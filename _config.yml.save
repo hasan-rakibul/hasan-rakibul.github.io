@@ -20,14 +20,14 @@
 
 title: It's Rakib
 email: rakibul.hasan@bracu.ac.bd
-# this means to ignore newlines until "baseurl:"
-# Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+http://127.0.0.1:4000/
+
 description: >-
   Personal Website of Md. Rakibul Hasan
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rakib-ul.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rakibul_mrh
-github_username:  mrh-rakib
+github_username:  rakib-ul
 
 # Build settings
 sass:
