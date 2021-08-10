@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About Me
+permalink: /about_me/
 ---
 
 Mr. Md. Rakibul Hasan was born in the Jashore district and carried out his school and college life there. Later, he received his B.Sc. in Electrical and Electronic Engineering (EEE) degree from Khulna University of Engineering & Technology (KUET) in March 2019. Mr. Hasan expects to obtain his M.Sc. Eng. degree from the same university, KUET, by September 2021. Among his several achievements during undergrad study, he was a champion of the "Seeds for the Future 2018" program by Huawei Technologies Co. Ltd., leading to a sponsored visit to China for two long weeks. There he had learned the basic Chinese language and culture and got training on state-of-the-art ICT solutions by Huawei that are emerging over the globe.
