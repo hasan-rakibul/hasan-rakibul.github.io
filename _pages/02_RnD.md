@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research & Development
+title: RnD
 permalink: /rnd/
 ---
 
