@@ -1,14 +1,14 @@
 ---
 layout: page
-title: RnD
-permalink: /RnD/
+title: Research & Development
+permalink: /rnd/
 ---
 
 ### Already published articles are available at my [Google Scholar](https://scholar.google.com/citations?user=DuCQ8goAAAAJ&hl=en) profile.
 
 &nbsp;
 
-### Article(s) accepted but not yet online
+### Article(s) accepted/presented but not yet online
 1. F. Wu, **Md Rakibul Hasan**, and M. Z. Hossain, “An evolutionary-based neural network for distinguishing between genuine and posed anger from observers’ pupillary responses,” Presented as a Full Paper in _14<sup>th</sup> International Conference on Agents and Artificial Intelligence 2022 (ICAART 2022)_, Feb. 2022.
 2. **Md Rakibul Hasan**, M. M. Hasan, and M. Z. Hossain, "Tuning Deep Neural Network Hyperparameters for Bengali Speech Token Classification,” Accepted in _2022 International Conference on Innovations in Science, Engineering and Technology_, Feb. 2022. 
 
@@ -21,8 +21,8 @@ permalink: /RnD/
 1. **Md Rakibul Hasan**, M. M. Hasan, and M. Z. Hossain, “Effect of vocal tract dynamics on neural network-based speech recognition: A bengali language-based study.” Major revision for _Expert Systems_, Dec. 2021.
 
 &nbsp;
-<!--
-### Students' undergrad Final-Year-Design-Projects I'm co-supervising
+
+<!--### Students' undergrad Final-Year-Design-Projects I'm co-supervising
 1. **IOT based Industrial Load Control and Safety Monitorization**  
  * Yousuf Mohammad (ID: 16310002)
  * Mehedi Hasan (ID: 16321131)
@@ -31,5 +31,4 @@ permalink: /RnD/
  * Khadiza Islam Sumaiya (ID: 18121092)
  * Md. Rakib Al – Amin (ID: 18121102)
  * Tamim Hasan Turjo (ID: 18121108)
- * S.M. Kayser Mehbub Siam (ID: 18121125)
--->
+ * S.M. Kayser Mehbub Siam (ID: 18121125)-->
