@@ -1,5 +1,5 @@
 Title: RnD
-Slug: RnD
+Slug: rnd
 
 ### Already published articles are available at my [Google Scholar](https://scholar.google.com/citations?user=DuCQ8goAAAAJ&hl=en) profile.
 

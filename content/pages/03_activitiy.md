@@ -1,4 +1,5 @@
 Title: Activity
+slug: activity
 
 ### Conferences I attended
 #### 2022
