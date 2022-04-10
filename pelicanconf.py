@@ -24,13 +24,14 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-        ('ReserchGate','https://www.researchgate.net/profile/Md-Rakibul-Hasan-13'),
-        ('LinkedIn','https://www.linkedin.com/in/rakibul-eeekuet/'),
+        ('Google Scholar','https://scholar.google.com/citations?user=DuCQ8goAAAAJ&hl=en'),
+        ('ReserchGate','https://www.researchgate.net/profile/M-Rakibul-Hasan'),
+        ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
         ('GitHub','https://github.com/mrh-rakib'),
         ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
         ('Faculty Profile','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
-        ('e-mail','mailto:rakibul.hasan@bracu.ac.bd'),
         ('publons','https://publons.com/researcher/5018248/md-rakibul-hasan/'),
+        ('e-mail','mailto:rakibul.hasan@bracu.ac.bd'),
         )
 
 LINKS_WIDGET_NAME = 'find me on'

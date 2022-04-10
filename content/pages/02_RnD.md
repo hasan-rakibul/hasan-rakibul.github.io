@@ -1,35 +1,35 @@
 Title: RnD
 slug: rnd
 
-### Already published articles are available at my [Google Scholar](https://scholar.google.com/citations?user=DuCQ8goAAAAJ&hl=en) profile.
+# Article(s) under review
+0.  Deng J., **Hasan, M. R.**, Mahmud M., Hasan M. M., Ahmed, K. A., & Hossain, M. Z. (2022). Diagnosing autism spectrum disorder using ensemble 3D-CNN: A preliminary study. In _2022 IEEE International Conference on Image Processing (ICIP)_. IEEE.
+0. Najjar, R., Hossain, M. Z., **Hasan, M. R.**, & Ahmed, K. A. (2022). The use of machine learning for COVID-19 prognostication: A systematic review. In _2022 IEEE World Congress on Computational Intelligence_. IEEE.
+0. **Hasan, M. R.**, Hasan M. M., & Hossain, M. Z. (2022). Effect of vocal tract dynamics on neural network-based speech recognition: A Bengali language-based study. _Expert Systems_.
+0. Lam, J. S., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022). Support vector machine to diagnose multiple sclerosis from smartphone data.
 
 &nbsp;
-
-### Article(s) accepted/presented but not yet on Google Scholar
-0. A. Qin, **Md Rakibul Hasan**, K. A. Ahmed, M. Z. Hossain, "Machine Learning for Predicting Cancer Severity Levels," Accepted for poster presentation in _The Tenth IEEE International Conference on Healthcare Informatics_, Mar. 2022.
-0. **Md Rakibul Hasan**, M. M. Hasan, and M. Z. Hossain, "Tuning Deep Neural Network Hyperparameters for Bengali Speech Token Classification,” Presented in _2022 International Conference on Innovations in Science, Engineering and Technology_, Feb. 2022.
+# Article(s) in press
+0. Qin, A., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022). Machine learning for predicting cancer severity levels. In _The Tenth IEEE International Conference on Healthcare Informatics_. USA: IEEE.
 
 &nbsp;
-
-### Submitted article(s) under review
-0. J. Deng, **Md Rakibul Hasan**, M. Mahmud, M. M. Hasan, K. A. Ahmed, M. Z. Hossain, "Diagnosing Autism Spectrum Disorder Using Ensemble 3D-CNN: A Preliminary Study," Submitted to _2022 IEEE International Conference on Image Processing (ICIP)_, Feb. 2022.
-0. R. Najjar, M. Z. Hossain, **Md Rakibul Hasan**, K. A. Ahmed, "The Use of Machine Learning for COVID-19 Prognostication: A Systematic Review," Submitted to _2022 IEEE World Congress on Computational Intelligence_, Jan. 2022.
+# Published Research
+## Journals
+### 2021
+0. **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2021). How many Mel‐frequency cepstral coefficients to be utilized in speech recognition? A study with the Bengali language. _The Journal of Engineering_, 2021(12), 817–827. [https://doi.org/10.1049/tje2.12082](https://doi.org/10.1049/tje2.12082)
 
 &nbsp;
+## Conferences
+### 2022
+0. **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2022, February). Outcomes of deep neural network hyperparameter tuning on Bengali speech token classification. In _2022 3rd International Conference on Innovations in Science, Engineering and Technology (ICISET)_. Chittagong, Bangladesh: IEEE.
+0. Wu, F., **Hasan, M. R.**, & Hossain, M. Z. (2022, February). An evolutionary-based neural network for distinguishing between genuine and posed anger from observers’ pupillary responses. In _Proceedings of the 14th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART_ (pp. 653–661). SciTePress. [https://doi.org/10.5220/0010985100003116](https://doi.org/10.5220/0010985100003116)
 
-### Article(s) in revision
-0. **Md Rakibul Hasan**, M. M. Hasan, and M. Z. Hossain, “Effect of vocal tract dynamics on neural network-based speech recognition: A Bengali language-based study,” Minor Revision for _Expert Systems_, Mar. 2022.
-0. J. S. Lam, **Md Rakibul Hasan**, K. A. Ahmed, M. Z. Hossain, "Support Vector Machine to Diagnose Multiple Sclerosis from Smartphone Data."
+### 2021
+0. Islam, A., **Hasan, M. R.**, Hossain, M. Z., & Hasan, M. M. (2021, December). The eigenvalue distribution of Hankel matrix: A tool for spectral estimation from noisy data. In 2021 _24th International Conference on Computer and Information Technology (ICCIT)_ (pp. 1–6). Dhaka, Bangladesh: IEEE. [https://doi.org/10.1109/ICCIT54785.2021.9689845](https://doi.org/10.1109/ICCIT54785.2021.9689845) 
+0. Sohan, S. H., Mahmud, M., Sikder, M. A. B., Hossain, F. S., & **Hasan, M. R.** (2021, January). Increasing throughput and reducing storage bloating problem using IPFS and dual-blockchain method. In _2021 2nd International Conference on Robotics, Electrical and Signal Processing Techniques (ICREST)_ (pp. 732–736). Dhaka, Bangladesh: IEEE. [https://doi.org/10.1109/ICREST51555.2021.9331254](https://doi.org/10.1109/ICREST51555.2021.9331254)
 
-<!--0. F. Wu, **Md Rakibul Hasan**, and M. Z. Hossain, “An evolutionary-based neural network for distinguishing between genuine and posed anger from observers’ pupillary responses,” Presented as a Full Paper in _14<sup>th</sup> International Conference on Agents and Artificial Intelligence 2022 (ICAART 2022)_, Feb. 2022, URL: [https://doi.org/10.5220/0010985100003116](https://doi.org/10.5220/0010985100003116)
+### 2020
+0. Sumaiya, J., **Hasan, M. R.**, & Hossain, E. (2020, December). Noninvasive blood glucose measurement using live video by smartphone. In _8th IEEE R10 Humanitarian Technology Conference, R10-HTC 2020_ (pp. 1–6). Kuching, Malaysia: IEEE. [https://doi.org/10.1109/R10-HTC49770.2020.9357018](https://doi.org/10.1109/R10-HTC49770.2020.9357018)
+0. **Hasan, M. R.**, & Hasan, M. M. (2020, June). Investigation of the effect of MFCC variation on the convolutional neural network-based speech classification. In _2020 IEEE Region 10 Symposium, TENSYMP 2020_ (pp. 1408–1411). Dhaka, Bangladesh: IEEE. [https://doi.org/10.1109/TENSYMP50017.2020.9230697](https://doi.org/10.1109/TENSYMP50017.2020.9230697)
 
-### Students' undergrad Final-Year-Design-Projects I'm co-supervising
-1. **IOT based Industrial Load Control and Safety Monitorization**  
- * Yousuf Mohammad (ID: 16310002)
- * Mehedi Hasan (ID: 16321131)
- * Shah Rukh Islam (ID: 16321133)
-2. **Accelerometer based Helmet for Accident Detection and Location Tracking**
- * Khadiza Islam Sumaiya (ID: 18121092)
- * Md. Rakib Al – Amin (ID: 18121102)
- * Tamim Hasan Turjo (ID: 18121108)
- * S.M. Kayser Mehbub Siam (ID: 18121125)-->
+### 2019
+0. **Hasan, M. R.**, Hossain, E., Resalat Faruque, H. M., & Sultan, T. (2019, May). IoT based smart energy management in residential applications. In _1st International Conference on Advances in Science, Engineering and Robotics Technology, ICASERT 2019_ (pp. 1–6). Dhaka, Bangladesh: IEEE. [https://doi.org/10.1109/ICASERT.2019.8934523](https://doi.org/10.1109/ICASERT.2019.8934523) [[Code](https://github.com/mrh-rakib/IoT-Smart-Energy-Management)]
