@@ -55,3 +55,14 @@ DEFAULT_PAGINATION = 10
 
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
+
+DISPLAY_CATEGORIES_ON_MENU = False # will manually display categories using MENUITEMS
+DISPLAY_PAGES_ON_MENU = False # will manually display pages using MENUITEMS
+
+MENUITEMS = (
+#     ('home', '/'),
+    ('about me', '/me'),
+    ('r&d', '/rnd'),
+    ('student projects', '/student_projects'),
+    ('activity', '/activity'),
+)

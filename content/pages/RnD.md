@@ -1,5 +1,6 @@
-Title: RnD
+Title: Research & Developments
 slug: rnd
+Modified: 2022-04-10 22:32
 
 # Article(s) under review
 0.  Deng J., **Hasan, M. R.**, Mahmud M., Hasan M. M., Ahmed, K. A., & Hossain, M. Z. (2022). Diagnosing autism spectrum disorder using ensemble 3D-CNN: A preliminary study. In _2022 IEEE International Conference on Image Processing (ICIP)_. IEEE.
