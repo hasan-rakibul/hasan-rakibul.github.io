@@ -3,9 +3,9 @@ SITENAME = 'M Rakibul Hasan (Rakib)'
 SITEURL = ''
 
 PATH = 'content'
-STATIC_PATHS = ['images','extras',]
+STATIC_PATHS = ['images','extras','pdfs']
 EXTRA_PATH_METADATA = {
-        'extra/favicon.ico': {'path': 'favicon.ico'},
+        'extras/favicon.ico': {'path': 'favicon.ico'},
 }
 
 # specify the custom theme directory

@@ -11,7 +11,7 @@ slug: activity
 0. Presented a paper at _2020 IEEE Region 10 Symposium (TENSYMP)_, Jun. 5-7, 2020, Online. [[News](https://www.ieeer10.org/2019/03/26/ieee-tensymp-2020/)]
 
 ## 2019
-0. Presented a paper at _2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT), May 3-5, 2019, Dhaka, Bangladesh. [[News](http://www.ieeebd.net/icasert-ewu-2019/)]
+0. Presented a paper at _2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT)_, May 3-5, 2019, Dhaka, Bangladesh. [[News](http://www.ieeebd.net/icasert-ewu-2019/)]
 
 &nbsp;
 
