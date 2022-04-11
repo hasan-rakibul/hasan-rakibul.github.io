@@ -1,6 +1,6 @@
 Title: Activity
 slug: activity
-Modified: 2022-04-11 17:38
+Modified: 2022-04-11 17:48
 
 # Conferences I attended
 ## 2022
