@@ -64,5 +64,6 @@ MENUITEMS = (
     ('about me', '/me'),
     ('r&d', '/rnd'),
     ('student projects', '/student_projects'),
+    ('teaching','/teaching'),
     ('activity', '/activity'),
 )
