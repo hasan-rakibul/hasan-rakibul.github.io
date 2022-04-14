@@ -53,6 +53,8 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
+SLUGIFY_SOURCE = 'basename' # automatically, slug will be the filename
+
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
 
@@ -60,9 +62,9 @@ DISPLAY_CATEGORIES_ON_MENU = False # will manually display categories using MENU
 DISPLAY_PAGES_ON_MENU = False # will manually display pages using MENUITEMS
 
 MENUITEMS = (
-#     ('home', '/'),
-    ('about me', '/me'),
-    ('r&d', '/rnd'),
+    ('home', '/'),
+#     ('about me', '/me'),
+    ('research', '/research'),
     ('student projects', '/student_projects'),
     ('teaching','/teaching'),
     ('activity', '/activity'),

@@ -1,6 +1,6 @@
 Title: About Me
-slug: me
 Modified: 2022-04-10 23:32
+status: hidden
 
 Mr. Md Rakibul Hasan currently serves as a Lecturer in the Electrical and Electronic Engineering (EEE) Department at BRAC University, Dhaka, Bangladesh. Before joining BRACU, he worked as a full-time lecturer in the EEE department of Bangladesh Army International University of Science & Technology (BAIUST) for more than one and half years. Mr. Hasan received his B.Sc. (2019) and M.Sc. (2021) degrees in Electrical and Electronic Engineering (EEE) from Khulna University of Engineering & Technology (KUET), Khulna, Bangladesh. Along with teaching, he is strongly focused on active research with global collaboration. In particular, his research interests include Applied Machine Learning, Signal Processing, IoT, and Embedded Systems. He worked on deep learning applications in Bengali speech recognition in his Bachelor’s and Master’s thesis. As a young academician, he has several peer-reviewed publications related to applied deep learning and machine learning. He loves to help students in research activities.
 
