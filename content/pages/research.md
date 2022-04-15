@@ -2,7 +2,7 @@ Title: Research
 Modified: 2022-04-11 17:32
 
 # Article(s) under review
-0. Lam, J. S., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022). Support vector machine to diagnose multiple sclerosis from smartphone data. In _14th Asian Conference on Intelligent Information and Database Systems_. Springer.
+0. Lam, J. S., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022). Machine learning to diagnose neurodegenerative multiple sclerosis disease. In _14th Asian Conference on Intelligent Information and Database Systems_. Springer.
 0.  Deng J., **Hasan, M. R.**, Mahmud M., Hasan M. M., Ahmed, K. A., & Hossain, M. Z. (2022). Diagnosing autism spectrum disorder using ensemble 3D-CNN: A preliminary study. In _2022 IEEE International Conference on Image Processing (ICIP)_. IEEE.
 0. Najjar, R., Hossain, M. Z., **Hasan, M. R.**, & Ahmed, K. A. (2022). The use of machine learning for COVID-19 prognostication: A systematic review. In _2022 IEEE World Congress on Computational Intelligence_. IEEE.
 0. **Hasan, M. R.**, Hasan M. M., & Hossain, M. Z. (2022). Effect of vocal tract dynamics on neural network-based speech recognition: A Bengali language-based study. _Expert Systems_.
