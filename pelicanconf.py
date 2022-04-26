@@ -1,5 +1,5 @@
-AUTHOR = 'M Rakibul Hasan (Rakib)'
-SITENAME = 'M Rakibul Hasan (Rakib)'
+AUTHOR = 'Md Rakibul HASAN (Rakib)'
+SITENAME = 'Md Rakibul HASAN (Rakib)'
 SITEURL = ''
 
 PATH = 'content'
@@ -25,11 +25,11 @@ AUTHOR_FEED_RSS = None
 # Blogroll
 LINKS = (
         ('Google Scholar','https://scholar.google.com/citations?user=DuCQ8goAAAAJ&hl=en'),
-        ('ReserchGate','https://www.researchgate.net/profile/M-Rakibul-Hasan'),
+        ('ReserchGate','https://www.researchgate.net/profile/Md-Rakibul-Hasan-10'),
         ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
         ('GitHub','https://github.com/mrh-rakib'),
         ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
-        ('Faculty Profile','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
+        ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
         ('publons','https://publons.com/researcher/5018248/md-rakibul-hasan/'),
         ('e-mail','mailto:rakibul.hasan@bracu.ac.bd'),
         )

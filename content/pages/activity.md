@@ -1,7 +1,7 @@
 Title: Activity
 Modified: 2022-04-11 17:48
 
-# Conferences I attended
+# Conferences where I presented
 ## 2022
 0. Presented a paper at _International Conference on Innovations in Science, Engineering and Technology 2022 (ICISET 2022)_, Feb. 26-17, 2022, Online. [[Website](https://iciset.iiuc.ac.bd/)]
 0. Presented a paper at _ICAART 2022 - 14th International Conference on Agents and Artificial Intelligence_, Feb. 3-5, 2022, Online. [[Website](https://icaart.scitevents.org/)]
