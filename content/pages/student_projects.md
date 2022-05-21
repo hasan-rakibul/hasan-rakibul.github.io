@@ -20,3 +20,13 @@ By Jingsheng Deng
 By Jin Si Lam
 0. **The use of machine learning for COVID-19 prognostication: A systematic review** [[Related publication](./research#najjar2022the)] </br>
 By Reabal Najjar
+
+&nbsp;
+## Open call(s)
+0. <a name="calls"></a> Extended paper preparation on a published paper on anger veracity identification using neural network [1].</br>
+**Description:** An extended version of the mentioned paper is selected to be published in a Springer LNAI book series. We are searching for a prospective collaborator who would be happy to work in this regard.</br>
+**Deadline:** open until filled</br>
+**Eligibility:** If you can prove that you can implement the mentioned paper, you are ready to go.</br>
+**Apply through:** [rakibul.hasan@bracu.ac.bd](mailto:rakibul.hasan@bracu.ac.bd) </br>
+**References:**</br>
+[1] Wu, F., **Hasan, M. R.**, & Hossain, M. Z. (2022, February). An evolutionary-based neural network for distinguishing between genuine and posed anger from observers’ pupillary responses. In _Proceedings of the 14th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART_ (pp. 653–661). SciTePress. [[View at Publisher](https://doi.org/10.5220/0010985100003116)] [[PDF](./pdfs/wu2022an.pdf)]
