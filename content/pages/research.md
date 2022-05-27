@@ -22,7 +22,7 @@ Modified: 2022-04-11 17:32
 &nbsp;
 ## Conferences
 ### 2022
-0. **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2022, February [in press]). Outcomes of deep neural network hyperparameter tuning on Bengali speech token classification. In _2022 3rd International Conference on Innovations in Science, Engineering and Technology (ICISET)_. Chittagong, Bangladesh: IEEE.
+0. **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2022, February). Outcomes of deep neural network hyperparameter tuning on Bengali speech token classification. In _2022 3rd International Conference on Innovations in Science, Engineering and Technology (ICISET)_ (pp. 445–450). Chittagong, Bangladesh: IEEE. [[View at Publisher](https://doi.org/10.1109/ICISET54810.2022.9775837)] [[PDF](./pdfs/hasan2022outcome.pdf)]
 0. <a name="wu2022an"></a> Wu, F., **Hasan, M. R.**, & Hossain, M. Z. (2022, February). An evolutionary-based neural network for distinguishing between genuine and posed anger from observers’ pupillary responses. In _Proceedings of the 14th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART_ (pp. 653–661). SciTePress. [[View at Publisher](https://doi.org/10.5220/0010985100003116)] [[PDF](./pdfs/wu2022an.pdf)]
 
 ### 2021
