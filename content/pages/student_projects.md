@@ -35,7 +35,9 @@ By Fan Wu
 
 &nbsp;
 ## Open call(s)
---
+No specific vacancy for now. </br>
+However, I would be all ears to hear about your research ideas and would be happy to guide and support.
+
 <!-- 0. <a name="calls"></a> Extended paper preparation on a published paper on anger veracity identification using neural network [1].</br>
 **Description:** An extended version of the mentioned paper is selected to be published in a Springer LNAI book series. We are searching for a prospective collaborator who would be happy to work in this regard.</br>
 **Deadline:** open until filled</br>
