@@ -68,4 +68,9 @@ MENUITEMS = (
     ('student projects', '/student_projects'),
     ('teaching','/teaching'),
     ('activity', '/activity'),
+    ('blogs','/category/blogs.html')
 )
+
+ARTICLE_PATHS = ['blogs']
+ARTICLE_URL = '{slug}'
+ARTICLE_SAVE_AS = '{slug}.html'

@@ -7,9 +7,9 @@ Modified: 2022-04-11 17:32
 0. <a name="lam2022machine"></a> Lam, J. S., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022). Machine learning to diagnose neurodegenerative multiple sclerosis disease. In _14th Asian Conference on Intelligent Information and Database Systems_. Springer.
 0. <a name="deng2022diagnosing"></a> Deng J., **Hasan, M. R.**, Mahmud M., Hasan M. M., Ahmed, K. A., & Hossain, M. Z. (2022). Diagnosing autism spectrum disorder using ensemble 3D-CNN: A preliminary study. In _2022 IEEE International Conference on Image Processing (ICIP)_. IEEE.
 
-&nbsp;
-# Article(s) accepted
-0. <a name="qin2022machine"></a> Qin, A., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022). Machine learning for predicting cancer severity levels. In _The Tenth IEEE International Conference on Healthcare Informatics_. USA: IEEE.
+<!-- &nbsp;
+# Article(s) accepted -->
+
 
 &nbsp;
 # Published Research
@@ -23,6 +23,7 @@ Modified: 2022-04-11 17:32
 &nbsp;
 ## Conferences
 ### 2022
+0. <a name="qin2022machine"></a> Qin, A., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022 [in press]). Machine learning for predicting cancer severity. In _The Tenth IEEE International Conference on Healthcare Informatics_. USA: IEEE.
 0. **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2022, February). Outcomes of deep neural network hyperparameter tuning on Bengali speech token classification. In _2022 3rd International Conference on Innovations in Science, Engineering and Technology (ICISET)_ (pp. 445–450). Chittagong, Bangladesh: IEEE. [[View at Publisher](https://doi.org/10.1109/ICISET54810.2022.9775837)] [[PDF](./pdfs/hasan2022outcome.pdf)]
 0. <a name="wu2022an"></a> Wu, F., **Hasan, M. R.**, & Hossain, M. Z. (2022, February). An evolutionary-based neural network for distinguishing between genuine and posed anger from observers’ pupillary responses. In _Proceedings of the 14th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART_ (pp. 653–661). SciTePress. [[View at Publisher](https://doi.org/10.5220/0010985100003116)] [[PDF](./pdfs/wu2022an.pdf)]
 
