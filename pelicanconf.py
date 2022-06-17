@@ -63,7 +63,7 @@ DISPLAY_PAGES_ON_MENU = False # will manually display pages using MENUITEMS
 
 MENUITEMS = (
     ('home', '/'),
-    ('about me', '/me'),
+    ('about me', '/about_me'),
     ('publications', '/publications'),
     ('student projects', '/student_projects'),
     # ('teaching','/teaching'),

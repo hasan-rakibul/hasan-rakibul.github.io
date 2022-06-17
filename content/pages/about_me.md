@@ -1,5 +1,4 @@
 Title: About Me
-Slug: me
 
 I'm currently serving as a Lecturer in the Electrical and Electronic Engineering (EEE) Department at <a href="https://www.bracu.ac.bd/">BRAC University (BRACU), Dhaka, Bangladesh</a>. Before joining BRACU, I worked as a full-time lecturer in the EEE department of <a href="https://www.baiust.edu.bd/">Bangladesh Army International University of Science & Technology (BAIUST)</a> for more than one and a half years.
     
