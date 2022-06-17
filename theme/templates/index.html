@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content_title %}{% endblock %}
 {% block content %}
-{% if articles %}
+{% if not articles %}
     {% for article in articles_page.object_list %}
 
         {# First item #}
