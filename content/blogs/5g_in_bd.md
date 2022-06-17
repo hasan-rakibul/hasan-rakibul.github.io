@@ -50,4 +50,4 @@ The opportunities of 5G are overwhelming if implemented properly to the full ext
 [1] [http://www.btrc.gov.bd/content/internet-subscribers-bangladesh-november-2020](http://www.btrc.gov.bd/content/internet-subscribers-bangladesh-november-2020) </br>
 [2] [https://en.wikipedia.org/wiki/IMT-2020](https://en.wikipedia.org/wiki/IMT-2020)
 
-_N.B.: I wrote this article as an assignment for a postgraduate course titled "Advanced Wireless Communication," which I took for my M.Sc. Eng. degree from Khulna University of Engineering & Technology (KUET). Further, it was originally published as a [LinkedIn article.](https://www.linkedin.com/pulse/opportunities-challenges-5g-communication-bangladesh-hasan/)_
+_N.B.: I wrote this article as an assignment for a postgraduate course titled "Advanced Wireless Communication," which I took for my M.Sc. Eng. degree from Khulna University of Engineering & Technology (KUET). Further, it was originally published as a [LinkedIn article](https://www.linkedin.com/pulse/opportunities-challenges-5g-communication-bangladesh-hasan/)_.

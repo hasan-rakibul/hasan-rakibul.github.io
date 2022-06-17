@@ -1,72 +1,17 @@
 {% extends "base.html" %}
 {% block content_title %}{% endblock %}
 {% block content %}
-{% if not articles %}
-    {% for article in articles_page.object_list %}
 
-        {# First item #}
-        {% if loop.first and not articles_page.has_previous() %}
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                    {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
-                </article>
-            </aside><!-- /#featured -->
-            {% if loop.length > 1 %}
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-            {% endif %}
-        {# other items #}
-        {% else %}
-            {% if loop.first %}
-                <section id="content" class="body">
-                    <ol id="posts-list" class="hfeed" start="{{ articles_paginator.per_page -1 }}">
-            {% endif %}
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                           title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-                </header>
-
-                <div class="entry-content">
-                {% include 'article_infos.html' %}
-                {{ article.summary }}
-                <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
-                {% include 'comments.html' %}
-                </div><!-- /.entry-content -->
-            </article></li>
-        {% endif %}
-        {% if loop.last %}
-            {% if loop.length > 1 or articles_page.has_other_pages() %}
-                </ol><!-- /#posts-list -->
-                {% if articles_page.has_other_pages() %}
-                    {% include 'pagination.html' %}
-                {% endif %}
-                </section><!-- /#content -->
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-{% else %}
 <section id="content" class="body">
-    {% if pages %}
     <h1>Welcome! I'm glad you are here!</h1>
-    <h2>About Me</h2>
-    <h3>I'm currently serving as a Lecturer in the Electrical and Electronic Engineering (EEE) Department at <a href="https://www.bracu.ac.bd/">BRAC University (BRACU), Dhaka, Bangladesh</a>. Before joining BRACU, I worked as a full-time lecturer in the EEE department of <a href="https://www.baiust.edu.bd/">Bangladesh Army International University of Science & Technology (BAIUST)</a> for more than one and a half years. </h3>
-    
-    <h3>I received B.Sc. (2019) and M.Sc. (2021) degrees in EEE from <a href="https://kuet.ac.bd/">Khulna University of Engineering & Technology (KUET), Khulna, Bangladesh</a>. Along with teaching, I love to do and learn research with global collaboration. In particular, my research interests include applied machine learning, biomedical signal processing, IoT, and embedded systems. I worked on deep learning applications in Bengali speech recognition in my Bachelor's and Master's thesis. As a young academician, I have a few peer-reviewed publications related to applied deep learning and machine learning. I love to help students in research activities.</h3>
-    
-    <h3>I was a champion of the “<a href="https://www.huawei.com/minisite/seeds-for-the-future/index.html">Seeds for the Future</a> 2018” program by Huawei Technologies Co. Ltd., leading to a sponsored visit to China for two weeks. I'm passionate about works involving programming. To date, I completed 25 certified courses on machine learning, deep learning, and data science from renowned online platforms, such as Coursera and DataCamp.</h3>
-
-    <!-- <ul> 
-    {% for page in pages %}
-        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-    {% endfor %}
-    </ul>-->
-    {% else %}
-    <p>This site currently has no content.</p>
-    {% endif %}
 </section>
-{% endif %}
+
+<section id="content" class="body">
+    <h1> <mark>Recent news</mark></h1>
+    <ul>
+        <li><a href="./publications#hasan2022effect">2nd journal article</a> from my M.Sc. thesis is accepted in Wiley Expert Systems journal (SJR: Q2, IF: 2.587).</li>
+        <li><a href="./publications#qin2022machine">Conference paper</a> accepted for the 10th ICHI 2022, USA.</li>
+    </ul>
+</section>
+
 {% endblock content %}
