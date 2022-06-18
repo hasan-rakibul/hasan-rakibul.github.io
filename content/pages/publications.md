@@ -37,6 +37,9 @@ Modified: 2022-04-11 17:32
 0. Islam, A., **Hasan, M. R.**, Hossain, M. Z., & Hasan, M. M. (2021, December). The eigenvalue distribution of Hankel matrix: A tool for spectral estimation from noisy data. In 2021 _24th International Conference on Computer and Information Technology (ICCIT)_ (pp. 1–6). Dhaka, Bangladesh: IEEE. [[View at Publisher](https://doi.org/10.1109/ICCIT54785.2021.9689845)] [[PDF](./pdfs/islam2021the.pdf)]
 0. Sohan, S. H., Mahmud, M., Sikder, M. A. B., Hossain, F. S., & **Hasan, M. R.** (2021, January). Increasing throughput and reducing storage bloating problem using IPFS and dual-blockchain method. In _2021 2nd International Conference on Robotics, Electrical and Signal Processing Techniques (ICREST)_ (pp. 732–736). Dhaka, Bangladesh: IEEE. [[View at Publisher](https://doi.org/10.1109/ICREST51555.2021.9331254)] [[PDF](./pdfs/sohan2021increasing.pdf)]
 
+### Dataset
+0. **Hasan, M. R.**, & Hasan, M. M. (2021). Isolated Bengali vowel and word speech sounds. _Mendeley Data_, V1. [[View at Publisher](https://doi.org/10.17632/2h6975kdsx.1)] [[Dataset](./extras/Isolated_Bengali_vowels_words_sounds.zip)]
+
 &nbsp;
 
 ## 2020
