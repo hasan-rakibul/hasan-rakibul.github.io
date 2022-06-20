@@ -7,11 +7,10 @@ Modified: 2022-04-11 17:32
 0. <a name="jobayer2022solar"></a> Jobayer, M., Shaikat, M. A. H., Rashid, M. N., & **Hasan, M. R.** (2022). Solar photovoltaic performance prediction using machine learning: A systematic review. _Energy Reports_.
 0. <a name="najjar2022the"></a> Najjar, R., Hossain, M. Z., Ahmed, K. A., & **Hasan, M. R.** (2022). The use of machine learning for COVID-19 prognostication: A systematic review. In _14th Asian Conference on Intelligent Information and Database Systems_. Springer.
 0. <a name="lam2022machine"></a> Lam, J. S., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022). Machine learning to diagnose neurodegenerative multiple sclerosis disease. In _14th Asian Conference on Intelligent Information and Database Systems_. Springer.
-0. <a name="deng2022diagnosing"></a> Deng J., **Hasan, M. R.**, Mahmud M., Hasan M. M., Ahmed, K. A., & Hossain, M. Z. (2022). Diagnosing autism spectrum disorder using ensemble 3D-CNN: A preliminary study. In _2022 IEEE International Conference on Image Processing (ICIP)_. IEEE.
 
-<!-- &nbsp;
-# Article(s) accepted -->
-
+&nbsp;
+# Article(s) accepted
+0. <a name="deng2022diagnosing"></a> Deng, J., **Hasan, M. R.**, Mahmud, M., Hasan, M. M., Ahmed, K. A., & Hossain, M. Z. (2022). Diagnosing autism spectrum disorder using ensemble 3D-CNN: A preliminary study. In _2022 29th IEEE International Conference on Image Processing (ICIP)_. Bordeaux, France: IEEE.
 
 &nbsp;
 # Published Research
@@ -19,7 +18,7 @@ Modified: 2022-04-11 17:32
 ## 2022
 
 ### Journals
-0. <a name="hasan2022effect"></a> **Hasan, M. R.**, Hasan M. M., & Hossain, M. Z. (2022 [in press]). Effect of vocal tract dynamics on neural network-based speech recognition: A Bengali language-based study. _Expert Systems_.
+0. <a name="hasan2022effect"></a> **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2022 [in press]). Effect of vocal tract dynamics on neural network-based speech recognition: A Bengali language-based study. _Expert Systems_.
 
 ### Conferences
 0. <a name="qin2022machine"></a> Qin, A., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022 [in press]). Machine learning for predicting cancer severity. In _The Tenth IEEE International Conference on Healthcare Informatics_. USA: IEEE.
