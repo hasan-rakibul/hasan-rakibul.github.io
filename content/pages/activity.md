@@ -8,8 +8,9 @@ Modified: 2022-04-11 17:48
 0. Expert Systems, Wiley
 
 ## Conferences
+0. ([Technical committee](https://2icml.net/Technical/)) 2022 International Conference on Intelligent Computing and Machine Learning (2ICML), Qingdao, China
 0. (Program committee) 29th International Conference on Neural Information Processing 2022 (ICONIP 2022), New Delhi, India
-0. ([Program committee](https://www.icmla-conference.org/icmla22/pcm.html)) 21st IEEE International Conference on Machine Learning and Applications (ICMLA 2022), Nassau, THe Bahamas
+0. ([Program committee](https://www.icmla-conference.org/icmla22/pcm.html)) 21st IEEE International Conference on Machine Learning and Applications (ICMLA 2022), Nassau, The Bahamas
 0. (External reviewer) 5th International Conference on Electrical Engineering and Information & Communication Technology 2021 (ICEEICT 2021), Dhaka, Bangladesh				
 
 &nbsp;
