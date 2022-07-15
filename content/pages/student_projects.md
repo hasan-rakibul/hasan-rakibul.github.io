@@ -1,5 +1,7 @@
 Title: Student Projects
 
+&nbsp;
+
 # Open call(s)
 No specific vacancy for now. </br>
 However, I would be all ears to your research ideas and would be happy to guide and support.
