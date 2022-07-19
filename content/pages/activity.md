@@ -8,10 +8,10 @@ Modified: 2022-04-11 17:48
 0. Expert Systems, Wiley
 
 ## Conferences
-0. ([Technical committee](https://2icml.net/Technical/)) 2022 International Conference on Intelligent Computing and Machine Learning (2ICML), Qingdao, China
-0. (Program committee) 29th International Conference on Neural Information Processing 2022 (ICONIP 2022), New Delhi, India
-0. ([Program committee](https://www.icmla-conference.org/icmla22/pcm.html)) 21st IEEE International Conference on Machine Learning and Applications (ICMLA 2022), Nassau, The Bahamas
-0. (External reviewer) 5th International Conference on Electrical Engineering and Information & Communication Technology 2021 (ICEEICT 2021), Dhaka, Bangladesh				
+0. [Technical committee](https://2icml.net/Technical/) member, 2022 International Conference on Intelligent Computing and Machine Learning (2ICML), Qingdao, China
+0. Program committee member, 29th International Conference on Neural Information Processing 2022 (ICONIP 2022), New Delhi, India
+0. [Program committee](https://www.icmla-conference.org/icmla22/pcm.html) member, 21st IEEE International Conference on Machine Learning and Applications (ICMLA 2022), Nassau, The Bahamas
+0. External reviewer, 5th International Conference on Electrical Engineering and Information & Communication Technology 2021 (ICEEICT 2021), Dhaka, Bangladesh				
 
 &nbsp;
 
@@ -30,15 +30,15 @@ Modified: 2022-04-11 17:48
 
 ## Conferences
 ### 2022
-0. Presented a paper at _International Conference on Innovations in Science, Engineering and Technology 2022 (ICISET 2022)_, Feb. 26-17, 2022, Online. [[Conference weblink](https://iciset.iiuc.ac.bd/)] [[Video](https://youtu.be/vXrQp_UEsEo)]
-0. Presented a paper at _ICAART 2022 - 14th International Conference on Agents and Artificial Intelligence_, Feb. 3-5, 2022, Online. [[Conference weblink](https://icaart.scitevents.org/)] [[Video](https://youtu.be/Fbq55NbjLx4)]
+0. Presented a paper at _International Conference on Innovations in Science, Engineering and Technology 2022 (ICISET 2022)_, Feb. 26-17, 2022, Online. [[Conference weblink](https://iciset.iiuc.ac.bd/)] [[Slides](https://www.slideshare.net/MdRakibulHasan96/outcomes-of-deep-neural-network-hyperparameter-tuning-on-bengali-speech-token-classification)] [[Video](https://youtu.be/vXrQp_UEsEo)]
+0. Presented a paper at _ICAART 2022 - 14th International Conference on Agents and Artificial Intelligence_, Feb. 3-5, 2022, Online. [[Conference weblink](https://icaart.scitevents.org/)] [[Slides](https://www.slideshare.net/MdRakibulHasan96/an-evolutionarybased-neural-network-for-distinguishing-between-genuine-and-posed-anger-from-observers-pupillary-responses)] [[Video](https://youtu.be/Fbq55NbjLx4)]
 
 ### 2020
-0. Presented a paper at _2020 IEEE 8th R10 Humanitarian Technology Conference (R10-HTC)_, Dec. 1-3, 2020, Online. [[Conference weblink](https://r10htc2020.org/)] [[Video](https://youtu.be/-Jsa6XK7-9Y)] [[Slides](http://dx.doi.org/10.13140/RG.2.2.24202.29122)]
-0. Presented a paper at _2020 IEEE Region 10 Symposium (TENSYMP)_, Jun. 5-7, 2020, Online. [[Conference weblink](https://www.ieeer10.org/2019/03/26/ieee-tensymp-2020/)] [[Slide](http://dx.doi.org/10.13140/RG.2.2.12173.77288)] [[Video](https://youtu.be/yjQ__BJ3uiQ)]
+0. Presented a paper at _2020 IEEE 8th R10 Humanitarian Technology Conference (R10-HTC)_, Dec. 1-3, 2020, Online. [[Conference weblink](https://r10htc2020.org/)] [[Slides](./pdfs/Presentation_R10HTC2020.pdf)] [[Video](https://youtu.be/-Jsa6XK7-9Y)]
+0. Presented a paper at _2020 IEEE Region 10 Symposium (TENSYMP)_, Jun. 5-7, 2020, Online. [[Conference weblink](https://www.ieeer10.org/2019/03/26/ieee-tensymp-2020/)] [[Slides](https://www.slideshare.net/MdRakibulHasan96/investigation-of-the-effect-of-mfcc-variation-on-the-convolutional-neural-networkbased-speech-classification)] [[Video](https://youtu.be/yjQ__BJ3uiQ)]
 
 ### 2019
-0. Presented a paper at _2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT)_, May 3-5, 2019, Dhaka, Bangladesh. [[Conference weblink](http://www.ieeebd.net/icasert-ewu-2019/)] [[Slides](https://www.researchgate.net/publication/343987157_IoT_Based_Smart_Energy_Management_in_Residential_Applications)]
+0. Presented a paper at _2019 1st International Conference on Advances in Science, Engineering and Robotics Technology (ICASERT)_, May 3-5, 2019, Dhaka, Bangladesh. [[Conference weblink](http://www.ieeebd.net/icasert-ewu-2019/)] [[Slides](https://www.slideshare.net/MdRakibulHasan96/iot-based-smart-energy-management-in-residential-applications)]
 
 &nbsp;
 ## Seminars/Workshops
