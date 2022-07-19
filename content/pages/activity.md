@@ -5,7 +5,7 @@ Modified: 2022-04-11 17:48
 
 # Peer-reviewer
 ## Journals
-0. Expert Systems, Wiley
+0. Reviewer, Expert Systems, Wiley
 
 ## Conferences
 0. [Technical committee](https://2icml.net/Technical/) member, 2022 International Conference on Intelligent Computing and Machine Learning (2ICML), Qingdao, China
