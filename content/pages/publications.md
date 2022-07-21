@@ -19,7 +19,7 @@ Modified: 2022-04-11 17:32
 ## 2022
 
 ### Journals
-0. <a name="hasan2022effect"></a> **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2022 [in press]). Effect of vocal tract dynamics on neural network-based speech recognition: A Bengali language-based study. _Expert Systems_.
+0. <a name="hasan2022effect"></a> **Hasan, M. R.**, Hasan, M. M., & Hossain, M. Z. (2022). Effect of vocal tract dynamics on neural network-based speech recognition: A Bengali language-based study. _Expert Systems_, e13045, 1-15. [[View at Publisher](https://doi.org/10.1111/exsy.13045)] [[PDF](./pdfs/hasan2022effect.pdf)]
 
 ### Conferences
 0. <a name="qin2022machine"></a> Qin, A., **Hasan, M. R.**, Ahmed, K. A., & Hossain, M. Z. (2022 [in press]). Machine learning for predicting cancer severity. In _The Tenth IEEE International Conference on Healthcare Informatics_. USA: IEEE.
