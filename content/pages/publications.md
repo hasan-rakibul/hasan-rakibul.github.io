@@ -3,9 +3,10 @@ Modified: 2022-04-11 17:32
 
 
 
-<!-- # Article(s) under review
-0. <a name="jobayer2022solar"></a> Jobayer, M., Shaikat, M. A. H., Rashid, M. N., & **Hasan, M. R.** (2022). Solar photovoltaic performance prediction using machine learning: A systematic review. _Energy Reports_.
-0. <a name="najjar2022the"></a> Najjar, R., Hossain, M. Z., Ahmed, K. A., & **Hasan, M. R.** (2022). The use of machine learning for COVID-19 prognostication: A systematic review. In _14th Asian Conference on Intelligent Information and Database Systems_. Springer. -->
+# Article(s) under review
+<!-- 0. <a name="jobayer2022solar"></a> Jobayer, M., Shaikat, M. A. H., Rashid, M. N., & **Hasan, M. R.** (2022). Solar photovoltaic performance prediction using machine learning: A systematic review. _Energy Reports_. -->
+0. <a name="najjar2022the"></a> Najjar, R., Hossain, M. Z., Ahmed, K. A., & **Hasan, M. R.** (2022). The use of machine learning for COVID-19 prognostication: A systematic review. In _IEEE 34th International
+Conference on Tools with Artificial Intelligence_. IEEE.
 
 &nbsp;
 # Article(s) accepted
