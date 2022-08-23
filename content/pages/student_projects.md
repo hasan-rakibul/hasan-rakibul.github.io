@@ -26,7 +26,7 @@ By Yousuf Mohammad, Mehedi Hasan, & Shah Rukh Islam <br/>
 &nbsp;
 # Other research group(s) with students
 ## BRACU
-0. **Solar photovoltaic performance prediction using machine learning: a systematic review** [[Related publication](./publications#jobayer2022solar)] </br>
+0. **A systematic review on predicting PV system parameters using machine learning** [[Related publication](./publications#jobayer2022a)] </br>
 By Md Jobayer, Md Al Hasan Shaikat, & Md Naimur Rashid
 
 ## BAIUST
