@@ -5,7 +5,7 @@ Modified: 2022-04-11 17:32
 
 # Article(s) under review
 0. <a name="jobayer2022a"></a> Jobayer, M., Shaikat, M. A. H., Rashid, M. N., & **Hasan, M. R.** (2022). A systematic review on predicting PV system parameters using machine learning. _Heliyon_.
-0. <a name="mahmud2022what"></a> Mahmud, M., **Hasan, M. R.**, Najjar, R., & Hossain, M. Z. (2022). What features are useful for machine learning-based COVID-19 prediction? A meta-analysis. In _The 20th Australasian Data Mining Conference (AusDM 2022)_. Springer.
+0. <a name="mahmud2022what"></a> Mahmud, M., **Hasan, M. R.**, Najjar, R., & Hossain, M. Z. (2022). What features are useful in machine learning-based COVID-19 prognostication? A meta-analysis. In _The 20th Australasian Data Mining Conference (AusDM 2022)_. Springer.
 0. <a name="najjar2022the"></a> Najjar, R., Hossain, M. Z., Ahmed, K. A., & **Hasan, M. R.** (2022). The use of machine learning for COVID-19 prognostication: A systematic review. In _IEEE 34th International Conference on Tools with Artificial Intelligence_. IEEE.
 
 &nbsp;
