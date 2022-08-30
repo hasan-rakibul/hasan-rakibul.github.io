@@ -74,3 +74,5 @@ MENUITEMS = (
 ARTICLE_PATHS = ['blogs']
 ARTICLE_URL = '{slug}'
 ARTICLE_SAVE_AS = '{slug}.html'
+
+# CSS_FILE = "list.css"
