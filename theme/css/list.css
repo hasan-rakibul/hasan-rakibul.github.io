@@ -1,0 +1,65 @@
+/**
+ * Ordered List Item Style Prefix
+ * prefix ordered list item numbers with a static string using CSS
+ * Dabblet (by @EricRasch): http://dabblet.com/gist/2919680
+ * jsFiddle (by @EricRasch): http://jsfiddle.net/NUJJk/
+ * SCSS Mixin (by @JimmyNotJim): http://jsfiddle.net/KY9ua/
+ * forked from: http://jsfiddle.net/BoltClock/9VdB3/
+ * StackOverflow Q&A: http://stackoverflow.com/a/5568259/1428800
+ */
+
+ @import url("main.css");
+ 
+ body {
+    background: #f7f7ef;
+    color: #4e443c;
+    margin: 20px;
+    padding: 20px;
+    min-height: 100%;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-bottom: 20px;
+}
+
+ol.prefixed {
+	border-top: 1px solid rgba(78,68,50,.05);
+    counter-reset: item;
+    list-style-type: none;
+    *list-style-type: decimal; /*Conditional hack for ie7*/
+    margin-left: -20px;
+    padding-top: 20px;
+}
+
+ol.prefixed li:before {
+    content: 'J' counter(item, decimal) '. ';
+    counter-increment: item;
+}
+​
+/* The <ol> needs to have its counter-reset redefined for each version you want to create. */
+ol.steps { counter-reset: item; }
+ol.steps li:before { content: 'Step ' counter(item, decimal) '. '; }
+
+ol.nodot { counter-reset: item; }
+​ol.nodot li:before { content: 'Step ' counter(item, decimal) ' '; }
+​
+ol.styled { counter-reset: item; }
+ol.styled li {
+    background: rgba(78,68,50,.10);
+    border-radius: 4px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 2;
+	margin-bottom: 10px;
+	width: 200px;
+}
+ol.styled li:before {
+    content: '' counter(item, decimal) '';
+    background: #4e443c;
+    border-radius: 4px;
+    color: #f7f7ef;
+	font-size: 15px;
+    margin: 0 5px 0 8px;
+    padding: 4px 7px;
+}
