@@ -1,22 +1,14 @@
-/**
- * Ordered List Item Style Prefix
- * prefix ordered list item numbers with a static string using CSS
- * Dabblet (by @EricRasch): http://dabblet.com/gist/2919680
- * jsFiddle (by @EricRasch): http://jsfiddle.net/NUJJk/
- * SCSS Mixin (by @JimmyNotJim): http://jsfiddle.net/KY9ua/
- * forked from: http://jsfiddle.net/BoltClock/9VdB3/
- * StackOverflow Q&A: http://stackoverflow.com/a/5568259/1428800
- */
+ /* Courtesy: https://gist.github.com/ericrasch/2919680 */
 
  @import url("main.css");
  
- body {
+ /* body {
     background: #f7f7ef;
     color: #4e443c;
     margin: 20px;
     padding: 20px;
     min-height: 100%;
-}
+} */
 
 ol {
     list-style-type: decimal;
@@ -28,20 +20,35 @@ ol.prefixed {
     counter-reset: item;
     list-style-type: none;
     *list-style-type: decimal; /*Conditional hack for ie7*/
-    margin-left: -20px;
-    padding-top: 20px;
+    margin-left: 30px;
+    padding-top: 0px;
+	text-indent: -25px;
 }
 
 ol.prefixed li:before {
     content: 'J' counter(item, decimal) '. ';
     counter-increment: item;
 }
-​
-/* The <ol> needs to have its counter-reset redefined for each version you want to create. */
-ol.steps { counter-reset: item; }
-ol.steps li:before { content: 'Step ' counter(item, decimal) '. '; }
 
-ol.nodot { counter-reset: item; }
+/* The <ol> needs to have its counter-reset redefined for each version you want to create. */
+
+/* BOOK */
+ol.book { counter-reset: item; }
+ol.book li:before { content: 'B' counter(item, decimal) '. '; }
+
+/* JOURNAL */
+ol.journal { counter-reset: item; }
+ol.journal li:before { content: 'J' counter(item, decimal) '. '; }
+
+/* CONFERENCE */
+ol.conference { counter-reset: item; }
+ol.conference li:before { content: 'C' counter(item, decimal) '. '; }
+
+/* OTHERS */
+ol.other { counter-reset: item; }
+ol.other li:before { content: 'O' counter(item, decimal) '. '; }
+
+/* ol.nodot { counter-reset: item; }
 ​ol.nodot li:before { content: 'Step ' counter(item, decimal) ' '; }
 ​
 ol.styled { counter-reset: item; }
@@ -62,4 +69,4 @@ ol.styled li:before {
 	font-size: 15px;
     margin: 0 5px 0 8px;
     padding: 4px 7px;
-}
+} */
