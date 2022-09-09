@@ -35,7 +35,7 @@ By Zannatul Naim Shanta, Shamim Al Mahmud, Md. Safaith Hosain Imran, Himel Achar
 
 &nbsp;
 # I've also been involved with guiding few students of [Dr Md Zakir Hossain](https://researchers.anu.edu.au/researchers/hossain-mzx), Research Fellow, CSIRO
-0. **Machine learning to analyse omic-data for COVID-19 diagnosis and prognostication** </br>
+0. **Machine learning to analyse omic-data for COVID-19 diagnosis and prognosis** [[Related publication](./publications#liu2022machine)] </br>
 By Xuehan Liu
 0. **Diagnosing autism spectrum disorder using ensemble 3D-CNN: A preliminary study** [[Related publication](./publications#deng2022diagnosing)] </br>
 By Jingsheng Deng
