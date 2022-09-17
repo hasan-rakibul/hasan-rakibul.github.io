@@ -2,14 +2,15 @@ Title: Opportunities and Challenges of 5G Communication in Bangladesh
 Date: 2021-01-22 00:00
 Category: blogs
 Slug: 5g-in-bangladesh
+Modified: 2022-09-17 17:38
 <!-- Status: draft -->
-<!-- Modified: 2022-06-16 18:00 -->
 <!-- Tags: 5G, bangladesh -->
 <!-- Summary: 5G in Bangladesh -->
 
 Better communication, especially better internet access, is a key requirement for modern day-to-day life. Bearing that in mind, significant improvement and efficient utilization of Information and Communication Technology (ICT) is expected. Like many developing countries, Bangladesh has also made significant growth in internet access. According to the Bangladesh Telecommunication Regulatory Commission (BTRC), Bangladesh has 110.561 million internet subscribers as of November 2020 where 101.905 million uses mobile internet [1]. Thus, mobile internet is the focal point where tremendous improvement is needed. In Bangladesh, the fourth-generation (4G) network was started on 19 February 2018, however, access to mass population was not readily achieved. Still, in 2021, there are certain areas where there is no 4G coverage. Again, in most coverage areas, the internet speed is not as per the 4G standard, although the users are using 4G networks. To cope up with the modern world, and to enable state-of-the-art technologies, the telecommunication capability in Bangladesh needs up-gradation, where fifth-generation (5G) communication comes into play.
 
-![5G in smartphone](../images/5G_smartphone.jpeg)
+<p style="text-align:center"><img src="../images/5G_smartphone.jpg" alt="5G in smartphone">
+Photo by <a href="https://unsplash.com/@jamesyarema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">James Yarema</a> on <a href="https://unsplash.com/@jamesyarema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
 
 Earlier generations of mobile communication were more focused on voice, whereas 5G is more focused on mobile broadband and industrial applications. That does not mean 5G won’t improve the internet speed. In 5G, users will experience ultra-high-speed and low-latency mobile broadband connection, which will be substantially better than today’s WiFi and 4G internet. According to the International Mobile Telecommunications-2020 (IMT-2020) standard, 5G will support a peak data rate of 20 Gbps download speed with a maximum latency of 4 ms only [2]. 5G will employ advanced technology such as Heterogeneous Networks (HetNets), Device-to-Device (D2D) communication, and Cognitive Radio (CR). In HetNets, subscribers will have multiple choices to utilize any suitable network. D2D communication will allow a device to communicate with another device directly, which is not permitted in 2G/3G/4G. CR enables efficient frequency spectrum utilization by utilizing the unoccupied spectrum at a particular instance. With the help of these emerging techniques, 5G is estimated to bring a real wireless world, which is also known as the World Wide Wireless Web (WWWW). **The key opportunities that are going to be supported or improved by 5G are as follows:**
 
@@ -50,4 +51,4 @@ The opportunities of 5G are overwhelming if implemented properly to the full ext
 [1] [http://www.btrc.gov.bd/content/internet-subscribers-bangladesh-november-2020](http://www.btrc.gov.bd/content/internet-subscribers-bangladesh-november-2020) </br>
 [2] [https://en.wikipedia.org/wiki/IMT-2020](https://en.wikipedia.org/wiki/IMT-2020)
 
-_N.B.: I wrote this article as an assignment for a postgraduate course titled "Advanced Wireless Communication," which I took for my M.Sc. Eng. degree from Khulna University of Engineering & Technology (KUET). Further, it was originally published as a [LinkedIn article](https://www.linkedin.com/pulse/opportunities-challenges-5g-communication-bangladesh-hasan/)_.
+_N.B.: I wrote this article as an assignment for a postgraduate course titled "Advanced Wireless Communication," which I took for my M.Sc. Eng. degree from Khulna University of Engineering & Technology (KUET). I first published it as a [LinkedIn article](https://www.linkedin.com/pulse/opportunities-challenges-5g-communication-bangladesh-hasan/)_.
