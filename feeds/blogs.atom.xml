@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Md Rakibul HASAN (Rakib) - blogs</title><link href="https://mrh-rakib.github.io/" rel="alternate"></link><link href="https://mrh-rakib.github.io/feeds/blogs.atom.xml" rel="self"></link><id>https://mrh-rakib.github.io/</id><updated>2022-09-17T17:38:00+06:00</updated><entry><title>Opportunities and Challenges of 5G Communication in Bangladesh</title><link href="https://mrh-rakib.github.io/5g-in-bangladesh" rel="alternate"></link><published>2021-01-22T00:00:00+06:00</published><updated>2022-09-17T17:38:00+06:00</updated><author><name>Md Rakibul HASAN (Rakib)</name></author><id>tag:mrh-rakib.github.io,2021-01-22:/5g-in-bangladesh</id><summary type="html">&lt;!-- Status: draft --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Md Rakibul HASAN (Rakib) - blogs</title><link href="https://mrh-rakib.github.io/" rel="alternate"></link><link href="https://mrh-rakib.github.io/feeds/blogs.atom.xml" rel="self"></link><id>https://mrh-rakib.github.io/</id><updated>2022-09-17T17:38:00+06:00</updated><entry><title>KUET postgrad thesis template in LaTeX</title><link href="https://mrh-rakib.github.io/kuet-pg-thesis-template" rel="alternate"></link><published>2022-09-17T15:46:00+06:00</published><updated>2022-09-17T15:46:00+06:00</updated><author><name>Md Rakibul HASAN (Rakib)</name></author><id>tag:mrh-rakib.github.io,2022-09-17:/kuet-pg-thesis-template</id><summary type="html">
+&lt;p&gt;Writing a postgraduate thesis is stressful and would be horrendous without a helpful template.&lt;/p&gt;
+
+&lt;p&gt;I received my MSc Eng degree from Khulna University of Engineering &amp; Technology (KUET) in 2021. Officially, the university only provided a &lt;a href="https://www.kuet.ac.bd/images/forms/ACAF_5.pdf"&gt;PDF&lt;/a&gt;, mentioning the formatting requirement of the thesis. Writing the thesis in MS Word was …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;Writing a postgraduate thesis is stressful and would be horrendous without a helpful template.&lt;/p&gt;
+
+&lt;p&gt;I received my MSc Eng degree from Khulna University of Engineering &amp; Technology (KUET) in 2021. Officially, the university only provided a &lt;a href="https://www.kuet.ac.bd/images/forms/ACAF_5.pdf"&gt;PDF&lt;/a&gt;, mentioning the formatting requirement of the thesis. Writing the thesis in MS Word was an easy option as the guidelines were MS Word-complaint. I, however, decided to use LaTeX as I always have been pleased with the beauty and power of what LaTeX can do.&lt;/p&gt;
+
+&lt;p style="text-align:center"&gt;&lt;img src="../images/writing-laptop.jpg" alt="wiring with laptop"&gt;
+Photo by &lt;a href="https://unsplash.com/@andrewtneel?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Andrew Neel&lt;/a&gt; on &lt;a href="https://unsplash.com/s/photos/thesis-writing?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Overleaf LaTeX template&lt;/h1&gt;
+    
+&lt;p&gt;With the hope of helping future thesis writers, I now release this "unofficial" LaTeX template following the "official" guidelines as an &lt;a href="https://www.overleaf.com/latex/templates/kuet-postgrad-msc-msceng-mphil-phd-thesis-dissertation/hdvscxfmtptx"&gt;Overleaf template&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I tried my best to replicate the template in LaTeX. However, future users are requested to check for any deviations from the guidelines.&lt;/p&gt;
+
+&lt;h2&gt;Version 1.0&lt;/h2&gt;
+&lt;p&gt;The version 1.0 includes the following files:
+    &lt;ul&gt;
+        &lt;li&gt;main.tex: main tex file where the thesis/dissertation would be written&lt;/li&gt;
+        &lt;li&gt;package-settings.tex: required packages with their appropriate settings to follow the guidelines are referenced here&lt;/li&gt;
+        &lt;li&gt;all_references.bib: the bibliography file where the BibTeX of all references should be placed&lt;/li&gt;
+        &lt;li&gt;./Figures: the folder where all figures should be placed&lt;/li&gt;
+        &lt;li&gt;BOOK COVER PAGE: the cover page of the final book, usually needs to be supplied to the bookbinding office/shop. Docx version is provided as normally most bookbinding office needs an editable version in MS word, not LaTeX.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Optional commands&lt;/h3&gt;
+
+&lt;h4&gt;Writing Bengali or any other language&lt;/h4&gt;
+&lt;p&gt;Several optional commands are commented out; for example, if you wish to write some texts in Bengali with the primary language as English, you need to enable the &lt;i&gt;polyglossia&lt;/i&gt; package and related commands in the &lt;i&gt;package-settings.tex&lt;/i&gt; file.&lt;/p&gt;
+
+&lt;h4&gt;Chapter title in the page header&lt;/h4&gt;
+&lt;p&gt;Furthermore, suppose you wish to mention the chapter name in the page header. In that case, you only need to enable some &lt;i&gt;fancyheader&lt;/i&gt; commands currently commented out.&lt;/p&gt;
+
+&lt;p&gt;Related guidelines on all these tweakings are briefed within the files as comments.&lt;/p&gt;
+
+&lt;p&gt;Although implementing the stringent requirements was difficult sometimes, I loved it in the end. It was when I had to find answers to questions never asked in StackExchange, Reddit, or any related sites. The documentation of packages really helped me out.&lt;/p&gt;
+
+&lt;p&gt;Feel free to let me know of any bugs/corrections/feedback; I will be all ears. &lt;/p&gt;
+
+</content><category term="blogs"></category></entry><entry><title>Opportunities and challenges of 5G communication in Bangladesh</title><link href="https://mrh-rakib.github.io/5g-in-bangladesh" rel="alternate"></link><published>2021-01-22T00:00:00+06:00</published><updated>2022-09-17T17:38:00+06:00</updated><author><name>Md Rakibul HASAN (Rakib)</name></author><id>tag:mrh-rakib.github.io,2021-01-22:/5g-in-bangladesh</id><summary type="html">&lt;!-- Status: draft --&gt;
 &lt;!-- Tags: 5G, bangladesh --&gt;
 &lt;!-- Summary: 5G in Bangladesh --&gt;
 
