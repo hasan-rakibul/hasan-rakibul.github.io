@@ -65,10 +65,10 @@ MENUITEMS = (
     ('home', '/'),
     ('about me', '/about_me'),
     ('publications', '/publications'),
-    ('student projects', '/student_projects'),
     # ('teaching','/teaching'),
     ('activity', '/activity'),
     ('blogs','/category/blogs.html')
+    ('student corner', '/student_corner')
 )
 
 ARTICLE_PATHS = ['blogs']

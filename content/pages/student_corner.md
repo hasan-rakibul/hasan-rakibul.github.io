@@ -1,8 +1,8 @@
-Title: Student Projects
+Title: Student Corner
 
 &nbsp;
 
-# Open call(s)
+# Open call(s) in projects
 No specific vacancy for now. </br>
 However, I would be all ears to your research ideas and would be happy to guide and support.
 
@@ -47,3 +47,9 @@ By Jin Si Lam
 By Reabal Najjar & Minhaz Mahmud
 0. **An evolutionary-based neural network for distinguishing between genuine and posed anger from observers’ pupillary responses** [[Related publication](./publications#wu2022an)] </br>
 By Fan Wu
+
+&nbsp;
+# Recommended by me
+Only the following students/colleagues are referred/recommended by me for higher study/job/etc.
+
+0. Tanvir Mahmud Mahim, Undergraduate student, EEE, BRAC University
