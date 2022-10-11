@@ -67,7 +67,7 @@ MENUITEMS = (
     ('publications', '/publications'),
     # ('teaching','/teaching'),
     ('activity', '/activity'),
-    ('blogs','/category/blogs.html')
+    ('blogs','/category/blogs.html'),
     ('student corner', '/student_corner')
 )
 
