@@ -50,6 +50,7 @@ By Fan Wu
 
 &nbsp;
 # Recommended by me
-Only the following students/colleagues are referred/recommended by me for higher study/job/etc.
+Only the following students are referred/recommended by me for higher study/job/etc.
 
 0. Tanvir Mahmud Mahim, Undergraduate student, EEE, BRAC University
+0. Md. Rakib Al-Amin, Undergraduate student, EEE, BRAC University
