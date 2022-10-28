@@ -30,7 +30,7 @@ LINKS = (
         ('GitHub','https://github.com/mrh-rakib'),
         ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
         ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
-        ('publons','https://publons.com/researcher/5018248/md-rakibul-hasan/'),
+        ('Web of Science','https://www.webofscience.com/wos/author/rid/AFK-8839-2022'),
         ('e-mail','mailto:rakibul.hasan@bracu.ac.bd'),
         )
 
