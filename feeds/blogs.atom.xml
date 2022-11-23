@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Md Rakibul HASAN (Rakib) - blogs</title><link href="https://mrh-rakib.github.io/" rel="alternate"></link><link href="https://mrh-rakib.github.io/feeds/blogs.atom.xml" rel="self"></link><id>https://mrh-rakib.github.io/</id><updated>2022-09-17T17:38:00+06:00</updated><entry><title>KUET postgrad thesis template in LaTeX</title><link href="https://mrh-rakib.github.io/kuet-pg-thesis-template" rel="alternate"></link><published>2022-09-17T15:46:00+06:00</published><updated>2022-09-17T15:46:00+06:00</updated><author><name>Md Rakibul HASAN (Rakib)</name></author><id>tag:mrh-rakib.github.io,2022-09-17:/kuet-pg-thesis-template</id><summary type="html">
+&lt;p&gt;Writing a postgraduate thesis is stressful and would be horrendous without a helpful template.&lt;/p&gt;
+
+&lt;p&gt;I received my MSc Eng degree from Khulna University of Engineering &amp; Technology (KUET) in 2021. Officially, the university only provided a &lt;a href="https://www.kuet.ac.bd/images/forms/ACAF_5.pdf"&gt;PDF&lt;/a&gt;, mentioning the formatting requirement of the thesis. Writing the thesis in MS Word was …&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;Writing a postgraduate thesis is stressful and would be horrendous without a helpful template.&lt;/p&gt;
+
+&lt;p&gt;I received my MSc Eng degree from Khulna University of Engineering &amp; Technology (KUET) in 2021. Officially, the university only provided a &lt;a href="https://www.kuet.ac.bd/images/forms/ACAF_5.pdf"&gt;PDF&lt;/a&gt;, mentioning the formatting requirement of the thesis. Writing the thesis in MS Word was an easy option as the guidelines were MS Word-complaint. I, however, decided to use LaTeX as I always have been pleased with the beauty and power of what LaTeX can do.&lt;/p&gt;
+
+&lt;p style="text-align:center"&gt;&lt;img src="../images/writing-laptop.jpg" alt="wiring with laptop"&gt;
+Photo by &lt;a href="https://unsplash.com/@andrewtneel?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Andrew Neel&lt;/a&gt; on &lt;a href="https://unsplash.com/s/photos/thesis-writing?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Overleaf LaTeX template&lt;/h1&gt;
+    
+&lt;p&gt;With the hope of helping future thesis writers, I now release this "unofficial" LaTeX template following the "official" guidelines as an &lt;a href="https://www.overleaf.com/latex/templates/kuet-postgrad-msc-msceng-mphil-phd-thesis-dissertation/hdvscxfmtptx"&gt;Overleaf template&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I tried my best to replicate the template in LaTeX. However, future users are requested to check for any deviations from the guidelines.&lt;/p&gt;
+
+&lt;p&gt;In case you didn't use Overleaf earlier, it is a perfect online LaTeX editor, for which you can register &lt;a href="https://www.overleaf.com?r=a1cbce73&amp;amp;rm=d&amp;amp;rs=b"&gt;here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Version 1.0&lt;/h2&gt;
+&lt;p&gt;The version 1.0 includes the following files:
+    &lt;ul&gt;
+        &lt;li&gt;main.tex: main tex file where the thesis/dissertation would be written&lt;/li&gt;
+        &lt;li&gt;package-settings.tex: required packages with their appropriate settings to follow the guidelines are referenced here&lt;/li&gt;
+        &lt;li&gt;all_references.bib: the bibliography file where the BibTeX of all references should be placed&lt;/li&gt;
+        &lt;li&gt;./Figures: the folder where all figures should be placed&lt;/li&gt;
+        &lt;li&gt;BOOK COVER PAGE: the cover page of the final book, usually needs to be supplied to the bookbinding office/shop. Docx version is provided as normally most bookbinding office needs an editable version in MS word, not LaTeX.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h3&gt;Optional commands&lt;/h3&gt;
+
+&lt;h4&gt;Writing Bengali or any other language&lt;/h4&gt;
+&lt;p&gt;Several optional commands are commented out; for example, if you wish to write some texts in Bengali with the primary language as English, you need to enable the &lt;i&gt;polyglossia&lt;/i&gt; package and related commands in the &lt;i&gt;package-settings.tex&lt;/i&gt; file.&lt;/p&gt;
+
+&lt;h4&gt;Chapter title in the page header&lt;/h4&gt;
+&lt;p&gt;Furthermore, suppose you wish to mention the chapter name in the page header. In that case, you only need to enable some &lt;i&gt;fancyheader&lt;/i&gt; commands currently commented out.&lt;/p&gt;
+
+&lt;p&gt;Related guidelines on all these tweakings are briefed within the files as comments.&lt;/p&gt;
+
+&lt;p&gt;Although implementing the stringent requirements was difficult sometimes, I loved it in the end. It was when I had to find answers to questions never asked in StackExchange, Reddit, or any related sites. The documentation of packages really helped me out.&lt;/p&gt;
+
+&lt;p&gt;Feel free to let me know of any bugs/corrections/feedback; I will be all ears. &lt;/p&gt;
+
+</content><category term="blogs"></category></entry><entry><title>Opportunities and challenges of 5G communication in Bangladesh</title><link href="https://mrh-rakib.github.io/5g-in-bangladesh" rel="alternate"></link><published>2021-01-22T00:00:00+06:00</published><updated>2022-09-17T17:38:00+06:00</updated><author><name>Md Rakibul HASAN (Rakib)</name></author><id>tag:mrh-rakib.github.io,2021-01-22:/5g-in-bangladesh</id><summary type="html">&lt;!-- Status: draft --&gt;
+&lt;!-- Tags: 5G, bangladesh --&gt;
+&lt;!-- Summary: 5G in Bangladesh --&gt;
+
+&lt;p&gt;Better communication, especially better internet access, is a key requirement for modern day-to-day life. Bearing that in mind, significant improvement and efficient utilization of Information and Communication Technology (ICT) is expected. Like many developing countries, Bangladesh has also made significant growth in internet access. According to the Bangladesh Telecommunication Regulatory …&lt;/p&gt;</summary><content type="html">&lt;!-- Status: draft --&gt;
+&lt;!-- Tags: 5G, bangladesh --&gt;
+&lt;!-- Summary: 5G in Bangladesh --&gt;
+
+&lt;p&gt;Better communication, especially better internet access, is a key requirement for modern day-to-day life. Bearing that in mind, significant improvement and efficient utilization of Information and Communication Technology (ICT) is expected. Like many developing countries, Bangladesh has also made significant growth in internet access. According to the Bangladesh Telecommunication Regulatory Commission (BTRC), Bangladesh has 110.561 million internet subscribers as of November 2020 where 101.905 million uses mobile internet [1]. Thus, mobile internet is the focal point where tremendous improvement is needed. In Bangladesh, the fourth-generation (4G) network was started on 19 February 2018, however, access to mass population was not readily achieved. Still, in 2021, there are certain areas where there is no 4G coverage. Again, in most coverage areas, the internet speed is not as per the 4G standard, although the users are using 4G networks. To cope up with the modern world, and to enable state-of-the-art technologies, the telecommunication capability in Bangladesh needs up-gradation, where fifth-generation (5G) communication comes into play.&lt;/p&gt;
+&lt;p style="text-align:center"&gt;&lt;img src="../images/5G_smartphone.jpg" alt="5G in smartphone"&gt;
+Photo by &lt;a href="https://unsplash.com/@jamesyarema?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;James Yarema&lt;/a&gt; on &lt;a href="https://unsplash.com/@jamesyarema?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Earlier generations of mobile communication were more focused on voice, whereas 5G is more focused on mobile broadband and industrial applications. That does not mean 5G won’t improve the internet speed. In 5G, users will experience ultra-high-speed and low-latency mobile broadband connection, which will be substantially better than today’s WiFi and 4G internet. According to the International Mobile Telecommunications-2020 (IMT-2020) standard, 5G will support a peak data rate of 20 Gbps download speed with a maximum latency of 4 ms only [2]. 5G will employ advanced technology such as Heterogeneous Networks (HetNets), Device-to-Device (D2D) communication, and Cognitive Radio (CR). In HetNets, subscribers will have multiple choices to utilize any suitable network. D2D communication will allow a device to communicate with another device directly, which is not permitted in 2G/3G/4G. CR enables efficient frequency spectrum utilization by utilizing the unoccupied spectrum at a particular instance. With the help of these emerging techniques, 5G is estimated to bring a real wireless world, which is also known as the World Wide Wireless Web (WWWW). &lt;strong&gt;The key opportunities that are going to be supported or improved by 5G are as follows:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Home Automation and IoT&lt;/h3&gt;
+&lt;p&gt;The Internet of Things (IoT) is a key enabling technology of 5G where various things such as home appliances, wearable devices, and machines have access to the internet through which they can communicate with each other. Users will be able to control and monitor these things over the internet even if they are not physically close to those things. 5G communication will help to implement this amazing technology in full length.&lt;/p&gt;
+&lt;h3&gt;Industry Automation&lt;/h3&gt;
+&lt;p&gt;There are many factories in Bangladesh, such as garments, jute, cement, pharmaceuticals, etc., where garments is one of the major revenue sources. To facilitate the upcoming fourth industrial revolution, many more improvements with the proper touch of technology are required in these sectors including efficient control of machines with effective supply chain management. With the advent of 5G, Industrial IoT (IIoT) technology will be able to automate this sector, which will eventually improve the productivity and economy.&lt;/p&gt;
+&lt;h3&gt;Smart Grid&lt;/h3&gt;
+&lt;p&gt;Smart grid helps to implement an efficient and effective electric power system consisting of generation, transmission, and distribution. 5G communication needs to be employed to extract the true potential of the smart grid that involves smart metering, demand-side management, fault localization, and clearing, etc.&lt;/p&gt;
+&lt;h3&gt;Health Care&lt;/h3&gt;
+&lt;p&gt;Without a healthy life, human life is meaningless, and that’s why the health care system needs to be much more advanced. Bangladesh lacks an effective and efficient health care system that needs to be updated. The importance of health care services from a distance in different forms such as telediagnosis, telesurgery, and telerehabilitation is more pronounced in recent COVID-19 days. 5G communication will help to realize these emerging technologies in health sectors.&lt;/p&gt;
+&lt;h3&gt;Virtual Reality (VR) and Augmented Reality (AR)&lt;/h3&gt;
+&lt;p&gt;High precision and sensitivity are required in many applications including telesurgery and micro-assembly. With the help of 5G, VR technology will implement necessary object manipulation. For telemedicine, museum/tourist guides, driver assistance systems, and so on, augmentation of information will be required in the user’s field of view with AR technology that will be facilitated by 5G.&lt;/p&gt;
+&lt;p&gt;The opportunities of 5G is not limited to the above use cases. Through high-speed broadband internet at home and offices, users will be able to use data-hungry applications such as direct Full High Definition (FHD) and Ultra High Definition (UHD) streaming, online heavy-gaming, video conferencing, and so on. The cost will be less as compared to the current 3G/4G connectivity. Small and medium-sized enterprises (SMEs) and corporate businesses will avail of cloud-based software and solutions efficiently with less cost. To ensure the better quality of life of the city-dwellers, 5G powered smart cities will enable smart parking, smart waste-management system, smart street-lighting, and so on. Although Bangladesh is an agricultural country, there is a significant lack of advanced tools and technology, which might be mitigated by 5G.&lt;/p&gt;
+&lt;p&gt;Implementation of 5G-based ambitious use-cases involves significant challenges to extract the most out of it. &lt;strong&gt;The key challenges for Bangladesh are explained as follows:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Spectrum&lt;/h3&gt;
+&lt;p&gt;Spectrum is the life-blood of communication, and it is valuable and limited at the same time. To facil##itate the key features of 5G, many vacant spectra need to be available. Due to the high cost, service providers might not see the significant business benefit to realize 5G soon in Bangladesh.&lt;/p&gt;
+&lt;h3&gt;Infrastructure and QoS Support&lt;/h3&gt;
+&lt;p&gt;Necessary infrastructures to support 4G took much time in Bangladesh, and yet, there are several areas out of reach. Thus, in the same manner, new infrastructure to support 5G might be challenging, and it might need a substantial amount of time. As seen in the 4G implementation in Bangladesh, proper Quality of Service (QoS) according to standard is not maintained. Therefore, end-to-end QoS maintenance might be a big challenge.&lt;/p&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;p&gt;Since many devices will be connected to the internet and each other, security will be a big issue to maintain. With millions of users' data online in a smart health care system, privacy needs to be maintained with great caution. In D2D communication, one user’s data will be transmitted through another user’s device, where an efficient security feature must be employed to maintain privacy. In essence, proper data encryption methods need to be employed to combat hacking, jamming, and spoofing.&lt;/p&gt;
+&lt;h3&gt;Policy&lt;/h3&gt;
+&lt;p&gt;As 5G will have diverse use-case, necessary policies need to be incorporated that includes how spectrum would be utilized, how different sectors would interact with each other, how taxation will be implemented, how revenue and billing will be managed, how cloud hosting will be done, and so on.&lt;/p&gt;
+&lt;p&gt;The opportunities of 5G are overwhelming if implemented properly to the full extent. A broad range of sectors will be benefited from the advent of 5G. However, there are significant challenges that need to be resolved to facilitate this exciting technology. With the mutual collaboration of government, telecommunication companies, and policymakers, hopefully, Bangladesh will see the light of 5G soon.&lt;/p&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;p&gt;[1] &lt;a href="http://www.btrc.gov.bd/content/internet-subscribers-bangladesh-november-2020"&gt;http://www.btrc.gov.bd/content/internet-subscribers-bangladesh-november-2020&lt;/a&gt; &lt;/br&gt;
+[2] &lt;a href="https://en.wikipedia.org/wiki/IMT-2020"&gt;https://en.wikipedia.org/wiki/IMT-2020&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;N.B.: I wrote this article as an assignment for a postgraduate course titled "Advanced Wireless Communication," which I took for my M.Sc. Eng. degree from Khulna University of Engineering &amp;amp; Technology (KUET). I first published it as a &lt;a href="https://www.linkedin.com/pulse/opportunities-challenges-5g-communication-bangladesh-hasan/"&gt;LinkedIn article&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;</content><category term="blogs"></category></entry></feed>
