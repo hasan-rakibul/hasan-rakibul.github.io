@@ -1,6 +1,6 @@
 Title: About Me
 
-I'm currently a PhD student at <a href="https://research.curtin.edu.au/work-with-us/optus-centre-for-artificial-intelligence/">Optus 5G lab, a.k.a. Optus Centre for Artificial Intelligence,</a> of Curtin University, Australia. I aim to develop neural architectures to detect empathy in videos.
+I'm currently a PhD student at <a href="https://research.curtin.edu.au/work-with-us/optus-centre-for-artificial-intelligence/">Optus 5G lab, a.k.a. Optus Centre for Artificial Intelligence,</a> of Curtin University, Australia. Supervised by <a href="https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/">Professor Tom Gedeon</a>, I aim to develop neural architectures to detect empathy in videos.
 
 I'm on leave from <a href="https://www.bracu.ac.bd/">BRAC University (BRACU)</a>, Bangladesh, where I have served as a Lecturer in the Electrical and Electronic Engineering (EEE) Department for over two years. Before joining BRACU, I worked as a full-time lecturer in the EEE department of <a href="https://www.baiust.edu.bd/">Bangladesh Army International University of Science & Technology</a> for more than one and a half years.
     
