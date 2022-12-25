@@ -30,8 +30,8 @@ LINKS = (
         ('GitHub','https://github.com/mrh-rakib'),
         ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
         ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
-        ('Web of Science','https://www.webofscience.com/wos/author/rid/AFK-8839-2022'),
-        ('e-mail','mailto:rakibul.hasan@bracu.ac.bd'),
+        # ('Web of Science','https://www.webofscience.com/wos/author/rid/AFK-8839-2022'),
+        ('e-mail','mailto:MdRakibul.Hasan2@postgrad.curtin.edu.au'),
         )
 
 LINKS_WIDGET_NAME = 'find me on'
