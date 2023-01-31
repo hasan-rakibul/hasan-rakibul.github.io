@@ -1,4 +1,4 @@
-Title: About Me
+Title: About me
 
 I'm a PhD student at <a href="https://research.curtin.edu.au/work-with-us/optus-centre-for-artificial-intelligence/">Optus Centre for Artificial Intelligence</a> at Curtin University, Australia. Supervised by <a href="https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/">Professor Tom Gedeon</a> and <a href="https://staffportal.curtin.edu.au/staff/profile/view/susannah-soon-4aabe072/">Dr Susannah Soon</a>, I am developing neural architectures to detect empathy in videos.
 
