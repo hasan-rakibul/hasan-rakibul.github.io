@@ -1,30 +1,37 @@
 Title: About me
 
-I'm a PhD student at <a href="https://research.curtin.edu.au/work-with-us/optus-centre-for-artificial-intelligence/">Optus Centre for Artificial Intelligence</a> at Curtin University, Australia. Supervised by <a href="https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/">Professor Tom Gedeon</a> and <a href="https://staffportal.curtin.edu.au/staff/profile/view/susannah-soon-4aabe072/">Dr Susannah Soon</a>, I am developing neural architectures to detect empathy in videos.
+I'm a PhD student at <a href="https://research.curtin.edu.au/work-with-us/optus-centre-for-artificial-intelligence/">Optus Centre for Artificial Intelligence</a> at Curtin Perth campus. I'm fortunate to be supervised by <a href="https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/">Professor Tom Gedeon</a> and <a href="https://staffportal.curtin.edu.au/staff/profile/view/susannah-soon-4aabe072/">Dr Susannah Soon</a>, with whom I'm advancing neural architectures to detect empathy in videos. My research interest includes advancing affective computing and biological signal processing using machine and deep learning tools.
 
-I'm on leave from <a href="https://www.bracu.ac.bd/">BRAC University (BRACU)</a>, Bangladesh, where I am a Senior Lecturer in the Department of Electrical and Electronic Engineering (EEE). I have been with BRACU since October 2020. Before joining BRACU, I was a full-time lecturer in the EEE department of <a href="https://www.baiust.edu.bd/">Bangladesh Army International University of Science & Technology</a> for more than one and a half years.
-    
-I received BSc (2019) and MSc (2021) degrees in EEE from <a href="https://kuet.ac.bd/">Khulna University of Engineering & Technology (KUET), Khulna, Bangladesh</a>. I am actively involved in research on applied machine learning and biomedical signal processing.
-<!-- , internet of things, and embedded systems. As a young academician, I have several peer-reviewed publications on applied deep learning and machine learning. -->
-    
-I was a champion of the “<a href="https://www.huawei.com/minisite/seeds-for-the-future/index.html">Seeds for the Future</a> 2018” program by Huawei Technologies Co. Ltd., leading to a two-week sponsored visit to China. I'm passionate about learning new things. To date, I completed 25 certified courses on machine learning, deep learning, and data science from renowned online platforms, such as Coursera and DataCamp.
+In addition to research, I'm keen on teaching. I've been tutoring as a casual academic at Curtin. I'm on leave from <a href="https://www.bracu.ac.bd/">BRAC University</a>, Bangladesh, where I currently hold a Senior Lecturer position. I also lectured full-time at the <a href="https://www.baiust.edu.bd/">Bangladesh Army International University of Science & Technology</a>.
+
+I received BSc (2019) and MSc (2021) degrees from <a href="https://kuet.ac.bd/">Khulna University of Engineering & Technology</a>, Bangladesh. I was a champion of the "<a href="https://www.huawei.com/minisite/seeds-for-the-future/index.html">Seeds for the Future</a> 2018" program by Huawei Technologies Co. Ltd., leading to a two-week sponsored visit to China.
+
+I am a big fan of open online learning and have completed over 25 certified courses on machine learning, deep learning, and data science from Coursera, DataCamp, etc.
 
 &nbsp;
 
 # Research interests
+- Affective computing
 - Machine learning applications
 - Biomedical signal processing
-- Internet of things
-- Embedded systems
 
 &nbsp;
 
 # Teaching
-At [BRAC University](https://www.bracu.ac.bd/), among several courses, I loved teaching&mdash;
+At [Curtin University](https://www.curtin.edu.au/), I'm tutoring &ndash;
 
-0. [EEE365/ECE365 Microprocessor and Interfacing](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE365+2022_Spring/about) [Summer 2021 - Fall 2022]
-0. [EEE365/ECE366 Microprocessor and Interfacing Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE366+2022_Spring/about) [Fall 2020 - Fall 2022]
-0. [EEE103/ECE103/CSE161 Computer Programming](https://bux.bracu.ac.bd/courses/course-v1:buX+CSE161+2022_Spring/about) [Summer 2021 - Fall 2021]
-0. [EEE103IL/ECE103IL/CSE162 Computer Programming Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE103L+2022_Spring/about) [Summer 2021 - Fall 2022]
+0. [ICTE3002/5001 Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/) laboratory [Semester 1, 2023]
+0. [COMP1000 Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) laboratory [Semester 1, 2023]
 
-Previously at [Bangladesh Army International University of Science and Technology (BAIUST)](https://www.baiust.edu.bd/), among several courses, I enjoyed teaching (1) Computer Fundamentals and Programming, and (2) Digital Electronics and Logic Design courses.
+&nbsp;
+
+At [BRAC University](https://www.bracu.ac.bd/), among several courses, I loved teaching &ndash;
+
+0. [EEE365/ECE365 Microprocessor and Interfacing](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE365+2022_Spring/about) [Summer 2021 &ndash; Fall 2022]
+0. [EEE365/ECE366 Microprocessor and Interfacing Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE366+2022_Spring/about) [Fall 2020 &ndash; Fall 2022]
+0. [EEE103/ECE103/CSE161 Computer Programming](https://bux.bracu.ac.bd/courses/course-v1:buX+CSE161+2022_Spring/about) [Summer 2021 &ndash; Fall 2021]
+0. [EEE103IL/ECE103IL/CSE162 Computer Programming Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE103L+2022_Spring/about) [Summer 2021 &ndash; Fall 2022]
+
+&nbsp;
+
+At [Bangladesh Army International University of Science and Technology (BAIUST)](https://www.baiust.edu.bd/), among several courses, I enjoyed teaching (1) Computer Fundamentals and Programming, and (2) Digital Electronics and Logic Design courses.
