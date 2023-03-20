@@ -15,7 +15,7 @@ git config --global user.email "EMAIL"
 ```
 ### Install pelican, markdown and ghp-import
 ```
-conda install -c conda-forge "pelican[markdown]" ghp-import
+conda install -c conda-forge pelican markdown ghp-import
 ```
 ### Post-commit hook to auto-update the website with commit
 ```
