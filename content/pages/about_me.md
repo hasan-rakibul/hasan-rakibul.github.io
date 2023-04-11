@@ -11,9 +11,9 @@ I am a big fan of open online learning and have completed over 25 certified cou
 &nbsp;
 
 # Research interests
+- Deep learning
+- Multimodal signal processing
 - Affective computing
-- Machine learning applications
-- Biomedical signal processing
 
 &nbsp;
 
