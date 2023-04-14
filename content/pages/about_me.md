@@ -1,12 +1,12 @@
 Title: About me
 
-I'm a PhD student at <a href="https://research.curtin.edu.au/work-with-us/optus-centre-for-artificial-intelligence/">Optus Centre for Artificial Intelligence</a> at Curtin Perth campus. I'm fortunate to be supervised by <a href="https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/">Professor Tom Gedeon</a> and <a href="https://staffportal.curtin.edu.au/staff/profile/view/susannah-soon-4aabe072/">Dr Susannah Soon</a>, with whom I'm advancing neural architectures to detect empathy in videos. My research interest includes advancing affective computing and biological signal processing using machine and deep learning tools.
+I'm a PhD student at <a href="https://research.curtin.edu.au/work-with-us/optus-centre-for-artificial-intelligence/">Optus Centre for Artificial Intelligence</a> at Curtin Perth campus. I'm fortunate to be supervised by <a href="https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/">Professor Tom Gedeon</a> and <a href="https://staffportal.curtin.edu.au/staff/profile/view/susannah-soon-4aabe072/">Dr Susannah Soon</a>, with whom I'm investigating deep learning technologies to detect empathy in videos. My overall research interest includes advancing affective computing and multimodal signal processing using deep learning algorithms.
 
 In addition to research, I'm keen on teaching. I've been tutoring as a casual academic at Curtin. I'm on leave from <a href="https://www.bracu.ac.bd/">BRAC University</a>, Bangladesh, where I currently hold a Senior Lecturer position. I also lectured full-time at the <a href="https://www.baiust.edu.bd/">Bangladesh Army International University of Science & Technology</a>.
 
 I received BSc (2019) and MSc (2021) degrees from <a href="https://kuet.ac.bd/">Khulna University of Engineering & Technology</a>, Bangladesh. I was a champion of the "<a href="https://www.huawei.com/minisite/seeds-for-the-future/index.html">Seeds for the Future</a> 2018" program by Huawei Technologies Co. Ltd., leading to a two-week sponsored visit to China.
 
-I am a big fan of open online learning and have completed over 25 certified courses on machine learning, deep learning, and data science from Coursera, DataCamp, etc.
+I am a big fan of open online learning and have completed over 25 certified courses on machine learning, deep learning, and data science from Coursera, DataCamp and other similar platforms.
 
 &nbsp;
 
@@ -22,6 +22,10 @@ At [Curtin University](https://www.curtin.edu.au/), I'm tutoring &ndash;
 
 0. [ICTE3002/5001 Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/) laboratory [Semester 1, 2023]
 0. [COMP1000 Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) laboratory [Semester 1, 2023]
+
+At [Murdoch University](https://www.murdoch.edu.au/), I'm tutoring &ndash;
+
+0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/rakib-ul/AI-cybersec) laboratory [Semester 1, 2023]
 
 &nbsp;
 
