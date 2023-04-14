@@ -27,7 +27,7 @@ LINKS = (
         ('Google Scholar','https://scholar.google.com.au/citations?user=DuCQ8goAAAAJ&hl=en'),
         ('ReserchGate','https://www.researchgate.net/profile/Md-Rakibul-Hasan-10'),
         ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
-        ('GitHub','https://github.com/mrh-rakib'),
+        ('GitHub','https://github.com/hasan-rakibul'),
         ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
         ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
         # ('Web of Science','https://www.webofscience.com/wos/author/rid/AFK-8839-2022'),
