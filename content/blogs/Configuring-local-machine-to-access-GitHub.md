@@ -2,7 +2,7 @@ Title: Configuring local machine to access GitHub
 Date: 2023-04-16 00:00
 Category: blogs
 
-Personal not to configure local machine to access (pull, push, etc.) GitHub private and public repositories.
+Personal note of configuring local machine to access (pull, push, etc.) GitHub private and public repositories.
 
 # Local machine &ndash; generate SSH key
 - [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux)
