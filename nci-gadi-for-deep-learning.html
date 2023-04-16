@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>NCI Gadi for deep learning</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <meta name="description" content="Personal note to access NCI Gadi cluster for deep learning workflow. Access from ARE (Australian Research Environment) Login at..." />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rakibul Hasan</a></h1>
+                <nav><ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/about_me">about me</a></li>
+                    <li><a href="/publications">publications</a></li>
+                    <li><a href="/activity">activity</a></li>
+                    <li><a href="/category/blogs.html">blogs</a></li>
+                    <li><a href="/student_corner">student corner</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/nci-gadi-for-deep-learning" rel="bookmark"
+           title="Permalink to NCI Gadi for deep learning">NCI Gadi for deep learning</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2023-04-16T00:00:00+08:00">
+                Published: Sun 16 April 2023
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
+        </address>
+<p>In <a href="/category/blogs.html">blogs</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Personal note to access NCI Gadi cluster for deep learning workflow.</p>
+<h1>Access from ARE (Australian Research Environment)</h1>
+<ul>
+<li>Login at <a href="https://are.nci.org.au/">https://are.nci.org.au/</a><ul>
+<li>Jupyterlab (gpuvolta) is good for running basic programs, but I couldn't find any way to install new package (such as pandas) as it has no internet access</li>
+<li>Virtual Desktop (GPU) seems better to me<ul>
+<li>Queue should be <em>analysis</em> to have internet access<ul>
+<li>As it has internet access, new modules/packages (conda tested) can be installed unless it requires sudo access</li>
+</ul>
+</li>
+<li>It gives VNC access to <a href="https://rockylinux.org/">Rocky Linux</a> </li>
+</ul>
+</li>
+<li>Be aware of your remaining Walltime as it automatically disconnects the session when time ends</li>
+</ul>
+</li>
+</ul>
+<h1>Access from Gadi terminal &ndash; not required if ARE is sufficient</h1>
+<h2>Access login node from a linux terminal</h2>
+<p><code>ssh &lt;username&gt;@gadi.nci.org.au</code></p>
+<h2>Modules</h2>
+<ul>
+<li>Check avialable moduels<ul>
+<li><code>module avail &lt;search string&gt;</code></li>
+</ul>
+</li>
+<li>Load module<ul>
+<li><code>module load &lt;module name/version(preferable)&gt;</code></li>
+</ul>
+</li>
+<li>Check loaded moduels<ul>
+<li><code>module list</code></li>
+</ul>
+</li>
+<li>Unload module<ul>
+<li><code>module unload &lt;module name&gt;</code></li>
+</ul>
+</li>
+<li>Install modules from requirements.txt<ul>
+<li>Install from login node as qsub computing node has no internet access</li>
+<li>From file<ul>
+<li><code>python3 -m pip install -v --no-binary :all: --user -r requirements.txt</code></li>
+</ul>
+</li>
+<li>A single package<ul>
+<li><code>python3 -m pip install -v --no-binary :all: --user &lt;module name&gt;</code></li>
+</ul>
+</li>
+<li>if binary install is unavailable, omit <code>--no-binary :all:</code></li>
+</ul>
+</li>
+</ul>
+<h2>File transfer from local to home directory of at Gadi</h2>
+<p><code>scp &lt;file with path&gt; &lt;username&gt;@gadi-dm.nci.org.au:&lt;home directory&gt;</code></p>
+<ul>
+<li>Above command to be run from local machine</li>
+<li><em>home directory</em> would be something like <code>/home/&lt;some number&gt;/&lt;username&gt;</code></li>
+<li><code>pwd</code> to check <em>home directory</em> at Gadi login/compute note</li>
+</ul>
+<h2>Submitting interactive job (accessing a compute node where I can interactively use resources, i.e., run programs)</h2>
+<p><code>qsub -I -qgpuvolta  -P&lt;project id&gt; -lwalltime=01:00:00,ncpus=48,ngpus=4,mem=48GB,jobfs=200GB,storage=gdata/&lt;project id&gt;,wd</code></p>
+<ul>
+<li>No internet access after login :(<ul>
+<li>So, if the program requires internet, it won't work!</li>
+</ul>
+</li>
+</ul>
+<h1>Manuals/helping resources</h1>
+<ul>
+<li><a href="https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi">https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi</a></li>
+<li><a href="https://opus.nci.org.au/display/Help/Python">https://opus.nci.org.au/display/Help/Python</a></li>
+<li><a href="https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide">https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide</a></li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>find me on</h2>
+                        <ul>
+                            <li><a href="https://scholar.google.com.au/citations?user=DuCQ8goAAAAJ&hl=en">Google Scholar</a></li>
+                            <li><a href="https://www.researchgate.net/profile/Md-Rakibul-Hasan-10">ReserchGate</a></li>
+                            <li><a href="https://www.linkedin.com/in/m-rakibul">LinkedIn</a></li>
+                            <li><a href="https://github.com/hasan-rakibul">GitHub</a></li>
+                            <li><a href="https://orcid.org/0000-0003-2565-5321">ORCiD</a></li>
+                            <li><a href="https://www.bracu.ac.bd/about/people/md-rakibul-hasan">BRAC University</a></li>
+                            <li><a href="mailto:Rakibul.Hasan@curtin.edu.au">e-mail</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                        &copy; 2022 &ndash; 2023 Md Rakibul Hasan </br>
+                        Proudly developed by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+                <!-- <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p> -->
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
