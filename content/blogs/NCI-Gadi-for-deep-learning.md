@@ -10,8 +10,14 @@ Personal note to access NCI Gadi cluster for deep learning workflow.
     - Virtual Desktop (GPU) seems better to me
         - Queue should be *analysis* to have internet access
             - As it has internet access, new modules/packages (conda tested) can be installed unless it requires sudo access
+        - Setup VNC resolution as per your monitor, otherwise it will be hard-to-see all corners
         - It gives VNC access to [Rocky Linux](https://rockylinux.org/) 
     - Be aware of your remaining Walltime as it automatically disconnects the session when time ends
+    
+## Python module/package installation
+- User's home directory limit is 10GB only, so better not to install at home directory (otherwise, *disk quota exceeded* error will happen.)
+- Can be installed at `/scratch/<project id>/` (I installed *anaconda* at `/scratch/<project id>/<username>/anaconda3`)
+    - Pytorch needs to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
 
 # Access from Gadi terminal &ndash; not required if ARE is sufficient
 ## Access login node from a linux terminal
