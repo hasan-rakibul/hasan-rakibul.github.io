@@ -47,13 +47,29 @@
 <li>Jupyterlab (gpuvolta) is good for running basic programs, but I couldn't find any way to install new package (such as pandas) as it has no internet access</li>
 <li>Virtual Desktop (GPU) seems better to me<ul>
 <li>Queue should be <em>analysis</em> to have internet access<ul>
-<li>As it has internet access, new modules/packages (conda tested) can be installed unless it requires sudo access</li>
+<li>As it has internet access, new modules/packages (conda tested) can be installed from compute node unless it requires sudo access</li>
 </ul>
 </li>
+<li><em>gpuvolta</em> node can also be used if the program doesn't need internet. In that case, necessay modules/packages can be installed from login node.</li>
+<li>Setup VNC resolution as per your monitor (e.g., 1920x1080), otherwise it will be hard to see all corners</li>
+<li>From <em>advanced options</em>, enter a reasonable <em>Jobfs size</em> (default is 100MB, which is insufficient). System will crash if more than allocated <em>jobfs</em> is used.</li>
 <li>It gives VNC access to <a href="https://rockylinux.org/">Rocky Linux</a> </li>
 </ul>
 </li>
 <li>Be aware of your remaining Walltime as it automatically disconnects the session when time ends</li>
+<li>File management can also be done from ARE web portal</li>
+</ul>
+</li>
+</ul>
+<h2>Python module/package installation</h2>
+<ul>
+<li>User's home directory limit is 10GB only, so better not to install at home directory (otherwise, <em>disk quota exceeded</em> error will happen.)</li>
+<li>Can be installed at <code>/scratch/&lt;project id&gt;/</code> (I installed <em>miniconda</em> at <code>/scratch/&lt;project id&gt;/&lt;username&gt;/miniconda3</code>)<ul>
+<li>Pytorch needs to be (re)installed as per <a href="https://pytorch.org/get-started/locally/">pytorch website</a>, otherwise default anaconda pytorch doesn't use GPU</li>
+<li>But be aware of inode (number of files) usage in <code>/scratch/</code> directory because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")<ul>
+<li>I installed <em>anaconda</em> and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled anaconda) from login node (Gadi terminal)</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
