@@ -9,15 +9,20 @@ Personal note to access NCI Gadi cluster for deep learning workflow.
     - Jupyterlab (gpuvolta) is good for running basic programs, but I couldn't find any way to install new package (such as pandas) as it has no internet access
     - Virtual Desktop (GPU) seems better to me
         - Queue should be *analysis* to have internet access
-            - As it has internet access, new modules/packages (conda tested) can be installed unless it requires sudo access
-        - Setup VNC resolution as per your monitor, otherwise it will be hard-to-see all corners
+            - As it has internet access, new modules/packages (conda tested) can be installed from compute node unless it requires sudo access
+        - *gpuvolta* node can also be used if the program doesn't need internet. In that case, necessay modules/packages can be installed from login node.
+        - Setup VNC resolution as per your monitor (e.g., 1920x1080), otherwise it will be hard to see all corners
+        - From *advanced options*, enter a reasonable *Jobfs size* (default is 100MB, which is insufficient). System will crash if more than allocated *jobfs* is used.
         - It gives VNC access to [Rocky Linux](https://rockylinux.org/) 
     - Be aware of your remaining Walltime as it automatically disconnects the session when time ends
+    - File management can also be done from ARE web portal
     
 ## Python module/package installation
 - User's home directory limit is 10GB only, so better not to install at home directory (otherwise, *disk quota exceeded* error will happen.)
-- Can be installed at `/scratch/<project id>/` (I installed *anaconda* at `/scratch/<project id>/<username>/anaconda3`)
+- Can be installed at `/scratch/<project id>/` (I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`)
     - Pytorch needs to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
+    - But be aware of inode (number of files) usage in `/scratch/` directory because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")
+        - I installed *anaconda* and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled anaconda) from login node (Gadi terminal)
 
 # Access from Gadi terminal &ndash; not required if ARE is sufficient
 ## Access login node from a linux terminal
