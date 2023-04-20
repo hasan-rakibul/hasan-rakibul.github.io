@@ -2,15 +2,14 @@ Title: NCI Gadi for deep learning
 Date: 2023-04-16 00:00
 Category: blogs
 
-Personal note to access NCI Gadi cluster for deep learning workflow.
+Personal note to access NCI Gadi cluster for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
 
 # Access from ARE (Australian Research Environment)
 - Login at [https://are.nci.org.au/](https://are.nci.org.au/)
-    - Jupyterlab (gpuvolta) is good for running basic programs, but I couldn't find any way to install new package (such as pandas) as it has no internet access
-    - Virtual Desktop (GPU) seems better to me
-        - Queue should be *analysis* to have internet access
-            - As it has internet access, new modules/packages (conda tested) can be installed from compute node unless it requires sudo access
-        - *gpuvolta* node can also be used if the program doesn't need internet. In that case, necessay modules/packages can be installed from login node.
+    - Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access.
+    - Virtual Desktop (GPU)
+        - Queue can be either *analysis* or *gpuvolta*. Now, both have internet access. *gpuvolta* allow more GPU than *analysis*
+            - As it has internet access, new modules/packages can be installed from compute node unless it requires sudo access
         - Setup VNC resolution as per your monitor (e.g., 1920x1080), otherwise it will be hard to see all corners
         - From *advanced options*, enter a reasonable *Jobfs size* (default is 100MB, which is insufficient). System will crash if more than allocated *jobfs* is used.
         - It gives VNC access to [Rocky Linux](https://rockylinux.org/) 
@@ -18,17 +17,16 @@ Personal note to access NCI Gadi cluster for deep learning workflow.
     - File management can also be done from ARE web portal
     
 ## Python module/package installation
+- NCI user support: "`/g/data/` should be the best place for installing software packages"
+- NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."
 - User's home directory limit is 10GB only, so better not to install at home directory (otherwise, *disk quota exceeded* error will happen.)
-- Can be installed at `/scratch/<project id>/` (I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`)
-    - Pytorch needs to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
-    - But be aware of inode (number of files) usage in `/scratch/` directory because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")
+- Initially, I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`)
+    - **Not a good option because file expiry policy (auto-delete) is in place for `/scratch`**
+    - If conda is installed, Pytorch needs to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
+    - If installed in `/scratch/`, be aware of inode (number of files) usage because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")
         - I installed *anaconda* and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled anaconda) from login node (Gadi terminal)
 
-# Access from Gadi terminal &ndash; not required if ARE is sufficient
-## Access login node from a linux terminal
-`ssh <username>@gadi.nci.org.au`
-
-## Modules
+# Modules
 - Check avialable moduels
     - `module avail <search string>`
 - Load module
@@ -45,12 +43,18 @@ Personal note to access NCI Gadi cluster for deep learning workflow.
         - `python3 -m pip install -v --no-binary :all: --user <module name>`
     - if binary install is unavailable, omit `--no-binary :all:`
 
-## File transfer from local to home directory of at Gadi
+# File transfer from local machine to home directory at Gadi
 `scp <file with path> <username>@gadi-dm.nci.org.au:<home directory>`
 
 - Above command to be run from local machine
 - *home directory* would be something like `/home/<some number>/<username>`
 - `pwd` to check *home directory* at Gadi login/compute note
+
+&nbsp;
+
+# Access from Gadi terminal &ndash; not required if ARE is sufficient
+## Access login node from a linux terminal
+`ssh <username>@gadi.nci.org.au`
 
 ## Submitting interactive job (accessing a compute node where I can interactively use resources, i.e., run programs)
 `qsub -I -qgpuvolta  -P<project id> -lwalltime=01:00:00,ncpus=48,ngpus=4,mem=48GB,jobfs=200GB,storage=gdata/<project id>,wd`
