@@ -44,10 +44,11 @@
 <h1>Access from ARE (Australian Research Environment)</h1>
 <ul>
 <li>Login at <a href="https://are.nci.org.au/">https://are.nci.org.au/</a><ul>
-<li>Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access.</li>
+<li>Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access but not fast like <em>analysis</em></li>
 <li>Virtual Desktop (GPU)<ul>
-<li>Queue can be either <em>analysis</em> or <em>gpuvolta</em>. Now, both have internet access. <em>gpuvolta</em> allow more GPU than <em>analysis</em><ul>
-<li>As it has internet access, new modules/packages can be installed from compute node unless it requires sudo access</li>
+<li>Not smooth/fast as compared to Jupyterlab</li>
+<li>Queue can be either <em>analysis</em> or <em>gpuvolta</em>. Now, both have internet access but speed is very limited in <em>gpuvolta</em>. <em>gpuvolta</em> allow more GPU than <em>analysis</em><ul>
+<li>As they have internet access, new modules/packages can be installed from compute node unless it requires sudo access</li>
 </ul>
 </li>
 <li>Setup VNC resolution as per your monitor (e.g., 1920x1080), otherwise it will be hard to see all corners</li>
@@ -107,12 +108,12 @@
 </ul>
 </li>
 </ul>
-<h1>File transfer from local machine to home directory at Gadi</h1>
-<p><code>scp &lt;file with path&gt; &lt;username&gt;@gadi-dm.nci.org.au:&lt;home directory&gt;</code></p>
+<h1>File transfer from local machine to Gadi</h1>
+<p><code>scp &lt;file with path&gt; &lt;username&gt;@gadi-dm.nci.org.au:&lt;directory&gt;</code></p>
 <ul>
 <li>Above command to be run from local machine</li>
-<li><em>home directory</em> would be something like <code>/home/&lt;some number&gt;/&lt;username&gt;</code></li>
-<li><code>pwd</code> to check <em>home directory</em> at Gadi login/compute note</li>
+<li><em>directory</em> would be something like <code>/home/&lt;some number&gt;/&lt;username&gt;</code> for home directory</li>
+<li><code>pwd</code> to check <em>current directory</em> at Gadi login/compute note</li>
 </ul>
 <p>&nbsp;</p>
 <h1>Access from Gadi terminal &ndash; not required if ARE is sufficient</h1>
