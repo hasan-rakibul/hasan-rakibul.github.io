@@ -6,10 +6,11 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 
 # Access from ARE (Australian Research Environment)
 - Login at [https://are.nci.org.au/](https://are.nci.org.au/)
-    - Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access.
+    - Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access but not fast like *analysis*
     - Virtual Desktop (GPU)
-        - Queue can be either *analysis* or *gpuvolta*. Now, both have internet access. *gpuvolta* allow more GPU than *analysis*
-            - As it has internet access, new modules/packages can be installed from compute node unless it requires sudo access
+        - Not smooth/fast as compared to Jupyterlab
+        - Queue can be either *analysis* or *gpuvolta*. Now, both have internet access but speed is very limited in *gpuvolta*. *gpuvolta* allow more GPU than *analysis*
+            - As they have internet access, new modules/packages can be installed from compute node unless it requires sudo access
         - Setup VNC resolution as per your monitor (e.g., 1920x1080), otherwise it will be hard to see all corners
         - From *advanced options*, enter a reasonable *Jobfs size* (default is 100MB, which is insufficient). System will crash if more than allocated *jobfs* is used.
         - It gives VNC access to [Rocky Linux](https://rockylinux.org/) 
@@ -43,12 +44,12 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
         - `python3 -m pip install -v --no-binary :all: --user <module name>`
     - if binary install is unavailable, omit `--no-binary :all:`
 
-# File transfer from local machine to home directory at Gadi
-`scp <file with path> <username>@gadi-dm.nci.org.au:<home directory>`
+# File transfer from local machine to Gadi
+`scp <file with path> <username>@gadi-dm.nci.org.au:<directory>`
 
 - Above command to be run from local machine
-- *home directory* would be something like `/home/<some number>/<username>`
-- `pwd` to check *home directory* at Gadi login/compute note
+- *directory* would be something like `/home/<some number>/<username>` for home directory
+- `pwd` to check *current directory* at Gadi login/compute note
 
 &nbsp;
 
