@@ -44,12 +44,17 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
         - `python3 -m pip install -v --no-binary :all: --user <module name>`
     - if binary install is unavailable, omit `--no-binary :all:`
 
-# File transfer from local machine to Gadi
+# File transfer between local machine and Gadi
 `scp <file with path> <username>@gadi-dm.nci.org.au:<directory>`
-
-- Above command to be run from local machine
-- *directory* would be something like `/home/<some number>/<username>` for home directory
+    - Above command to be run from local machine to copy from local machine to Gadi
+    - `gadi-dm` specifies data-mover (or something), which doesn't have time/cpu-limitation like login node
+    - *directory* cane be something like `/home/<some number>/<username>` for home directory
 - `pwd` to check *current directory* at Gadi login/compute note
+- It's recommended to use `copyq` for large data transfer "as there is limited internet bandwidth available for jobs in the normal queues" 
+- We can also use `rsync` (which can be resumed)
+
+# Other important commands
+- `nci_account`: check storage and compute allocation with usage
 
 &nbsp;
 
@@ -63,7 +68,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 - No internet access after login :(
     - So, if the program requires internet, it won't work!
 
-# Manuals/helping resources
+# Manuals / helpful resources
 - [https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi](https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi)
 - [https://opus.nci.org.au/display/Help/Python](https://opus.nci.org.au/display/Help/Python)
 - [https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide](https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide)
