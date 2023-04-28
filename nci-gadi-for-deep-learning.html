@@ -108,12 +108,17 @@
 </ul>
 </li>
 </ul>
-<h1>File transfer from local machine to Gadi</h1>
-<p><code>scp &lt;file with path&gt; &lt;username&gt;@gadi-dm.nci.org.au:&lt;directory&gt;</code></p>
+<h1>File transfer between local machine and Gadi</h1>
+<p><code>scp &lt;file with path&gt; &lt;username&gt;@gadi-dm.nci.org.au:&lt;directory&gt;</code>
+    - Above command to be run from local machine to copy from local machine to Gadi
+    - <code>gadi-dm</code> specifies data-mover (or something), which doesn't have time/cpu-limitation like login node
+    - <em>directory</em> cane be something like <code>/home/&lt;some number&gt;/&lt;username&gt;</code> for home directory
+- <code>pwd</code> to check <em>current directory</em> at Gadi login/compute note
+- It's recommended to use <code>copyq</code> for large data transfer "as there is limited internet bandwidth available for jobs in the normal queues" 
+- We can also use <code>rsync</code> (which can be resumed)</p>
+<h1>Other important commands</h1>
 <ul>
-<li>Above command to be run from local machine</li>
-<li><em>directory</em> would be something like <code>/home/&lt;some number&gt;/&lt;username&gt;</code> for home directory</li>
-<li><code>pwd</code> to check <em>current directory</em> at Gadi login/compute note</li>
+<li><code>nci_account</code>: check storage and compute allocation with usage</li>
 </ul>
 <p>&nbsp;</p>
 <h1>Access from Gadi terminal &ndash; not required if ARE is sufficient</h1>
@@ -127,7 +132,7 @@
 </ul>
 </li>
 </ul>
-<h1>Manuals/helping resources</h1>
+<h1>Manuals / helpful resources</h1>
 <ul>
 <li><a href="https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi">https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi</a></li>
 <li><a href="https://opus.nci.org.au/display/Help/Python">https://opus.nci.org.au/display/Help/Python</a></li>
