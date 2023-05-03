@@ -56,6 +56,11 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 # Other important commands
 - `nci_account`: check storage and compute allocation with usage
 
+# Service unit (SU) calculation
+- Number of cpu cores = 12 * number of gpu
+- For gpuvolta queue, SU estimate = 3 SUs/core/h
+    - E.g., if I use 4 GPUs for 8 hours, SUs = 3\*4\*12\*8 = 1152 SUs
+
 &nbsp;
 
 # Access from Gadi terminal &ndash; not required if ARE is sufficient
