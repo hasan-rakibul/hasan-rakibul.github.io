@@ -120,6 +120,14 @@
 <ul>
 <li><code>nci_account</code>: check storage and compute allocation with usage</li>
 </ul>
+<h1>Service unit (SU) calculation</h1>
+<ul>
+<li>Number of cpu cores = 12 * number of gpu</li>
+<li>For gpuvolta queue, SU estimate = 3 SUs/core/h<ul>
+<li>E.g., if I use 4 GPUs for 8 hours, SUs = 3*4*12*8 = 1152 SUs</li>
+</ul>
+</li>
+</ul>
 <p>&nbsp;</p>
 <h1>Access from Gadi terminal &ndash; not required if ARE is sufficient</h1>
 <h2>Access login node from a linux terminal</h2>
