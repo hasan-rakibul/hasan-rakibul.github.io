@@ -16,16 +16,50 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
         - It gives VNC access to [Rocky Linux](https://rockylinux.org/) 
     - Be aware of your remaining Walltime as it automatically disconnects the session when time ends
     - File management can also be done from ARE web portal
+## More on Jupyterlab
+- By default, it will use start from apps directory: `/apps/jupyterlab/3.4.3-py3.9/bin/jupyter`
+- If I have it installed in another directory, it will start from there, e.g., `/scratch/<custom-installed-dir>/bin/jupyter`
+    - And it will automatically have all the installed package from my custom-installed-dir
     
 ## Python module/package installation
 - NCI user support: "`/g/data/` should be the best place for installing software packages"
 - NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."
 - User's home directory limit is 10GB only, so better not to install at home directory (otherwise, *disk quota exceeded* error will happen.)
-- Initially, I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`)
+- Initially, I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`
     - **Not a good option because file expiry policy (auto-delete) is in place for `/scratch`**
     - If conda is installed, Pytorch needs to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
     - If installed in `/scratch/`, be aware of inode (number of files) usage because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")
-        - I installed *anaconda* and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled anaconda) from login node (Gadi terminal)
+        - I installed *anaconda* and later *miniconda* and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled) from login node (Gadi terminal)
+- NCI recommended installation using `pip` command (so much pain!) on `/g/data`
+    
+    NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my experience (especially pandas). Anyway, to compile (or, **no-binary** install):
+    ```
+    python3 -m pip install -v --no-binary :all: --prefix=/g/data/<new-dir> <package_name>
+    ```
+    
+    If compiling fails:
+    
+    ```
+    python3 -m pip install -v --prefix=/g/data/<new-dir> <package_name>
+    ```
+    
+    Check site-package directory and add it to `PYTHONPATH`. In my case, I added the following in `~/.bashrc` (once).
+    
+    ```
+    export PYTHONPATH=/g/data/<new-dir>/lib/python3.9/site-packages:$PYTHONPATH 
+    ```
+
+- Alternaticely, I preferreed venv approach. Inside `g/data`
+
+    ```
+    python3 -m venv <env-name>
+    source <env-name>/bin/activate
+    ```
+    
+    To upgrade pip: `<env_name>/bin/python3 -m pip install --upgrade pip`
+
+    And then install without any prefix path. It will automatically install on `/g/data` if the env is activated.
+    
 
 &nbsp;
 # Modules
