@@ -27,6 +27,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     - If installed in `/scratch/`, be aware of inode (number of files) usage because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")
         - I installed *anaconda* and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled anaconda) from login node (Gadi terminal)
 
+&nbsp;
 # Modules
 - Check avialable moduels
     - `module avail <search string>`
@@ -44,6 +45,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
         - `python3 -m pip install -v --no-binary :all: --user <module name>`
     - if binary install is unavailable, omit `--no-binary :all:`
 
+&nbsp;
 # File transfer between local machine and Gadi
 `scp <file with path> <username>@gadi-dm.nci.org.au:<directory>`
     - Above command to be run from local machine to copy from local machine to Gadi
@@ -53,26 +55,30 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 - It's recommended to use `copyq` for large data transfer "as there is limited internet bandwidth available for jobs in the normal queues" 
 - We can also use `rsync` (which can be resumed)
 
+&nbsp;
 # Other important commands
 - `nci_account`: check storage and compute allocation with usage
 
+&nbsp;
 # Service unit (SU) calculation
+For gpuvolta queue,
 - Number of cpu cores = 12 * number of gpu
-- For gpuvolta queue, SU estimate = 3 SUs/core/h
-    - E.g., if I use 4 GPUs for 8 hours, SUs = 3\*4\*12\*8 = 1152 SUs
+- SU estimate = 3 SUs/core/h
+    - So, using 4 GPUs for 8 hours, SUs = 3\*4\*12\*8 = 1152 SUs
 
 &nbsp;
 
-# Access from Gadi terminal &ndash; not required if ARE is sufficient
+# Access Gadi terminal &ndash; not required if ARE is sufficient
 ## Access login node from a linux terminal
 `ssh <username>@gadi.nci.org.au`
 
-## Submitting interactive job (accessing a compute node where I can interactively use resources, i.e., run programs)
+## Submit interactive job (accessing a compute node where I can interactively use resources, i.e., run programs)
 `qsub -I -qgpuvolta  -P<project id> -lwalltime=01:00:00,ncpus=48,ngpus=4,mem=48GB,jobfs=200GB,storage=gdata/<project id>,wd`
 
 - No internet access after login :(
     - So, if the program requires internet, it won't work!
 
+&nbsp;
 # Manuals / helpful resources
 - [https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi](https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi)
 - [https://opus.nci.org.au/display/Help/Python](https://opus.nci.org.au/display/Help/Python)
