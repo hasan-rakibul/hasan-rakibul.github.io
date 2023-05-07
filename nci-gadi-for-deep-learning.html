@@ -76,6 +76,7 @@
 </ul>
 </li>
 </ul>
+<p>&nbsp;</p>
 <h1>Modules</h1>
 <ul>
 <li>Check avialable moduels<ul>
@@ -108,6 +109,7 @@
 </ul>
 </li>
 </ul>
+<p>&nbsp;</p>
 <h1>File transfer between local machine and Gadi</h1>
 <p><code>scp &lt;file with path&gt; &lt;username&gt;@gadi-dm.nci.org.au:&lt;directory&gt;</code>
     - Above command to be run from local machine to copy from local machine to Gadi
@@ -116,23 +118,22 @@
 - <code>pwd</code> to check <em>current directory</em> at Gadi login/compute note
 - It's recommended to use <code>copyq</code> for large data transfer "as there is limited internet bandwidth available for jobs in the normal queues" 
 - We can also use <code>rsync</code> (which can be resumed)</p>
+<p>&nbsp;</p>
 <h1>Other important commands</h1>
 <ul>
 <li><code>nci_account</code>: check storage and compute allocation with usage</li>
 </ul>
-<h1>Service unit (SU) calculation</h1>
-<ul>
-<li>Number of cpu cores = 12 * number of gpu</li>
-<li>For gpuvolta queue, SU estimate = 3 SUs/core/h<ul>
-<li>E.g., if I use 4 GPUs for 8 hours, SUs = 3*4*12*8 = 1152 SUs</li>
-</ul>
-</li>
-</ul>
 <p>&nbsp;</p>
-<h1>Access from Gadi terminal &ndash; not required if ARE is sufficient</h1>
+<h1>Service unit (SU) calculation</h1>
+<p>For gpuvolta queue,
+- Number of cpu cores = 12 * number of gpu
+- SU estimate = 3 SUs/core/h
+    - So, using 4 GPUs for 8 hours, SUs = 3*4*12*8 = 1152 SUs</p>
+<p>&nbsp;</p>
+<h1>Access Gadi terminal &ndash; not required if ARE is sufficient</h1>
 <h2>Access login node from a linux terminal</h2>
 <p><code>ssh &lt;username&gt;@gadi.nci.org.au</code></p>
-<h2>Submitting interactive job (accessing a compute node where I can interactively use resources, i.e., run programs)</h2>
+<h2>Submit interactive job (accessing a compute node where I can interactively use resources, i.e., run programs)</h2>
 <p><code>qsub -I -qgpuvolta  -P&lt;project id&gt; -lwalltime=01:00:00,ncpus=48,ngpus=4,mem=48GB,jobfs=200GB,storage=gdata/&lt;project id&gt;,wd</code></p>
 <ul>
 <li>No internet access after login :(<ul>
@@ -140,6 +141,7 @@
 </ul>
 </li>
 </ul>
+<p>&nbsp;</p>
 <h1>Manuals / helpful resources</h1>
 <ul>
 <li><a href="https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi">https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi</a></li>
