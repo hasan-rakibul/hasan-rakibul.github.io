@@ -54,19 +54,43 @@
 </ul>
 </li>
 </ul>
+<h2>More on Jupyterlab</h2>
+<ul>
+<li>By default, it will use start from apps directory: <code>/apps/jupyterlab/3.4.3-py3.9/bin/jupyter</code></li>
+<li>If I have it installed in another directory, it will start from there, e.g., <code>/scratch/&lt;custom-installed-dir&gt;/bin/jupyter</code><ul>
+<li>And it will automatically have all the installed package from my custom-installed-dir</li>
+</ul>
+</li>
+</ul>
 <h2>Python module/package installation</h2>
 <ul>
 <li>NCI user support: "<code>/g/data/</code> should be the best place for installing software packages"</li>
 <li>NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."</li>
 <li>User's home directory limit is 10GB only, so better not to install at home directory (otherwise, <em>disk quota exceeded</em> error will happen.)</li>
-<li>Initially, I installed <em>miniconda</em> at <code>/scratch/&lt;project id&gt;/&lt;username&gt;/miniconda3</code>)<ul>
+<li>Initially, I installed <em>miniconda</em> at <code>/scratch/&lt;project id&gt;/&lt;username&gt;/miniconda3</code><ul>
 <li><strong>Not a good option because file expiry policy (auto-delete) is in place for <code>/scratch</code></strong></li>
 <li>If conda is installed, Pytorch needs to be (re)installed as per <a href="https://pytorch.org/get-started/locally/">pytorch website</a>, otherwise default anaconda pytorch doesn't use GPU</li>
 <li>If installed in <code>/scratch/</code>, be aware of inode (number of files) usage because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")<ul>
-<li>I installed <em>anaconda</em> and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled anaconda) from login node (Gadi terminal)</li>
+<li>I installed <em>anaconda</em> and later <em>miniconda</em> and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled) from login node (Gadi terminal)</li>
 </ul>
 </li>
 </ul>
+</li>
+<li>
+<p>NCI recommended installation using <code>pip</code> command (so much pain!) on <code>/g/data</code></p>
+<p>NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my experience (especially pandas). Anyway, to compile (or, <strong>no-binary</strong> install):
+<code>python3 -m pip install -v --no-binary :all: --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
+<p>If compiling fails:</p>
+<p><code>python3 -m pip install -v --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
+<p>Check site-package directory and add it to <code>PYTHONPATH</code>. In my case, I added the following in <code>~/.bashrc</code> (once).</p>
+<p><code>export PYTHONPATH=/g/data/&lt;new-dir&gt;/lib/python3.9/site-packages:$PYTHONPATH</code></p>
+</li>
+<li>
+<p>Alternaticely, I preferreed venv approach. Inside <code>g/data</code></p>
+<p><code>python3 -m venv &lt;env-name&gt;
+source &lt;env-name&gt;/bin/activate</code></p>
+<p>To upgrade pip: <code>&lt;env_name&gt;/bin/python3 -m pip install --upgrade pip</code></p>
+<p>And then install without any prefix path. It will automatically install on <code>/g/data</code> if the env is activated.</p>
 </li>
 </ul>
 <p>&nbsp;</p>
