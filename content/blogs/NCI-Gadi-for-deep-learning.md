@@ -6,7 +6,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 
 # Access from ARE (Australian Research Environment)
 - Login at [https://are.nci.org.au/](https://are.nci.org.au/)
-    - Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access but not fast like *analysis*
+    - Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access but not fast like *analysis* queue.
     - Virtual Desktop (GPU)
         - Not smooth/fast as compared to Jupyterlab
         - Queue can be either *analysis* or *gpuvolta*. Now, both have internet access but speed is very limited in *gpuvolta*. *gpuvolta* allow more GPU than *analysis*
@@ -17,9 +17,9 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     - Be aware of your remaining Walltime as it automatically disconnects the session when time ends
     - File management can also be done from ARE web portal
 ## More on Jupyterlab
-- By default, it will use start from apps directory: `/apps/jupyterlab/3.4.3-py3.9/bin/jupyter`
-- If I have it installed in another directory, it will start from there, e.g., `/scratch/<custom-installed-dir>/bin/jupyter`
-    - And it will automatically have all the installed package from my custom-installed-dir
+- By default, it will start from apps directory: `/apps/jupyterlab/3.4.3-py3.9/bin/jupyter`
+- If we have it installed in another directory, it will start from there, e.g., `/scratch/<custom-installed-dir>/bin/jupyter`
+    - And it will automatically have all the installed package from the custom-installed-dir
     
 ## Python module/package installation
 - NCI user support: "`/g/data/` should be the best place for installing software packages"
@@ -27,17 +27,17 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 - User's home directory limit is 10GB only, so better not to install at home directory (otherwise, *disk quota exceeded* error will happen.)
 - Initially, I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`
     - **Not a good option because file expiry policy (auto-delete) is in place for `/scratch`**
-    - If conda is installed, Pytorch needs to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
-    - If installed in `/scratch/`, be aware of inode (number of files) usage because it has a limit after which VDI session will not be created ("Your session has entered a bad state...")
-        - I installed *anaconda* and later *miniconda* and used up more than allowed inode, so couldn't create new VDI session, which I fixed (uninstalled) from login node (Gadi terminal)
+    - If conda is installed, Pytorch might need to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
+    - If installed in `/scratch/`, be aware of inode (number of files) usage because it has a limit after which new session will not be created ("Your session has entered a bad state...")
+        - I installed *anaconda* and also later *miniconda* and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)
 - NCI recommended installation using `pip` command (so much pain!) on `/g/data`
     
-    NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my experience (especially pandas). Anyway, to compile (or, **no-binary** install):
+    Python-related NCI documentation is [https://opus.nci.org.au/display/Help/Python](here). NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). Anyway, to compile (or, *no-binary* install):
     ```
     python3 -m pip install -v --no-binary :all: --prefix=/g/data/<new-dir> <package_name>
     ```
     
-    If compiling fails:
+    If *no-binary* fails, install binary:
     
     ```
     python3 -m pip install -v --prefix=/g/data/<new-dir> <package_name>
@@ -49,7 +49,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     export PYTHONPATH=/g/data/<new-dir>/lib/python3.9/site-packages:$PYTHONPATH 
     ```
 
-- Alternaticely, I preferreed venv approach. Inside `g/data`
+- Alternaticely, **I preferreed venv approach**. Inside `g/data`:
 
     ```
     python3 -m venv <env-name>
@@ -59,6 +59,10 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     To upgrade pip: `<env_name>/bin/python3 -m pip install --upgrade pip`
 
     And then install without any prefix path. It will automatically install on `/g/data` if the env is activated.
+
+    ```
+    python3 -m pip install -v --no-binary :all: <package_name>
+    ```
     
 
 &nbsp;
