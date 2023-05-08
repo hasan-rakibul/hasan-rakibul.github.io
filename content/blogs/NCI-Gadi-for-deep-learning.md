@@ -32,29 +32,21 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
         - I installed *anaconda* and also later *miniconda* and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)
 - NCI recommended installation using `pip` command (so much pain!) on `/g/data`
     
-    Python-related NCI documentation is [https://opus.nci.org.au/display/Help/Python](here). NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). Anyway, to compile (or, *no-binary* install):
-    ```
-    python3 -m pip install -v --no-binary :all: --prefix=/g/data/<new-dir> <package_name>
-    ```
+    Python-related NCI documentation is [https://opus.nci.org.au/display/Help/Python](here). NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). 
     
-    If *no-binary* fails, install binary:
+    To compile (or, *no-binary* install): 
     
-    ```
-    python3 -m pip install -v --prefix=/g/data/<new-dir> <package_name>
-    ```
+    `python3 -m pip install -v --no-binary :all: --prefix=/g/data/<new-dir> <package_name>`
+    
+    If *no-binary* fails, install binary: `python3 -m pip install -v --prefix=/g/data/<new-dir> <package_name>`
     
     Check site-package directory and add it to `PYTHONPATH`. In my case, I added the following in `~/.bashrc` (once).
     
-    ```
-    export PYTHONPATH=/g/data/<new-dir>/lib/python3.9/site-packages:$PYTHONPATH 
-    ```
+    `export PYTHONPATH=/g/data/<new-dir>/lib/python3.9/site-packages:$PYTHONPATH`
 
-- Alternaticely, **I preferreed venv approach**. Inside `g/data`:
+- Alternaticely, **I preferreed venv approach**. Inside `g/data`: `python3 -m venv <env-name>`
 
-    ```
-    python3 -m venv <env-name>
-    source <env-name>/bin/activate
-    ```
+    Then, activate it: `source <env-name>/bin/activate`
     
     To upgrade pip: `<env_name>/bin/python3 -m pip install --upgrade pip`
 
@@ -84,12 +76,14 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     - if binary install is unavailable, omit `--no-binary :all:`
 
 &nbsp;
+
 # File transfer between local machine and Gadi
-`scp <file with path> <username>@gadi-dm.nci.org.au:<directory>`
-    - Above command to be run from local machine to copy from local machine to Gadi
-    - `gadi-dm` specifies data-mover (or something), which doesn't have time/cpu-limitation like login node
-    - *directory* cane be something like `/home/<some number>/<username>` for home directory
-- `pwd` to check *current directory* at Gadi login/compute note
+`scp <file with path> <username>@gadi-dm.nci.org.au:<directory>` 
+
+- Above command to be run from local machine to copy from local machine to Gadi
+- `gadi-dm` specifies data-mover (or something), which doesn't have time/cpu-limitation like login node
+- *directory* can be something like `/home/<some number>/<username>` for home directory
+- `pwd` can be used to check *current directory* at Gadi login/compute note
 - It's recommended to use `copyq` for large data transfer "as there is limited internet bandwidth available for jobs in the normal queues" 
 - We can also use `rsync` (which can be resumed)
 
@@ -100,6 +94,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 &nbsp;
 # Service unit (SU) calculation
 For gpuvolta queue,
+
 - Number of cpu cores = 12 * number of gpu
 - SU estimate = 3 SUs/core/h
     - So, using 4 GPUs for 8 hours, SUs = 3\*4\*12\*8 = 1152 SUs
