@@ -85,19 +85,22 @@
 </li>
 <li>
 <p>NCI recommended installation using <code>pip</code> command (so much pain!) on <code>/g/data</code></p>
-<p>Python-related NCI documentation is <a href="here">https://opus.nci.org.au/display/Help/Python</a>. NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). </p>
-<p>To compile (or, <em>no-binary</em> install): </p>
+<p>Python-related NCI documentation is <a href="https://opus.nci.org.au/display/Help/Python">here</a>. NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). </p>
+<p>Let's say I create a new directory in gdata (&lt;new-dir&gt;). To compile (or, <em>no-binary</em> install): </p>
 <p><code>python3 -m pip install -v --no-binary :all: --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
 <p>If <em>no-binary</em> fails, install binary: <code>python3 -m pip install -v --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
 <p>Check site-package directory and add it to <code>PYTHONPATH</code>. In my case, I added the following in <code>~/.bashrc</code> (once).</p>
 <p><code>export PYTHONPATH=/g/data/&lt;new-dir&gt;/lib/python3.9/site-packages:$PYTHONPATH</code></p>
 </li>
 <li>
-<p>Alternaticely, <strong>I preferreed venv approach</strong>. Inside <code>g/data</code>: <code>python3 -m venv &lt;env-name&gt;</code></p>
+<p>Alternaticely, <strong>I preferreed venv approach</strong>. Inside <code>g/data</code> I create a new virtual enrinronment: </p>
+<p><code>python3 -m venv &lt;env-name&gt;</code></p>
 <p>Then, activate it: <code>source &lt;env-name&gt;/bin/activate</code></p>
 <p>To upgrade pip: <code>&lt;env_name&gt;/bin/python3 -m pip install --upgrade pip</code></p>
 <p>And then install without any prefix path. It will automatically install on <code>/g/data</code> if the env is activated.</p>
 <p><code>python3 -m pip install -v --no-binary :all: &lt;package_name&gt;</code></p>
+<p>Or,</p>
+<p><code>python3 -m pip install -v &lt;package_name&gt;</code></p>
 </li>
 </ul>
 <p>&nbsp;</p>
