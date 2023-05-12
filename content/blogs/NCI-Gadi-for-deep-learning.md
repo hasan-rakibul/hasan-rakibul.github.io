@@ -32,9 +32,9 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
         - I installed *anaconda* and also later *miniconda* and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)
 - NCI recommended installation using `pip` command (so much pain!) on `/g/data`
     
-    Python-related NCI documentation is [https://opus.nci.org.au/display/Help/Python](here). NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). 
+    Python-related NCI documentation is [here](https://opus.nci.org.au/display/Help/Python). NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). 
     
-    To compile (or, *no-binary* install): 
+    Let's say I create a new directory in gdata (<new-dir\>). To compile (or, *no-binary* install): 
     
     `python3 -m pip install -v --no-binary :all: --prefix=/g/data/<new-dir> <package_name>`
     
@@ -44,7 +44,9 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     
     `export PYTHONPATH=/g/data/<new-dir>/lib/python3.9/site-packages:$PYTHONPATH`
 
-- Alternaticely, **I preferreed venv approach**. Inside `g/data`: `python3 -m venv <env-name>`
+- Alternaticely, **I preferreed venv approach**. Inside `g/data` I create a new virtual enrinronment: 
+
+    `python3 -m venv <env-name>`
 
     Then, activate it: `source <env-name>/bin/activate`
     
@@ -54,6 +56,12 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 
     ```
     python3 -m pip install -v --no-binary :all: <package_name>
+    ```
+    
+    Or,
+
+    ```
+    python3 -m pip install -v <package_name>
     ```
     
 
