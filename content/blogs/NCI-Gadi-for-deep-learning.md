@@ -120,7 +120,8 @@ For gpuvolta queue,
     - So, if the program requires internet, it won't work!
 
 &nbsp;
-# Manuals / helpful resources
+# Course / Manuals / helpful resources
+- [Introduction to Gadi](https://nci-australia.teachable.com/p/introduction-to-gadi)
 - [https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi](https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi)
 - [https://opus.nci.org.au/display/Help/Python](https://opus.nci.org.au/display/Help/Python)
 - [https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide](https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide)
