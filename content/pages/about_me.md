@@ -23,9 +23,11 @@ At [Curtin University](https://www.curtin.edu.au/), I'm tutoring &ndash;
 0. [ICTE3002/5001 Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/) laboratory [Semester 1, 2023]
 0. [COMP1000 Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) laboratory [Semester 1, 2023]
 
+&nbsp;
+
 At [Murdoch University](https://www.murdoch.edu.au/), I'm tutoring &ndash;
 
-0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/rakib-ul/AI-cybersec) laboratory [Semester 1, 2023]
+0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/rakib-ul/AI-cybersec) laboratory **[Semester 1, 2023] [I designed this laboratory.]**
 
 &nbsp;
 
