@@ -93,14 +93,21 @@
 <p><code>export PYTHONPATH=/g/data/&lt;new-dir&gt;/lib/python3.9/site-packages:$PYTHONPATH</code></p>
 </li>
 <li>
-<p>Alternaticely, <strong>I preferreed venv approach</strong>. Inside <code>g/data</code> I create a new virtual enrinronment: </p>
-<p><code>python3 -m venv &lt;env-name&gt;</code></p>
-<p>Then, activate it: <code>source &lt;env-name&gt;/bin/activate</code></p>
-<p>To upgrade pip: <code>&lt;env_name&gt;/bin/python3 -m pip install --upgrade pip</code></p>
+<p>Alternaticely, <strong>I preferreed venv approach</strong>. Inside <code>/g/data</code> I create a new virtual enrinronment named <code>.venv</code>, for example. I load specific python version (<code>module load python3/3.11.0</code>) for which I want to base my virtual environment.</p>
+<p><code>python3 -m venv .venv</code></p>
+<p>Then, activate it: <code>source .venv/bin/activate</code> (better, put this command in <code>~/.bashrc</code> if it's your default environment. Then you don't need to call it everytime.)</p>
 <p>And then install without any prefix path. It will automatically install on <code>/g/data</code> if the env is activated.</p>
 <p><code>python3 -m pip install -v --no-binary :all: &lt;package_name&gt;</code></p>
 <p>Or,</p>
 <p><code>python3 -m pip install -v &lt;package_name&gt;</code></p>
+<ul>
+<li>While creating JupyterLab session, specify the base python version (<code>python3/3.11.0</code>) in the <code>Modules</code> field.</li>
+<li>More hacks with venv<ul>
+<li><code>which python</code> to check whether the virtual environment is properly activated</li>
+<li>After creating virtual environment, make <code>include-system-site-packages = true</code> in <code>./venv/pyvenv.cfg</code> file to include system-wide packages available in the virtual envirorment as well</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <p>&nbsp;</p>
