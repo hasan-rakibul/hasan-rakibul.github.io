@@ -44,13 +44,11 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     
     `export PYTHONPATH=/g/data/<new-dir>/lib/python3.9/site-packages:$PYTHONPATH`
 
-- Alternaticely, **I preferreed venv approach**. Inside `g/data` I create a new virtual enrinronment: 
+- Alternaticely, **I preferreed venv approach**. Inside `/g/data` I create a new virtual enrinronment named `.venv`, for example. I load specific python version (`module load python3/3.11.0`) for which I want to base my virtual environment.
 
-    `python3 -m venv <env-name>`
+    `python3 -m venv .venv`
 
-    Then, activate it: `source <env-name>/bin/activate`
-    
-    To upgrade pip: `<env_name>/bin/python3 -m pip install --upgrade pip`
+    Then, activate it: `source .venv/bin/activate` (better, put this command in `~/.bashrc` if it's your default environment. Then you don't need to call it everytime.)
 
     And then install without any prefix path. It will automatically install on `/g/data` if the env is activated.
 
@@ -63,6 +61,11 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     ```
     python3 -m pip install -v <package_name>
     ```
+    
+    - While creating JupyterLab session, specify the base python version (`python3/3.11.0`) in the `Modules` field.
+    - More hacks with venv
+        - `which python` to check whether the virtual environment is properly activated
+        - After creating virtual environment, make `include-system-site-packages = true` in `./venv/pyvenv.cfg` file to include system-wide packages available in the virtual envirorment as well
     
 
 &nbsp;
