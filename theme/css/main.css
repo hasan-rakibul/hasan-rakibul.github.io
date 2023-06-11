@@ -65,6 +65,26 @@ h1 a:hover {
     background-color: inherit
 }
 
+/* Toggle button with BibTeX -- added by RKBL */
+#BibTeX {
+	display: none;
+}
+
+.toggle-button {
+	/* padding: 10px 20px; */
+	background-color: #fff;
+	color: #C74350;
+	/* border: none; */
+	cursor: pointer;
+	/* font-size: 16px; */
+  }
+
+.toggle-button:hover {
+	color: #fff;
+	background-color: #C74350;
+}
+
+
 /* Paragraphs */
 div.line-block,
 p { margin-top: 1em;
