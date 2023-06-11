@@ -114,14 +114,10 @@ Photo by <a href="https://unsplash.com/@andrewtneel?utm_source=unsplash&amp;utm_
 
 <!-- Added by RKBL to toggle BibTeX info -->
 <script>
-        function show() {
-          var x = document.getElementById("BibTeX");
-          if (x.style.display === "block") {
-            x.style.display = "none";
-          } else {
-            x.style.display = "block";
-          }
-        }
+    function showBlock(blockId) {
+      var codeBlock = document.getElementById(blockId);
+      codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+    }
 </script>
 
 </body>
