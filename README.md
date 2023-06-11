@@ -1,4 +1,4 @@
-# hasan-rakibul.github.io
+# https://hasan-rakibul.github.io
 Personal website to track my recent involvements.
 
 ## (Nonconventional) files
@@ -19,3 +19,6 @@ cp post-commit ./.git/hooks/
 ```
 ### Tips
 - `make devserver` to do and see changes in local server
+
+## Other resources that I wish to try
+- [Pelican-btex - Automatic publication list generation for Pelican](https://github.com/toni-heittola/pelican-btex) OR [pelican-bib](https://pypi.org/project/pelican-bib/)
