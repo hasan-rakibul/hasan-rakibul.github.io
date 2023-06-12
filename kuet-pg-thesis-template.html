@@ -117,6 +117,9 @@ Photo by <a href="https://unsplash.com/@andrewtneel?utm_source=unsplash&amp;utm_
     function showBlock(blockId) {
       var codeBlock = document.getElementById(blockId);
       codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+
+      var button = document.getElementById(blockId+"-button"); <!--button ID is blockid-"button"-->
+      button.classList.toggle("active");
     }
 </script>
 

@@ -81,6 +81,9 @@ EEE 426: Switchgear &amp; Protection Laboratory</p>
     function showBlock(blockId) {
       var codeBlock = document.getElementById(blockId);
       codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+
+      var button = document.getElementById(blockId+"-button"); <!--button ID is blockid-"button"-->
+      button.classList.toggle("active");
     }
 </script>
 
