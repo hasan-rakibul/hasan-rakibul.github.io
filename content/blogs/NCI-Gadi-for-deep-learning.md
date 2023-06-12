@@ -124,6 +124,7 @@ For gpuvolta queue,
 
 &nbsp;
 # Course / Manuals / helpful resources
+- [](https://sydney-informatics-hub.github.io/training.gadi.intro/03-Accounting/index.html)
 - [Introduction to Gadi](https://nci-australia.teachable.com/p/introduction-to-gadi)
 - [https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi](https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi)
 - [https://opus.nci.org.au/display/Help/Python](https://opus.nci.org.au/display/Help/Python)
