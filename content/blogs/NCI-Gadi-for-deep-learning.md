@@ -7,6 +7,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 # Access from ARE (Australian Research Environment)
 - Login at [https://are.nci.org.au/](https://are.nci.org.au/)
     - Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access but not fast like *analysis* queue.
+    - By default, it will start from apps directory: `/apps/jupyterlab/3.4.3-py3.9/bin/jupyter` but can be altered (more on later).
     - Virtual Desktop (GPU)
         - Not smooth/fast as compared to Jupyterlab
         - Queue can be either *analysis* or *gpuvolta*. Now, both have internet access but speed is very limited in *gpuvolta*. *gpuvolta* allow more GPU than *analysis*
@@ -16,21 +17,46 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
         - It gives VNC access to [Rocky Linux](https://rockylinux.org/) 
     - Be aware of your remaining Walltime as it automatically disconnects the session when time ends
     - File management can also be done from ARE web portal
-## More on Jupyterlab
-- By default, it will start from apps directory: `/apps/jupyterlab/3.4.3-py3.9/bin/jupyter`
-- If we have it installed in another directory, it will start from there, e.g., `/scratch/<custom-installed-dir>/bin/jupyter`
-    - And it will automatically have all the installed package from the custom-installed-dir
     
 ## Python module/package installation
-- NCI user support: "`/g/data/` should be the best place for installing software packages"
-- NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."
-- User's home directory limit is 10GB only, so better not to install at home directory (otherwise, *disk quota exceeded* error will happen.)
-- Initially, I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`
-    - **Not a good option because file expiry policy (auto-delete) is in place for `/scratch`**
-    - If conda is installed, Pytorch might need to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
-    - If installed in `/scratch/`, be aware of inode (number of files) usage because it has a limit after which new session will not be created ("Your session has entered a bad state...")
-        - I installed *anaconda* and also later *miniconda* and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)
-- NCI recommended installation using `pip` command (so much pain!) on `/g/data`
+### Modules
+- Check avialable moduels
+    - `module avail <search string>`
+- Load module
+    - `module load <module name/version(preferable)>`
+- Check loaded moduels
+    - `module list`
+- Unload module
+    - `module unload <module name>`
+
+### I preferred virtual-environment approach to install Python packages
+Inside `/g/data`, I create a new virtual enrinronment named `.venv`, for example. If I don't want to use the default python version, I load specific version (`module load python3/3.11.0`) for which I want to base my virtual environment.
+
+`python3 -m venv .venv`
+
+Then, activate it: `source .venv/bin/activate` (better, put this command in `~/.bashrc` if it's your default environment. Then I don't need to activate it everytime.)
+
+And then install without any prefix path. It will automatically install on `/g/data` if the env is activated.
+
+```
+python3 -m pip install -v --no-binary :all: <package_name>
+```
+
+Or if binary install is unavailable,
+
+```
+python3 -m pip install -v <package_name>
+```
+
+To install a list of packages from `requirements.txt`, append `-r requirements.txt` with the above command.
+
+- While creating JupyterLab session, specify the base python version (`python3/3.11.0`) in the `Modules` field and venv absoulate path (`/g/data/<...>/.venv`) in "Python or Conda virtual environment base" field.
+- More on venv
+    - `which python` to check whether the virtual environment is properly activated
+    - After creating virtual environment, make `include-system-site-packages = true` in `./venv/pyvenv.cfg` file to include system-wide packages available in the virtual envirorment as well
+
+### From NCI guide
+- NCI recommended installation using `pip` command on `/g/data`
     
     Python-related NCI documentation is [here](https://opus.nci.org.au/display/Help/Python). NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). 
     
@@ -43,48 +69,16 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     Check site-package directory and add it to `PYTHONPATH`. In my case, I added the following in `~/.bashrc` (once).
     
     `export PYTHONPATH=/g/data/<new-dir>/lib/python3.9/site-packages:$PYTHONPATH`
-
-- Alternaticely, **I preferreed venv approach**. Inside `/g/data` I create a new virtual enrinronment named `.venv`, for example. I load specific python version (`module load python3/3.11.0`) for which I want to base my virtual environment.
-
-    `python3 -m venv .venv`
-
-    Then, activate it: `source .venv/bin/activate` (better, put this command in `~/.bashrc` if it's your default environment. Then you don't need to call it everytime.)
-
-    And then install without any prefix path. It will automatically install on `/g/data` if the env is activated.
-
-    ```
-    python3 -m pip install -v --no-binary :all: <package_name>
-    ```
     
-    Or,
-
-    ```
-    python3 -m pip install -v <package_name>
-    ```
-    
-    - While creating JupyterLab session, specify the base python version (`python3/3.11.0`) in the `Modules` field.
-    - More hacks with venv
-        - `which python` to check whether the virtual environment is properly activated
-        - After creating virtual environment, make `include-system-site-packages = true` in `./venv/pyvenv.cfg` file to include system-wide packages available in the virtual envirorment as well
-    
-
-&nbsp;
-# Modules
-- Check avialable moduels
-    - `module avail <search string>`
-- Load module
-    - `module load <module name/version(preferable)>`
-- Check loaded moduels
-    - `module list`
-- Unload module
-    - `module unload <module name>`
-- Install modules from requirements.txt
-    - Install from login node as qsub computing node has no internet access
-    - From file
-        - `python3 -m pip install -v --no-binary :all: --user -r requirements.txt`
-    - A single package
-        - `python3 -m pip install -v --no-binary :all: --user <module name>`
-    - if binary install is unavailable, omit `--no-binary :all:`
+### What not to do
+- NCI user support: "`/g/data/` should be the best place for installing software packages"
+- NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."
+- User's home directory limit is 10GB only, so better not to install at home directory (otherwise, *disk quota exceeded* error will happen.)
+- Initially, I installed *miniconda* at `/scratch/<project id>/<username>/miniconda3`
+    - **Not a good option because file expiry policy (auto-delete) is in place for `/scratch`**
+    - If conda is installed, Pytorch might need to be (re)installed as per [pytorch website](https://pytorch.org/get-started/locally/), otherwise default anaconda pytorch doesn't use GPU
+    - If installed in `/scratch/`, be aware of inode (number of files) usage because it has a limit after which new session will not be created ("Your session has entered a bad state...")
+        - I installed *anaconda* and also later *miniconda* and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)
 
 &nbsp;
 
@@ -110,6 +104,22 @@ For gpuvolta queue,
 - SU estimate = 3 SUs/core/h
     - So, using 4 GPUs for 8 hours, SUs = 3\*4\*12\*8 = 1152 SUs
 
+## Azure equivalent
+Please note that the following equivalence calculation is based on my personal understanding of the two systems. I cannot guarantee the accuracy or comprehensiveness of these calculations. Of course, these are completely different systems, and their features vary.
+
+As of 14 June 2023, Azure NDv2-series (ND40rs v2) offers 8 NVIDIA V100 32 GB GPUs and 40 Core(s). It costs $33.8563/hour. [[Source](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing)]
+
+### Based on GPU
+Equivalent Gadi usage = 3\*8\*12 = 288 SU/hour
+
+288 SU costs $33.8563 <br>
+So, 1 KSU costs = $117.56
+
+### Based on Core
+Equivalent Gadi usage = 3\*40 = 120 SU/hour <br>
+Therefore, 1 KSU costs = $282.136
+
+
 &nbsp;
 
 # Access Gadi terminal &ndash; not required if ARE is sufficient
@@ -124,7 +134,7 @@ For gpuvolta queue,
 
 &nbsp;
 # Course / Manuals / helpful resources
-- [](https://sydney-informatics-hub.github.io/training.gadi.intro/03-Accounting/index.html)
+- [Introduction to NCI Gadi – Sydney Informatics Hub](https://sydney-informatics-hub.github.io/training.gadi.intro/03-Accounting/index.html)
 - [Introduction to Gadi](https://nci-australia.teachable.com/p/introduction-to-gadi)
 - [https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi](https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi)
 - [https://opus.nci.org.au/display/Help/Python](https://opus.nci.org.au/display/Help/Python)
