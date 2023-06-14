@@ -45,6 +45,7 @@
 <ul>
 <li>Login at <a href="https://are.nci.org.au/">https://are.nci.org.au/</a><ul>
 <li>Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access but not fast like <em>analysis</em> queue.</li>
+<li>By default, it will start from apps directory: <code>/apps/jupyterlab/3.4.3-py3.9/bin/jupyter</code> but can be altered (more on later).</li>
 <li>Virtual Desktop (GPU)<ul>
 <li>Not smooth/fast as compared to Jupyterlab</li>
 <li>Queue can be either <em>analysis</em> or <em>gpuvolta</em>. Now, both have internet access but speed is very limited in <em>gpuvolta</em>. <em>gpuvolta</em> allow more GPU than <em>analysis</em><ul>
@@ -61,57 +62,8 @@
 </ul>
 </li>
 </ul>
-<h2>More on Jupyterlab</h2>
-<ul>
-<li>By default, it will start from apps directory: <code>/apps/jupyterlab/3.4.3-py3.9/bin/jupyter</code></li>
-<li>If we have it installed in another directory, it will start from there, e.g., <code>/scratch/&lt;custom-installed-dir&gt;/bin/jupyter</code><ul>
-<li>And it will automatically have all the installed package from the custom-installed-dir</li>
-</ul>
-</li>
-</ul>
 <h2>Python module/package installation</h2>
-<ul>
-<li>NCI user support: "<code>/g/data/</code> should be the best place for installing software packages"</li>
-<li>NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."</li>
-<li>User's home directory limit is 10GB only, so better not to install at home directory (otherwise, <em>disk quota exceeded</em> error will happen.)</li>
-<li>Initially, I installed <em>miniconda</em> at <code>/scratch/&lt;project id&gt;/&lt;username&gt;/miniconda3</code><ul>
-<li><strong>Not a good option because file expiry policy (auto-delete) is in place for <code>/scratch</code></strong></li>
-<li>If conda is installed, Pytorch might need to be (re)installed as per <a href="https://pytorch.org/get-started/locally/">pytorch website</a>, otherwise default anaconda pytorch doesn't use GPU</li>
-<li>If installed in <code>/scratch/</code>, be aware of inode (number of files) usage because it has a limit after which new session will not be created ("Your session has entered a bad state...")<ul>
-<li>I installed <em>anaconda</em> and also later <em>miniconda</em> and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>NCI recommended installation using <code>pip</code> command (so much pain!) on <code>/g/data</code></p>
-<p>Python-related NCI documentation is <a href="https://opus.nci.org.au/display/Help/Python">here</a>. NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). </p>
-<p>Let's say I create a new directory in gdata (&lt;new-dir&gt;). To compile (or, <em>no-binary</em> install): </p>
-<p><code>python3 -m pip install -v --no-binary :all: --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
-<p>If <em>no-binary</em> fails, install binary: <code>python3 -m pip install -v --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
-<p>Check site-package directory and add it to <code>PYTHONPATH</code>. In my case, I added the following in <code>~/.bashrc</code> (once).</p>
-<p><code>export PYTHONPATH=/g/data/&lt;new-dir&gt;/lib/python3.9/site-packages:$PYTHONPATH</code></p>
-</li>
-<li>
-<p>Alternaticely, <strong>I preferreed venv approach</strong>. Inside <code>/g/data</code> I create a new virtual enrinronment named <code>.venv</code>, for example. I load specific python version (<code>module load python3/3.11.0</code>) for which I want to base my virtual environment.</p>
-<p><code>python3 -m venv .venv</code></p>
-<p>Then, activate it: <code>source .venv/bin/activate</code> (better, put this command in <code>~/.bashrc</code> if it's your default environment. Then you don't need to call it everytime.)</p>
-<p>And then install without any prefix path. It will automatically install on <code>/g/data</code> if the env is activated.</p>
-<p><code>python3 -m pip install -v --no-binary :all: &lt;package_name&gt;</code></p>
-<p>Or,</p>
-<p><code>python3 -m pip install -v &lt;package_name&gt;</code></p>
-<ul>
-<li>While creating JupyterLab session, specify the base python version (<code>python3/3.11.0</code>) in the <code>Modules</code> field.</li>
-<li>More hacks with venv<ul>
-<li><code>which python</code> to check whether the virtual environment is properly activated</li>
-<li>After creating virtual environment, make <code>include-system-site-packages = true</code> in <code>./venv/pyvenv.cfg</code> file to include system-wide packages available in the virtual envirorment as well</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>&nbsp;</p>
-<h1>Modules</h1>
+<h3>Modules</h3>
 <ul>
 <li>Check avialable moduels<ul>
 <li><code>module avail &lt;search string&gt;</code></li>
@@ -129,17 +81,52 @@
 <li><code>module unload &lt;module name&gt;</code></li>
 </ul>
 </li>
-<li>Install modules from requirements.txt<ul>
-<li>Install from login node as qsub computing node has no internet access</li>
-<li>From file<ul>
-<li><code>python3 -m pip install -v --no-binary :all: --user -r requirements.txt</code></li>
+</ul>
+<h3>I preferred virtual-environment approach to install Python packages</h3>
+<p>Inside <code>/g/data</code>, I create a new virtual enrinronment named <code>.venv</code>, for example. If I don't want to use the default python version, I load specific version (<code>module load python3/3.11.0</code>) for which I want to base my virtual environment.</p>
+<p><code>python3 -m venv .venv</code></p>
+<p>Then, activate it: <code>source .venv/bin/activate</code> (better, put this command in <code>~/.bashrc</code> if it's your default environment. Then I don't need to activate it everytime.)</p>
+<p>And then install without any prefix path. It will automatically install on <code>/g/data</code> if the env is activated.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">python3</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">v</span><span class="w"> </span><span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">binary</span><span class="w"> </span><span class="p">:</span><span class="nx">all</span><span class="p">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">package_name</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Or if binary install is unavailable,</p>
+<div class="highlight"><pre><span></span><code><span class="nx">python3</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">v</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">package_name</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>To install a list of packages from <code>requirements.txt</code>, append <code>-r requirements.txt</code> with the above command.</p>
+<ul>
+<li>While creating JupyterLab session, specify the base python version (<code>python3/3.11.0</code>) in the <code>Modules</code> field and venv absoulate path (<code>/g/data/&lt;...&gt;/.venv</code>) in "Python or Conda virtual environment base" field.</li>
+<li>More on venv<ul>
+<li><code>which python</code> to check whether the virtual environment is properly activated</li>
+<li>After creating virtual environment, make <code>include-system-site-packages = true</code> in <code>./venv/pyvenv.cfg</code> file to include system-wide packages available in the virtual envirorment as well</li>
 </ul>
 </li>
-<li>A single package<ul>
-<li><code>python3 -m pip install -v --no-binary :all: --user &lt;module name&gt;</code></li>
+</ul>
+<h3>From NCI guide</h3>
+<ul>
+<li>
+<p>NCI recommended installation using <code>pip</code> command on <code>/g/data</code></p>
+<p>Python-related NCI documentation is <a href="https://opus.nci.org.au/display/Help/Python">here</a>. NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). </p>
+<p>Let's say I create a new directory in gdata (&lt;new-dir&gt;). To compile (or, <em>no-binary</em> install): </p>
+<p><code>python3 -m pip install -v --no-binary :all: --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
+<p>If <em>no-binary</em> fails, install binary: <code>python3 -m pip install -v --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
+<p>Check site-package directory and add it to <code>PYTHONPATH</code>. In my case, I added the following in <code>~/.bashrc</code> (once).</p>
+<p><code>export PYTHONPATH=/g/data/&lt;new-dir&gt;/lib/python3.9/site-packages:$PYTHONPATH</code></p>
+</li>
+</ul>
+<h3>What not to do</h3>
+<ul>
+<li>NCI user support: "<code>/g/data/</code> should be the best place for installing software packages"</li>
+<li>NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."</li>
+<li>User's home directory limit is 10GB only, so better not to install at home directory (otherwise, <em>disk quota exceeded</em> error will happen.)</li>
+<li>Initially, I installed <em>miniconda</em> at <code>/scratch/&lt;project id&gt;/&lt;username&gt;/miniconda3</code><ul>
+<li><strong>Not a good option because file expiry policy (auto-delete) is in place for <code>/scratch</code></strong></li>
+<li>If conda is installed, Pytorch might need to be (re)installed as per <a href="https://pytorch.org/get-started/locally/">pytorch website</a>, otherwise default anaconda pytorch doesn't use GPU</li>
+<li>If installed in <code>/scratch/</code>, be aware of inode (number of files) usage because it has a limit after which new session will not be created ("Your session has entered a bad state...")<ul>
+<li>I installed <em>anaconda</em> and also later <em>miniconda</em> and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)</li>
 </ul>
 </li>
-<li>if binary install is unavailable, omit <code>--no-binary :all:</code></li>
 </ul>
 </li>
 </ul>
@@ -169,6 +156,16 @@
 </ul>
 </li>
 </ul>
+<h2>Azure equivalent</h2>
+<p>Please note that the following equivalence calculation is based on my personal understanding of the two systems. I cannot guarantee the accuracy or comprehensiveness of these calculations. Of course, these are completely different systems, and their features vary.</p>
+<p>As of 14 June 2023, Azure NDv2-series (ND40rs v2) offers 8 NVIDIA V100 32 GB GPUs and 40 Core(s). It costs $33.8563/hour. [<a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing">Source</a>]</p>
+<h3>Based on GPU</h3>
+<p>Equivalent Gadi usage = 3*8*12 = 288 SU/hour</p>
+<p>288 SU costs $33.8563 <br>
+So, 1 KSU costs = $117.56</p>
+<h3>Based on Core</h3>
+<p>Equivalent Gadi usage = 3*40 = 120 SU/hour <br>
+Therefore, 1 KSU costs = $282.136</p>
 <p>&nbsp;</p>
 <h1>Access Gadi terminal &ndash; not required if ARE is sufficient</h1>
 <h2>Access login node from a linux terminal</h2>
