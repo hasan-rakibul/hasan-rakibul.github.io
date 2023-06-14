@@ -107,7 +107,7 @@ For gpuvolta queue,
 ## Azure equivalent
 Please note that the following equivalence calculation is based on my personal understanding of the two systems. I cannot guarantee the accuracy or comprehensiveness of these calculations. Of course, these are completely different systems, and their features vary.
 
-As of 14 June 2023, Azure NDv2-series (ND40rs v2) offers 8 NVIDIA V100 32 GB GPUs and 40 Core(s). It costs $33.8563/hour. [[Source](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing)]
+As of 14 June 2023, Azure NDv2-series (ND40rs v2) offers 8 NVIDIA V100 32 GB GPUs and 40 Core(s). It costs $33.8563/hour (Australian Dollar). [[Source](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing)]
 
 ### Based on GPU
 Equivalent Gadi usage = 3\*8\*12 = 288 SU/hour
@@ -118,7 +118,6 @@ So, 1 KSU costs = $117.56
 ### Based on Core
 Equivalent Gadi usage = 3\*40 = 120 SU/hour <br>
 Therefore, 1 KSU costs = $282.136
-
 
 &nbsp;
 
