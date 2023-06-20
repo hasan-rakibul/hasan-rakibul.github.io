@@ -31,3 +31,12 @@ git config --global user.email <EMAIL>
 # Linux
 - `mkdir dir_name{01..12}`: create dir_name01, dir_name02 ... dir_name12 directories
 - `du -sh`: disk usage
+
+# LaTeX
+## LaTeX Error: Unicode character ́ (U+0301)
+- Using XeLaTex would solve but sometimes we need to stick to pdfLaTeX
+- The main problem to locate the character since it usually exist in the bib file. An excellent hack, as suggested in [this StackExchange answer](https://tex.stackexchange.com/a/487565), is to print something strange in place of the character:
+
+    Put `\DeclareUnicodeCharacter{0301}{*************************************}` in the preamble (before `\begin{document}`) and find the asterisks on the pdf.
+
+    After locating it, the final fix in my case was replacing `\'\i` by `\'{i}`
