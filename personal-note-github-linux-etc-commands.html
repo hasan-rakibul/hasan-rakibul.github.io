@@ -71,6 +71,16 @@ git config --global user.email &lt;EMAIL&gt;
 <li><code>mkdir dir_name{01..12}</code>: create dir_name01, dir_name02 ... dir_name12 directories</li>
 <li><code>du -sh</code>: disk usage</li>
 </ul>
+<h1>LaTeX</h1>
+<h2>LaTeX Error: Unicode character ́ (U+0301)</h2>
+<ul>
+<li>Using XeLaTex would solve but sometimes we need to stick to pdfLaTeX</li>
+<li>
+<p>The main problem to locate the character since it usually exist in the bib file. An excellent hack, as suggested in <a href="https://tex.stackexchange.com/a/487565">this StackExchange answer</a>, is to print something strange in place of the character:</p>
+<p>Put <code>\DeclareUnicodeCharacter{0301}{*************************************}</code> in the preamble (before <code>\begin{document}</code>) and find the asterisks on the pdf.</p>
+<p>After locating it, the final fix in my case was replacing <code>\'\i</code> by <code>\'{i}</code></p>
+</li>
+</ul>
     </div><!-- /.entry-content -->
 
   </article>
