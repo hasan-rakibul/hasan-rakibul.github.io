@@ -28,9 +28,13 @@ git config --global user.email <EMAIL>
 ### GitHub &ndash; add local machine's SSH key
 - [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux)
 
+&nbsp;
+
 # Linux
 - `mkdir dir_name{01..12}`: create dir_name01, dir_name02 ... dir_name12 directories
 - `du -sh`: disk usage
+
+&nbsp;
 
 # LaTeX
 ## LaTeX Error: Unicode character ́ (U+0301)
@@ -40,3 +44,16 @@ git config --global user.email <EMAIL>
     Put `\DeclareUnicodeCharacter{0301}{*************************************}` in the preamble (before `\begin{document}`) and find the asterisks on the pdf.
 
     After locating it, the final fix in my case was replacing `\'\i` by `\'{i}`
+
+## JFST Editorial Manager was not using bibtex/biber to compile *.bib file
+The solution is to link the *.bbl file, which is actually a compiled version of the *.bib file
+- `BibTeX` user: Access the `*.bbl` file and change the main `*.tex` file:
+    ```diff
+    -\bibliography{bib-file}
+    +<contents from the .bbl file>
+    ```
+- `BibLaTeX` user: For `biber` backend, the [biblatex-readbbl](https://ctan.org/pkg/biblatex-readbbl?lang=en) package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include `something.bbl` and change the main `tex` file:
+    ```diff
+    -\addbibresource{ref.bib}
+    +\usepackage[bblfile=something]{biblatex-readbbl}
+    ```
