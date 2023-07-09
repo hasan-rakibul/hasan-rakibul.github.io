@@ -47,13 +47,7 @@ git config --global user.email <EMAIL>
 
 ## JFST Editorial Manager was not using bibtex/biber to compile *.bib file
 The solution is to link the *.bbl file, which is actually a compiled version of the *.bib file
-- `BibTeX` user: Access the `*.bbl` file and change the main `*.tex` file:
-    ```diff
-    -\bibliography{bib-file}
-    +<contents from the .bbl file>
-    ```
-- `BibLaTeX` user: For `biber` backend, the [biblatex-readbbl](https://ctan.org/pkg/biblatex-readbbl?lang=en) package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include `something.bbl` and change the main `tex` file:
-    ```diff
-    -\addbibresource{ref.bib}
-    +\usepackage[bblfile=something]{biblatex-readbbl}
-    ```
+
+- `BibTeX` user: Access the `*.bbl` file and change the main `*.tex` file: Comment out `\bibliography{bib-file}` and place `<contents from the .bbl file>`
+
+- `BibLaTeX` user: For `biber` backend, the [biblatex-readbbl](https://ctan.org/pkg/biblatex-readbbl?lang=en) package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include `something.bbl` and change the main `tex` file: Comment out `\addbibresource{ref.bib}` and place `\usepackage[bblfile=something]{biblatex-readbbl}`
