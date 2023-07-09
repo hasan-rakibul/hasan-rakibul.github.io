@@ -85,15 +85,15 @@ git config --global user.email &lt;EMAIL&gt;
 </li>
 </ul>
 <h2>JFST Editorial Manager was not using bibtex/biber to compile *.bib file</h2>
-<p>The solution is to link the <em>.bbl file, which is actually a compiled version of the </em>.bib file
-- <code>BibTeX</code> user: Access the <code>*.bbl</code> file and change the main <code>*.tex</code> file:
-    <code>diff
-    -\bibliography{bib-file}
-    +&lt;contents from the .bbl file&gt;</code>
-- <code>BibLaTeX</code> user: For <code>biber</code> backend, the <a href="https://ctan.org/pkg/biblatex-readbbl?lang=en">biblatex-readbbl</a> package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include <code>something.bbl</code> and change the main <code>tex</code> file:
-    <code>diff
-    -\addbibresource{ref.bib}
-    +\usepackage[bblfile=something]{biblatex-readbbl}</code></p>
+<p>The solution is to link the <em>.bbl file, which is actually a compiled version of the </em>.bib file</p>
+<ul>
+<li>
+<p><code>BibTeX</code> user: Access the <code>*.bbl</code> file and change the main <code>*.tex</code> file: Comment out <code>\bibliography{bib-file}</code> and place <code>&lt;contents from the .bbl file&gt;</code></p>
+</li>
+<li>
+<p><code>BibLaTeX</code> user: For <code>biber</code> backend, the <a href="https://ctan.org/pkg/biblatex-readbbl?lang=en">biblatex-readbbl</a> package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include <code>something.bbl</code> and change the main <code>tex</code> file: Comment out <code>\addbibresource{ref.bib}</code> and place <code>\usepackage[bblfile=something]{biblatex-readbbl}</code></p>
+</li>
+</ul>
     </div><!-- /.entry-content -->
 
   </article>
