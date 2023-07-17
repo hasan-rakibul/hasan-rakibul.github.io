@@ -32,3 +32,16 @@ EEE 426: Switchgear & Protection Laboratory
 
 
 Previously at [Bangladesh Army International University of Science and Technology (BAIUST)](https://www.baiust.edu.bd/), among several courses, I enjoyed teaching (1) Computer Fundamentals and Programming, and (2) Digital Electronics and Logic Design courses.
+
+BRAC University
+Among several courses, I enjoyed teaching –
+
+EEE103/ECE103/CSE161 Computer Programming [Summer 2021 – Fall 2021]
+EEE103IL/ECE103IL/CSE162 Computer Programming Laboratory [Summer 2021 – Fall 2022]
+EEE365/ECE365 Microprocessor and Interfacing [Summer 2021 – Fall 2022]
+EEE365/ECE366 Microprocessor and Interfacing Laboratory [Fall 2020 – Fall 2022]
+Bangladesh Army International University of Science and Technology
+Among several courses, I enjoyed teaching –
+
+Computer Fundamentals and Programming (Theory & Lab)
+Digital Electronics and Logic Design (Theory & Lab)
