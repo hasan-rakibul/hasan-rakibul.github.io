@@ -21,23 +21,25 @@ I am a big fan of open online learning and have completed over 25 certified cou
 # Teaching
 At [Curtin University](https://www.curtin.edu.au/), I tutored &ndash;
 
-0. [ICTE3002/5001 Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/) laboratory [Semester 1, 2023]
-0. [COMP1000 Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) laboratory [Semester 1, 2023]
+0. ISEC1000: Cyber Security Concepts (Computer Laboratory) [Semester 2, 2023]
+0. COMP5008: Data Structures and Algorithms (Computer Laboratory) [Semester 2, 2023]
+0. [ICTE3002/5001: Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/) (Computer Laboratory) [Semester 1, 2023]
+0. [COMP1000: Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) (Computer Laboratory) [Semester 1, 2023]
 
 &nbsp;
 
 At [Murdoch University](https://www.murdoch.edu.au/), I tutored &ndash;
 
-0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/rakib-ul/AI-cybersec) laboratory **[Semester 1, 2023] [I designed this laboratory.]**
+0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/hasan-rakibul/AI-cybersec) (Tutorial) **[Semester 1, 2023] [I designed this laboratory.]**
 
 &nbsp;
 
 At [BRAC University](https://www.bracu.ac.bd/), among several courses, I loved teaching &ndash;
 
-0. [EEE365/ECE365 Microprocessor and Interfacing](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE365+2022_Spring/about) [Summer 2021 &ndash; Fall 2022]
-0. [EEE365/ECE366 Microprocessor and Interfacing Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE366+2022_Spring/about) [Fall 2020 &ndash; Fall 2022]
-0. [EEE103/ECE103/CSE161 Computer Programming](https://bux.bracu.ac.bd/courses/course-v1:buX+CSE161+2022_Spring/about) [Summer 2021 &ndash; Fall 2021]
-0. [EEE103IL/ECE103IL/CSE162 Computer Programming Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE103L+2022_Spring/about) [Summer 2021 &ndash; Fall 2022]
+0. [EEE365/ECE365: Microprocessor and Interfacing](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE365+2022_Spring/about) [Summer 2021 &ndash; Fall 2022]
+0. [EEE365/ECE366: Microprocessor and Interfacing Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE366+2022_Spring/about) [Fall 2020 &ndash; Fall 2022]
+0. [EEE103/ECE103/CSE161: Computer Programming](https://bux.bracu.ac.bd/courses/course-v1:buX+CSE161+2022_Spring/about) [Summer 2021 &ndash; Fall 2021]
+0. [EEE103IL/ECE103IL/CSE162: Computer Programming Laboratory](https://bux.bracu.ac.bd/courses/course-v1:buX+EEE103L+2022_Spring/about) [Summer 2021 &ndash; Fall 2022]
 
 &nbsp;
 

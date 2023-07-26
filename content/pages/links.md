@@ -10,7 +10,11 @@ Title: Useful links
 
 &nbsp;
 
-# Natural language processing
+# Deep learning
+- [What should I do when my neural network doesn't learn?](https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn)
+- [What should I do when my neural network doesn't generalize well?](https://stats.stackexchange.com/questions/365778/what-should-i-do-when-my-neural-network-doesnt-generalize-well)
+
+## Natural language processing
 - [The Annotated Transformer](http://nlp.seas.harvard.edu/annotated-transformer/)
 - [A Visual Guide to Using BERT for the First Time](http://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/)
 - [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](http://jalammar.github.io/illustrated-bert/)
