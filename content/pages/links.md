@@ -22,6 +22,6 @@ Title: Useful links
 - [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/)
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - [Animated RNN, LSTM and GRU](https://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45)
-- [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
 - [Transformer Neural Networks - EXPLAINED! (Attention is all you need)](https://www.youtube.com/watch?v=TQQlZhbC5ps)
 - [What is Transformer?](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
+- [Pooling Strategies for Downstream Tasks - Utilizing Transformer Representations Efficiently](https://www.kaggle.com/code/rhtsingh/utilizing-transformer-representations-efficiently)
