@@ -21,15 +21,16 @@ I am a big fan of open online learning and have completed over 25 certified cou
 # Teaching
 At [Curtin University](https://www.curtin.edu.au/), I tutored &ndash;
 
-0. ISEC1000: Cyber Security Concepts (Computer Laboratory) [Semester 2, 2023]
-0. COMP5008: Data Structures and Algorithms (Computer Laboratory) [Semester 2, 2023]
-0. [ICTE3002/5001: Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/) (Computer Laboratory) [Semester 1, 2023]
-0. [COMP1000: Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) (Computer Laboratory) [Semester 1, 2023]
+0. ISEC1000: Cyber Security Concepts (Laboratory) [Semester 2, 2023]
+0. COMP5008: Data Structures and Algorithms (Laboratory) [Semester 2, 2023]
+0. [ICTE3002/5001: Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/) (Laboratory) [Semester 1, 2023]
+0. [COMP1000: Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) (Laboratory) [Semester 1, 2023]
 
 &nbsp;
 
 At [Murdoch University](https://www.murdoch.edu.au/), I tutored &ndash;
 
+0. ICT100: Transition to IT (Tutorial & Laboratory) [Semester 2, 2023]
 0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/hasan-rakibul/AI-cybersec) (Tutorial) **[Semester 1, 2023] [I designed this laboratory.]**
 
 &nbsp;

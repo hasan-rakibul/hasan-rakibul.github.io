@@ -12,7 +12,7 @@ Personal note of anything (GitHub, Linux, etc.) I would like to find out easily.
 - `git rm --cached <file1> <dir/file2>`: remove file1 and file2 from repository, especially required when `.gitignore` is updated to avoid tracking file1 and file2, which was earlier tracked and now on repository. This will NOT remove the file from the current local system. "Be aware to commit all your changes before, otherwise you will loose control on all the changed files" - [Hoang Pham at SO](https://stackoverflow.com/questions/1139762/ignore-files-that-have-already-been-committed-to-a-git-repository#comment1985104_1139797)
 
 ## Fix local configuration after changing repo name
-- `git remove -v` to check current repo name
+- `git remote -v` to check current repo name
 - `git remote set-url origin git@github.com:<username>/<new-repo-name>.git`: update origin
 
 ## Configuring local machine to access (pull, push, etc.) GitHub private and public repositories. 
