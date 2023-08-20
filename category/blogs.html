@@ -21,9 +21,14 @@
                     <li><a href="/student_corner">student corner</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-        <aside id="featured" class="body">
-            <article>
-                <h1 class="entry-title"><a href="/nci-gadi-for-deep-learning">NCI Gadi for deep learning</a></h1>
+    <section id="content" class="body">
+    <article class="hentry">
+        <header>
+            <h1><a href="/nci-gadi-for-deep-learning" rel="bookmark"
+                    title="Permalink to NCI Gadi for deep learning">NCI Gadi for deep learning</a></h1>
+        </header>
+
+        <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2023-04-16T00:00:00+08:00">
                 Published: Sun 16 April 2023
@@ -34,165 +39,24 @@
         </address>
 <p>In <a href="/category/blogs.html">blogs</a>.</p>
 
-</footer><!-- /.post-info --><p>Personal note to access NCI Gadi cluster for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
+</footer><!-- /.post-info -->        <p>Personal note to access NCI Gadi cluster for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
 <h1>Access from ARE (Australian Research Environment)</h1>
 <ul>
 <li>Login at <a href="https://are.nci.org.au/">https://are.nci.org.au/</a><ul>
-<li>Jupyterlab (gpuvolta) is good for running python programs. Now, it also has internet access but not fast like <em>analysis</em> queue.</li>
-<li>By default, it will start from apps directory: <code>/apps/jupyterlab/3.4.3-py3.9/bin/jupyter</code> but can be altered (more on later).</li>
-<li>Virtual Desktop (GPU)<ul>
-<li>Not smooth/fast as compared to Jupyterlab</li>
-<li>Queue can be either <em>analysis</em> or <em>gpuvolta</em>. Now, both have internet access but speed is very limited in <em>gpuvolta</em>. <em>gpuvolta</em> allow more GPU than <em>analysis</em><ul>
-<li>As they have internet access, new modules/packages can be installed from compute node unless it requires sudo access</li>
-</ul>
-</li>
-<li>Setup VNC resolution as per your monitor (e.g., 1920x1080), otherwise it will be hard to see all corners</li>
-<li>From <em>advanced options</em>, enter a reasonable <em>Jobfs size</em> (default is 100MB, which is insufficient). System will crash if more than allocated <em>jobfs</em> is used.</li>
-<li>It gives VNC access to <a href="https://rockylinux.org/">Rocky Linux</a> </li>
-</ul>
-</li>
-<li>Be aware of your remaining Walltime as it automatically disconnects the session when time ends</li>
-<li>File management can also be done from ARE web portal</li>
-</ul>
-</li>
-</ul>
-<h2>Python module/package installation</h2>
-<h3>Modules</h3>
-<ul>
-<li>Check avialable moduels<ul>
-<li><code>module avail &lt;search string&gt;</code></li>
-</ul>
-</li>
-<li>Load module<ul>
-<li><code>module load &lt;module name/version(preferable)&gt;</code></li>
-</ul>
-</li>
-<li>Check loaded moduels<ul>
-<li><code>module list</code></li>
-</ul>
-</li>
-<li>Unload module<ul>
-<li><code>module unload &lt;module name&gt;</code></li>
-</ul>
-</li>
-</ul>
-<h3>I preferred virtual-environment approach to install Python packages</h3>
-<p>Inside <code>/g/data</code>, I create a new virtual enrinronment named <code>.venv</code>, for example. If I don't want to use the default python version, I load specific version (<code>module load python3/3.11.0</code>) for which I want to base my virtual environment.</p>
-<p><code>python3 -m venv .venv</code></p>
-<p>Then, activate it: <code>source .venv/bin/activate</code> (better, put this command in <code>~/.bashrc</code> if it's your default environment. Then I don't need to activate it everytime.)</p>
-<p>And then install without any prefix path. It will automatically install on <code>/g/data</code> if the env is activated.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">python3</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">v</span><span class="w"> </span><span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">binary</span><span class="w"> </span><span class="p">:</span><span class="nx">all</span><span class="p">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">package_name</span><span class="p">&gt;</span>
-</code></pre></div>
+<li>Jupyterlab (gpuvolta) is good for …</li></ul></li></ul>
+        <a class="readmore" href="/nci-gadi-for-deep-learning">read more</a>
+        </div><!-- /.entry-content -->
+    </article>
+        </ol><!-- /#posts-list -->
+    </section><!-- /#content -->
+    <section id="content" class="body">
+    <article class="hentry">
+        <header>
+            <h1><a href="/personal-note-github-linux-etc-commands" rel="bookmark"
+                    title="Permalink to Personal note on GitHub, Linux, etc. commands">Personal note on GitHub, Linux, etc. commands</a></h1>
+        </header>
 
-<p>Or if binary install is unavailable,</p>
-<div class="highlight"><pre><span></span><code><span class="nx">python3</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">v</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">package_name</span><span class="p">&gt;</span>
-</code></pre></div>
-
-<p>To install a list of packages from <code>requirements.txt</code>, append <code>-r requirements.txt</code> with the above command.</p>
-<ul>
-<li>While creating JupyterLab session, specify the base python version (<code>python3/3.11.0</code>) in the <code>Modules</code> field and venv absoulate path (<code>/g/data/&lt;...&gt;/.venv</code>) in "Python or Conda virtual environment base" field.</li>
-<li>More on venv<ul>
-<li><code>which python</code> to check whether the virtual environment is properly activated</li>
-<li>After creating virtual environment, make <code>include-system-site-packages = true</code> in <code>./venv/pyvenv.cfg</code> file to include system-wide packages available in the virtual envirorment as well</li>
-</ul>
-</li>
-</ul>
-<h3>From NCI guide</h3>
-<ul>
-<li>
-<p>NCI recommended installation using <code>pip</code> command on <code>/g/data</code></p>
-<p>Python-related NCI documentation is <a href="https://opus.nci.org.au/display/Help/Python">here</a>. NCI recommends compiling package on Gadi and not to install binary if possible. Compiling took so much time in my case (especially pandas). </p>
-<p>Let's say I create a new directory in gdata (&lt;new-dir&gt;). To compile (or, <em>no-binary</em> install): </p>
-<p><code>python3 -m pip install -v --no-binary :all: --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
-<p>If <em>no-binary</em> fails, install binary: <code>python3 -m pip install -v --prefix=/g/data/&lt;new-dir&gt; &lt;package_name&gt;</code></p>
-<p>Check site-package directory and add it to <code>PYTHONPATH</code>. In my case, I added the following in <code>~/.bashrc</code> (once).</p>
-<p><code>export PYTHONPATH=/g/data/&lt;new-dir&gt;/lib/python3.9/site-packages:$PYTHONPATH</code></p>
-</li>
-</ul>
-<h3>What not to do</h3>
-<ul>
-<li>NCI user support: "<code>/g/data/</code> should be the best place for installing software packages"</li>
-<li>NCI user support: "We do not recommend to use "conda" on Gadi as it creates lots of small files, interfere with the Gadi environment and creates other problems. We recommend to install packages using "pip" command, if possible."</li>
-<li>User's home directory limit is 10GB only, so better not to install at home directory (otherwise, <em>disk quota exceeded</em> error will happen.)</li>
-<li>Initially, I installed <em>miniconda</em> at <code>/scratch/&lt;project id&gt;/&lt;username&gt;/miniconda3</code><ul>
-<li><strong>Not a good option because file expiry policy (auto-delete) is in place for <code>/scratch</code></strong></li>
-<li>If conda is installed, Pytorch might need to be (re)installed as per <a href="https://pytorch.org/get-started/locally/">pytorch website</a>, otherwise default anaconda pytorch doesn't use GPU</li>
-<li>If installed in <code>/scratch/</code>, be aware of inode (number of files) usage because it has a limit after which new session will not be created ("Your session has entered a bad state...")<ul>
-<li>I installed <em>anaconda</em> and also later <em>miniconda</em> and used up more than allowed inode, so couldn't create new session, which I fixed (uninstalled) from login node (Gadi terminal)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>&nbsp;</p>
-<h1>File transfer between local machine and Gadi</h1>
-<p><code>scp &lt;file with path&gt; &lt;username&gt;@gadi-dm.nci.org.au:&lt;directory&gt;</code> </p>
-<ul>
-<li>Above command to be run from local machine to copy from local machine to Gadi</li>
-<li><code>gadi-dm</code> specifies data-mover (or something), which doesn't have time/cpu-limitation like login node</li>
-<li><em>directory</em> can be something like <code>/home/&lt;some number&gt;/&lt;username&gt;</code> for home directory</li>
-<li><code>pwd</code> can be used to check <em>current directory</em> at Gadi login/compute note</li>
-<li>It's recommended to use <code>copyq</code> for large data transfer "as there is limited internet bandwidth available for jobs in the normal queues" </li>
-<li>We can also use <code>rsync</code> (which can be resumed)</li>
-</ul>
-<p>&nbsp;</p>
-<h1>Other important commands</h1>
-<ul>
-<li><code>nci_account</code>: check storage and compute allocation with usage</li>
-</ul>
-<p>&nbsp;</p>
-<h1>Service unit (SU) calculation</h1>
-<p>For gpuvolta queue,</p>
-<ul>
-<li>Number of cpu cores = 12 * number of gpu</li>
-<li>SU estimate = 3 SUs/core/h<ul>
-<li>So, using 4 GPUs for 8 hours, SUs = 3*4*12*8 = 1152 SUs</li>
-</ul>
-</li>
-</ul>
-<h2>Azure equivalent</h2>
-<p>Please note that the following equivalence calculation is based on my personal understanding of the two systems. I cannot guarantee the accuracy or comprehensiveness of these calculations. Of course, these are completely different systems, and their features vary.</p>
-<p>As of 14 June 2023, Azure NDv2-series (ND40rs v2) offers 8 NVIDIA V100 32 GB GPUs and 40 Core(s). It costs $33.8563/hour (Australian Dollar) in "Pay as you go" plan. [<a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/#pricing">Source</a>]</p>
-<h3>Based on GPU</h3>
-<p>Equivalent Gadi usage = 3*8*12 = 288 SU/hour</p>
-<p>288 SU costs $33.8563 <br>
-So, 1 KSU costs = $117.56</p>
-<h3>Based on Core</h3>
-<p>Equivalent Gadi usage = 3*40 = 120 SU/hour <br>
-Therefore, 1 KSU costs = $282.136</p>
-<p>&nbsp;</p>
-<h1>Access Gadi terminal &ndash; not required if ARE is sufficient</h1>
-<h2>Access login node from a linux terminal</h2>
-<p><code>ssh &lt;username&gt;@gadi.nci.org.au</code></p>
-<h2>Submit interactive job (accessing a compute node where I can interactively use resources, i.e., run programs)</h2>
-<p><code>qsub -I -qgpuvolta  -P&lt;project id&gt; -lwalltime=01:00:00,ncpus=48,ngpus=4,mem=48GB,jobfs=200GB,storage=gdata/&lt;project id&gt;,wd</code></p>
-<ul>
-<li>No internet access after login :(<ul>
-<li>So, if the program requires internet, it won't work!</li>
-</ul>
-</li>
-</ul>
-<p>&nbsp;</p>
-<h1>Course / Manuals / helpful resources</h1>
-<ul>
-<li><a href="https://sydney-informatics-hub.github.io/training.gadi.intro/03-Accounting/index.html">Introduction to NCI Gadi – Sydney Informatics Hub</a></li>
-<li><a href="https://nci-australia.teachable.com/p/introduction-to-gadi">Introduction to Gadi</a></li>
-<li><a href="https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi">https://opus.nci.org.au/display/Help/0.+Welcome+to+Gadi</a></li>
-<li><a href="https://opus.nci.org.au/display/Help/Python">https://opus.nci.org.au/display/Help/Python</a></li>
-<li><a href="https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide">https://opus.nci.org.au/display/Help/Gadi+Quick+Reference+Guide</a></li>
-</ul>            </article>
-        </aside><!-- /#featured -->
-            <section id="content" class="body">
-                <h1>Other articles</h1>
-                <hr />
-                <ol id="posts-list" class="hfeed">
-        <li><article class="hentry">
-            <header>
-                <h1><a href="/personal-note-github-linux-etc-commands" rel="bookmark"
-                        title="Permalink to Personal note on GitHub, Linux, etc. commands">Personal note on GitHub, Linux, etc. commands</a></h1>
-            </header>
-
-            <div class="entry-content">
+        <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2023-04-16T00:00:00+08:00">
                 Published: Sun 16 April 2023
@@ -203,22 +67,25 @@ Therefore, 1 KSU costs = $282.136</p>
         </address>
 <p>In <a href="/category/blogs.html">blogs</a>.</p>
 
-</footer><!-- /.post-info -->            <p>Personal note of anything (GitHub, Linux, etc.) I would like to find out easily.</p>
+</footer><!-- /.post-info -->        <p>Personal note of anything (GitHub, Linux, etc.) I would like to find out easily.</p>
 <h1>GitHub</h1>
 <h2>General commands</h2>
 <ul>
 <li><code>git mv &lt;current filename&gt; &lt;new filename (with dir to move)&gt;</code>: move or rename file that is already tracked by git</li>
 <li><code>git rm --cached &lt;file1&gt; &lt;dir/file2&gt;</code>: remove file1 and file2 from repository, especially …</li></ul>
-            <a class="readmore" href="/personal-note-github-linux-etc-commands">read more</a>
-            </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-            <header>
-                <h1><a href="/kuet-pg-thesis-template" rel="bookmark"
-                        title="Permalink to KUET postgrad thesis template in LaTeX">KUET postgrad thesis template in LaTeX</a></h1>
-            </header>
+        <a class="readmore" href="/personal-note-github-linux-etc-commands">read more</a>
+        </div><!-- /.entry-content -->
+    </article>
+        </ol><!-- /#posts-list -->
+    </section><!-- /#content -->
+    <section id="content" class="body">
+    <article class="hentry">
+        <header>
+            <h1><a href="/kuet-pg-thesis-template" rel="bookmark"
+                    title="Permalink to KUET postgrad thesis template in LaTeX">KUET postgrad thesis template in LaTeX</a></h1>
+        </header>
 
-            <div class="entry-content">
+        <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2022-09-17T15:46:00+08:00">
                 Published: Sat 17 September 2022
@@ -229,20 +96,23 @@ Therefore, 1 KSU costs = $282.136</p>
         </address>
 <p>In <a href="/category/blogs.html">blogs</a>.</p>
 
-</footer><!-- /.post-info -->            
+</footer><!-- /.post-info -->        
 <p>Writing a postgraduate thesis is stressful and would be horrendous without a helpful template.</p>
 
 <p>I received my MSc Eng degree from Khulna University of Engineering & Technology (KUET) in 2021. Officially, the university only provided a <a href="https://www.kuet.ac.bd/images/forms/ACAF_5.pdf">PDF</a>, mentioning the formatting requirement of the thesis. Writing the thesis in MS Word was …</p>
-            <a class="readmore" href="/kuet-pg-thesis-template">read more</a>
-            </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-            <header>
-                <h1><a href="/5g-in-bangladesh" rel="bookmark"
-                        title="Permalink to Opportunities and challenges of 5G communication in Bangladesh">Opportunities and challenges of 5G communication in Bangladesh</a></h1>
-            </header>
+        <a class="readmore" href="/kuet-pg-thesis-template">read more</a>
+        </div><!-- /.entry-content -->
+    </article>
+        </ol><!-- /#posts-list -->
+    </section><!-- /#content -->
+    <section id="content" class="body">
+    <article class="hentry">
+        <header>
+            <h1><a href="/5g-in-bangladesh" rel="bookmark"
+                    title="Permalink to Opportunities and challenges of 5G communication in Bangladesh">Opportunities and challenges of 5G communication in Bangladesh</a></h1>
+        </header>
 
-            <div class="entry-content">
+        <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2021-01-22T00:00:00+08:00">
                 Published: Fri 22 January 2021
@@ -257,16 +127,16 @@ Therefore, 1 KSU costs = $282.136</p>
         </address>
 <p>In <a href="/category/blogs.html">blogs</a>.</p>
 
-</footer><!-- /.post-info -->            <!-- Status: draft -->
+</footer><!-- /.post-info -->        <!-- Status: draft -->
 <!-- Tags: 5G, bangladesh -->
 <!-- Summary: 5G in Bangladesh -->
 
 <p>Better communication, especially better internet access, is a key requirement for modern day-to-day life. Bearing that in mind, significant improvement and efficient utilization of Information and Communication Technology (ICT) is expected. Like many developing countries, Bangladesh has also made significant growth in internet access. According to the Bangladesh Telecommunication Regulatory …</p>
-            <a class="readmore" href="/5g-in-bangladesh">read more</a>
-            </div><!-- /.entry-content -->
-        </article></li>
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
+        <a class="readmore" href="/5g-in-bangladesh">read more</a>
+        </div><!-- /.entry-content -->
+    </article>
+        </ol><!-- /#posts-list -->
+    </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>find me on</h2>
@@ -293,7 +163,7 @@ Therefore, 1 KSU costs = $282.136</p>
 
 
 
-<!-- Added by RKBL to toggle BibTeX info -->
+<!-- Added by RKBL to toggle BibTeX info and auto anchor tag on all pub list-->
 <script>
         function generateId(entry) {
                 // generating id for the toggle block
@@ -314,12 +184,20 @@ Therefore, 1 KSU costs = $282.136</p>
         // iterate through <li> elements and set IDs
         liElements.forEach(function(li) {
                 var entry = li.getAttribute('entry');
-                var aElement = li.querySelector('a');
+
+                // create and set the anchor tag
+                var aElement = document.createElement('a');
+                aElement.name = entry;
+                li.insertBefore(aElement, li.firstChild);
+                // var aElement = li.querySelector('a');
+                
                 var preElement = li.querySelector('pre.toggle-block');
 
-                var blockId = generateId(entry);
-                aElement.name = entry;
-                preElement.id = blockId;
+                // if there is a preElement, set it's id
+                if (preElement) {
+                        var blockId = generateId(entry);
+                        preElement.id = blockId;
+                }
         });
 </script>
 

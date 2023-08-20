@@ -77,7 +77,8 @@ However, I would be all ears to your research ideas and would be happy to guide 
 <ol reversed>
     <li>
         <strong>Machine Learning to Predict Gut Microbiomes of Agricultural Pests</strong> <br>
-        By Alexander Taylor
+        By Alexander Taylor <br>
+        [<a href="publications#jobayer2023machine">Paper</a>]
     </li>
     <li>
         <strong>Convolutional neural networks on contrast CT scans: predicting and staging hepatocellular carcinoma</strong> <br>
@@ -166,7 +167,7 @@ However, I would be all ears to your research ideas and would be happy to guide 
 
 
 
-<!-- Added by RKBL to toggle BibTeX info -->
+<!-- Added by RKBL to toggle BibTeX info and auto anchor tag on all pub list-->
 <script>
         function generateId(entry) {
                 // generating id for the toggle block
@@ -187,12 +188,20 @@ However, I would be all ears to your research ideas and would be happy to guide 
         // iterate through <li> elements and set IDs
         liElements.forEach(function(li) {
                 var entry = li.getAttribute('entry');
-                var aElement = li.querySelector('a');
+
+                // create and set the anchor tag
+                var aElement = document.createElement('a');
+                aElement.name = entry;
+                li.insertBefore(aElement, li.firstChild);
+                // var aElement = li.querySelector('a');
+                
                 var preElement = li.querySelector('pre.toggle-block');
 
-                var blockId = generateId(entry);
-                aElement.name = entry;
-                preElement.id = blockId;
+                // if there is a preElement, set it's id
+                if (preElement) {
+                        var blockId = generateId(entry);
+                        preElement.id = blockId;
+                }
         });
 </script>
 

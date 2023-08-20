@@ -124,7 +124,7 @@ git config --global user.email &lt;EMAIL&gt;
 
 
 
-<!-- Added by RKBL to toggle BibTeX info -->
+<!-- Added by RKBL to toggle BibTeX info and auto anchor tag on all pub list-->
 <script>
         function generateId(entry) {
                 // generating id for the toggle block
@@ -145,12 +145,20 @@ git config --global user.email &lt;EMAIL&gt;
         // iterate through <li> elements and set IDs
         liElements.forEach(function(li) {
                 var entry = li.getAttribute('entry');
-                var aElement = li.querySelector('a');
+
+                // create and set the anchor tag
+                var aElement = document.createElement('a');
+                aElement.name = entry;
+                li.insertBefore(aElement, li.firstChild);
+                // var aElement = li.querySelector('a');
+                
                 var preElement = li.querySelector('pre.toggle-block');
 
-                var blockId = generateId(entry);
-                aElement.name = entry;
-                preElement.id = blockId;
+                // if there is a preElement, set it's id
+                if (preElement) {
+                        var blockId = generateId(entry);
+                        preElement.id = blockId;
+                }
         });
 </script>
 
