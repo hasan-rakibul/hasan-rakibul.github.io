@@ -40,14 +40,15 @@
 <h1>Teaching</h1>
 <p>At <a href="https://www.curtin.edu.au/">Curtin University</a>, I tutored &ndash;</p>
 <ol>
-<li>ISEC1000: Cyber Security Concepts (Computer Laboratory) [Semester 2, 2023]</li>
-<li>COMP5008: Data Structures and Algorithms (Computer Laboratory) [Semester 2, 2023]</li>
-<li><a href="https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/">ICTE3002/5001: Human-Computer Interfaces</a> (Computer Laboratory) [Semester 1, 2023]</li>
-<li><a href="https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/">COMP1000: Unix and C Programming</a> (Computer Laboratory) [Semester 1, 2023]</li>
+<li>ISEC1000: Cyber Security Concepts (Laboratory) [Semester 2, 2023]</li>
+<li>COMP5008: Data Structures and Algorithms (Laboratory) [Semester 2, 2023]</li>
+<li><a href="https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/">ICTE3002/5001: Human-Computer Interfaces</a> (Laboratory) [Semester 1, 2023]</li>
+<li><a href="https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/">COMP1000: Unix and C Programming</a> (Laboratory) [Semester 1, 2023]</li>
 </ol>
 <p>&nbsp;</p>
 <p>At <a href="https://www.murdoch.edu.au/">Murdoch University</a>, I tutored &ndash;</p>
 <ol>
+<li>ICT100: Transition to IT (Tutorial &amp; Laboratory) [Semester 2, 2023]</li>
 <li><a href="https://github.com/hasan-rakibul/AI-cybersec">ICT607: Artificial Intelligence for Cybersecurity</a> (Tutorial) <strong>[Semester 1, 2023] [I designed this laboratory.]</strong></li>
 </ol>
 <p>&nbsp;</p>
@@ -89,13 +90,32 @@
 
 <!-- Added by RKBL to toggle BibTeX info -->
 <script>
-    function showBlock(blockId) {
-      var codeBlock = document.getElementById(blockId);
-      codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+        function generateId(entry) {
+                // generating id for the toggle block
+                return entry + "-bibtex";
+        }
 
-      var button = document.getElementById(blockId+"-button"); <!--button ID is blockid-"button"-->
-      button.classList.toggle("active");
-    }
+        function showBlock(blockId) {
+                var codeBlock = document.getElementById(blockId);
+                codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+
+                var button = document.getElementById(blockId+"-button"); <!--button ID is blockid-"button"-->
+                button.classList.toggle("active");
+        }
+
+        // select all <li> elements
+        var liElements = document.querySelectorAll('li[entry]');
+
+        // iterate through <li> elements and set IDs
+        liElements.forEach(function(li) {
+                var entry = li.getAttribute('entry');
+                var aElement = li.querySelector('a');
+                var preElement = li.querySelector('pre.toggle-block');
+
+                var blockId = generateId(entry);
+                aElement.name = entry;
+                preElement.id = blockId;
+        });
 </script>
 
 </body>

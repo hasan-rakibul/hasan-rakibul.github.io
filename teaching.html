@@ -89,13 +89,32 @@ Digital Electronics and Logic Design (Theory &amp; Lab)</p>
 
 <!-- Added by RKBL to toggle BibTeX info -->
 <script>
-    function showBlock(blockId) {
-      var codeBlock = document.getElementById(blockId);
-      codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+        function generateId(entry) {
+                // generating id for the toggle block
+                return entry + "-bibtex";
+        }
 
-      var button = document.getElementById(blockId+"-button"); <!--button ID is blockid-"button"-->
-      button.classList.toggle("active");
-    }
+        function showBlock(blockId) {
+                var codeBlock = document.getElementById(blockId);
+                codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+
+                var button = document.getElementById(blockId+"-button"); <!--button ID is blockid-"button"-->
+                button.classList.toggle("active");
+        }
+
+        // select all <li> elements
+        var liElements = document.querySelectorAll('li[entry]');
+
+        // iterate through <li> elements and set IDs
+        liElements.forEach(function(li) {
+                var entry = li.getAttribute('entry');
+                var aElement = li.querySelector('a');
+                var preElement = li.querySelector('pre.toggle-block');
+
+                var blockId = generateId(entry);
+                aElement.name = entry;
+                preElement.id = blockId;
+        });
 </script>
 
 </body>
