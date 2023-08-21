@@ -482,10 +482,12 @@
                         <h2>find me on</h2>
                         <ul>
                             <li><a href="https://scholar.google.com.au/citations?user=DuCQ8goAAAAJ&hl=en">Google Scholar</a></li>
+                            <li><a href="https://orcid.org/0000-0003-2565-5321">ORCiD</a></li>
                             <li><a href="https://www.researchgate.net/profile/Md-Rakibul-Hasan-10">ReserchGate</a></li>
+                            <li><a href="https://www.semanticscholar.org/author/2142425">Semantic Scholar</a></li>
+                            <li><a href="https://www.webofscience.com/wos/author/record/AFK-8839-2022">Web of Science</a></li>
                             <li><a href="https://www.linkedin.com/in/m-rakibul">LinkedIn</a></li>
                             <li><a href="https://github.com/hasan-rakibul">GitHub</a></li>
-                            <li><a href="https://orcid.org/0000-0003-2565-5321">ORCiD</a></li>
                             <li><a href="https://www.bracu.ac.bd/about/people/md-rakibul-hasan">BRAC University</a></li>
                             <li><a href="mailto:Rakibul.Hasan@curtin.edu.au">e-mail</a></li>
                         </ul>
@@ -525,18 +527,21 @@
         liElements.forEach(function(li) {
                 var entry = li.getAttribute('entry');
 
-                // create and set the anchor tag
-                var aElement = document.createElement('a');
-                aElement.name = entry;
-                li.insertBefore(aElement, li.firstChild);
-                // var aElement = li.querySelector('a');
-                
-                var preElement = li.querySelector('pre.toggle-block');
+                if (entry) {
 
-                // if there is a preElement, set it's id
-                if (preElement) {
-                        var blockId = generateId(entry);
-                        preElement.id = blockId;
+                        // create and set the anchor tag
+                        var aElement = document.createElement('a');
+                        aElement.name = entry;
+                        li.insertBefore(aElement, li.firstChild);
+                        // var aElement = li.querySelector('a');
+                        
+                        var preElement = li.querySelector('pre.toggle-block');
+
+                        // if there is a preElement, set it's id
+                        if (preElement) {
+                                var blockId = generateId(entry);
+                                preElement.id = blockId;
+                        }
                 }
         });
 </script>
