@@ -104,18 +104,21 @@
         liElements.forEach(function(li) {
                 var entry = li.getAttribute('entry');
 
-                // create and set the anchor tag
-                var aElement = document.createElement('a');
-                aElement.name = entry;
-                li.insertBefore(aElement, li.firstChild);
-                // var aElement = li.querySelector('a');
-                
-                var preElement = li.querySelector('pre.toggle-block');
+                if (entry) {
 
-                // if there is a preElement, set it's id
-                if (preElement) {
-                        var blockId = generateId(entry);
-                        preElement.id = blockId;
+                        // create and set the anchor tag
+                        var aElement = document.createElement('a');
+                        aElement.name = entry;
+                        li.insertBefore(aElement, li.firstChild);
+                        // var aElement = li.querySelector('a');
+                        
+                        var preElement = li.querySelector('pre.toggle-block');
+
+                        // if there is a preElement, set it's id
+                        if (preElement) {
+                                var blockId = generateId(entry);
+                                preElement.id = blockId;
+                        }
                 }
         });
 </script>

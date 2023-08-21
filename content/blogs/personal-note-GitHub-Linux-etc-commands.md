@@ -32,7 +32,8 @@ git config --global user.email <EMAIL>
 
 # Linux
 - `mkdir dir_name{01..12}`: create dir_name01, dir_name02 ... dir_name12 directories
-- `du -sh`: disk usage
+- `du -sh`: disk usage summary in human readable form
+- `du -h | sort -h`: disk usage in human readable form sorted
 
 &nbsp;
 
