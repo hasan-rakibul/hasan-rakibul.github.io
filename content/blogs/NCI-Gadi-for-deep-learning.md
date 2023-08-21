@@ -30,11 +30,13 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
     - `module unload <module name>`
 
 ### I preferred virtual-environment approach to install Python packages
-Inside `/g/data`, I create a new virtual enrinronment named `.venv`, for example. If I don't want to use the default python version, I load specific version (`module load python3/3.11.0`) for which I want to base my virtual environment.
+Inside `/g/data`, I create a new virtual enrinronment named `.venv`, for example. If I don't want to use the default python version, I load specific version (`module load python3/3.11.0`) for which I want to base my virtual environment on.
 
 `python3 -m venv .venv`
 
-Then, activate it: `source .venv/bin/activate` (better, put this command in `~/.bashrc` if it's your default environment. Then I don't need to activate it everytime.)
+Then, activate it: `source .venv/bin/activate` (better: put this command in `~/.bashrc` if it's your default environment. Then I don't need to activate it everytime.)
+
+Pro tip: Make `include-system-site-packages = true` in `.venv/pyvenv.cfg` file to include system-wide packages available in the virtual envirorment as well
 
 And then install without any prefix path. It will automatically install on `/g/data` if the env is activated.
 
@@ -50,10 +52,9 @@ python3 -m pip install -v <package_name>
 
 To install a list of packages from `requirements.txt`, append `-r requirements.txt` with the above command.
 
-- While creating JupyterLab session, specify the base python version (`python3/3.11.0`) in the `Modules` field and venv absoulate path (`/g/data/<...>/.venv`) in "Python or Conda virtual environment base" field.
+- **While creating JupyterLab session,** specify the base python version (`python3/3.11.0`) in the `Modules` field and venv absoulate path (`/g/data/<...>/.venv`) in "Python or Conda virtual environment base" field.
 - More on venv
     - `which python` to check whether the virtual environment is properly activated
-    - After creating virtual environment, make `include-system-site-packages = true` in `./venv/pyvenv.cfg` file to include system-wide packages available in the virtual envirorment as well
 
 ### From NCI guide
 - NCI recommended installation using `pip` command on `/g/data`
