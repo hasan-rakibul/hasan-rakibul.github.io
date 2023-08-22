@@ -10,6 +10,15 @@ Title: Useful links
 
 &nbsp;
 
+# Upcoming conferences
+- [**Computer Science conferences timeline (lucjaulmes.github.io)**](https://lucjaulmes.github.io/cfp-timeline/)
+- [AI Conference Deadlines (aideadlin.es)](https://aideadlin.es/?sub=ML,CV,CG,NLP,RO,SP,DM,AP,KR,HCI)
+- [Upcoming Conferences – ACM SIGCHI](https://sigchi.org/conferences/upcoming-conferences/)
+- [AAAI Association for the Advancement of Artificial Intelligence](https://aaai.org/)
+- [Conferences | IEEE SWC2023 (ieee-smart-world-congress.org)](https://ieee-smart-world-congress.org/program/overview)
+
+&nbsp;
+
 # Deep learning
 - [What should I do when my neural network doesn't learn?](https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn)
 - [What should I do when my neural network doesn't generalize well?](https://stats.stackexchange.com/questions/365778/what-should-i-do-when-my-neural-network-doesnt-generalize-well)
