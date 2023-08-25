@@ -31,6 +31,7 @@ LINKS = (
         ('Web of Science','https://www.webofscience.com/wos/author/record/AFK-8839-2022'),
         ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
         ('GitHub','https://github.com/hasan-rakibul'),
+        ('Curtin University','https://staffportal.curtin.edu.au/staff/profile/view/rakibul-hasan-145a1046/'),
         ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
         ('e-mail','mailto:Rakibul.Hasan@curtin.edu.au'),
         )

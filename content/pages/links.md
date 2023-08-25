@@ -12,7 +12,7 @@ Title: Useful links
 
 # Upcoming conferences
 - [**Computer Science conferences timeline (lucjaulmes.github.io)**](https://lucjaulmes.github.io/cfp-timeline/)
-- [AI Conference Deadlines (aideadlin.es)](https://aideadlin.es/?sub=ML,CV,CG,NLP,RO,SP,DM,AP,KR,HCI)
+- [**AI Conference Deadlines (aideadlin.es)**](https://aideadlin.es/?sub=ML,CV,CG,NLP,RO,SP,DM,AP,KR,HCI)
 - [Upcoming Conferences – ACM SIGCHI](https://sigchi.org/conferences/upcoming-conferences/)
 - [AAAI Association for the Advancement of Artificial Intelligence](https://aaai.org/)
 - [Conferences | IEEE SWC2023 (ieee-smart-world-congress.org)](https://ieee-smart-world-congress.org/program/overview)
@@ -34,3 +34,10 @@ Title: Useful links
 - [Transformer Neural Networks - EXPLAINED! (Attention is all you need)](https://www.youtube.com/watch?v=TQQlZhbC5ps)
 - [What is Transformer?](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
 - [Pooling Strategies for Downstream Tasks - Utilizing Transformer Representations Efficiently](https://www.kaggle.com/code/rhtsingh/utilizing-transformer-representations-efficiently)
+
+&nbsp;
+
+# Others
+## Photo background remover
+- https://retoucher.online/upload: There are a varieties of background options (can new background be uploaded as well), have different size options for downloading. No sign-up required for the first three downloads.
+- https://www.fotor.com/features/backgrounds.html: Preview (lower quality) can be downloaded w/o sign up. Have similar others features as above.
