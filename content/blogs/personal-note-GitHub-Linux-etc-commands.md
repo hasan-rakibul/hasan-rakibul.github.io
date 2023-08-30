@@ -52,3 +52,12 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 - `BibTeX` user: Access the `*.bbl` file and change the main `*.tex` file: Comment out `\bibliography{bib-file}` and place `<contents from the .bbl file>`
 
 - `BibLaTeX` user: For `biber` backend, the [biblatex-readbbl](https://ctan.org/pkg/biblatex-readbbl?lang=en) package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include `something.bbl` and change the main `tex` file: Comment out `\addbibresource{ref.bib}` and place `\usepackage[bblfile=something]{biblatex-readbbl}`
+
+&nbsp;
+
+# Others
+## Change JupyerLab startup directory
+As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder):
+
+- `jupyter server --generate-config` will generate `jupyter_server_config.py` in `~/.jupyter/` directory
+- Uncomment/write `c.ServerApp.root_dir = </your/preferred/directory/>`
