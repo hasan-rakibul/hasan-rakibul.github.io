@@ -95,6 +95,14 @@ git config --global user.email &lt;EMAIL&gt;
 <p><code>BibLaTeX</code> user: For <code>biber</code> backend, the <a href="https://ctan.org/pkg/biblatex-readbbl?lang=en">biblatex-readbbl</a> package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include <code>something.bbl</code> and change the main <code>tex</code> file: Comment out <code>\addbibresource{ref.bib}</code> and place <code>\usepackage[bblfile=something]{biblatex-readbbl}</code></p>
 </li>
 </ul>
+<p>&nbsp;</p>
+<h1>Others</h1>
+<h2>Change JupyerLab startup directory</h2>
+<p>As discussed in <a href="https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder">this SO thread</a>:</p>
+<ul>
+<li><code>jupyter server --generate-config</code> will generate <code>jupyter_server_config.py</code> in <code>~/.jupyter/</code> directory</li>
+<li>Uncomment/write <code>c.ServerApp.root_dir = &lt;/your/preferred/directory/&gt;</code></li>
+</ul>
     </div><!-- /.entry-content -->
 
   </article>
