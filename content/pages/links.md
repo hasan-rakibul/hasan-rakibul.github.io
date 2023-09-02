@@ -22,6 +22,9 @@ Title: Useful links
 # Deep learning
 - [What should I do when my neural network doesn't learn?](https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn)
 - [What should I do when my neural network doesn't generalize well?](https://stats.stackexchange.com/questions/365778/what-should-i-do-when-my-neural-network-doesnt-generalize-well)
+
+## Semi-supervised learning
+- [Definition and commond algorithms in plain language](https://h3abionet.github.io/H3ABioNet-ML-glossary/semi-supervised_intro.html)
 - [An overview of proxy-label approaches for semi-supervised learning](https://www.ruder.io/semi-supervised/)
 
 ## Natural language processing

@@ -61,3 +61,5 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
 
 - `jupyter server --generate-config` will generate `jupyter_server_config.py` in `~/.jupyter/` directory
 - Uncomment/write `c.ServerApp.root_dir = </your/preferred/directory/>`
+
+<!-- https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2 -->
