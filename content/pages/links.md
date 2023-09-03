@@ -43,6 +43,9 @@ Title: Useful links
 &nbsp;
 
 # Others
-## Photo background remover
-- https://retoucher.online/upload: There are a varieties of background options (can new background be uploaded as well), have different size options for downloading. No sign-up required for the first three downloads.
-- https://www.fotor.com/features/backgrounds.html: Preview (lower quality) can be downloaded w/o sign up. Have similar others features as above.
+## Photo - remove current background and use a different one
+- Adobe Photoshop: straightforward with generative AI prompting
+As I wanted to use another picture's background, I removed subject while keeping the background and filling the gap with generative AI.
+After placing the subject on the new background, one important factor to make the editing smooth is matching colour exposures. [This YT tutorial](https://www.youtube.com/watch?v=HE019S74t2o&t=760s) shows how to blend the subject and background.
+- [Retoucher](https://retoucher.online/upload): There are a varieties of background options (can new background be uploaded as well), have different size options for downloading. No sign-up required for the first three downloads.
+- [fotor](https://www.fotor.com/features/backgrounds.html): Preview (lower quality) can be downloaded w/o sign up. Have similar others features as above.

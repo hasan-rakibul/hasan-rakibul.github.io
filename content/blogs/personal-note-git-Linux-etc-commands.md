@@ -1,10 +1,10 @@
-Title: Personal note on GitHub, Linux, etc. commands
+Title: Personal note on git, Linux, etc. commands
 Date: 2023-04-16 00:00
 Category: blogs
 
-Personal note of anything (GitHub, Linux, etc.) I would like to find out easily.
+Personal note of anything (git, Linux, etc.) I would like to find out easily.
 
-# GitHub
+# git
 
 ## General commands
 
@@ -62,4 +62,7 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
 - `jupyter server --generate-config` will generate `jupyter_server_config.py` in `~/.jupyter/` directory
 - Uncomment/write `c.ServerApp.root_dir = </your/preferred/directory/>`
 
-<!-- https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2 -->
+## Acees remote instance from VS Code
+[This thread](https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2) mentions access ARE instance from VS Code. In addition:
+
+- If it's a JupyterLab session, I can directly use it in VS Code
