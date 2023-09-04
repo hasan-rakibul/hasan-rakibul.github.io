@@ -65,4 +65,4 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
 ## Acees remote instance from VS Code
 [This thread](https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2) mentions access ARE instance from VS Code. In addition:
 
-- If it's a JupyterLab session, I can directly use it in VS Code
+- If it's a JupyterLab session, I can directly use it in VS Code. If not, I can create jupyter session there and use it.
