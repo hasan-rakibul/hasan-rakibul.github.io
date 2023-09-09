@@ -122,6 +122,15 @@ Therefore, 1 KSU costs = $282.136
 
 &nbsp;
 
+# Acees remote instance from VS Code
+[This thread](https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2) mentions access ARE instance from VS Code. In addition:
+
+- The config file is in `~/.ssh/config`
+- When connected to JupyterLab, I had no internet access on the VS Code terminal but can access internet from the JupyterLab terminal on the remote server through ARE.
+- When connected to the analysis queue, I had internet access on the VS Code terminal.
+
+&nbsp;
+
 # Access Gadi terminal &ndash; not required if ARE is sufficient
 ## Access login node from a linux terminal
 `ssh <username>@gadi.nci.org.au`

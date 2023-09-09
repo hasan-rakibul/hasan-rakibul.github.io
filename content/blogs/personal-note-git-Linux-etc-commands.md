@@ -62,7 +62,5 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
 - `jupyter server --generate-config` will generate `jupyter_server_config.py` in `~/.jupyter/` directory
 - Uncomment/write `c.ServerApp.root_dir = </your/preferred/directory/>`
 
-## Acees remote instance from VS Code
-[This thread](https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2) mentions access ARE instance from VS Code. In addition:
-
-- If it's a JupyterLab session, I can directly use it in VS Code. If not, I can create jupyter session there and use it.
+## VS Code not finding virtual environment
+- As discussed in [this answer](https://stackoverflow.com/a/68169595), I need to go 'Select Interpreter' and can select the virtual environment through the file explorer.
