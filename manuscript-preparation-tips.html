@@ -4,8 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Rakibul Hasan</title>
+        <title>Some tips on preparing manuscripts for publication</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
+        <meta name="description" content="How to prepare high-quality manuscript for publication, in terms of paper structure, generating high-quality figures, and writing platform." />
 </head>
 
 <body id="index" class="home">
@@ -22,20 +23,62 @@
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
-<h1>Archives for Rakibul Hasan</h1>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/manuscript-preparation-tips" rel="bookmark"
+           title="Permalink to Some tips on preparing manuscripts for publication">Some tips on preparing manuscripts for publication</a></h1>
+    </header>
 
-<dl>
-    <dt>Sat 16 September 2023</dt>
-    <dd><a href="/manuscript-preparation-tips">Some tips on preparing manuscripts for publication</a></dd>
-    <dt>Sun 16 April 2023</dt>
-    <dd><a href="/nci-gadi-for-deep-learning">NCI Gadi for deep learning</a></dd>
-    <dt>Sun 16 April 2023</dt>
-    <dd><a href="/personal-note-git-linux-etc-commands">Personal note on git, Linux, etc. commands</a></dd>
-    <dt>Sat 17 September 2022</dt>
-    <dd><a href="/kuet-pg-thesis-template">KUET postgrad thesis template in LaTeX</a></dd>
-    <dt>Fri 22 January 2021</dt>
-    <dd><a href="/5g-in-bangladesh">Opportunities and challenges of 5G communication in Bangladesh</a></dd>
-</dl>
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2023-09-16T23:00:00+08:00">
+                Published: Sat 16 September 2023
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/md-rakibul-hasan.html">Md Rakibul Hasan</a>
+        </address>
+<p>In <a href="/category/blogs.html">blogs</a>.</p>
+
+</footer><!-- /.post-info -->      <h1>Paper structure</h1>
+<p>Ideally, the paper can have the following structure:</p>
+<ul>
+<li>Abstract</li>
+<li>Introduction (End with a list of contributions. Add a teaser figure, possibly on the top-right of the first page in double-column format or on the top of second page in single-column format.)</li>
+<li>Related work (Can be within the Introduction)</li>
+<li>Proposed model (Add a figure to explain the model)</li>
+<li>Experiment<ul>
+<li>Dataset</li>
+<li>Main results</li>
+<li>Comparison with literature</li>
+<li>Ablation study</li>
+</ul>
+</li>
+<li>Conclusion</li>
+</ul>
+<h1>Generating and maintaining high quality figures</h1>
+<ul>
+<li>Use vector graphics (e.g., PDF, EPS) instead of raster graphics (e.g., PNG, JPG) for figures. This will ensure that the figures are scalable and can be zoomed in without losing quality.</li>
+<li>Use consistent font size and font type across all figures.</li>
+<li>Use consistent color scheme, possibly color-blind-friendly colors across all figures.</li>
+</ul>
+<p>In Python, you can use <a href="https://matplotlib.org/">Matplotlib</a> or <a href="https://seaborn.pydata.org/">Seaborn</a> to generate high-quality figures. With Matplotlib, you can use the following code to generate high-quality figures and save it as pdf:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scienceplots</span> <span class="c1"># scienceplots is a Matplotlib style package &#39;to format your plots for scientific papers, presentations and theses&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">([</span><span class="s1">&#39;science&#39;</span><span class="p">,</span> <span class="s1">&#39;ieee&#39;</span><span class="p">])</span> <span class="c1"># use science and IEEE styles</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">figure generation codes</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="c1"># save figure as &#39;filename.pdf&#39; in the same directory as the script</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s1">&#39;filename.pdf&#39;</span><span class="p">,</span> <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;pdf&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<h1>Writing platform</h1>
+<p>We prefer LaTeX for writing papers. We specifically use Overleaf, which is a collaborative cloud-based LaTeX editor used for writing, editing and publishing scientific documents. If you are new to Overleaf, you can <a href="https://www.overleaf.com?r=a1cbce73&amp;rm=d&amp;rs=b">register through this link</a>, and you can <a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">learn LaTeX in 30 minutes</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
 </section>
         <section id="extras" class="body">
                 <div class="blogroll">
