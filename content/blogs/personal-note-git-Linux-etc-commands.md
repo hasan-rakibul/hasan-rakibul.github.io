@@ -15,6 +15,11 @@ Personal note of anything (git, Linux, etc.) I would like to find out easily.
 - `git remote -v` to check current repo name
 - `git remote set-url origin git@github.com:<username>/<new-repo-name>.git`: update origin
 
+## Roll back to a specific commit after pushed to remote
+- `git reset --hard <commit-hash>`: reset to a specific commit. Get the commit hash from `git log` or GitHub commit history
+- `git push -f origin main`: force push to remote
+Caution: This will remove all commits after the specified commit hash.
+
 ## Configuring local machine to access (pull, push, etc.) GitHub private and public repositories. 
 
 ### Local machine &ndash; generate SSH key
