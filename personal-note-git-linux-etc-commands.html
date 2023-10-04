@@ -53,6 +53,12 @@
 <li><code>git remote -v</code> to check current repo name</li>
 <li><code>git remote set-url origin git@github.com:&lt;username&gt;/&lt;new-repo-name&gt;.git</code>: update origin</li>
 </ul>
+<h2>Roll back to a specific commit after pushed to remote</h2>
+<ul>
+<li><code>git reset --hard &lt;commit-hash&gt;</code>: reset to a specific commit. Get the commit hash from <code>git log</code> or GitHub commit history</li>
+<li><code>git push -f origin main</code>: force push to remote
+Caution: This will remove all commits after the specified commit hash.</li>
+</ul>
 <h2>Configuring local machine to access (pull, push, etc.) GitHub private and public repositories.</h2>
 <h3>Local machine &ndash; generate SSH key</h3>
 <ul>
