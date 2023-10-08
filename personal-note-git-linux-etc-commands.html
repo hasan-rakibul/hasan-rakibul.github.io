@@ -102,6 +102,26 @@ git config --global user.email &lt;EMAIL&gt;
 </li>
 </ul>
 <p>&nbsp;</p>
+<h1>VS Code</h1>
+<h2>Not finding virtual environment</h2>
+<ul>
+<li>As discussed in <a href="https://stackoverflow.com/a/68169595">this answer</a>, I need to go 'Select Interpreter' and can select the virtual environment through the file explorer.</li>
+</ul>
+<h2>Connecting remote host through SSH</h2>
+<ul>
+<li>
+<p>As discussed <a href="https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips">here in VSCode</a>, I need to specify the public key in the remote host from my local PC. In PowerShell:
+    ```bash
+    export USER_AT_HOST="your-user-name-on-host@hostname"
+    export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"</p>
+<p>ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\.ssh\"; Add-Content -Force -Path \"\$HOME\.ssh\authorized_keys\" -Value '$(tr -d '\n\r' &lt; "$PUBKEYPATH")'"
+<code>- Then I can connect to the remote host through SSH passphrase instead of the remote login password. Passphrase is associated with every SSH key when we generate the key.
+- Pretty convenient (it won't ask for a passphrase) if the passphrase is empty. To change SSH passphrase for a key, in PowerShell:</code>bash
+ssh-keygen -p
+```</p>
+</li>
+</ul>
+<p>&nbsp;</p>
 <h1>Others</h1>
 <h2>Change JupyerLab startup directory</h2>
 <p>As discussed in <a href="https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder">this SO thread</a>:</p>
@@ -109,9 +129,12 @@ git config --global user.email &lt;EMAIL&gt;
 <li><code>jupyter server --generate-config</code> will generate <code>jupyter_server_config.py</code> in <code>~/.jupyter/</code> directory</li>
 <li>Uncomment/write <code>c.ServerApp.root_dir = &lt;/your/preferred/directory/&gt;</code></li>
 </ul>
-<h2>VS Code not finding virtual environment</h2>
+<h2>Ububtu WSL2 opens as root</h2>
 <ul>
-<li>As discussed in <a href="https://stackoverflow.com/a/68169595">this answer</a>, I need to go 'Select Interpreter' and can select the virtual environment through the file explorer.</li>
+<li>As discussed <a href="https://www.reddit.com/r/Ubuntu/comments/x4xuek/ubuntu_has_started_defaulting_to_root_user_on/">here in Reddit</a>, I need to change the default user to my username. In PowerShell:
+    <code>bash
+    ubuntu config --default-user &lt;username&gt;</code></li>
+<li>The correct username can be found in <code>/etc/passwd</code></li>
 </ul>
     </div><!-- /.entry-content -->
 
