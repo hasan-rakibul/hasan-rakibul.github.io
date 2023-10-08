@@ -60,6 +60,26 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 
 &nbsp;
 
+# VS Code
+## Not finding virtual environment
+- As discussed in [this answer](https://stackoverflow.com/a/68169595), I need to go 'Select Interpreter' and can select the virtual environment through the file explorer.
+
+## Connecting remote host through SSH
+- As discussed [here in VSCode](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips), I need to specify the public key in the remote host from my local PC. In PowerShell:
+    ```bash
+    export USER_AT_HOST="your-user-name-on-host@hostname"
+    export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+
+    ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\\.ssh\"; Add-Content -Force -Path \"\$HOME\\.ssh\\authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
+    ```
+- Then I can connect to the remote host through SSH passphrase instead of the remote login password. Passphrase is associated with every SSH key when we generate the key.
+- Pretty convenient (it won't ask for a passphrase) if the passphrase is empty. To change SSH passphrase for a key, in PowerShell:
+    ```bash
+    ssh-keygen -p
+    ```
+
+&nbsp;
+
 # Others
 ## Change JupyerLab startup directory
 As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder):
@@ -67,5 +87,9 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
 - `jupyter server --generate-config` will generate `jupyter_server_config.py` in `~/.jupyter/` directory
 - Uncomment/write `c.ServerApp.root_dir = </your/preferred/directory/>`
 
-## VS Code not finding virtual environment
-- As discussed in [this answer](https://stackoverflow.com/a/68169595), I need to go 'Select Interpreter' and can select the virtual environment through the file explorer.
+## Ububtu WSL2 opens as root
+- As discussed [here in Reddit](https://www.reddit.com/r/Ubuntu/comments/x4xuek/ubuntu_has_started_defaulting_to_root_user_on/), I need to change the default user to my username. In PowerShell:
+    ```bash
+    ubuntu config --default-user <username>
+    ```
+- The correct username can be found in `/etc/passwd`

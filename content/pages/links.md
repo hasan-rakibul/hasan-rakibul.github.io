@@ -7,6 +7,10 @@ Title: Useful links
 - ["Some resources I have found helpful" - Leena Mathur](https://l-mathur.github.io/)
 - [Calendar. Not to-do lists.](https://deviparikh.medium.com/calendar-in-stead-of-to-do-lists-9ada86a512dd)
 - [Collections related to paper writing, publications, etc. by Professor Cornelia Caragea](https://www.cs.uic.edu/~cornelia/links.html)
+- Poster
+    - [Better Poster by Mike Morrison](https://osf.io/ef53g/?view_only=)
+    - https://github.com/zhoubolei/bolei_awesome_posters
+    - https://www.makesigns.com/SciPosters_Templates.aspx
 
 &nbsp;
 
