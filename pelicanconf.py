@@ -28,6 +28,7 @@ LINKS = (
         ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
         ('ReserchGate','https://www.researchgate.net/profile/Md-Rakibul-Hasan-10'),
         ('Semantic Scholar', 'https://www.semanticscholar.org/author/2142425'),
+        ('dblp','https://dblp.org/pid/122/5190-1.html'),
         ('Web of Science','https://www.webofscience.com/wos/author/record/AFK-8839-2022'),
         ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
         ('GitHub','https://github.com/hasan-rakibul'),
@@ -40,7 +41,7 @@ LINKS_WIDGET_NAME = 'find me on'
 
 # Social widget
 # SOCIAL = (
-#         ('e-mail','mailto:rakibul.hasan@bracu.ac.bd'),
+#         ('e-mail','mailto:rakibul.hasan@`bracu.ac.bd'),
 #         ('GitHub','https://github.com/mrh-rakib'),
 #         ('LinkedIn','https://www.linkedin.com/in/rakibul-eeekuet/'),
 #         ('ORCiD','https://orcid.org/0000-0003-2565-5321'),

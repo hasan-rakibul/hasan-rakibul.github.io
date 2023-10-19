@@ -6,6 +6,7 @@ Title: Useful links
 - [Collection of advice for prospective and current PhD students by Paul Liang](https://github.com/pliang279/awesome-phd-advice)
 - ["Some resources I have found helpful" - Leena Mathur](https://l-mathur.github.io/)
 - [Calendar. Not to-do lists.](https://deviparikh.medium.com/calendar-in-stead-of-to-do-lists-9ada86a512dd)
+- [Check journal copyrights - Sherma Romeo](https://www.sherpa.ac.uk/romeo/)
 - [Collections related to paper writing, publications, etc. by Professor Cornelia Caragea](https://www.cs.uic.edu/~cornelia/links.html)
 - Poster
     - [Better Poster by Mike Morrison](https://osf.io/ef53g/?view_only=)
@@ -24,8 +25,16 @@ Title: Useful links
 &nbsp;
 
 # Deep learning
+
+## General
 - [What should I do when my neural network doesn't learn?](https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn)
 - [What should I do when my neural network doesn't generalize well?](https://stats.stackexchange.com/questions/365778/what-should-i-do-when-my-neural-network-doesnt-generalize-well)
+
+## Book
+- [Dive into Deep Learning](https://d2l.ai/index.html)
+- [Understanding Deep Learning](https://udlbook.github.io/udlbook/)
+- [Deep Learning](https://www.deeplearningbook.org/)
+- [Understanding Machine Learning: From Theory to Algorithms](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
 
 ## Semi-supervised learning
 - [Definition and commond algorithms in plain language](https://h3abionet.github.io/H3ABioNet-ML-glossary/semi-supervised_intro.html)

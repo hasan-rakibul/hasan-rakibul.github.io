@@ -80,6 +80,13 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 
 &nbsp;
 
+# WSL
+## Ubuntu in WSL2 not starting up, both the Ubuntu terminal and VS Code
+- Restart the Ubuntu. In PowerShell:
+    ```bash
+    wsl --shutdown
+    ```
+
 # Others
 ## Change JupyerLab startup directory
 As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder):
