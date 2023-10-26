@@ -1,6 +1,5 @@
 Title: Personal note on git, Linux, etc. commands
 Date: 2023-04-16 00:00
-Category: blogs
 
 Personal note of anything (git, Linux, etc.) I would like to find out easily.
 
@@ -57,6 +56,12 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 - `BibTeX` user: Access the `*.bbl` file and change the main `*.tex` file: Comment out `\bibliography{bib-file}` and place `<contents from the .bbl file>`
 
 - `BibLaTeX` user: For `biber` backend, the [biblatex-readbbl](https://ctan.org/pkg/biblatex-readbbl?lang=en) package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include `something.bbl` and change the main `tex` file: Comment out `\addbibresource{ref.bib}` and place `\usepackage[bblfile=something]{biblatex-readbbl}`
+
+&nbsp;
+
+# PyTorch
+- `len(dataloader)`: number of batches
+- `len(dataloader.dataset)`: number of samples
 
 &nbsp;
 

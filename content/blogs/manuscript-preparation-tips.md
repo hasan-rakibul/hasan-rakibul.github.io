@@ -1,8 +1,7 @@
 Title: Some tips on preparing manuscripts for publication
 Date: 2023-09-16 23:00
-Category: blogs
 Slug: manuscript-preparation-tips
-Authors: Md Rakibul Hasan
+Authors: Rakibul Hasan
 Summary: How to prepare high-quality manuscript for publication, in terms of paper structure, generating high-quality figures, and writing platform.
 
 # Paper structure

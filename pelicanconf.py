@@ -13,7 +13,7 @@ THEME = 'theme'
 
 TIMEZONE = 'Australia/Perth'
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'en-au'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -56,6 +56,8 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
+INDEX_SAVE_AS = 'blogs.html'
+
 SLUGIFY_SOURCE = 'basename' # automatically, slug will be the filename
 
 PAGE_URL = '{slug}'
@@ -70,7 +72,7 @@ MENUITEMS = (
     ('publications', '/publications'),
     # ('teaching','/teaching'),
     ('activity', '/activity'),
-    ('blogs','/category/blogs.html'),
+    ('blogs','/blogs'),
     ('links','/links'),
     ('student corner', '/student_corner')
 )
@@ -80,3 +82,9 @@ ARTICLE_URL = '{slug}'
 ARTICLE_SAVE_AS = '{slug}.html'
 
 # CSS_FILE='list.css'
+
+# To compile faster: as suggested in https://github.com/getpelican/pelican/issues/2042#issuecomment-257620460
+CONTENT_CACHING_LAYER = 'generator'
+AUTHORS_SAVE_AS = False
+# CATEGORY_SAVE_AS = False # important for blogs category
+TAGS_SAVE_AS = False

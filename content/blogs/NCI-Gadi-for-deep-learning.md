@@ -1,6 +1,5 @@
 Title: NCI Gadi for deep learning
 Date: 2023-04-16 00:00
-Category: blogs
 
 Personal note to access NCI Gadi cluster for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
 

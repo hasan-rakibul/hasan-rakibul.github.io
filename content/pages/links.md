@@ -29,6 +29,9 @@ Title: Useful links
 ## General
 - [What should I do when my neural network doesn't learn?](https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn)
 - [What should I do when my neural network doesn't generalize well?](https://stats.stackexchange.com/questions/365778/what-should-i-do-when-my-neural-network-doesnt-generalize-well)
+- [Understanding 1D, 2D and 3D Convolution Network](https://www.kaggle.com/code/mersico/understanding-1d-2d-and-3d-convolution-network)
+- [How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
+- [Animated RNN, LSTM and GRU](https://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45)
 
 ## Book
 - [Dive into Deep Learning](https://d2l.ai/index.html)
@@ -48,7 +51,6 @@ Title: Useful links
 - [Paper Dissected: “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding” Explained](https://datasciencetoday.net/index.php/en-us/nlp/211-paper-dissected-bert-pre-training-of-deep-bidirectional-transformers-for-language-understanding-explained)
 - [The Illustrated Word2vec](http://jalammar.github.io/illustrated-word2vec/)
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-- [Animated RNN, LSTM and GRU](https://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45)
 - [Transformer Neural Networks - EXPLAINED! (Attention is all you need)](https://www.youtube.com/watch?v=TQQlZhbC5ps)
 - [What is Transformer?](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
 - [Pooling Strategies for Downstream Tasks - Utilizing Transformer Representations Efficiently](https://www.kaggle.com/code/rhtsingh/utilizing-transformer-representations-efficiently)
