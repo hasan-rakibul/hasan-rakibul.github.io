@@ -3,6 +3,7 @@
 {% block content %}
 {% if articles %}
     {% for article in articles_page.object_list %}
+    {# All items #}
     <section id="content" class="body">
         <article class="hentry">
             <header>
@@ -17,17 +18,16 @@
             {% include 'comments.html' %}
             </div><!-- /.entry-content -->
         </article>
-    </section><!-- /#content -->
     {% if loop.last %}
             {% if loop.length > 1 or articles_page.has_other_pages() %}
                 <!-- /#posts-list -->
                 {% if articles_page.has_other_pages() %}
                     {% include 'pagination.html' %}
                 {% endif %}
-            </section><!-- /#content -->
             {% endif %}
-        {% endif %}
-    {% endfor %}
+    {% endif %}
+    </section><!-- /#content -->
+{% endfor %}
 {% else %}
 <section id="content" class="body">
     {% if pages %}
