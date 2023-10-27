@@ -1,7 +1,6 @@
 Title: Opportunities and challenges of 5G communication in Bangladesh
 Date: 2021-01-22 00:00
 Slug: 5g-in-bangladesh
-Modified: 2022-09-17 17:38
 <!-- Status: draft -->
 <!-- Tags: 5G, bangladesh -->
 <!-- Summary: 5G in Bangladesh -->

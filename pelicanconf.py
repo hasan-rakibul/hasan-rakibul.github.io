@@ -56,7 +56,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-INDEX_SAVE_AS = 'blogs.html'
+INDEX_SAVE_AS = 'blogs.html' # this is the index.html file inside the /theme/template folder
 
 SLUGIFY_SOURCE = 'basename' # automatically, slug will be the filename
 
@@ -86,5 +86,5 @@ ARTICLE_SAVE_AS = '{slug}.html'
 # To compile faster: as suggested in https://github.com/getpelican/pelican/issues/2042#issuecomment-257620460
 CONTENT_CACHING_LAYER = 'generator'
 AUTHORS_SAVE_AS = False
-# CATEGORY_SAVE_AS = False # important for blogs category
+CATEGORY_SAVE_AS = False
 TAGS_SAVE_AS = False
