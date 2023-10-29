@@ -83,6 +83,29 @@ git config --global user.email &lt;EMAIL&gt;
 </ul>
 <p>&nbsp;</p>
 <h1>LaTeX</h1>
+<h2>Natbib-style citation in IEEE template</h2>
+<p>I like the <code>\citep</code> and <code>\citet</code> commands to automatically mention author names. To use them in IEEE template, I need to add the following lines in the preamble:</p>
+<div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[backend=biber,style=ieee,natbib=true,maxcitenames=2,mincitenames=1]</span><span class="nb">{</span>biblatex<span class="nb">}</span>
+<span class="k">\renewcommand</span><span class="nb">{</span><span class="k">\bibfont</span><span class="nb">}{</span><span class="k">\footnotesize</span><span class="nb">}</span> <span class="c">% 8 pt as in template</span>
+<span class="k">\addbibresource</span><span class="nb">{</span>&lt;bibfile&gt;.bib<span class="nb">}</span>
+</code></pre></div>
+
+<p>Further to enable <code>\IEEEtriggeratref{&lt;number&gt;}</code> to balance the reference list at last page, I need to add the following lines in the preamble according to <a href="https://tex.stackexchange.com/a/316282">this StackExchange answer</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="nb">{</span>ifthen<span class="nb">}</span>
+
+<span class="k">\makeatletter</span>
+<span class="k">\newcounter</span><span class="nb">{</span>IEEE@bibentries<span class="nb">}</span>
+<span class="k">\renewcommand\IEEEtriggeratref</span><span class="na">[1]</span><span class="nb">{</span><span class="c">%</span>
+  <span class="k">\renewbibmacro</span><span class="nb">{</span>finentry<span class="nb">}{</span><span class="c">%</span>
+    <span class="k">\stepcounter</span><span class="nb">{</span>IEEE@bibentries<span class="nb">}</span><span class="c">%</span>
+    <span class="k">\ifthenelse</span><span class="nb">{</span><span class="k">\equal</span><span class="nb">{</span><span class="k">\value</span><span class="nb">{</span>IEEE@bibentries<span class="nb">}}{</span>#1<span class="nb">}}</span>
+    <span class="nb">{</span><span class="k">\finentry\@</span>IEEEtriggercmd<span class="nb">}</span>
+    <span class="nb">{</span><span class="k">\finentry</span><span class="nb">}</span><span class="c">%</span>
+  <span class="nb">}</span><span class="c">%</span>
+<span class="nb">}</span>
+<span class="k">\makeatother</span>
+</code></pre></div>
+
 <h2>LaTeX Error: Unicode character ́ (U+0301)</h2>
 <ul>
 <li>Using XeLaTex would solve but sometimes we need to stick to pdfLaTeX</li>
