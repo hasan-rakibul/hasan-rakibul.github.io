@@ -10,8 +10,8 @@ Title: Useful links
 - [Collections related to paper writing, publications, etc. by Professor Cornelia Caragea](https://www.cs.uic.edu/~cornelia/links.html)
 - Poster
     - [Better Poster by Mike Morrison](https://osf.io/ef53g/?view_only=)
-    - https://github.com/zhoubolei/bolei_awesome_posters
-    - https://www.makesigns.com/SciPosters_Templates.aspx
+    - [https://github.com/zhoubolei/bolei_awesome_posters](https://github.com/zhoubolei/bolei_awesome_posters)
+    - [https://www.makesigns.com/SciPosters_Templates.aspx](https://www.makesigns.com/SciPosters_Templates.aspx)
 
 &nbsp;
 

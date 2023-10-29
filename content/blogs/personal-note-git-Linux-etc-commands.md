@@ -42,6 +42,31 @@ git config --global user.email <EMAIL>
 &nbsp;
 
 # LaTeX
+## Natbib-style citation in IEEE template
+I like the `\citep` and `\citet` commands to automatically mention author names. To use them in IEEE template, I need to add the following lines in the preamble:
+```latex
+\usepackage[backend=biber,style=ieee,natbib=true,maxcitenames=2,mincitenames=1]{biblatex}
+\renewcommand{\bibfont}{\footnotesize} % 8 pt as in template
+\addbibresource{<bibfile>.bib}
+``` 
+Further to enable `\IEEEtriggeratref{<number>}` to balance the reference list at last page, I need to add the following lines in the preamble according to [this StackExchange answer](https://tex.stackexchange.com/a/316282):
+```latex
+\usepackage{ifthen}
+
+\makeatletter
+\newcounter{IEEE@bibentries}
+\renewcommand\IEEEtriggeratref[1]{%
+  \renewbibmacro{finentry}{%
+    \stepcounter{IEEE@bibentries}%
+    \ifthenelse{\equal{\value{IEEE@bibentries}}{#1}}
+    {\finentry\@IEEEtriggercmd}
+    {\finentry}%
+  }%
+}
+\makeatother
+```
+
+
 ## LaTeX Error: Unicode character ́ (U+0301)
 - Using XeLaTex would solve but sometimes we need to stick to pdfLaTeX
 - The main problem to locate the character since it usually exist in the bib file. An excellent hack, as suggested in [this StackExchange answer](https://tex.stackexchange.com/a/487565), is to print something strange in place of the character:
