@@ -57,6 +57,11 @@ Title: Useful links
 
 &nbsp;
 
+# Career
+- [https://interviewsby.ai/](https://interviewsby.ai/)
+
+&nbsp;
+
 # Others
 ## Photo - remove current background and use a different one
 - Adobe Photoshop: straightforward with generative AI prompting
