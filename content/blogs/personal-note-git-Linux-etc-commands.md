@@ -36,8 +36,9 @@ git config --global user.email <EMAIL>
 
 # Linux
 - `mkdir dir_name{01..12}`: create dir_name01, dir_name02 ... dir_name12 directories
-- `du -sh`: disk usage summary in human readable form
-- `du -h | sort -h`: disk usage in human readable form sorted
+- `du -sh [dir]`: disk usage summary in human readable form, optinally for a specific directory
+- `du -h [dir] | sort -h`: disk usage in human readable form sorted, optinally for a specific directory
+- `du -sh --inode [dir]`: disk inode usage summary in human readable form, optinally for a specific directory
 
 &nbsp;
 
@@ -93,6 +94,7 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 # VS Code
 ## Not finding virtual environment
 - As discussed in [this answer](https://stackoverflow.com/a/68169595), I need to go 'Select Interpreter' and can select the virtual environment through the file explorer.
+- Alternatively, as mentioned [here](https://code.visualstudio.com/docs/python/environments): 'Open the Command Palette (Ctrl+Shift+P) and enter Preferences: Open User Settings. Then set `python.defaultInterpreterPathInterpreter` to the path of the virtual environment.'
 
 ## Connecting remote host through SSH
 - As discussed [here in VSCode](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips), I need to specify the public key in the remote host from my local PC. In PowerShell:

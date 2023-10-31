@@ -29,6 +29,7 @@ LINKS = (
         ('ReserchGate','https://www.researchgate.net/profile/Md-Rakibul-Hasan-10'),
         ('Semantic Scholar', 'https://www.semanticscholar.org/author/2142425'),
         ('dblp','https://dblp.org/pid/122/5190-1.html'),
+        ('arXiv', 'https://arxiv.org/a/hasan_m_1.html'),
         ('Web of Science','https://www.webofscience.com/wos/author/record/AFK-8839-2022'),
         ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
         ('GitHub','https://github.com/hasan-rakibul'),
@@ -60,7 +61,7 @@ INDEX_SAVE_AS = 'blogs.html' # this is the index.html file inside the /theme/tem
 
 SLUGIFY_SOURCE = 'basename' # automatically, slug will be the filename
 
-PAGE_URL = '{slug}'
+PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
 
 DISPLAY_CATEGORIES_ON_MENU = False # will manually display categories using MENUITEMS
@@ -68,17 +69,17 @@ DISPLAY_PAGES_ON_MENU = False # will manually display pages using MENUITEMS
 
 MENUITEMS = (
     ('home', '/'),
-    ('about me', '/about_me'),
-    ('publications', '/publications'),
+    ('about me', '/about_me.html'),
+    ('publications', '/publications.html'),
     # ('teaching','/teaching'),
-    ('activity', '/activity'),
-    ('blogs','/blogs'),
-    ('links','/links'),
-    ('student corner', '/student_corner')
+    ('activity', '/activity.html'),
+    ('blogs','/blogs.html'),
+    ('links','/links.html'),
+    ('student corner', '/student_corner.html')
 )
 
 ARTICLE_PATHS = ['blogs']
-ARTICLE_URL = '{slug}'
+ARTICLE_URL = '{slug}.html'
 ARTICLE_SAVE_AS = '{slug}.html'
 
 # CSS_FILE='list.css'
