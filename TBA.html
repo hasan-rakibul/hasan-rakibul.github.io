@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-au">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>TBA</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <meta name="description" content="Links https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Working_with_emotibit_data.md#parsing-emotibit-timestamps-to-lsl-time..." />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rakibul Hasan</a></h1>
+                <nav><ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/about_me.html">about me</a></li>
+                    <li><a href="/publications.html">publications</a></li>
+                    <li><a href="/activity.html">activity</a></li>
+                    <li><a href="/blogs.html">blogs</a></li>
+                    <li><a href="/links.html">links</a></li>
+                    <li><a href="/student_corner.html">student corner</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/TBA.html" rel="bookmark"
+           title="Permalink to TBA">TBA</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2023-11-01T00:00:00+08:00">
+                Published: Wed 01 November 2023
+        </abbr>
+
+        <!--         <address class="vcard author">
+                By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
+        </address>
+ -->
+<!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
+
+</footer><!-- /.post-info -->      <h1>Links</h1>
+<ul>
+<li><a href="Parsing EmotiBit timestamps to LSL time">https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Working_with_emotibit_data.md#parsing-emotibit-timestamps-to-lsl-time</a></li>
+<li><a href="Batch parsing">https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Working_with_emotibit_data.md#batch-parsing</a></li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>find me on</h2>
+                        <ul>
+                            <li><a href="https://scholar.google.com.au/citations?user=DuCQ8goAAAAJ&hl=en">Google Scholar</a></li>
+                            <li><a href="https://orcid.org/0000-0003-2565-5321">ORCiD</a></li>
+                            <li><a href="https://www.researchgate.net/profile/Md-Rakibul-Hasan-10">ReserchGate</a></li>
+                            <li><a href="https://www.semanticscholar.org/author/2142425">Semantic Scholar</a></li>
+                            <li><a href="https://dblp.org/pid/122/5190-1.html">dblp</a></li>
+                            <li><a href="https://arxiv.org/a/hasan_m_1.html">arXiv</a></li>
+                            <li><a href="https://www.webofscience.com/wos/author/record/AFK-8839-2022">Web of Science</a></li>
+                            <li><a href="https://www.linkedin.com/in/m-rakibul">LinkedIn</a></li>
+                            <li><a href="https://github.com/hasan-rakibul">GitHub</a></li>
+                            <li><a href="https://staffportal.curtin.edu.au/staff/profile/view/rakibul-hasan-145a1046/">Curtin University</a></li>
+                            <li><a href="https://www.bracu.ac.bd/about/people/md-rakibul-hasan">BRAC University</a></li>
+                            <li><a href="mailto:Rakibul.Hasan@curtin.edu.au">e-mail</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                        &copy; 2022 &ndash; 2023 Rakibul Hasan </br>
+                        Proudly developed by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+                <!-- <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p> -->
+        </footer><!-- /#contentinfo -->
+
+
+
+<!-- Added by RKBL to toggle BibTeX info and auto anchor tag on all pub list-->
+<script>
+        function generateId(entry) {
+                // generating id for the toggle block
+                return entry + "-bibtex";
+        }
+
+        function showBlock(blockId) {
+                var codeBlock = document.getElementById(blockId);
+                codeBlock.style.display = codeBlock.style.display === "block" ? "none" : "block";
+
+                var button = document.getElementById(blockId+"-button"); <!--button ID is blockid-"button"-->
+                button.classList.toggle("active");
+        }
+
+        // select all <li> elements
+        var liElements = document.querySelectorAll('li[entry]');
+
+        // iterate through <li> elements and set IDs
+        liElements.forEach(function(li) {
+                var entry = li.getAttribute('entry');
+
+                if (entry) {
+
+                        // create and set the anchor tag
+                        var aElement = document.createElement('a');
+                        aElement.name = entry;
+                        li.insertBefore(aElement, li.firstChild);
+                        // var aElement = li.querySelector('a');
+                        
+                        var preElement = li.querySelector('pre.toggle-block');
+
+                        // if there is a preElement, set it's id
+                        if (preElement) {
+                                var blockId = generateId(entry);
+                                preElement.id = blockId;
+                        }
+                }
+        });
+</script>
+
+</body>
+</html>
