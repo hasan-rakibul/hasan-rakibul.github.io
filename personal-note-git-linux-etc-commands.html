@@ -82,6 +82,15 @@ git config --global user.email &lt;EMAIL&gt;
 <li><code>du -h [dir] | sort -h</code>: disk usage in human readable form sorted, optinally for a specific directory</li>
 <li><code>du -sh --inode [dir]</code>: disk inode usage summary in human readable form, optinally for a specific directory</li>
 </ul>
+<h2>Managing permissions</h2>
+<ul>
+<li><code>chmod u+x &lt;file&gt;</code>: add execute permission for <strong>user</strong></li>
+<li><code>chmod [-R] g+rwx &lt;file[dir]&gt;</code>: add read, write, execute permission for <strong>group</strong></li>
+<li><code>chmod [-R] o+rwx &lt;file[dir]&gt;</code>: add read, write, execute permission for <strong>others</strong></li>
+<li><code>chmode [-R] a+rwx &lt;file[dir]&gt;</code>: add read, write, execute permission for <strong>all</strong></li>
+<li><code>chmod [-R] g-rwx &lt;file[dir]&gt;</code>: remove read, write, execute permission for <strong>group</strong></li>
+<li><code>chmod [-R] o-rwx &lt;file[dir}&gt;</code>: remove read, write, execute permission for <strong>others</strong></li>
+</ul>
 <p>&nbsp;</p>
 <h1>LaTeX</h1>
 <h2>Natbib-style citation in IEEE template</h2>
