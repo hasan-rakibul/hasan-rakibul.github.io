@@ -40,6 +40,14 @@ git config --global user.email <EMAIL>
 - `du -h [dir] | sort -h`: disk usage in human readable form sorted, optinally for a specific directory
 - `du -sh --inode [dir]`: disk inode usage summary in human readable form, optinally for a specific directory
 
+## Managing permissions
+- `chmod u+x <file>`: add execute permission for **user**
+- `chmod [-R] g+rwx <file[dir]>`: add read, write, execute permission for **group**
+- `chmod [-R] o+rwx <file[dir]>`: add read, write, execute permission for **others**
+- `chmode [-R] a+rwx <file[dir]>`: add read, write, execute permission for **all**
+- `chmod [-R] g-rwx <file[dir]>`: remove read, write, execute permission for **group**
+- `chmod [-R] o-rwx <file[dir}>`: remove read, write, execute permission for **others**
+
 &nbsp;
 
 # LaTeX

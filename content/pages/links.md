@@ -12,6 +12,8 @@ Title: Useful links
     - [Better Poster by Mike Morrison](https://osf.io/ef53g/?view_only=)
     - [https://github.com/zhoubolei/bolei_awesome_posters](https://github.com/zhoubolei/bolei_awesome_posters)
     - [https://www.makesigns.com/SciPosters_Templates.aspx](https://www.makesigns.com/SciPosters_Templates.aspx)
+- [Consensus - AI Search Engine for Research](https://consensus.app/)
+- [Scholarcy - AI-powered summariser](https://article-summarizer.scholarcy.com/summarizer)
 
 &nbsp;
 
