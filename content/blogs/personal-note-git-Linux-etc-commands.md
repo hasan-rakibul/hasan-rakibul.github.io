@@ -140,3 +140,7 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
     ubuntu config --default-user <username>
     ```
 - The correct username can be found in `/etc/passwd`
+
+## Zoom Recording
+- While sharing the screen, 'optimize for video clip' option creates black boxes at different parts of shared screen (maybe the idea is to create black box on Zoom software-related pop-ups, but maybe buggy as of Nov 23.). So, I should share the screen without this option.
+- If I minimise my video, it will not be recorded.

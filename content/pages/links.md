@@ -34,8 +34,9 @@ Title: Useful links
 - [Understanding 1D, 2D and 3D Convolution Network](https://www.kaggle.com/code/mersico/understanding-1d-2d-and-3d-convolution-network)
 - [How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 - [Animated RNN, LSTM and GRU](https://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45)
+- [PyTorch implementation of several common architectures by Lorna](https://github.com/Lornatang?tab=repositories)
 
-## Book
+### Book
 - [Dive into Deep Learning](https://d2l.ai/index.html)
 - [Understanding Deep Learning](https://udlbook.github.io/udlbook/)
 - [Deep Learning](https://www.deeplearningbook.org/)
@@ -56,6 +57,11 @@ Title: Useful links
 - [Transformer Neural Networks - EXPLAINED! (Attention is all you need)](https://www.youtube.com/watch?v=TQQlZhbC5ps)
 - [What is Transformer?](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
 - [Pooling Strategies for Downstream Tasks - Utilizing Transformer Representations Efficiently](https://www.kaggle.com/code/rhtsingh/utilizing-transformer-representations-efficiently)
+
+## Physics-informed machine learning
+- [Basic definition and background -- PNNL](https://www.pnnl.gov/explainer-articles/physics-informed-machine-learning)
+- [https://github.com/thunil/Physics-Based-Deep-Learning](https://github.com/thunil/Physics-Based-Deep-Learning)
+- [https://www.physicsbaseddeeplearning.org/intro.html](https://www.physicsbaseddeeplearning.org/intro.html)
 
 &nbsp;
 

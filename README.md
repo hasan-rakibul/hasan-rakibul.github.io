@@ -17,6 +17,11 @@ pip install pelican[markdown] ghp-import
 ```
 cp post-commit ./.git/hooks/
 ```
+
+## Rendering math equations
+- [render-math](https://github.com/pelican-plugins/render-math) plugin is used
+- Just install via `python -m pip install pelican-render-math` and wrap the math equation with `$$` in markdown file
+
 ## Notes
 - `make devserver` to do and see changes in local server
 - Each list item (i.e., publication entry) now has `entry` atrribute, using which automatically (1) anchor tag and (2) bibtex block id are created for all items (08/2023)
