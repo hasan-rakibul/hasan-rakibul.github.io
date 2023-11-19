@@ -4,8 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Rakibul Hasan</title>
+        <title>Personal note on deep learning</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
+        <meta name="description" content="CNN Default stride is 1 According to Wikipedia, the output height/width of a convolutional layer (per channel) is given by..." />
 </head>
 
 <body id="index" class="home">
@@ -21,14 +22,15 @@
                     <li><a href="/student_corner.html">student corner</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-    <section id="content" class="body">
-        <article class="hentry">
-            <header>
-                <h1><a href="/personal-note-deep-learning.html" rel="bookmark"
-                        title="Permalink to Personal note on deep learning">Personal note on deep learning</a></h1>
-            </header>
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/personal-note-deep-learning.html" rel="bookmark"
+           title="Permalink to Personal note on deep learning">Personal note on deep learning</a></h1>
+    </header>
 
-            <div class="entry-content">
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2023-11-19T00:00:00+08:00">
                 Published: Sun 19 November 2023
@@ -40,12 +42,21 @@
  -->
 <!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
 
-</footer><!-- /.post-info -->            <h1>CNN</h1>
+</footer><!-- /.post-info -->      <h1>CNN</h1>
 <ul>
 <li>Default stride is 1</li>
 <li>According to <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network#Convolutional_layer">Wikipedia</a>, the output height/width of a convolutional layer (per channel) is given by
     <div class="math">$$\left\lfloor\frac{W-K+2P}{S}+1\right\rfloor$$</div>
-    where <span class="math">\(W\)</span> is the input size, <span class="math">\(K\)</span> is the filter size, <span class="math">\(P\)</span> is the padding size and <span class="math">\(S\)</span> is the …</li></ul><script type='text/javascript'>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    where <span class="math">\(W\)</span> is the input size, <span class="math">\(K\)</span> is the filter size, <span class="math">\(P\)</span> is the padding size and <span class="math">\(S\)</span> is the stride.</li>
+</ul>
+<h1>Batch normalisation</h1>
+<ul>
+<li>In FC layer, normalise per mini-batch</li>
+<li>In Conv layer, normalise per channel. Per sample normalisation can also be done, which is called layer normalisation.</li>
+<li>Batch normalisation (BN) layer is inserted after FC/Conv layer and before activation layer.</li>
+<li>Batch size becomes an important tunable parameter</li>
+</ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
         linebreak = "false";
@@ -107,147 +118,10 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 </script>
-            <a class="readmore" href="/personal-note-deep-learning.html">read more</a>
-            </div><!-- /.entry-content -->
-        </article>
-    </section><!-- /#content -->
-    <section id="content" class="body">
-        <article class="hentry">
-            <header>
-                <h1><a href="/manuscript-preparation-tips.html" rel="bookmark"
-                        title="Permalink to Some tips on preparing manuscripts for publication">Some tips on preparing manuscripts for publication</a></h1>
-            </header>
+    </div><!-- /.entry-content -->
 
-            <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2023-09-16T23:00:00+08:00">
-                Published: Sat 16 September 2023
-        </abbr>
-
-        <!--         <address class="vcard author">
-                By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
-        </address>
- -->
-<!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
-
-</footer><!-- /.post-info -->            <p>How to prepare high-quality manuscript for publication, in terms of paper structure, generating high-quality figures, and writing platform.</p>
-            <a class="readmore" href="/manuscript-preparation-tips.html">read more</a>
-            </div><!-- /.entry-content -->
-        </article>
-    </section><!-- /#content -->
-    <section id="content" class="body">
-        <article class="hentry">
-            <header>
-                <h1><a href="/nci-gadi-for-deep-learning.html" rel="bookmark"
-                        title="Permalink to NCI Gadi for deep learning">NCI Gadi for deep learning</a></h1>
-            </header>
-
-            <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2023-04-16T00:00:00+08:00">
-                Published: Sun 16 April 2023
-        </abbr>
-
-        <!--         <address class="vcard author">
-                By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
-        </address>
- -->
-<!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
-
-</footer><!-- /.post-info -->            <p>Personal note to access NCI Gadi cluster for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
-<h1>Access from ARE (Australian Research Environment)</h1>
-<ul>
-<li>Login at <a href="https://are.nci.org.au/">https://are.nci.org.au/</a><ul>
-<li>Jupyterlab (gpuvolta) is good for …</li></ul></li></ul>
-            <a class="readmore" href="/nci-gadi-for-deep-learning.html">read more</a>
-            </div><!-- /.entry-content -->
-        </article>
-    </section><!-- /#content -->
-    <section id="content" class="body">
-        <article class="hentry">
-            <header>
-                <h1><a href="/personal-note-git-linux-etc-commands.html" rel="bookmark"
-                        title="Permalink to Personal note on git, Linux, etc. commands">Personal note on git, Linux, etc. commands</a></h1>
-            </header>
-
-            <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2023-04-16T00:00:00+08:00">
-                Published: Sun 16 April 2023
-        </abbr>
-
-        <!--         <address class="vcard author">
-                By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
-        </address>
- -->
-<!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
-
-</footer><!-- /.post-info -->            <p>Personal note of anything (git, Linux, etc.) I would like to find out easily.</p>
-<h1>git</h1>
-<h2>General commands</h2>
-<ul>
-<li><code>git mv &lt;current filename&gt; &lt;new filename (with dir to move)&gt;</code>: move or rename file that is already tracked by git</li>
-<li><code>git rm --cached &lt;file1&gt; &lt;dir/file2&gt;</code>: remove file1 and file2 from repository, especially …</li></ul>
-            <a class="readmore" href="/personal-note-git-linux-etc-commands.html">read more</a>
-            </div><!-- /.entry-content -->
-        </article>
-    </section><!-- /#content -->
-    <section id="content" class="body">
-        <article class="hentry">
-            <header>
-                <h1><a href="/kuet-pg-thesis-template.html" rel="bookmark"
-                        title="Permalink to KUET postgrad thesis template in LaTeX">KUET postgrad thesis template in LaTeX</a></h1>
-            </header>
-
-            <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2022-09-17T15:46:00+08:00">
-                Published: Sat 17 September 2022
-        </abbr>
-
-        <!--         <address class="vcard author">
-                By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
-        </address>
- -->
-<!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
-
-</footer><!-- /.post-info -->            
-<p>Writing a postgraduate thesis is stressful and would be horrendous without a helpful template.</p>
-
-<p>I received my MSc Eng degree from Khulna University of Engineering & Technology (KUET) in 2021. Officially, the university only provided a <a href="https://www.kuet.ac.bd/images/forms/ACAF_5.pdf">PDF</a>, mentioning the formatting requirement of the thesis. Writing the thesis in MS Word was …</p>
-            <a class="readmore" href="/kuet-pg-thesis-template.html">read more</a>
-            </div><!-- /.entry-content -->
-        </article>
-    </section><!-- /#content -->
-    <section id="content" class="body">
-        <article class="hentry">
-            <header>
-                <h1><a href="/5g-in-bangladesh.html" rel="bookmark"
-                        title="Permalink to Opportunities and challenges of 5G communication in Bangladesh">Opportunities and challenges of 5G communication in Bangladesh</a></h1>
-            </header>
-
-            <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2021-01-22T00:00:00+08:00">
-                Published: Fri 22 January 2021
-        </abbr>
-
-        <!--         <address class="vcard author">
-                By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
-        </address>
- -->
-<!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
-
-</footer><!-- /.post-info -->            <!-- Status: draft -->
-<!-- Tags: 5G, bangladesh -->
-<!-- Summary: 5G in Bangladesh -->
-
-<p>Better communication, especially better internet access, is a key requirement for modern day-to-day life. Bearing that in mind, significant improvement and efficient utilization of Information and Communication Technology (ICT) is expected. Like many developing countries, Bangladesh has also made significant growth in internet access. According to the Bangladesh Telecommunication Regulatory …</p>
-            <a class="readmore" href="/5g-in-bangladesh.html">read more</a>
-            </div><!-- /.entry-content -->
-        </article>
-                <!-- /#posts-list -->
-    </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>find me on</h2>
