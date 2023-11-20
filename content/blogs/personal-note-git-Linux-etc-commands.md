@@ -92,8 +92,27 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 - `BibLaTeX` user: For `biber` backend, the [biblatex-readbbl](https://ctan.org/pkg/biblatex-readbbl?lang=en) package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include `something.bbl` and change the main `tex` file: Comment out `\addbibresource{ref.bib}` and place `\usepackage[bblfile=something]{biblatex-readbbl}`
 
 &nbsp;
+# Python
+- No module named pip
 
-# PyTorch
+    Install pip via apt:
+    ```bash
+    sudo apt install python3-pip
+    ```
+- Change default python version.
+
+    Create alias. Inside `~/.bashrc` or if it is linked to `~/.bash_aliases`:
+    ```bash
+    alias python3='/usr/bin/python3.11'
+    ```
+- ImportError: cannot import name '_imaging' from 'PIL'
+
+    Upgrade `Pillow`:
+    ```bash
+    python -m pip install -U Pillow
+    ```
+
+## PyTorch
 - `len(dataloader)`: number of batches
 - `len(dataloader.dataset)`: number of samples
 
@@ -144,3 +163,6 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
 ## Zoom Recording
 - While sharing the screen, 'optimize for video clip' option creates black boxes at different parts of shared screen (maybe the idea is to create black box on Zoom software-related pop-ups, but maybe buggy as of Nov 23.). So, I should share the screen without this option.
 - If I minimise my video, it will not be recorded.
+
+## Convert pdf to image in Linux
+- As mentioned [here in askubuntu](https://askubuntu.com/a/50180): `pdftoppm input.pdf outputname [-png / -jpeg / etc.] -r <resolution>`
