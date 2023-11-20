@@ -136,7 +136,24 @@ git config --global user.email &lt;EMAIL&gt;
 </li>
 </ul>
 <p>&nbsp;</p>
-<h1>PyTorch</h1>
+<h1>Python</h1>
+<ul>
+<li>
+<p>No module named pip</p>
+<p>Install pip via apt:
+<code>bash
+sudo apt install python3-pip</code>
+- Change default python version.</p>
+<p>Create alias. Inside <code>~/.bashrc</code> or if it is linked to <code>~/.bash_aliases</code>:
+<code>bash
+alias python3='/usr/bin/python3.11'</code>
+- ImportError: cannot import name '_imaging' from 'PIL'</p>
+<p>Upgrade <code>Pillow</code>:
+<code>bash
+python -m pip install -U Pillow</code></p>
+</li>
+</ul>
+<h2>PyTorch</h2>
 <ul>
 <li><code>len(dataloader)</code>: number of batches</li>
 <li><code>len(dataloader.dataset)</code>: number of samples</li>
@@ -188,6 +205,10 @@ ssh-keygen -p
 <ul>
 <li>While sharing the screen, 'optimize for video clip' option creates black boxes at different parts of shared screen (maybe the idea is to create black box on Zoom software-related pop-ups, but maybe buggy as of Nov 23.). So, I should share the screen without this option.</li>
 <li>If I minimise my video, it will not be recorded.</li>
+</ul>
+<h2>Convert pdf to image in Linux</h2>
+<ul>
+<li>As mentioned <a href="https://askubuntu.com/a/50180">here in askubuntu</a>: <code>pdftoppm input.pdf outputname [-png / -jpeg / etc.] -r &lt;resolution&gt;</code></li>
 </ul>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
