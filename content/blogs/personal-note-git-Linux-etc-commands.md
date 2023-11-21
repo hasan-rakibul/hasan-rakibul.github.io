@@ -95,22 +95,22 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 # Python
 - No module named pip
 
-    Install pip via apt:
-    ```bash
-    sudo apt install python3-pip
-    ```
+Install pip via apt:
+```bash
+sudo apt install python3-pip
+```
 - Change default python version.
 
-    Create alias. Inside `~/.bashrc` or if it is linked to `~/.bash_aliases`:
-    ```bash
-    alias python3='/usr/bin/python3.11'
-    ```
+Create alias. Inside `~/.bashrc` or if it is linked to `~/.bash_aliases`:
+```bash
+alias python3='/usr/bin/python3.11'
+```
 - ImportError: cannot import name '_imaging' from 'PIL'
 
-    Upgrade `Pillow`:
-    ```bash
-    python -m pip install -U Pillow
-    ```
+Upgrade `Pillow`:
+```bash
+python -m pip install -U Pillow
+```
 
 ## PyTorch
 - `len(dataloader)`: number of batches
@@ -124,18 +124,29 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 - Alternatively, as mentioned [here](https://code.visualstudio.com/docs/python/environments): 'Open the Command Palette (Ctrl+Shift+P) and enter Preferences: Open User Settings. Then set `python.defaultInterpreterPathInterpreter` to the path of the virtual environment.'
 
 ## Connecting remote host through SSH
-- As discussed [here in VSCode](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips), I need to specify the public key in the remote host from my local PC. In PowerShell:
-    ```bash
-    export USER_AT_HOST="your-user-name-on-host@hostname"
-    export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+- As discussed [here in VSCode](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips), I need to specify the public key in the remote host from my local PC. 
 
-    ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\\.ssh\"; Add-Content -Force -Path \"\$HOME\\.ssh\\authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
-    ```
+- If the local machine is a macOS or Linux, terminal:
+```bash
+export USER_AT_HOST="your-user-name-on-host@hostname"
+export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+
+ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
+```
+
+- If the local machine is Windows, PowerShell:
+
+```bash
+export USER_AT_HOST="your-user-name-on-host@hostname"
+export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+
+ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\\.ssh\"; Add-Content -Force -Path \"\$HOME\\.ssh\\authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
+```
 - Then I can connect to the remote host through SSH passphrase instead of the remote login password. Passphrase is associated with every SSH key when we generate the key.
 - Pretty convenient (it won't ask for a passphrase) if the passphrase is empty. To change SSH passphrase for a key, in PowerShell:
-    ```bash
-    ssh-keygen -p
-    ```
+```bash
+ssh-keygen -p
+```
 
 &nbsp;
 
@@ -155,9 +166,9 @@ As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/ho
 
 ## Ububtu WSL2 opens as root
 - As discussed [here in Reddit](https://www.reddit.com/r/Ubuntu/comments/x4xuek/ubuntu_has_started_defaulting_to_root_user_on/), I need to change the default user to my username. In PowerShell:
-    ```bash
-    ubuntu config --default-user <username>
-    ```
+```bash
+ubuntu config --default-user <username>
+```
 - The correct username can be found in `/etc/passwd`
 
 ## Zoom Recording
