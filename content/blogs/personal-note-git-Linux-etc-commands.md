@@ -111,6 +111,10 @@ Upgrade `Pillow`:
 ```bash
 python -m pip install -U Pillow
 ```
+- Package installation failed due to setuptools (although setuptools>40 was installed): 'ERROR: No matching distribution found for setuptools>=40.8.0'. Randomly tried the following command and it worked: 
+```bash
+python -m pip install -U wheel
+```
 
 ## PyTorch
 - `len(dataloader)`: number of batches
