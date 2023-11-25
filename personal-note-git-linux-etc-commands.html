@@ -158,6 +158,12 @@ git config --global user.email &lt;EMAIL&gt;
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>Pillow
 </code></pre></div>
 
+<ul>
+<li>Package installation failed due to setuptools (although setuptools&gt;40 was installed): 'ERROR: No matching distribution found for setuptools&gt;=40.8.0'. Randomly tried the following command and it worked: </li>
+</ul>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>wheel
+</code></pre></div>
+
 <h2>PyTorch</h2>
 <ul>
 <li><code>len(dataloader)</code>: number of batches</li>
