@@ -14,6 +14,7 @@ Title: Useful links
     - [https://www.makesigns.com/SciPosters_Templates.aspx](https://www.makesigns.com/SciPosters_Templates.aspx)
 - [Consensus - AI Search Engine for Research](https://consensus.app/)
 - [Scholarcy - AI-powered summariser](https://article-summarizer.scholarcy.com/summarizer)
+- [Peer review in NLP: reject-if-not-SOTA](https://hackingsemantics.xyz/2020/reviewing-models/)
 
 &nbsp;
 
