@@ -145,10 +145,10 @@ ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
 - If the local machine is Windows, PowerShell:
 
 ```bash
-export USER_AT_HOST="your-user-name-on-host@hostname"
-export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+$USER_AT_HOST="your-user-name-on-host@hostname"
+$PUBKEYPATH="$HOME\.ssh\id_ed25519.pub"
 
-ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\\.ssh\"; Add-Content -Force -Path \"\$HOME\\.ssh\\authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
+$pubKey=(Get-Content "$PUBKEYPATH" | Out-String); ssh "$USER_AT_HOST" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '${pubKey}' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 ```
 - Then I can connect to the remote host through SSH passphrase instead of the remote login password. Passphrase is associated with every SSH key when we generate the key.
 - Pretty convenient (it won't ask for a passphrase) if the passphrase is empty. To change SSH passphrase for a key, in PowerShell:
