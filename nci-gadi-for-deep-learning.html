@@ -170,12 +170,19 @@ So, 1 KSU costs = $117.56</p>
 Therefore, 1 KSU costs = $282.136</p>
 <p>&nbsp;</p>
 <h1>Acees remote instance from VS Code</h1>
-<p><a href="https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2">This thread</a> mentions access ARE instance from VS Code. In addition:</p>
-<ul>
-<li>The config file is in <code>~/.ssh/config</code> under Windows OS where VS Code is installed</li>
-<li>When connected to JupyterLab, I had no internet access on the VS Code terminal but can access internet from the JupyterLab terminal on the remote server through ARE.</li>
-<li>When connected to the analysis queue, I had internet access on the VS Code terminal.</li>
-</ul>
+<p><a href="https://forum.access-hive.org.au/t/working-with-jupyter-notebooks-on-gadi-are-via-vs-code/461/2">This thread</a> mentions access ARE instance from VS Code. In my local machine, I need to have a <code>config</code> file with the following contents:</p>
+<div class="highlight"><pre><span></span><code>Host<span class="w"> </span>&lt;some<span class="w"> </span>name&gt;
+<span class="w">       </span>ProxyJump<span class="w"> </span>&lt;your-gadi-username&gt;@gadi.nci.org.au
+<span class="w">       </span>User<span class="w"> </span>&lt;your-gadi-username&gt;
+<span class="w">       </span>ForwardX11<span class="w"> </span><span class="nb">true</span>
+<span class="w">       </span>ForwardX11Trusted<span class="w"> </span>yes
+<span class="w">       </span>Hostname<span class="w"> </span>&lt;cpu-node-hostname&gt;
+</code></pre></div>
+
+<p>In addition:
+- The config file is in <code>~/.ssh/config</code> under Windows OS where VS Code is installed (if the local machine is Windows)
+- When connected to JupyterLab, I had no internet access on the VS Code terminal but can access internet from the JupyterLab terminal on the remote server through ARE.
+- When connected to the analysis queue, I had internet access on the VS Code terminal.</p>
 <p>&nbsp;</p>
 <h1>Access Gadi terminal &ndash; not required if ARE is sufficient</h1>
 <h2>Access login node from a linux terminal</h2>

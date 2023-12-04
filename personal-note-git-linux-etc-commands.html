@@ -199,10 +199,10 @@ ssh-copy-id<span class="w"> </span>-i<span class="w"> </span><span class="s2">&q
 <ul>
 <li>If the local machine is Windows, PowerShell:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">USER_AT_HOST</span><span class="o">=</span><span class="s2">&quot;your-user-name-on-host@hostname&quot;</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">PUBKEYPATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_ed25519.pub&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nv">$USER_AT_HOST</span><span class="o">=</span><span class="s2">&quot;your-user-name-on-host@hostname&quot;</span>
+<span class="nv">$PUBKEYPATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">\.ssh\id_ed25519.pub&quot;</span>
 
-ssh<span class="w"> </span><span class="nv">$USER_AT_HOST</span><span class="w"> </span><span class="s2">&quot;powershell New-Item -Force -ItemType Directory -Path \&quot;\$HOME\\.ssh\&quot;; Add-Content -Force -Path \&quot;\$HOME\\.ssh\\authorized_keys\&quot; -Value &#39;</span><span class="k">$(</span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;\n\r&#39;</span><span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PUBKEYPATH</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&#39;&quot;</span>
+<span class="nv">$pubKey</span><span class="o">=(</span>Get-Content<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PUBKEYPATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>Out-String<span class="o">)</span><span class="p">;</span><span class="w"> </span>ssh<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER_AT_HOST</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh &amp;&amp; echo &#39;</span><span class="si">${</span><span class="nv">pubKey</span><span class="si">}</span><span class="s2">&#39; &gt;&gt; ~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys&quot;</span>
 </code></pre></div>
 
 <ul>
