@@ -36,6 +36,7 @@ Title: Useful links
 - [How to use Learning Curves to Diagnose Machine Learning Model Performance](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 - [Animated RNN, LSTM and GRU](https://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45)
 - [PyTorch implementation of several common architectures by Lorna](https://github.com/Lornatang?tab=repositories)
+- [Generative AI Glossary - AIPRM](https://www.aiprm.com/resources/guides/generative-ai-glossary/)
 
 ### Book
 - [Dive into Deep Learning](https://d2l.ai/index.html)
