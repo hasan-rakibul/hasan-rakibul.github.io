@@ -169,6 +169,11 @@ git config --global user.email &lt;EMAIL&gt;
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>wheel
 </code></pre></div>
 
+<h2>Configuring cache directory</h2>
+<ul>
+<li><code>pip</code>: Add <code>export XDG_CACHE_HOME=/&lt;target-dir&gt;</code> in <code>~/.bashrc</code></li>
+<li><code>conda</code>: Add <code>conda config --add pkgs_dirs /&lt;target-dir&gt;</code> in <code>~/.bashrc</code></li>
+</ul>
 <h2>PyTorch</h2>
 <ul>
 <li><code>len(dataloader)</code>: number of batches</li>
