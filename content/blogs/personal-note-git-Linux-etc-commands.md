@@ -120,6 +120,10 @@ python -m pip install -U Pillow
 python -m pip install -U wheel
 ```
 
+## Configuring cache directory
+- `pip`: Add `export XDG_CACHE_HOME=/<target-dir>` in `~/.bashrc`
+- `conda`: Add `conda config --add pkgs_dirs /<target-dir>` in `~/.bashrc`
+
 ## PyTorch
 - `len(dataloader)`: number of batches
 - `len(dataloader.dataset)`: number of samples
