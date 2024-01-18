@@ -16,3 +16,4 @@ Date: 2023-12-28
 ## Resources
 - Drive Safe Handbook is the official guidebook. Can be downloaded from [here](https://www.transport.wa.gov.au/licensing/rules-of-the-road.asp).
 - [DriveSmart Onliny by VIC government](http://drivesmart.vic.gov.au/) can be a good resource for becoming a good driver.
+- [https://rac.com.au/car-motoring/info/wa-misunderstood-road-rules](https://rac.com.au/car-motoring/info/wa-misunderstood-road-rules)
