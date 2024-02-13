@@ -86,9 +86,7 @@
 </ul>
 <h3>I preferred virtual-environment approach to install Python packages</h3>
 <p>Inside <code>/g/data</code>, I create a new virtual enrinronment named <code>.venv</code>, for example. If I don't want to use the default python version, I load specific version (<code>module load python3/3.11.0</code>) for which I want to base my virtual environment on.</p>
-<p><code>python3 -m venv .venv</code></p>
-<p>Then, activate it: <code>source .venv/bin/activate</code> (better: put this command in <code>~/.bashrc</code> if it's your default environment. Then I don't need to activate it everytime.)</p>
-<p>Pro tip: Make <code>include-system-site-packages = true</code> in <code>.venv/pyvenv.cfg</code> file to include system-wide packages available in the virtual envirorment as well</p>
+<p>Instructions on creating virtual environmen can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>.</p>
 <p>And then install without any prefix path. It will automatically install on <code>/g/data</code> if the env is activated.</p>
 <div class="highlight"><pre><span></span><code><span class="nx">python3</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">pip</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="o">-</span><span class="nx">v</span><span class="w"> </span><span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">binary</span><span class="w"> </span><span class="p">:</span><span class="nx">all</span><span class="p">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">package_name</span><span class="p">&gt;</span>
 </code></pre></div>

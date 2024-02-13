@@ -4,9 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>Personal note on deep learning</title>
+        <title>CSIRO Bracewell for deep learning</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
-        <meta name="description" content="CNN Default stride is 1 According to Wikipedia, the output height/width of a convolutional layer (per channel) is given by..." />
+        <meta name="description" content="Access I access through VSCode remote SSH extension. Just open the remote explorer and add a new SSH host. Then, select the host and connect. It..." />
 </head>
 
 <body id="index" class="home">
@@ -26,14 +26,14 @@
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/personal-note-deep-learning.html" rel="bookmark"
-           title="Permalink to Personal note on deep learning">Personal note on deep learning</a></h1>
+        <a href="/csiro-bracewell-for-deep-learning.html" rel="bookmark"
+           title="Permalink to CSIRO Bracewell for deep learning">CSIRO Bracewell for deep learning</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2023-11-19T00:00:00+08:00">
-                Published: Sun 19 November 2023
+        <abbr class="published" title="2024-02-13T09:00:00+08:00">
+                Published: Tue 13 February 2024
         </abbr>
 
         <!--         <address class="vcard author">
@@ -42,84 +42,38 @@
  -->
 <!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
 
-</footer><!-- /.post-info -->      <h1>CNN</h1>
+</footer><!-- /.post-info -->      <h1>Access</h1>
+<p>I access through VSCode remote SSH extension. Just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, I can use the public key authentication (detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>).</p>
+<h1>Conda</h1>
+<p>In <strong>CSIRO Bracewell</strong>, I can load minoconda using <code>module load miniconda3</code></p>
+<p>As I should not install in home directory, let's change them in conda configuration, as detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands#python-configuring-cache-directory">here</a>.</p>
+<h1>Useful SLURM commands</h1>
+<div class="highlight"><pre><span></span><code>sbatch<span class="w"> </span>&lt;script.sh&gt;<span class="w"> </span><span class="c1"># to submit a job</span>
+salloc<span class="w"> </span>--nodes<span class="o">=</span><span class="m">1</span><span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">16</span><span class="w"> </span>--mem<span class="o">=</span>8GB<span class="w"> </span>--gres<span class="o">=</span>gpu:1<span class="w"> </span>--time<span class="o">=</span><span class="m">6</span>:00:00<span class="w"> </span>--account<span class="o">=</span>&lt;O2D<span class="w"> </span>code&gt;<span class="w"> </span><span class="c1"># get some allocation for interactive session</span>
+ssh<span class="w"> </span>&lt;ident&gt;@&lt;node&gt;<span class="w"> </span><span class="c1"># to connect to the allocated node</span>
+sacct<span class="w"> </span><span class="c1"># to see the job history of the user for today</span>
+sacct<span class="w"> </span>--starttime<span class="w"> </span>MMDD<span class="w"> </span><span class="c1"># MMDD is the month and day from which you want to see the job history</span>
+seff<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span><span class="c1"># to see the efficiency of resource utilisation for the job</span>
+</code></pre></div>
+
+<p>&nbsp;</p>
+<h1>Course / Manuals / helpful resources</h1>
 <ul>
-<li>Default stride is 1</li>
-<li>According to <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network#Convolutional_layer">Wikipedia</a>, the output height/width of a convolutional layer (per channel) is given by
-    <div class="math">$$\left\lfloor\frac{W-K+2P}{S}+1\right\rfloor$$</div>
-    where <span class="math">\(W\)</span> is the input size, <span class="math">\(K\)</span> is the filter size, <span class="math">\(P\)</span> is the padding size and <span class="math">\(S\)</span> is the stride.</li>
+<li><a href="https://confluence.csiro.au/display/SC/Useful+information+for+new+users">https://confluence.csiro.au/display/SC/Useful+information+for+new+users</a></li>
+<li><a href="https://confluence.csiro.au/display/~mac581/Oddities+of+our+HPC">https://confluence.csiro.au/display/~mac581/Oddities+of+our+HPC</a></li>
+<li><a href="https://confluence.csiro.au/display/SC/Interactive+access+and+visualization">https://confluence.csiro.au/display/SC/Interactive+access+and+visualization</a></li>
+<li>Configure VSCode: <a href="https://confluence.csiro.au/display/MLAIFSP/Remote+editing+with+VS+Code+on+bracewell">https://confluence.csiro.au/display/MLAIFSP/Remote+editing+with+VS+Code+on+bracewell</a></li>
+<li>Configure Conda: <a href="https://confluence.csiro.au/display/IMT/Conda+and+python+in+HPC">https://confluence.csiro.au/display/IMT/Conda+and+python+in+HPC</a></li>
 </ul>
-<h1>Batch normalisation</h1>
+<h1>Submitting SLURM job</h1>
 <ul>
-<li>In FC layer, normalise per mini-batch</li>
-<li>In Conv layer, normalise per channel. Per sample normalisation can also be done, which is called layer normalisation.</li>
-<li>Batch normalisation (BN) layer is inserted after FC/Conv layer and before activation layer.</li>
-<li>Batch size becomes an important tunable parameter</li>
+<li><a href="https://confluence.csiro.au/display/SC/Sample+Slurm+Job+Scripts">https://confluence.csiro.au/display/SC/Sample+Slurm+Job+Scripts</a></li>
+<li><a href="https://confluence.csiro.au/pages/viewpage.action?pageId=1540489611">PBS to SLURM</a></li>
+<li><a href="https://confluence.csiro.au/display/VCCRI/SLURM">https://confluence.csiro.au/display/VCCRI/SLURM</a></li>
+<li><a href="https://confluence.csiro.au/display/SC/Requesting+resources+in+Slurm">https://confluence.csiro.au/display/SC/Requesting+resources+in+Slurm</a></li>
+<li><a href="https://confluence.csiro.au/display/SC/Running+jobs+in+an+interactive+batch+shell">https://confluence.csiro.au/display/SC/Running+jobs+in+an+interactive+batch+shell</a></li>
+<li><a href="https://confluence.csiro.au/display/GEES/HPC+Cheat+Sheet">https://confluence.csiro.au/display/GEES/HPC+Cheat+Sheet</a></li>
 </ul>
-<h1>Freezing layers</h1>
-<p>In addition to controlling <code>param.requires_grad</code>, I need to enable <code>eval()</code> mode corresponding to <code>batchnorm layers</code>, if any. Details: <a href="https://discuss.pytorch.org/t/should-i-use-model-eval-when-i-freeze-batchnorm-layers-to-finetune/39495">https://discuss.pytorch.org/t/should-i-use-model-eval-when-i-freeze-batchnorm-layers-to-finetune/39495</a></p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
     </div><!-- /.entry-content -->
 
   </article>
