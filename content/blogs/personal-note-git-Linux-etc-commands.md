@@ -97,13 +97,13 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 
 &nbsp;
 # Python
-- No module named pip
+## No module named pip
 
 Install pip via apt:
 ```bash
 sudo apt install python3-pip
 ```
-- Change default python version.
+## Change default python version.
 
 Create alias. Inside `~/.bashrc` or if it is linked to `~/.bash_aliases`:
 ```bash
@@ -115,14 +115,49 @@ Upgrade `Pillow`:
 ```bash
 python -m pip install -U Pillow
 ```
-- Package installation failed due to setuptools (although setuptools>40 was installed): 'ERROR: No matching distribution found for setuptools>=40.8.0'. Randomly tried the following command and it worked: 
+## Package installation failed due to setuptools (although setuptools>40 was installed): 'ERROR: No matching distribution found for setuptools>=40.8.0'. Randomly tried the following command and it worked: 
 ```bash
 python -m pip install -U wheel
+```
+
+## Creating python virtual environment
+Inside your preferred directory (it's standard to name it as `.venv` directory):
+```bash
+python -m venv <env_name>
+```
+Pro tip: Make `include-system-site-packages = true` in `<env_name>/pyvenv.cfg` file to include system-wide packages available in the virtual envirorment as well
+
+Activate virtual environment. (better: put this command in `~/.bashrc` if it's your default environment. Then you don't need to activate it everytime.)
+```bash
+source <target/directory/with/env_name>/bin/activate
+```
+
+Or, if you don't need the environment everytime. You can activate in each terminal session using the same command above.
+
+To deactivate the current environment:
+```bash
+deactivate
 ```
 
 ## Configuring cache directory
 - `pip`: Add `export XDG_CACHE_HOME=/<target-dir>` in `~/.bashrc`
 - `conda`: Add `conda config --add pkgs_dirs /<target-dir>` in `~/.bashrc`
+  - Alternatively, `conda config` will create a `.condarc` file in home directory. Open it, and add the following lines:
+```bash
+envs_dirs:
+  - /scratch2/<ident>/.conda/envs
+pkgs_dirs:
+  - /scratch2/<ident>/.conda/pkgs
+```
+
+## Install older version of Python (e.g., python3.9) in Ubuntu 22.04.3 LTS  
+
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.9 python3.9-venv python3.9-distutils
+```
+
+Normally, `python` command will point to the latest version. To point it to specific version, you can include the version (e.g., `python3.9`) in the command.
 
 ## PyTorch
 - `len(dataloader)`: number of batches

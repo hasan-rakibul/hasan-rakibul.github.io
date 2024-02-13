@@ -12,3 +12,6 @@ Date: 2023-11-19 00:00
 - In Conv layer, normalise per channel. Per sample normalisation can also be done, which is called layer normalisation.
 - Batch normalisation (BN) layer is inserted after FC/Conv layer and before activation layer.
 - Batch size becomes an important tunable parameter
+
+# Freezing layers
+In addition to controlling `param.requires_grad`, I need to enable `eval()` mode corresponding to `batchnorm layers`, if any. Details: [https://discuss.pytorch.org/t/should-i-use-model-eval-when-i-freeze-batchnorm-layers-to-finetune/39495](https://discuss.pytorch.org/t/should-i-use-model-eval-when-i-freeze-batchnorm-layers-to-finetune/39495)

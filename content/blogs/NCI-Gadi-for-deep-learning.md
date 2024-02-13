@@ -31,11 +31,7 @@ Personal note to access NCI Gadi cluster for deep learning workflow. Please be i
 ### I preferred virtual-environment approach to install Python packages
 Inside `/g/data`, I create a new virtual enrinronment named `.venv`, for example. If I don't want to use the default python version, I load specific version (`module load python3/3.11.0`) for which I want to base my virtual environment on.
 
-`python3 -m venv .venv`
-
-Then, activate it: `source .venv/bin/activate` (better: put this command in `~/.bashrc` if it's your default environment. Then I don't need to activate it everytime.)
-
-Pro tip: Make `include-system-site-packages = true` in `.venv/pyvenv.cfg` file to include system-wide packages available in the virtual envirorment as well
+Instructions on creating virtual environmen can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html).
 
 And then install without any prefix path. It will automatically install on `/g/data` if the env is activated.
 
