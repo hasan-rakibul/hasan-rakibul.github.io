@@ -44,7 +44,7 @@
 
 </footer><!-- /.post-info -->      <p>Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
 <h1>Access</h1>
-<p>I access through VSCode remote SSH extension. Just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, I can use the public key authentication (detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>).</p>
+<p>I access through VSCode remote SSH extension (it has some caveats mentioned <a href="https://support.pawsey.org.au/documentation/display/US/Visual+Studio+Code+for+Remote+Development">here</a>). Just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, I can use the public key authentication (detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>).</p>
 <h1>File system</h1>
 <ul>
 <li>As mentioned in <a href="https://support.pawsey.org.au/documentation/display/US/Setonix+General+Information">this Pawsey's documentation</a>,<ul>
@@ -53,10 +53,16 @@
 </ul>
 </li>
 </ul>
+<h1>Important points</h1>
+<ul>
+<li>Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the <code>.cache</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;</code>). Managing the cache and conda files can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>.</li>
+</ul>
 <p>&nbsp;</p>
 <h1>Course / Manuals / helpful resources</h1>
 <ul>
 <li><a href="https://support.pawsey.org.au/documentation/display/US/Setonix+General+Information">https://support.pawsey.org.au/documentation/display/US/Setonix+General+Information</a></li>
+<li><a href="https://support.pawsey.org.au/documentation/display/US/Pawsey+Filesystems+and+their+Usage">https://support.pawsey.org.au/documentation/display/US/Pawsey+Filesystems+and+their+Usage</a></li>
+<li><a href="https://support.pawsey.org.au/documentation/display/US/Visual+Studio+Code+for+Remote+Development">https://support.pawsey.org.au/documentation/display/US/Visual+Studio+Code+for+Remote+Development</a></li>
 </ul>
     </div><!-- /.entry-content -->
 
