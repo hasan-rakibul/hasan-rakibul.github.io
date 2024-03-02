@@ -11,11 +11,17 @@ I access through VSCode remote SSH extension (it has some caveats mentioned [her
     - `/software/projects/<project_id>/<user_id>/` to install software packages.
     - `/scratch/<project_id>/<user_id>` for temporary storage.
 
+# SLURM job submission
+- `account` is the project ID, e.g., pawsey1234
+- Sample job submission script is [here for CPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes) and [here for GPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes).
+
 # Important points
 - Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the `.cache` and/or `.conda` files must be in another directory (e.g., `/software/projects/<project_id>/<user_id>`). Managing the cache and conda files can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html).
 
 &nbsp;
 # Course / Manuals / helpful resources
-- [https://support.pawsey.org.au/documentation/display/US/Setonix+General+Information](https://support.pawsey.org.au/documentation/display/US/Setonix+General+Information)
-- [https://support.pawsey.org.au/documentation/display/US/Pawsey+Filesystems+and+their+Usage](https://support.pawsey.org.au/documentation/display/US/Pawsey+Filesystems+and+their+Usage)
-- [https://support.pawsey.org.au/documentation/display/US/Visual+Studio+Code+for+Remote+Development](https://support.pawsey.org.au/documentation/display/US/Visual+Studio+Code+for+Remote+Development)
+- [https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information)
+- [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage)
+- [https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development)
+- [https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes)
+- [https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes)
