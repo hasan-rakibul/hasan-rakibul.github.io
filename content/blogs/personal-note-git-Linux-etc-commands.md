@@ -20,6 +20,8 @@ Personal note of anything (git, Linux, etc.) I would like to find out easily.
 - `git fetch <origin>`: fetch changes from remote repository, including all branches. After fetching, I can see the changes through `git log` command.
 - `git merge <orgin/another_branch>`: merge changes from another branch to the current branch
 - `git diff <branch1> <branch2>`: compare changes between two branches
+- `git branch -d <branch>`: delete local branch. `-d` is for delete. `-D` is for force delete, without checking if the changes are merged or not.
+- `git push <origin> -d <branch>`: delete remote branch
 
 ## Fix local configuration after changing repo name
 - `git remote -v` to check current repo name
