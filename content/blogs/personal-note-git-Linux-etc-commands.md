@@ -10,6 +10,17 @@ Personal note of anything (git, Linux, etc.) I would like to find out easily.
 - `git mv <current filename> <new filename (with dir to move)>`: move or rename file that is already tracked by git
 - `git rm --cached <file1> <dir/file2>`: remove file1 and file2 from repository, especially required when `.gitignore` is updated to avoid tracking file1 and file2, which was earlier tracked and now on repository. This will NOT remove the file from the current local system. "Be aware to commit all your changes before, otherwise you will loose control on all the changed files" - [Hoang Pham at SO](https://stackoverflow.com/questions/1139762/ignore-files-that-have-already-been-committed-to-a-git-repository#comment1985104_1139797)
 
+## Working with branches
+- `git branch`: list branches. The current branch is marked with an asterisk.
+- `git stash`: save current changes to a stash. Mandatory when I want to switch to another branch without committing the current changes.
+- `git stash list`: list all stashes
+- `git stash apply`: apply the latest stash
+- `git stash apply stash@{<stash_number>}`: apply a specific stash. The stash number can be found from `git stash list`
+- `git switch <branch_name>`: switch to a branch
+- `git fetch <origin>`: fetch changes from remote repository, including all branches. After fetching, I can see the changes through `git log` command.
+- `git merge <orgin/another_branch>`: merge changes from another branch to the current branch
+- `git diff <branch1> <branch2>`: compare changes between two branches
+
 ## Fix local configuration after changing repo name
 - `git remote -v` to check current repo name
 - `git remote set-url origin git@github.com:<username>/<new-repo-name>.git`: update origin
