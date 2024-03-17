@@ -49,6 +49,18 @@
 <li><code>git mv &lt;current filename&gt; &lt;new filename (with dir to move)&gt;</code>: move or rename file that is already tracked by git</li>
 <li><code>git rm --cached &lt;file1&gt; &lt;dir/file2&gt;</code>: remove file1 and file2 from repository, especially required when <code>.gitignore</code> is updated to avoid tracking file1 and file2, which was earlier tracked and now on repository. This will NOT remove the file from the current local system. "Be aware to commit all your changes before, otherwise you will loose control on all the changed files" - <a href="https://stackoverflow.com/questions/1139762/ignore-files-that-have-already-been-committed-to-a-git-repository#comment1985104_1139797">Hoang Pham at SO</a></li>
 </ul>
+<h2>Working with branches</h2>
+<ul>
+<li><code>git branch</code>: list branches. The current branch is marked with an asterisk.</li>
+<li><code>git stash</code>: save current changes to a stash. Mandatory when I want to switch to another branch without committing the current changes.</li>
+<li><code>git stash list</code>: list all stashes</li>
+<li><code>git stash apply</code>: apply the latest stash</li>
+<li><code>git stash apply stash@{&lt;stash_number&gt;}</code>: apply a specific stash. The stash number can be found from <code>git stash list</code></li>
+<li><code>git switch &lt;branch_name&gt;</code>: switch to a branch</li>
+<li><code>git fetch &lt;origin&gt;</code>: fetch changes from remote repository, including all branches. After fetching, I can see the changes through <code>git log</code> command.</li>
+<li><code>git merge &lt;orgin/another_branch&gt;</code>: merge changes from another branch to the current branch</li>
+<li><code>git diff &lt;branch1&gt; &lt;branch2&gt;</code>: compare changes between two branches</li>
+</ul>
 <h2>Fix local configuration after changing repo name</h2>
 <ul>
 <li><code>git remote -v</code> to check current repo name</li>
