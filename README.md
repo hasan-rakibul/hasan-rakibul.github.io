@@ -9,6 +9,11 @@ Personal website to track my recent involvements.
 python -m pip install -r requirements.txt
 ```
 
+**Note:** Sometimes, `pelican` and `ghp-import` are shown as not found. In that case, installing through apt works:
+```
+sudo apt install pelican ghp-import
+```
+
 ## Post-commit hook to auto-update the website with commit
 ```
 cp post-commit ./.git/hooks/
