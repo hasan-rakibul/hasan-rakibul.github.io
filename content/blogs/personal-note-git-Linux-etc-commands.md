@@ -68,6 +68,15 @@ git config --global user.email <EMAIL>
 &nbsp;
 
 # LaTeX
+# VSCode on Linux setup
+- VSCode extensions
+  - "LaTeX Workshop" to compile LaTeX files with Ctrl+Alt+B or each save
+  - "Grammarly" to check grammar
+- Linux packages
+  - `latexmk`, otherwise the LaTeX Workshop did not compile the file in my case (was getting "Recipe terminated with fatal error: spawn latexmk ENOENT." error)
+  - `texlive-latex-base` and `texlive-latex-extra` packages to install LaTeX compiler and additional packages
+
+
 ## Natbib-style citation in IEEE template
 I like the `\citep` and `\citet` commands to automatically mention author names. To use them in IEEE template, I need to add the following lines in the preamble:
 ```latex
