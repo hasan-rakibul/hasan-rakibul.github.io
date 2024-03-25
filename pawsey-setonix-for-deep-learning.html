@@ -44,10 +44,29 @@
 
 </footer><!-- /.post-info -->      <p>Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
 <h1>Access</h1>
-<p>I access through VSCode remote SSH extension (it has some caveats mentioned <a href="https://support.pawsey.org.au/documentation/display/US/Visual+Studio+Code+for+Remote+Development">here</a>). Just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, I can use the public key authentication (detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>).</p>
+<p>I access through VSCode remote SSH extension. It has a side-effect of hogging the small HOME quota, as mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">here</a>. To solve this, I can configure the remote SSH extension to use a different directory for the <code>.vscode-server</code> directory. Open the VSCode settings (Ctrl + ,) and search for "Server install path". Then, add items like this:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setonix.pawsey.org.au</td>
+<td>/software/projects/<project_id>/<user_id>/</td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Next, just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>).</p>
 <h1>File system</h1>
 <ul>
-<li>As mentioned in <a href="https://support.pawsey.org.au/documentation/display/US/Setonix+General+Information">this Pawsey's documentation</a>,<ul>
+<li>As mentioned in <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information">this Pawsey's documentation</a>,<ul>
 <li><code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;/</code> to install software packages.</li>
 <li><code>/scratch/&lt;project_id&gt;/&lt;user_id&gt;</code> for temporary storage.</li>
 </ul>
@@ -61,6 +80,7 @@
 <h1>Important points</h1>
 <ul>
 <li>Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the <code>.cache</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;</code>). Managing the cache and conda files can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>.</li>
+<li>Configure <code>$MYSCRATCH</code> and <code>$MYSOFTWARE</code> environment variables in <code>.bashrc</code> file using <code>export</code>. Especially helpful if I have multiple projects.</li>
 </ul>
 <p>&nbsp;</p>
 <h1>Course / Manuals / helpful resources</h1>
