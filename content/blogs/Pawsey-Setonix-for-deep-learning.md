@@ -13,6 +13,20 @@ setonix.pawsey.org.au | /software/projects/<project_id>/<user_id>/
 
 Next, just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html)).
 
+## GPU Computing
+- As described [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes), I can use the following command to access the GPU node interactively:
+```bash
+salloc -N 1 --gres=gpu:3 -A <project_id>-gpu --partition=<gpu or gpu-dev or gpu-highmem
+```
+- Importants notes
+    - "Project name to access the GPU nodes is different." It is `<project_id>-gpu` instead of `<project_id>`.
+    - "The request of resources only needs the number of nodes (–-nodes, -N) and the number of allocation-packs per node (--gres=gpu:number)." "Users should not indicate any other Slurm allocation option related to memory or CPU cores. Therefore, users should not use --ntasks, --cpus-per-task, --mem, etc."
+
+## Pytorch
+- Guide: [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch)
+- The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix
+- To make it simpler, dockers and containers are available. We can load it throuch `docker pull` or `module load`
+
 # File system
 - As mentioned in [this Pawsey's documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information),
     - `/software/projects/<project_id>/<user_id>/` to install software packages.
