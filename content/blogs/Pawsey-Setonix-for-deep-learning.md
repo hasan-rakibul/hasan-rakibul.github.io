@@ -9,7 +9,6 @@ I access through VSCode remote SSH extension. It has a side-effect of hogging th
 Item | Value
 --- | ---
 setonix.pawsey.org.au | /software/projects/<project_id>/<user_id>/
----
 
 Next, just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html)).
 
