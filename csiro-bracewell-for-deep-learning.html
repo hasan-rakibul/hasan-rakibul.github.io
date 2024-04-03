@@ -47,15 +47,6 @@
 <h1>Conda</h1>
 <p>In <strong>CSIRO Bracewell</strong>, I can load minoconda using <code>module load miniconda3</code></p>
 <p>As I should not install in home directory, let's change them in conda configuration, as detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands#python-configuring-cache-directory">here</a>.</p>
-<h1>Useful SLURM commands</h1>
-<div class="highlight"><pre><span></span><code>sbatch<span class="w"> </span>&lt;script.sh&gt;<span class="w"> </span><span class="c1"># to submit a job</span>
-salloc<span class="w"> </span>--nodes<span class="o">=</span><span class="m">1</span><span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">16</span><span class="w"> </span>--mem<span class="o">=</span>8GB<span class="w"> </span>--gres<span class="o">=</span>gpu:1<span class="w"> </span>--time<span class="o">=</span><span class="m">6</span>:00:00<span class="w"> </span>--account<span class="o">=</span>&lt;O2D<span class="w"> </span>code&gt;<span class="w"> </span><span class="c1"># get some allocation for interactive session</span>
-ssh<span class="w"> </span>&lt;ident&gt;@&lt;node&gt;<span class="w"> </span><span class="c1"># to connect to the allocated node</span>
-sacct<span class="w"> </span><span class="c1"># to see the job history of the user for today</span>
-sacct<span class="w"> </span>--starttime<span class="w"> </span>MMDD<span class="w"> </span><span class="c1"># MMDD is the month and day from which you want to see the job history</span>
-seff<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span><span class="c1"># to see the efficiency of resource utilisation for the job</span>
-</code></pre></div>
-
 <p>&nbsp;</p>
 <h1>Course / Manuals / helpful resources</h1>
 <ul>

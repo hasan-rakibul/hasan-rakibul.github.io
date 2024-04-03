@@ -270,6 +270,18 @@ ssh-copy-id<span class="w"> </span>-i<span class="w"> </span><span class="s2">&q
     <code>bash
     wsl --shutdown</code></li>
 </ul>
+<p>&nbsp;</p>
+<h1>SLURM commands</h1>
+<div class="highlight"><pre><span></span><code>sbatch<span class="w"> </span>&lt;script.sh&gt;<span class="w"> </span><span class="c1"># to submit a job</span>
+salloc<span class="w"> </span>--nodes<span class="o">=</span>&lt;n&gt;<span class="w"> </span>--cpus-per-task<span class="o">=</span>&lt;n&gt;<span class="w"> </span>--mem<span class="o">=</span>&lt;n&gt;GB<span class="w"> </span>--gres<span class="o">=</span>gpu:&lt;n&gt;<span class="w"> </span>--time<span class="o">=</span>&lt;hh:mm:ss&gt;<span class="w"> </span>--account<span class="o">=</span>&lt;id&gt;<span class="w"> </span><span class="c1"># get some allocation for interactive session</span>
+ssh<span class="w"> </span>&lt;node&gt;<span class="w"> </span><span class="c1"># to connect to the allocated node</span>
+sacct<span class="w"> </span><span class="c1"># to see the job history of the user for today</span>
+sacct<span class="w"> </span>--starttime<span class="w"> </span>MMDD<span class="w"> </span><span class="c1"># MMDD is the month and day from which you want to see the job history</span>
+seff<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span><span class="c1"># to see the efficiency of resource utilisation for the job</span>
+squeue<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;%A %N&quot;</span><span class="w"> </span>-u<span class="w"> </span>user_name<span class="w"> </span><span class="c1"># to see the job id and node name of the user</span>
+</code></pre></div>
+
+<p>&nbsp;</p>
 <h1>Others</h1>
 <h2>Change JupyerLab startup directory</h2>
 <p>As discussed in <a href="https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder">this SO thread</a>:</p>
