@@ -1,5 +1,5 @@
 Title: Pawsey Setonix for deep learning
-Date: 2024-02-13 00:00
+Date: 2024-02-13 10:00
 
 Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
 

@@ -226,6 +226,20 @@ ssh-keygen -p
     wsl --shutdown
     ```
 
+&nbsp;
+# SLURM commands
+```bash
+sbatch <script.sh> # to submit a job
+salloc --nodes=<n> --cpus-per-task=<n> --mem=<n>GB --gres=gpu:<n> --time=<hh:mm:ss> --account=<id> # get some allocation for interactive session
+ssh <node> # to connect to the allocated node
+sacct # to see the job history of the user for today
+sacct --starttime MMDD # MMDD is the month and day from which you want to see the job history
+seff <jobid> # to see the efficiency of resource utilisation for the job
+squeue -o "%A %N" -u user_name # to see the job id and node name of the user
+```
+
+&nbsp;
+
 # Others
 ## Change JupyerLab startup directory
 As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder):

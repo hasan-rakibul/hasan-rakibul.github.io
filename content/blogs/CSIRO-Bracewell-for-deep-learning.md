@@ -9,15 +9,6 @@ In **CSIRO Bracewell**, I can load minoconda using `module load miniconda3`
 
 As I should not install in home directory, let's change them in conda configuration, as detailed [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands#python-configuring-cache-directory).
 
-# Useful SLURM commands
-```bash
-sbatch <script.sh> # to submit a job
-salloc --nodes=1 --cpus-per-task=16 --mem=8GB --gres=gpu:1 --time=6:00:00 --account=<O2D code> # get some allocation for interactive session
-ssh <ident>@<node> # to connect to the allocated node
-sacct # to see the job history of the user for today
-sacct --starttime MMDD # MMDD is the month and day from which you want to see the job history
-seff <jobid> # to see the efficiency of resource utilisation for the job
-```
 
 &nbsp;
 # Course / Manuals / helpful resources
