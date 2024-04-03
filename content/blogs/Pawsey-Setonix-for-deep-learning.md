@@ -13,12 +13,13 @@ setonix.pawsey.org.au | /software/projects/<project_id>/<user_id>/
 Next, just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html)).
 
 ## GPU Computing
-- As described [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes), I can use the following command to access the GPU node interactively:
+- Based on [this](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes), SLURM command to access the GPU node interactively:
 ```bash
-salloc -N 1 --gres=gpu:3 -A <project_id>-gpu --partition=<gpu or gpu-dev or gpu-highmem> --time=1:00:00
+salloc -N <n> --gres=gpu:<n> -A <project_id>-gpu --partition=<gpu or gpu-dev or gpu-highmem> --time=<hh:mm:ss>
+ssh <node_name> # node_name is the name of the node you get from the previous command
 ```
 - Importants notes
-    - "Project name to access the GPU nodes is different." It is `<project_id>-gpu` instead of `<project_id>`.
+    - "Project name to access the GPU nodes is different." It is `<project_id>-gpu` instead of just `<project_id>`.
     - "The request of resources only needs the number of nodes (–-nodes, -N) and the number of allocation-packs per node (--gres=gpu:number)." "Users should not indicate any other Slurm allocation option related to memory or CPU cores. Therefore, users should not use --ntasks, --cpus-per-task, --mem, etc."
 
 ## Pytorch
@@ -36,7 +37,6 @@ source <path/to/venv>/bin/activate # activate the virtual environment
 # Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.
 ```
 
-Note:
 - **The first two steps are important.** That is: everything should be done inside the Singularity shell. Otherwise, there's Python version mismatch between created venv and loaded pytorch, I couldnt figure out.
 - Details about the Singularity shell can be found [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925448/OpenFOAM+Advance+use+of+containerised+modules+and+external+containers).
 
