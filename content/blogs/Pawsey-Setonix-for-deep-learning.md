@@ -15,7 +15,7 @@ Next, just open the remote explorer and add a new SSH host. Then, select the hos
 ## GPU Computing
 - As described [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes), I can use the following command to access the GPU node interactively:
 ```bash
-salloc -N 1 --gres=gpu:3 -A <project_id>-gpu --partition=<gpu or gpu-dev or gpu-highmem
+salloc -N 1 --gres=gpu:3 -A <project_id>-gpu --partition=<gpu or gpu-dev or gpu-highmem> --time=1:00:00
 ```
 - Importants notes
     - "Project name to access the GPU nodes is different." It is `<project_id>-gpu` instead of `<project_id>`.
@@ -25,6 +25,20 @@ salloc -N 1 --gres=gpu:3 -A <project_id>-gpu --partition=<gpu or gpu-dev or gpu-
 - Guide: [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch)
 - The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix
 - To make it simpler, dockers and containers are available. We can load it throuch `docker pull` or `module load`
+
+### Install new packages on top of the existing Pytorch
+```bash
+module load <preferred_pytorch_version>
+pytorch-shell # to activate Singularity shell
+python3 -m venv <path/to/venv> # create a new virtual environment
+source <path/to/venv>/bin/activate # activate the virtual environment
+# open <path/to/venv>/pyvenv.cfg and make "include-system-site-packages = true" to use the system packages, e.g., the loaded Pytorch
+# Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.
+```
+
+Note:
+- **The first two steps are important.** That is: everything should be done inside the Singularity shell. Otherwise, there's Python version mismatch between created venv and loaded pytorch, I couldnt figure out.
+- Details about the Singularity shell can be found [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925448/OpenFOAM+Advance+use+of+containerised+modules+and+external+containers).
 
 # File system
 - As mentioned in [this Pawsey's documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information),
@@ -37,7 +51,7 @@ salloc -N 1 --gres=gpu:3 -A <project_id>-gpu --partition=<gpu or gpu-dev or gpu-
 
 # Important points
 - Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the `.cache` and/or `.conda` files must be in another directory (e.g., `/software/projects/<project_id>/<user_id>`). Managing the cache and conda files can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html).
-- Configure `$MYSCRATCH` and `$MYSOFTWARE` environment variables in `.bashrc` file using `export`. Especially helpful if I have multiple projects.
+- if there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables.
 
 &nbsp;
 # Course / Manuals / helpful resources
