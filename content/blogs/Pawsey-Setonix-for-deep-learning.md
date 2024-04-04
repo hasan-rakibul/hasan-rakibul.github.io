@@ -8,7 +8,7 @@ I access through VSCode remote SSH extension. It has a side-effect of hogging th
 
 Item | Value
 --- | ---
-setonix.pawsey.org.au | /software/projects/<project_id>/<user_id>/
+setonix.pawsey.org.au | /software/projects/\<project_id\>/\<user_id\>/
 
 Next, just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html)).
 
@@ -29,7 +29,7 @@ ssh <node_name> # node_name is the name of the node you get from the previous co
 
 ### Install new packages on top of the existing Pytorch
 ```bash
-module load <preferred_pytorch_version>
+module load <preferred_pytorch_version> # e.g., pytorch/2.2.0-rocm5.7.3
 pytorch-shell # to activate Singularity shell
 python3 -m venv <path/to/venv> # create a new virtual environment
 source <path/to/venv>/bin/activate # activate the virtual environment
@@ -37,7 +37,7 @@ source <path/to/venv>/bin/activate # activate the virtual environment
 # Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.
 ```
 
-- **The first two steps are important.** That is: everything should be done inside the Singularity shell. Otherwise, there's Python version mismatch between created venv and loaded pytorch, I couldnt figure out.
+- **The first two steps are important.** That is: everything, **including the usage of virtual environment to run code**, should be done inside the Singularity shell. Otherwise, there's Python version mismatch between created venv and loaded pytorch, I couldnt figure out.
 - Details about the Singularity shell can be found [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925448/OpenFOAM+Advance+use+of+containerised+modules+and+external+containers).
 
 # File system
@@ -51,7 +51,7 @@ source <path/to/venv>/bin/activate # activate the virtual environment
 
 # Important points
 - Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the `.cache` and/or `.conda` files must be in another directory (e.g., `/software/projects/<project_id>/<user_id>`). Managing the cache and conda files can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html).
-- if there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables.
+- If there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables.
 
 &nbsp;
 # Course / Manuals / helpful resources
