@@ -55,7 +55,7 @@
 <tbody>
 <tr>
 <td>setonix.pawsey.org.au</td>
-<td>/software/projects/<project_id>/<user_id>/</td>
+<td>/software/projects/\&lt;project_id&gt;/\&lt;user_id&gt;/</td>
 </tr>
 </tbody>
 </table>
@@ -82,7 +82,7 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 <li>To make it simpler, dockers and containers are available. We can load it throuch <code>docker pull</code> or <code>module load</code></li>
 </ul>
 <h3>Install new packages on top of the existing Pytorch</h3>
-<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;<span class="w"> </span><span class="c1"># e.g., pytorch/2.2.0-rocm5.7.3</span>
 pytorch-shell<span class="w"> </span><span class="c1"># to activate Singularity shell</span>
 python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
 <span class="nb">source</span><span class="w"> </span>&lt;path/to/venv&gt;/bin/activate<span class="w"> </span><span class="c1"># activate the virtual environment</span>
@@ -91,7 +91,7 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 </code></pre></div>
 
 <ul>
-<li><strong>The first two steps are important.</strong> That is: everything should be done inside the Singularity shell. Otherwise, there's Python version mismatch between created venv and loaded pytorch, I couldnt figure out.</li>
+<li><strong>The first two steps are important.</strong> That is: everything, <strong>including the usage of virtual environment to run code</strong>, should be done inside the Singularity shell. Otherwise, there's Python version mismatch between created venv and loaded pytorch, I couldnt figure out.</li>
 <li>Details about the Singularity shell can be found <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51925448/OpenFOAM+Advance+use+of+containerised+modules+and+external+containers">here</a>.</li>
 </ul>
 <h1>File system</h1>
@@ -110,7 +110,7 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 <h1>Important points</h1>
 <ul>
 <li>Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the <code>.cache</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;</code>). Managing the cache and conda files can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>.</li>
-<li>if there are multiple projects, configure default project name in <code>$HOME/.pawsey_project</code> to appropriately set <code>$MYSCRATCH</code> and <code>$MYSOFTWARE</code> environment variables.</li>
+<li>If there are multiple projects, configure default project name in <code>$HOME/.pawsey_project</code> to appropriately set <code>$MYSCRATCH</code> and <code>$MYSOFTWARE</code> environment variables.</li>
 </ul>
 <p>&nbsp;</p>
 <h1>Course / Manuals / helpful resources</h1>
