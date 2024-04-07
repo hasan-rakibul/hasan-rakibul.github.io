@@ -240,6 +240,16 @@ squeue -o "%A %N" -u user_name # to see the job id and node name of the user
 
 &nbsp;
 
+# Rclone commands
+```bash
+rclone copy <source> <destination> # copy files from source to destination
+rclone sync <source> <destination> # sync files from source to destination. It will delete the files in destination that are not in source.
+rclone ls <remote>:<path> # list files in the remote path
+rclone lsd <remote>:<path> # list directories in the remote path
+```
+
+&nbsp;
+
 # Others
 ## Change JupyerLab startup directory
 As discussed in [this SO thread](https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder):
