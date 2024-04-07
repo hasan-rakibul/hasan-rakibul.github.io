@@ -282,6 +282,14 @@ squeue<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;%
 </code></pre></div>
 
 <p>&nbsp;</p>
+<h1>Rclone commands</h1>
+<div class="highlight"><pre><span></span><code>rclone<span class="w"> </span>copy<span class="w"> </span>&lt;source&gt;<span class="w"> </span>&lt;destination&gt;<span class="w"> </span><span class="c1"># copy files from source to destination</span>
+rclone<span class="w"> </span>sync<span class="w"> </span>&lt;source&gt;<span class="w"> </span>&lt;destination&gt;<span class="w"> </span><span class="c1"># sync files from source to destination. It will delete the files in destination that are not in source.</span>
+rclone<span class="w"> </span>ls<span class="w"> </span>&lt;remote&gt;:&lt;path&gt;<span class="w"> </span><span class="c1"># list files in the remote path</span>
+rclone<span class="w"> </span>lsd<span class="w"> </span>&lt;remote&gt;:&lt;path&gt;<span class="w"> </span><span class="c1"># list directories in the remote path</span>
+</code></pre></div>
+
+<p>&nbsp;</p>
 <h1>Others</h1>
 <h2>Change JupyerLab startup directory</h2>
 <p>As discussed in <a href="https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder">this SO thread</a>:</p>

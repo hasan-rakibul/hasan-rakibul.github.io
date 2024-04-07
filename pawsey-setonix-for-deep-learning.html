@@ -102,6 +102,19 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 </ul>
 </li>
 </ul>
+<h2>A horrible reality &ndash; /scratch files gets deleted after 30 days of no access</h2>
+<ul>
+<li>As mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51926296/Files+in+Scratch+Were+Deleted">here</a>, files in <code>/scratch</code> are deleted after 30 days of no access. The policy checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than 30 days. <code>ls -ltu</code> can be used to check the access time of the files, sorted by access time. We can use <code>touch</code> command to update the access time of the files. Or, better to use <code>acacia</code> for long-term storage.</li>
+</ul>
+<h2>Acacia</h2>
+<ul>
+<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924476/Acacia+-+Quick+Start">Quick start</a>. <strong>It's important to save the access keys key in the <code>$HOME/.config/rclone/rclone.conf</code> file.</strong> To do that, corresponding client configure command is available on the window after clicking the "Create New Key" button. Feel free to customise the profile name.</li>
+<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924986/Acacia+-+User+Guide">User guide</a><ul>
+<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51928144/Installing+an+S3+client+application">Install S3 client</a></li>
+<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924480/Listing+the+contents+of+your+account">Listing the contents</a></li>
+</ul>
+</li>
+</ul>
 <h1>SLURM job submission</h1>
 <ul>
 <li><code>account</code> is the project ID, e.g., pawsey1234</li>
