@@ -55,7 +55,7 @@
 <tbody>
 <tr>
 <td>setonix.pawsey.org.au</td>
-<td>/software/projects/\&lt;project_id&gt;/\&lt;user_id&gt;/</td>
+<td><code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;/</code></td>
 </tr>
 </tbody>
 </table>
@@ -83,17 +83,19 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 </ul>
 <h3>Install new packages on top of the existing Pytorch</h3>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;<span class="w"> </span><span class="c1"># e.g., pytorch/2.2.0-rocm5.7.3</span>
-pytorch-shell<span class="w"> </span><span class="c1"># to activate Singularity shell</span>
 python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
-<span class="nb">source</span><span class="w"> </span>&lt;path/to/venv&gt;/bin/activate<span class="w"> </span><span class="c1"># activate the virtual environment</span>
+</code></pre></div>
+
+<p><strong>There is a problem here.</strong> The symlinked Python version in the virtual environment is different from the loaded Pytorch. To verify, go to the <code>bin</code> directory of the virtual environment and run <code>ls -l</code>. It will show the symbolic link. An entry of <code>python3 -&gt; /usr/bin/python3</code> means the virtual environment is linked to the system Python, which we don't want. We can find the correct Python path using <code>which python3</code> command after loading the PyTorch module (for example: <code>/software/setonix/2023.08/containers/modules-long/quay.io/pawsey/pytorch/2.2.0-rocm5.7.3/bin/python3</code>). Then, to update the symlink, we can use the following command:</p>
+<div class="highlight"><pre><span></span><code>ln<span class="w"> </span>-sf<span class="w"> </span>&lt;correct/path/to/python3&gt;<span class="w"> </span>&lt;path/to/venv&gt;/bin/python3<span class="w"> </span><span class="c1"># or, just python3 if you are in the bin directory</span>
+</code></pre></div>
+
+<p>Next, it should work as normal virtual environment. The next steps are:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>&lt;path/to/venv&gt;/bin/activate<span class="w"> </span><span class="c1"># activate the virtual environment</span>
 <span class="c1"># open &lt;path/to/venv&gt;/pyvenv.cfg and make &quot;include-system-site-packages = true&quot; to use the system packages, e.g., the loaded Pytorch</span>
 <span class="c1"># Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.</span>
 </code></pre></div>
 
-<ul>
-<li><strong>The first two steps are important.</strong> That is: everything, <strong>including the usage of virtual environment to run code</strong>, should be done inside the Singularity shell. Otherwise, there's Python version mismatch between created venv and loaded pytorch, I couldnt figure out.</li>
-<li>Details about the Singularity shell can be found <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51925448/OpenFOAM+Advance+use+of+containerised+modules+and+external+containers">here</a>.</li>
-</ul>
 <h1>File system</h1>
 <ul>
 <li>As mentioned in <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information">this Pawsey's documentation</a>,<ul>
