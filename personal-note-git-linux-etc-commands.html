@@ -283,10 +283,15 @@ squeue<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;%
 
 <p>&nbsp;</p>
 <h1>Rclone commands</h1>
-<div class="highlight"><pre><span></span><code>rclone<span class="w"> </span>copy<span class="w"> </span>&lt;source&gt;<span class="w"> </span>&lt;destination&gt;<span class="w"> </span><span class="c1"># copy files from source to destination</span>
-rclone<span class="w"> </span>sync<span class="w"> </span>&lt;source&gt;<span class="w"> </span>&lt;destination&gt;<span class="w"> </span><span class="c1"># sync files from source to destination. It will delete the files in destination that are not in source.</span>
-rclone<span class="w"> </span>ls<span class="w"> </span>&lt;remote&gt;:&lt;path&gt;<span class="w"> </span><span class="c1"># list files in the remote path</span>
+<div class="highlight"><pre><span></span><code>rclone<span class="w"> </span>copy<span class="w"> </span>&lt;source&gt;<span class="w"> </span>&lt;destination&gt;<span class="w"> </span><span class="c1"># copy files from source to destination. It **will not delete** the files in destination that are not in source. It will not copy the files that are already in destination.</span>
+rclone<span class="w"> </span>sync<span class="w"> </span>&lt;source&gt;<span class="w"> </span>&lt;destination&gt;<span class="w"> </span><span class="c1"># sync files from source to destination. It **will delete** the files in destination that are not in source.</span>
+rclone<span class="w"> </span>ls<span class="w"> </span>&lt;remote&gt;:&lt;path&gt;<span class="w"> </span><span class="c1"># list files in the remote path. Just mention &lt;remote&gt;: if you want to list all files in the remote.</span>
 rclone<span class="w"> </span>lsd<span class="w"> </span>&lt;remote&gt;:&lt;path&gt;<span class="w"> </span><span class="c1"># list directories in the remote path</span>
+</code></pre></div>
+
+<h2>Important flags</h2>
+<div class="highlight"><pre><span></span><code>--dry-run<span class="w"> </span><span class="c1"># simulate the command without actually doing it</span>
+--progress<span class="w"> </span><span class="c1"># show progress of the command</span>
 </code></pre></div>
 
 <p>&nbsp;</p>
