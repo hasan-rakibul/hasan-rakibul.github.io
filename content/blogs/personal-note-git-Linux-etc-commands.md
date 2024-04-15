@@ -242,10 +242,15 @@ squeue -o "%A %N" -u user_name # to see the job id and node name of the user
 
 # Rclone commands
 ```bash
-rclone copy <source> <destination> # copy files from source to destination
-rclone sync <source> <destination> # sync files from source to destination. It will delete the files in destination that are not in source.
-rclone ls <remote>:<path> # list files in the remote path
+rclone copy <source> <destination> # copy files from source to destination. It **will not delete** the files in destination that are not in source. It will not copy the files that are already in destination.
+rclone sync <source> <destination> # sync files from source to destination. It **will delete** the files in destination that are not in source.
+rclone ls <remote>:<path> # list files in the remote path. Just mention <remote>: if you want to list all files in the remote.
 rclone lsd <remote>:<path> # list directories in the remote path
+```
+## Important flags
+```bash
+--dry-run # simulate the command without actually doing it
+--progress # show progress of the command
 ```
 
 &nbsp;
