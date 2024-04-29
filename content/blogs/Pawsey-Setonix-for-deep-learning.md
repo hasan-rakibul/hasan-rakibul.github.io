@@ -22,7 +22,7 @@ ssh <node_name> # node_name is the name of the node you get from the previous co
     - "Project name to access the GPU nodes is different." It is `<project_id>-gpu` instead of just `<project_id>`.
     - "The request of resources only needs the number of nodes (–-nodes, -N) and the number of allocation-packs per node (--gres=gpu:number)." "Users should not indicate any other Slurm allocation option related to memory or CPU cores. Therefore, users should not use --ntasks, --cpus-per-task, --mem, etc."
 
-## Pytorch
+## Pytorch and Python
 - Guide: [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch)
 - The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix
 - To make it simpler, dockers and containers are available. We can load it throuch `docker pull` or `module load`
@@ -64,7 +64,12 @@ source <path/to/venv>/bin/activate # activate the virtual environment
 - Sample job submission script is [here for CPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes) and [here for GPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes).
 
 # Important points
-- Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the `.cache` and/or `.conda` files must be in another directory (e.g., `/software/projects/<project_id>/<user_id>`). Managing the cache and conda files can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html).
+- Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the `.cache`, `.local` and/or `.conda` files must be in another directory (e.g., `$MYSOFTWARE`). Managing the cache and conda files through environment variable can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html). Alternatively (**Better**), I can create symbolic links to those resource-intensive directories in the home directory.
+```bash
+mkdir -p .cache && ln -s $MYSOFTWARE/.cache $HOME/.cache
+mkdir -p .local && ln -s $MYSOFTWARE/.local $HOME/.local
+```
+
 - If there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables.
 
 &nbsp;

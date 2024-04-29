@@ -15,6 +15,7 @@ Title: Useful links
 - [Consensus - AI Search Engine for Research](https://consensus.app/)
 - [Scholarcy - AI-powered summariser](https://article-summarizer.scholarcy.com/summarizer)
 - [Peer review in NLP: reject-if-not-SOTA](https://hackingsemantics.xyz/2020/reviewing-models/)
+- [HOW TO BE A GOOD REVIEWER? REVIEWER TUTORIAL FOR ECCV 2024](https://docs.google.com/presentation/d/1HE_Pwcdy_3eVCIdb1o1VjtwqX5KTvddukhRxZVAOnIY/)
 
 &nbsp;
 

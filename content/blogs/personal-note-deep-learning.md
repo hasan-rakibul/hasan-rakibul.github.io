@@ -15,3 +15,7 @@ Date: 2023-11-19 00:00
 
 # Freezing layers
 In addition to controlling `param.requires_grad`, I need to enable `eval()` mode corresponding to `batchnorm layers`, if any. Details: [https://discuss.pytorch.org/t/should-i-use-model-eval-when-i-freeze-batchnorm-layers-to-finetune/39495](https://discuss.pytorch.org/t/should-i-use-model-eval-when-i-freeze-batchnorm-layers-to-finetune/39495)
+
+# PyTorch
+- `len(dataloader)`: number of batches
+- `len(dataloader.dataset)`: number of samples

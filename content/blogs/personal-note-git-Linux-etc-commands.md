@@ -56,6 +56,7 @@ git config --global user.email <EMAIL>
 - `du -sh [dir]`: disk usage summary in human readable form, optinally for a specific directory
 - `du -h [dir] | sort -h`: disk usage in human readable form sorted, optinally for a specific directory
 - `du -sh --inode [dir]`: disk inode usage summary in human readable form, optinally for a specific directory
+- `curl -L -o <filename.ext> "https://drive.usercontent.google.com/download?id=xxxx&export=download&confirm=yes"`: download file from Google Drive
 
 ## Managing permissions
 - `chmod u+x <file>`: add execute permission for **user**
@@ -171,6 +172,12 @@ envs_dirs:
 pkgs_dirs:
   - /scratch2/<ident>/.conda/pkgs
 ```
+- Alternatively (**better**), create symbolic links to the target directory:
+```bash
+mkdir -p .cache && ln -s /<target-dir>/.cache $HOME/.cache
+mkdir -p .local && ln -s /<target-dir>/.local $HOME/.local
+mkdir -p .conda && ln -s /<target-dir>/.conda $HOME/.conda
+```
 
 ## Install older version of Python (e.g., python3.9) in Ubuntu 22.04.3 LTS  
 
@@ -180,10 +187,6 @@ sudo apt install python3.9 python3.9-venv python3.9-distutils
 ```
 
 Normally, `python` command will point to the latest version. To point it to specific version, you can include the version (e.g., `python3.9`) in the command.
-
-## PyTorch
-- `len(dataloader)`: number of batches
-- `len(dataloader.dataset)`: number of samples
 
 &nbsp;
 
@@ -236,6 +239,9 @@ sacct # to see the job history of the user for today
 sacct --starttime MMDD # MMDD is the month and day from which you want to see the job history
 seff <jobid> # to see the efficiency of resource utilisation for the job
 squeue -o "%A %N" -u user_name # to see the job id and node name of the user
+scontrol show job <jobid> # to see the details of the job, including the node name
+scontrol show job <jobid> -d # to see the detailed information of the job, including the **allocated GPU index**
+sacct --format=JobID,NodeList,JobName,State,ExitCode # sacct result, including the node list and other details provided in the format
 ```
 
 &nbsp;
