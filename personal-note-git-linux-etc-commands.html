@@ -100,6 +100,7 @@ git config --global user.email &lt;EMAIL&gt;
 <li><code>du -sh [dir]</code>: disk usage summary in human readable form, optinally for a specific directory</li>
 <li><code>du -h [dir] | sort -h</code>: disk usage in human readable form sorted, optinally for a specific directory</li>
 <li><code>du -sh --inode [dir]</code>: disk inode usage summary in human readable form, optinally for a specific directory</li>
+<li><code>curl -L -o &lt;filename.ext&gt; "https://drive.usercontent.google.com/download?id=xxxx&amp;export=download&amp;confirm=yes"</code>: download file from Google Drive</li>
 </ul>
 <h2>Managing permissions</h2>
 <ul>
@@ -213,17 +214,20 @@ pkgs_dirs:
 <span class="w">  </span>-<span class="w"> </span>/scratch2/&lt;ident&gt;/.conda/pkgs
 </code></pre></div>
 
+<ul>
+<li>Alternatively (<strong>better</strong>), create symbolic links to the target directory:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>.cache<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/&lt;target-dir&gt;/.cache<span class="w"> </span><span class="nv">$HOME</span>/.cache
+mkdir<span class="w"> </span>-p<span class="w"> </span>.local<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/&lt;target-dir&gt;/.local<span class="w"> </span><span class="nv">$HOME</span>/.local
+mkdir<span class="w"> </span>-p<span class="w"> </span>.conda<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/&lt;target-dir&gt;/.conda<span class="w"> </span><span class="nv">$HOME</span>/.conda
+</code></pre></div>
+
 <h2>Install older version of Python (e.g., python3.9) in Ubuntu 22.04.3 LTS</h2>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:deadsnakes/ppa
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3.9<span class="w"> </span>python3.9-venv<span class="w"> </span>python3.9-distutils
 </code></pre></div>
 
 <p>Normally, <code>python</code> command will point to the latest version. To point it to specific version, you can include the version (e.g., <code>python3.9</code>) in the command.</p>
-<h2>PyTorch</h2>
-<ul>
-<li><code>len(dataloader)</code>: number of batches</li>
-<li><code>len(dataloader.dataset)</code>: number of samples</li>
-</ul>
 <p>&nbsp;</p>
 <h1>VS Code</h1>
 <h2>Not finding virtual environment</h2>
@@ -279,6 +283,9 @@ sacct<span class="w"> </span><span class="c1"># to see the job history of the us
 sacct<span class="w"> </span>--starttime<span class="w"> </span>MMDD<span class="w"> </span><span class="c1"># MMDD is the month and day from which you want to see the job history</span>
 seff<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span><span class="c1"># to see the efficiency of resource utilisation for the job</span>
 squeue<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;%A %N&quot;</span><span class="w"> </span>-u<span class="w"> </span>user_name<span class="w"> </span><span class="c1"># to see the job id and node name of the user</span>
+scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span><span class="c1"># to see the details of the job, including the node name</span>
+scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span>-d<span class="w"> </span><span class="c1"># to see the detailed information of the job, including the **allocated GPU index**</span>
+sacct<span class="w"> </span>--format<span class="o">=</span>JobID,NodeList,JobName,State,ExitCode<span class="w"> </span><span class="c1"># sacct result, including the node list and other details provided in the format</span>
 </code></pre></div>
 
 <p>&nbsp;</p>

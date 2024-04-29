@@ -75,7 +75,7 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 </ul>
 </li>
 </ul>
-<h2>Pytorch</h2>
+<h2>Pytorch and Python</h2>
 <ul>
 <li>Guide: <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a></li>
 <li>The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix</li>
@@ -124,7 +124,13 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 </ul>
 <h1>Important points</h1>
 <ul>
-<li>Home directory quota is 1GB only. Therefore, I should manage my files properly. Especially, the <code>.cache</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;</code>). Managing the cache and conda files can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>.</li>
+<li>Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the <code>.cache</code>, <code>.local</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>$MYSOFTWARE</code>). Managing the cache and conda files through environment variable can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>. Alternatively (<strong>Better</strong>), I can create symbolic links to those resource-intensive directories in the home directory.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>.cache<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$MYSOFTWARE</span>/.cache<span class="w"> </span><span class="nv">$HOME</span>/.cache
+mkdir<span class="w"> </span>-p<span class="w"> </span>.local<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$MYSOFTWARE</span>/.local<span class="w"> </span><span class="nv">$HOME</span>/.local
+</code></pre></div>
+
+<ul>
 <li>If there are multiple projects, configure default project name in <code>$HOME/.pawsey_project</code> to appropriately set <code>$MYSCRATCH</code> and <code>$MYSOFTWARE</code> environment variables.</li>
 </ul>
 <p>&nbsp;</p>
