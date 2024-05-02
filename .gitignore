@@ -7,3 +7,5 @@
 *.py[cod]
 output
 __pycache__
+
+.make_env_ready.sh
