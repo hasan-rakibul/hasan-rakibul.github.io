@@ -81,7 +81,15 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 <li>The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix</li>
 <li>To make it simpler, dockers and containers are available. We can load it throuch <code>docker pull</code> or <code>module load</code></li>
 </ul>
-<h3>Install new packages on top of the existing Pytorch</h3>
+<h3>Pyenv</h3>
+<ul>
+<li>I really liked <a href="https://github.com/pyenv/pyenv">pyenv</a>, because the official pytorch container has several complexities and issues (details on next point). Pyenv seemed simpler to me.</li>
+<li>To install ROCm-compatible Pytorch, I can follow the official pytorch guideline from <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>, for example:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/rocm6.0
+</code></pre></div>
+
+<h3>Pawsey-provided Pytorch</h3>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;<span class="w"> </span><span class="c1"># e.g., pytorch/2.2.0-rocm5.7.3</span>
 python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
 </code></pre></div>
@@ -96,6 +104,11 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 <span class="c1"># Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.</span>
 </code></pre></div>
 
+<p>Even with this approach, I failed to work with Jupyter notebook with virtual environment.</p>
+<h3>Mamba/Conda</h3>
+<ul>
+<li>I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of <code>/software/</code> directory, and there's <code>disk quota exceeded</code> error frequently.</li>
+</ul>
 <h1>File system</h1>
 <ul>
 <li>As mentioned in <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information">this Pawsey's documentation</a>,<ul>
@@ -124,7 +137,7 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 </ul>
 <h1>Important points</h1>
 <ul>
-<li>Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the <code>.cache</code>, <code>.local</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>$MYSOFTWARE</code>). Managing the cache and conda files through environment variable can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>. Alternatively (<strong>Better</strong>), I can create symbolic links to those resource-intensive directories in the home directory.</li>
+<li>Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the <code>.cache</code>, <code>.local</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>$MYSOFTWARE</code>). But please note that <code>/software/</code> has inode <strong>quota of 100K per user</strong>. Managing the cache and conda files through environment variable can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>. Alternatively (<strong>Better</strong>), I can create symbolic links to those resource-intensive directories in the home directory.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>.cache<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$MYSOFTWARE</span>/.cache<span class="w"> </span><span class="nv">$HOME</span>/.cache
 mkdir<span class="w"> </span>-p<span class="w"> </span>.local<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$MYSOFTWARE</span>/.local<span class="w"> </span><span class="nv">$HOME</span>/.local
@@ -138,6 +151,7 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>.local<span class="w"> </
 <ul>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information">https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage">https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage</a></li>
+<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies">https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes">https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes">https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes</a></li>

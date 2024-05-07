@@ -101,6 +101,7 @@ git config --global user.email &lt;EMAIL&gt;
 <li><code>du -h [dir] | sort -h</code>: disk usage in human readable form sorted, optinally for a specific directory</li>
 <li><code>du -sh --inode [dir]</code>: disk inode usage summary in human readable form, optinally for a specific directory</li>
 <li><code>curl -L -o &lt;filename.ext&gt; "https://drive.usercontent.google.com/download?id=xxxx&amp;export=download&amp;confirm=yes"</code>: download file from Google Drive</li>
+<li><code>wget "&lt;anyone-sharable-link&gt;&amp;download=1" -O &lt;filename.ext&gt;</code>: download file from OneDrive. The link is the anyone-shareable link with <code>download=1</code> at the end.</li>
 </ul>
 <h2>Managing permissions</h2>
 <ul>
@@ -187,7 +188,17 @@ git config --global user.email &lt;EMAIL&gt;
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>wheel
 </code></pre></div>
 
-<h2>Creating python virtual environment</h2>
+<h2>Pyenv</h2>
+<div class="highlight"><pre><span></span><code>pyenv<span class="w"> </span>install<span class="w"> </span>--list<span class="w"> </span><span class="c1"># list all available versions</span>
+pyenv<span class="w"> </span>install<span class="w"> </span>&lt;version&gt;<span class="w"> </span><span class="c1"># install a specific version</span>
+pyenv<span class="w"> </span>versions<span class="w"> </span><span class="c1"># list all installed versions</span>
+pyenv<span class="w"> </span>which<span class="w"> </span>python<span class="w"> </span><span class="c1"># show the path of the current python</span>
+pyenv<span class="w"> </span>global<span class="w"> </span>&lt;version&gt;<span class="w"> </span><span class="c1"># set a global version</span>
+pyenv<span class="w"> </span>virtualenv<span class="w"> </span><span class="o">[</span>&lt;version&gt;<span class="o">]</span><span class="w"> </span>&lt;env_name&gt;<span class="w"> </span><span class="c1"># create a virtual environment</span>
+pyenv<span class="w"> </span>activate<span class="w"> </span>&lt;env_name&gt;<span class="w"> </span><span class="c1"># activate the virtual environment</span>
+</code></pre></div>
+
+<h2>Python venv that comes with Python</h2>
 <p>Inside your preferred directory (it's standard to name it as <code>.venv</code> directory):</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;env_name&gt;
 </code></pre></div>
@@ -285,7 +296,7 @@ seff<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span><span class="c1
 squeue<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;%A %N&quot;</span><span class="w"> </span>-u<span class="w"> </span>user_name<span class="w"> </span><span class="c1"># to see the job id and node name of the user</span>
 scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span><span class="c1"># to see the details of the job, including the node name</span>
 scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span>&lt;jobid&gt;<span class="w"> </span>-d<span class="w"> </span><span class="c1"># to see the detailed information of the job, including the **allocated GPU index**</span>
-sacct<span class="w"> </span>--format<span class="o">=</span>JobID,NodeList,JobName,State,ExitCode<span class="w"> </span><span class="c1"># sacct result, including the node list and other details provided in the format</span>
+sacct<span class="w"> </span>--format<span class="o">=</span>JobID,JobName,Partition,Account,AllocCPUS,NodeList,State,ExitCode<span class="w"> </span><span class="c1"># sacct result, including the node list and other details provided in the format</span>
 </code></pre></div>
 
 <p>&nbsp;</p>
