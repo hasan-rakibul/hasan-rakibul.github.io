@@ -57,6 +57,7 @@ git config --global user.email <EMAIL>
 - `du -h [dir] | sort -h`: disk usage in human readable form sorted, optinally for a specific directory
 - `du -sh --inode [dir]`: disk inode usage summary in human readable form, optinally for a specific directory
 - `curl -L -o <filename.ext> "https://drive.usercontent.google.com/download?id=xxxx&export=download&confirm=yes"`: download file from Google Drive
+- `wget "<anyone-sharable-link>&download=1" -O <filename.ext>`: download file from OneDrive. The link is the anyone-shareable link with `download=1` at the end.
 
 ## Managing permissions
 - `chmod u+x <file>`: add execute permission for **user**
@@ -143,7 +144,18 @@ python -m pip install -U Pillow
 python -m pip install -U wheel
 ```
 
-## Creating python virtual environment
+## Pyenv
+```bash
+pyenv install --list # list all available versions
+pyenv install <version> # install a specific version
+pyenv versions # list all installed versions
+pyenv which python # show the path of the current python
+pyenv global <version> # set a global version
+pyenv virtualenv [<version>] <env_name> # create a virtual environment
+pyenv activate <env_name> # activate the virtual environment
+```
+
+## Python venv that comes with Python
 Inside your preferred directory (it's standard to name it as `.venv` directory):
 ```bash
 python -m venv <env_name>
@@ -241,7 +253,7 @@ seff <jobid> # to see the efficiency of resource utilisation for the job
 squeue -o "%A %N" -u user_name # to see the job id and node name of the user
 scontrol show job <jobid> # to see the details of the job, including the node name
 scontrol show job <jobid> -d # to see the detailed information of the job, including the **allocated GPU index**
-sacct --format=JobID,NodeList,JobName,State,ExitCode # sacct result, including the node list and other details provided in the format
+sacct --format=JobID,JobName,Partition,Account,AllocCPUS,NodeList,State,ExitCode # sacct result, including the node list and other details provided in the format
 ```
 
 &nbsp;

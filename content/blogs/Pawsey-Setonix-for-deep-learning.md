@@ -27,7 +27,14 @@ ssh <node_name> # node_name is the name of the node you get from the previous co
 - The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix
 - To make it simpler, dockers and containers are available. We can load it throuch `docker pull` or `module load`
 
-### Install new packages on top of the existing Pytorch
+### Pyenv
+- I really liked [pyenv](https://github.com/pyenv/pyenv), because the official pytorch container has several complexities and issues (details on next point). Pyenv seemed simpler to me.
+- To install ROCm-compatible Pytorch, I can follow the official pytorch guideline from [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/), for example:
+```bash
+pip3 install torch --index-url https://download.pytorch.org/whl/rocm6.0
+```
+
+### Pawsey-provided Pytorch
 ```bash
 module load <preferred_pytorch_version> # e.g., pytorch/2.2.0-rocm5.7.3
 python3 -m venv <path/to/venv> # create a new virtual environment
@@ -44,6 +51,11 @@ source <path/to/venv>/bin/activate # activate the virtual environment
 # open <path/to/venv>/pyvenv.cfg and make "include-system-site-packages = true" to use the system packages, e.g., the loaded Pytorch
 # Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.
 ```
+
+Even with this approach, I failed to work with Jupyter notebook with virtual environment.
+
+### Mamba/Conda
+- I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of `/software/` directory, and there's `disk quota exceeded` error frequently.
 
 # File system
 - As mentioned in [this Pawsey's documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information),
@@ -64,7 +76,7 @@ source <path/to/venv>/bin/activate # activate the virtual environment
 - Sample job submission script is [here for CPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes) and [here for GPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes).
 
 # Important points
-- Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the `.cache`, `.local` and/or `.conda` files must be in another directory (e.g., `$MYSOFTWARE`). Managing the cache and conda files through environment variable can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html). Alternatively (**Better**), I can create symbolic links to those resource-intensive directories in the home directory.
+- Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the `.cache`, `.local` and/or `.conda` files must be in another directory (e.g., `$MYSOFTWARE`). But please note that `/software/` has inode **quota of 100K per user**. Managing the cache and conda files through environment variable can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html). Alternatively (**Better**), I can create symbolic links to those resource-intensive directories in the home directory.
 ```bash
 mkdir -p .cache && ln -s $MYSOFTWARE/.cache $HOME/.cache
 mkdir -p .local && ln -s $MYSOFTWARE/.local $HOME/.local
@@ -76,6 +88,7 @@ mkdir -p .local && ln -s $MYSOFTWARE/.local $HOME/.local
 # Course / Manuals / helpful resources
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage)
+- [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes)

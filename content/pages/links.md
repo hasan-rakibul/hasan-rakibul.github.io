@@ -68,6 +68,13 @@ Title: Useful links
 
 &nbsp;
 
+# Online Courses
+- [GitHub: awesome](https://github.com/sindresorhus/awesome)
+    - [Awesome CS Courses](https://github.com/prakhar1989/awesome-courses)
+- [MIT OpenCourseWare](https://ocw.mit.edu/)
+
+&nbsp;
+
 # Career
 - [https://interviewsby.ai/](https://interviewsby.ai/)
 
