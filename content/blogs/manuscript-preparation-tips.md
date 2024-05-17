@@ -40,5 +40,6 @@ We prefer LaTeX for writing papers. We specifically use Overleaf, which is a col
 
 # AI tools
 There are lots of AI tools out there which may or may not be useful. I personally found tools like ChatGPT generate exagerrated texts with common patterns (e.g., "delve into the realm of ...", "highlighting the effectiveness of ..."). To me, it is always good to have a human touch in the manuscript. However, the following tools may be useful for brainstorming, from where we can improve further with human touch:
+
 - [SciSpace](https://typeset.io/)
 - [scite](https://scite.ai/)
