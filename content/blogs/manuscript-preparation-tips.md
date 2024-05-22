@@ -9,9 +9,13 @@ Ideally, the paper can have the following structure:
 - Abstract
 - Introduction (End with a list of contributions. Add a teaser figure, possibly on the top-right of the first page in double-column format or on the top of second page in single-column format.)
 - Related work (Can be within the Introduction)
-- Proposed model (Add a figure to explain the model)
+- Method
+    - Problem formulation
+    - Architecture of the proposed model (Add a figure to explain the model)
 - Experiment
-    - Dataset
+    - Experimental setup
+        - Dataset
+        - Implementation details (This subsection should be an overview of what are the things needed (e.g., software versions, GPU models, values of hyperparameters, etc.) if someone wants to implement your system and/or reproduce your results.)
     - Main results
     - Comparison with literature
     - Ablation study
