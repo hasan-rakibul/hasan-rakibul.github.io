@@ -117,9 +117,9 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 </ul>
 </li>
 </ul>
-<h2>A horrible reality &ndash; /scratch files gets deleted after 30 days of no access</h2>
+<h2>Limitation &ndash; /scratch files gets deleted after 21 days of inactivity</h2>
 <ul>
-<li>As mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51926296/Files+in+Scratch+Were+Deleted">here</a>, files in <code>/scratch</code> are deleted after 30 days of no access. The policy checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than 30 days. <code>ls -ltu</code> can be used to check the access time of the files, sorted by access time. We can use <code>touch</code> command to update the access time of the files. Or, better to use <code>acacia</code> for long-term storage.</li>
+<li>As per Pawsey policy, files in <code>/scratch</code> are deleted after 21 days of no access. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than 21 days. <code>ls -ltu</code> can be used to check the access time of the files, sorted by access time. It is better to use <code>acacia</code> for long-term storage.</li>
 </ul>
 <h2>Acacia</h2>
 <ul>
