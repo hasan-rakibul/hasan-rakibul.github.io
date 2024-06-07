@@ -80,6 +80,16 @@ Title: Useful links
 
 &nbsp;
 
+# Researcher's website I like to visit time to time
+- https://jkk.name/
+- https://nchuramani.github.io/
+- https://salman-h-khan.github.io/
+- http://www.cs.cmu.edu/~pliang/
+- https://l-mathur.github.io/
+- https://jonbarron.info/
+
+&nbsp;
+
 # Others
 ## Photo - remove current background and use a different one
 - Adobe Photoshop: straightforward with generative AI prompting

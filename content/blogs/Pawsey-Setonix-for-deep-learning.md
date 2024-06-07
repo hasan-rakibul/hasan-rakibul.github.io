@@ -62,8 +62,8 @@ Even with this approach, I failed to work with Jupyter notebook with virtual env
     - `/software/projects/<project_id>/<user_id>/` to install software packages.
     - `/scratch/<project_id>/<user_id>` for temporary storage.
 
-## A horrible reality &ndash; /scratch files gets deleted after 30 days of no access
-- As mentioned [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51926296/Files+in+Scratch+Were+Deleted), files in `/scratch` are deleted after 30 days of no access. The policy checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than 30 days. `ls -ltu` can be used to check the access time of the files, sorted by access time. We can use `touch` command to update the access time of the files. Or, better to use `acacia` for long-term storage.
+## Limitation &ndash; /scratch files gets deleted after 21 days of inactivity
+- As per Pawsey policy, files in `/scratch` are deleted after 21 days of no access. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than 21 days. `ls -ltu` can be used to check the access time of the files, sorted by access time. It is better to use `acacia` for long-term storage.
 
 ## Acacia
 - [Quick start](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924476/Acacia+-+Quick+Start). **It's important to save the access keys key in the `$HOME/.config/rclone/rclone.conf` file.** To do that, corresponding client configure command is available on the window after clicking the "Create New Key" button. Feel free to customise the profile name.
