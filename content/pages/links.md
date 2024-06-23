@@ -81,12 +81,12 @@ Title: Useful links
 &nbsp;
 
 # Researcher's website I like to visit time to time
-- https://jkk.name/
-- https://nchuramani.github.io/
-- https://salman-h-khan.github.io/
-- http://www.cs.cmu.edu/~pliang/
-- https://l-mathur.github.io/
-- https://jonbarron.info/
+- [https://jkk.name/](https://jkk.name/)
+- [https://nchuramani.github.io/](https://nchuramani.github.io/)
+- [https://salman-h-khan.github.io/](https://salman-h-khan.github.io/)
+- [http://www.cs.cmu.edu/~pliang/](http://www.cs.cmu.edu/~pliang/)
+- [https://l-mathur.github.io/](https://l-mathur.github.io/)
+- [https://jonbarron.info/](https://jonbarron.info/)
 
 &nbsp;
 

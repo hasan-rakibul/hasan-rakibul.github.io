@@ -293,3 +293,6 @@ ubuntu config --default-user <username>
 
 ## Convert pdf to image in Linux
 - As mentioned [here in askubuntu](https://askubuntu.com/a/50180): `pdftoppm input.pdf outputname [-png / -jpeg / etc.] -r <resolution>`
+
+## Crop pdf
+- `pdfcrop --margin '-left -top -right -bottom' --clip input.pdf output.pdf`
