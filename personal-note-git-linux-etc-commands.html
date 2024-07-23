@@ -165,6 +165,23 @@ git config --global user.email &lt;EMAIL&gt;
 <p><code>BibLaTeX</code> user: For <code>biber</code> backend, the <a href="https://ctan.org/pkg/biblatex-readbbl?lang=en">biblatex-readbbl</a> package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include <code>something.bbl</code> and change the main <code>tex</code> file: Comment out <code>\addbibresource{ref.bib}</code> and place <code>\usepackage[bblfile=something]{biblatex-readbbl}</code></p>
 </li>
 </ul>
+<h2>Placing floats on top of floats-only page</h2>
+<ul>
+<li>By default, LaTeX places floats on the centre of floats-only page. As outlined in <a href="https://tex.stackexchange.com/a/28565">this StackExchange answer</a>, we can align the float to the top of the page by adding these in the preamble:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c">% if float page is single column</span>
+<span class="k">\makeatletter</span>
+<span class="k">\setlength</span><span class="nb">{</span><span class="k">\@</span>fptop<span class="nb">}{</span>0pt<span class="nb">}</span>
+<span class="k">\setlength</span><span class="nb">{</span><span class="k">\@</span>fpbot<span class="nb">}{</span>0pt plus 1fil<span class="nb">}</span>
+<span class="k">\makeatother</span>
+
+<span class="c">% if float page is double column</span>
+<span class="k">\makeatletter</span>
+<span class="k">\setlength</span><span class="nb">{</span><span class="k">\@</span>dblfptop<span class="nb">}{</span>0pt<span class="nb">}</span>
+<span class="k">\setlength</span><span class="nb">{</span><span class="k">\@</span>dblfpbot<span class="nb">}{</span>0pt plus 1fil<span class="nb">}</span>
+<span class="k">\makeatother</span>
+</code></pre></div>
+
 <p>&nbsp;</p>
 <h1>Python</h1>
 <h2>No module named pip</h2>
@@ -338,6 +355,10 @@ rclone<span class="w"> </span>lsd<span class="w"> </span>&lt;remote&gt;:&lt;path
 <h2>Convert pdf to image in Linux</h2>
 <ul>
 <li>As mentioned <a href="https://askubuntu.com/a/50180">here in askubuntu</a>: <code>pdftoppm input.pdf outputname [-png / -jpeg / etc.] -r &lt;resolution&gt;</code></li>
+</ul>
+<h2>Crop pdf</h2>
+<ul>
+<li><code>pdfcrop --margin '-left -top -right -bottom' --clip input.pdf output.pdf</code></li>
 </ul>
     </div><!-- /.entry-content -->
 
