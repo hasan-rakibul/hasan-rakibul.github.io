@@ -78,7 +78,6 @@ git config --global user.email <EMAIL>
   - `latexmk`, otherwise the LaTeX Workshop did not compile the file in my case (was getting "Recipe terminated with fatal error: spawn latexmk ENOENT." error)
   - `texlive-latex-base` and `texlive-latex-extra` packages to install LaTeX compiler and additional packages
 
-
 ## Natbib-style citation in IEEE template
 I like the `\citep` and `\citet` commands to automatically mention author names. To use them in IEEE template, I need to add the following lines in the preamble:
 ```latex
@@ -103,7 +102,6 @@ Further to enable `\IEEEtriggeratref{<number>}` to balance the reference list at
 \makeatother
 ```
 
-
 ## LaTeX Error: Unicode character ́ (U+0301)
 - Using XeLaTex would solve but sometimes we need to stick to pdfLaTeX
 - The main problem to locate the character since it usually exist in the bib file. An excellent hack, as suggested in [this StackExchange answer](https://tex.stackexchange.com/a/487565), is to print something strange in place of the character:
@@ -118,6 +116,22 @@ The solution is to link the *.bbl file, which is actually a compiled version of 
 - `BibTeX` user: Access the `*.bbl` file and change the main `*.tex` file: Comment out `\bibliography{bib-file}` and place `<contents from the .bbl file>`
 
 - `BibLaTeX` user: For `biber` backend, the [biblatex-readbbl](https://ctan.org/pkg/biblatex-readbbl?lang=en) package worked fine in Overleaf and local machine but not in the Editorial Manager. Just include `something.bbl` and change the main `tex` file: Comment out `\addbibresource{ref.bib}` and place `\usepackage[bblfile=something]{biblatex-readbbl}`
+
+## Placing floats on top of floats-only page
+- By default, LaTeX places floats on the centre of floats-only page. As outlined in [this StackExchange answer](https://tex.stackexchange.com/a/28565), we can align the float to the top of the page by adding these in the preamble:
+```latex
+% if float page is single column
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
+
+% if float page is double column
+\makeatletter
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpbot}{0pt plus 1fil}
+\makeatother
+```
 
 &nbsp;
 # Python
