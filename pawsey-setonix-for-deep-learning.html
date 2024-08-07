@@ -129,6 +129,12 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924480/Listing+the+contents+of+your+account">Listing the contents</a></li>
 </ul>
 </li>
+<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting">Acacia - Troubleshooting</a><ul>
+<li>"If copying to Setonix /scratch file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
+This could result in data being purged from /scratch even though it has not been on the file system for 21 days.
+To prevent this you can use the <code>--local-no-set-modtime</code> option to rclone."</li>
+</ul>
+</li>
 </ul>
 <h1>SLURM job submission</h1>
 <ul>
@@ -147,11 +153,18 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>.local<span class="w"> </
 <li>If there are multiple projects, configure default project name in <code>$HOME/.pawsey_project</code> to appropriately set <code>$MYSCRATCH</code> and <code>$MYSOFTWARE</code> environment variables.</li>
 </ul>
 <p>&nbsp;</p>
+<h1>System macros</h1>
+<div class="highlight"><pre><span></span><code>pawseyAccountBalance<span class="w"> </span>-p<span class="w"> </span>pawsey1001-gpu<span class="w"> </span>-user<span class="w"> </span><span class="c1"># Check user-wise usage of GPU and CPU from a project</span>
+pawseyAccountBalance<span class="w"> </span>-p<span class="w"> </span>pawsey1001-gpu<span class="w"> </span>-year<span class="w"> </span><span class="c1"># Check yearly usage of GPU and CPU from a project</span>
+</code></pre></div>
+
+<p>&nbsp;</p>
 <h1>Course / Manuals / helpful resources</h1>
 <ul>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information">https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage">https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies">https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies</a></li>
+<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51925964/Job+Scheduling">https://pawsey.atlassian.net/wiki/spaces/US/pages/51925964/Job+Scheduling</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes">https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes</a></li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes">https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes</a></li>
