@@ -70,6 +70,10 @@ Even with this approach, I failed to work with Jupyter notebook with virtual env
 - [User guide](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924986/Acacia+-+User+Guide)
     - [Install S3 client](https://pawsey.atlassian.net/wiki/spaces/US/pages/51928144/Installing+an+S3+client+application)
     - [Listing the contents](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924480/Listing+the+contents+of+your+account)
+- [Acacia - Troubleshooting](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting)
+    - "If copying to Setonix /scratch file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
+This could result in data being purged from /scratch even though it has not been on the file system for 21 days.
+To prevent this you can use the `--local-no-set-modtime` option to rclone."
 
 # SLURM job submission
 - `account` is the project ID, e.g., pawsey1234
@@ -85,10 +89,18 @@ mkdir -p .local && ln -s $MYSOFTWARE/.local $HOME/.local
 - If there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables.
 
 &nbsp;
+# System macros
+```bash
+pawseyAccountBalance -p pawsey1001-gpu -user # Check user-wise usage of GPU and CPU from a project
+pawseyAccountBalance -p pawsey1001-gpu -year # Check yearly usage of GPU and CPU from a project
+```
+
+&nbsp;
 # Course / Manuals / helpful resources
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies)
+- [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925964/Job+Scheduling](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925964/Job+Scheduling)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes)
