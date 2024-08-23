@@ -44,7 +44,7 @@
 
 </footer><!-- /.post-info -->      <p>Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
 <h1>Access</h1>
-<p>I access through VSCode remote SSH extension. It has a side-effect of hogging the small HOME quota, as mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">here</a>. To solve this, I can configure the remote SSH extension to use a different directory for the <code>.vscode-server</code> directory. Open the VSCode settings (Ctrl + ,) and search for "Server install path". Then, add items like this:</p>
+<p>I access through VSCode remote SSH extension. It has a side-effect of hogging the small HOME quota, as mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">here</a>. To solve this, I can configure the remote SSH extension to use a different directory (e.g., <code>/scratch</code>) for the <code>.vscode-server</code> directory. Open the VSCode settings (Ctrl + ,) and search for "Server install path". Then, add items like this:</p>
 <table>
 <thead>
 <tr>
@@ -55,7 +55,7 @@
 <tbody>
 <tr>
 <td>setonix.pawsey.org.au</td>
-<td><code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;/</code></td>
+<td><code>/scratch/&lt;project_id&gt;/&lt;user_id&gt;/</code></td>
 </tr>
 </tbody>
 </table>
