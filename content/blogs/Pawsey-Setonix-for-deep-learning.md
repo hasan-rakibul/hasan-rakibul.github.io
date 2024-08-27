@@ -3,6 +3,13 @@ Date: 2024-02-13 10:00
 
 Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
 
+# Constraints -- Must remember
+- `/home` directory quota is 1GB.
+- `/home` directory has inode quota of 10K.
+- `/software/` directory has inode quota of 100K per user.
+- `/scratch/` directory has a quota of 1M per user.
+- `/scratch/` files are deleted after 21 days of inactivity.
+
 # Access
 I access through VSCode remote SSH extension. It has a side-effect of hogging the small HOME quota, as mentioned [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development). To solve this, I can configure the remote SSH extension to use a different directory (e.g., `/scratch`) for the `.vscode-server` directory. Open the VSCode settings (Ctrl + ,) and search for "Server install path". Then, add items like this:
 
@@ -33,6 +40,9 @@ ssh <node_name> # node_name is the name of the node you get from the previous co
 ```bash
 pip3 install torch --index-url https://download.pytorch.org/whl/rocm6.0
 ```
+#### Offloading pyenv files across multiple directories due to inode quota
+- The primary `.pyenv` is located in the home directory, which I symlinked to the `/software` directory. After symlinking, the `ls -al` shows `.pyenv -> /software/projects/pawsey1001/rakib/.pyenv`
+- This did NOT work because the inode limit is __per user__: After creating a virtual environment, I also symlinked corresponding virtual environment files to another project. Inside `/home/rakib/.pyenv/versions/3.12.3/envs`, I symlinked the created virtual environment, which looks like: `env_name -> /software/projects/pawsey0993/rakib/envs/env_name`. Note that `pawsey0993` is is another project comared to the project `pawsey1001` where the primary `.pyenv` is symlinked.
 
 ### Pawsey-provided Pytorch
 ```bash
@@ -62,8 +72,8 @@ Even with this approach, I failed to work with Jupyter notebook with virtual env
     - `/software/projects/<project_id>/<user_id>/` to install software packages.
     - `/scratch/<project_id>/<user_id>` for temporary storage.
 
-## Limitation &ndash; /scratch files gets deleted after 21 days of inactivity
-- As per Pawsey policy, files in `/scratch` are deleted after 21 days of no access. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than 21 days. `ls -ltu` can be used to check the access time of the files, sorted by access time. It is better to use `acacia` for long-term storage.
+## Limitation &ndash; /scratch files gets automatically deleted
+- As per Pawsey policy, files in `/scratch` are deleted automatically. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than the specified days. `ls -ltu` can be used to check the access time of the files, sorted by access time. It is better to use `acacia` for long-term storage.
 
 ## Acacia
 - [Quick start](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924476/Acacia+-+Quick+Start). **It's important to save the access keys key in the `$HOME/.config/rclone/rclone.conf` file.** To do that, corresponding client configure command is available on the window after clicking the "Create New Key" button. Feel free to customise the profile name.
@@ -71,8 +81,8 @@ Even with this approach, I failed to work with Jupyter notebook with virtual env
     - [Install S3 client](https://pawsey.atlassian.net/wiki/spaces/US/pages/51928144/Installing+an+S3+client+application)
     - [Listing the contents](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924480/Listing+the+contents+of+your+account)
 - [Acacia - Troubleshooting](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting)
-    - "If copying to Setonix /scratch file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
-This could result in data being purged from /scratch even though it has not been on the file system for 21 days.
+    - "If copying to Setonix `/scratch` file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
+This could result in data being purged from `/scratch` even though it has not been on the file system for 21 days.
 To prevent this you can use the `--local-no-set-modtime` option to rclone."
 
 # SLURM job submission
@@ -80,7 +90,7 @@ To prevent this you can use the `--local-no-set-modtime` option to rclone."
 - Sample job submission script is [here for CPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes) and [here for GPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes).
 
 # Important points
-- Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the `.cache`, `.local` and/or `.conda` files must be in another directory (e.g., `$MYSOFTWARE`). But please note that `/software/` has inode **quota of 100K per user**. Managing the cache and conda files through environment variable can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html). Alternatively (**Better**), I can create symbolic links to those resource-intensive directories in the home directory.
+- Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the `.cache`, `.local` and/or `.conda` files must be in another directory (e.g., `$MYSOFTWARE`). But please note that `/software/` has a smaller inode quota (mentioned in the top of this note).  Managing the cache and conda files through environment variable can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html). Alternatively (**Better**), I can create symbolic links to those resource-intensive directories in the home directory.
 ```bash
 mkdir -p .cache && ln -s $MYSOFTWARE/.cache $HOME/.cache
 mkdir -p .local && ln -s $MYSOFTWARE/.local $HOME/.local
@@ -89,10 +99,14 @@ mkdir -p .local && ln -s $MYSOFTWARE/.local $HOME/.local
 - If there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables.
 
 &nbsp;
-# System macros
+# Important commands
 ```bash
 pawseyAccountBalance -p pawsey1001-gpu -user # Check user-wise usage of GPU and CPU from a project
 pawseyAccountBalance -p pawsey1001-gpu -year # Check yearly usage of GPU and CPU from a project
+lfs quota /software # Check quota of the software directory, both user-wise and group-wise. Same can be checked for /scratch
+quota -s # Check the quota of the home directory
+du -sh [path] # Check the size of a directory, human-readable summary format
+ls --inode -sh [path] # Check the inode usage of a directory, human-readable summary format
 ```
 
 &nbsp;
