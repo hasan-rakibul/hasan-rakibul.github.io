@@ -43,6 +43,14 @@
 <!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
 
 </footer><!-- /.post-info -->      <p>Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
+<h1>Constraints -- Must remember</h1>
+<ul>
+<li><code>/home</code> directory quota is 1GB.</li>
+<li><code>/home</code> directory has inode quota of 10K.</li>
+<li><code>/software/</code> directory has inode quota of 100K per user.</li>
+<li><code>/scratch/</code> directory has a quota of 1M per user.</li>
+<li><code>/scratch/</code> files are deleted after 21 days of inactivity.</li>
+</ul>
 <h1>Access</h1>
 <p>I access through VSCode remote SSH extension. It has a side-effect of hogging the small HOME quota, as mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">here</a>. To solve this, I can configure the remote SSH extension to use a different directory (e.g., <code>/scratch</code>) for the <code>.vscode-server</code> directory. Open the VSCode settings (Ctrl + ,) and search for "Server install path". Then, add items like this:</p>
 <table>
@@ -89,6 +97,11 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 <div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/rocm6.0
 </code></pre></div>
 
+<h4>Offloading pyenv files across multiple directories due to inode quota</h4>
+<ul>
+<li>The primary <code>.pyenv</code> is located in the home directory, which I symlinked to the <code>/software</code> directory. After symlinking, the <code>ls -al</code> shows <code>.pyenv -&gt; /software/projects/pawsey1001/rakib/.pyenv</code></li>
+<li>This did NOT work because the inode limit is <strong>per user</strong>: After creating a virtual environment, I also symlinked corresponding virtual environment files to another project. Inside <code>/home/rakib/.pyenv/versions/3.12.3/envs</code>, I symlinked the created virtual environment, which looks like: <code>env_name -&gt; /software/projects/pawsey0993/rakib/envs/env_name</code>. Note that <code>pawsey0993</code> is is another project comared to the project <code>pawsey1001</code> where the primary <code>.pyenv</code> is symlinked.</li>
+</ul>
 <h3>Pawsey-provided Pytorch</h3>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;<span class="w"> </span><span class="c1"># e.g., pytorch/2.2.0-rocm5.7.3</span>
 python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
@@ -117,9 +130,9 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 </ul>
 </li>
 </ul>
-<h2>Limitation &ndash; /scratch files gets deleted after 21 days of inactivity</h2>
+<h2>Limitation &ndash; /scratch files gets automatically deleted</h2>
 <ul>
-<li>As per Pawsey policy, files in <code>/scratch</code> are deleted after 21 days of no access. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than 21 days. <code>ls -ltu</code> can be used to check the access time of the files, sorted by access time. It is better to use <code>acacia</code> for long-term storage.</li>
+<li>As per Pawsey policy, files in <code>/scratch</code> are deleted automatically. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than the specified days. <code>ls -ltu</code> can be used to check the access time of the files, sorted by access time. It is better to use <code>acacia</code> for long-term storage.</li>
 </ul>
 <h2>Acacia</h2>
 <ul>
@@ -130,8 +143,8 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 </ul>
 </li>
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting">Acacia - Troubleshooting</a><ul>
-<li>"If copying to Setonix /scratch file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
-This could result in data being purged from /scratch even though it has not been on the file system for 21 days.
+<li>"If copying to Setonix <code>/scratch</code> file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
+This could result in data being purged from <code>/scratch</code> even though it has not been on the file system for 21 days.
 To prevent this you can use the <code>--local-no-set-modtime</code> option to rclone."</li>
 </ul>
 </li>
@@ -143,7 +156,7 @@ To prevent this you can use the <code>--local-no-set-modtime</code> option to rc
 </ul>
 <h1>Important points</h1>
 <ul>
-<li>Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the <code>.cache</code>, <code>.local</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>$MYSOFTWARE</code>). But please note that <code>/software/</code> has inode <strong>quota of 100K per user</strong>. Managing the cache and conda files through environment variable can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>. Alternatively (<strong>Better</strong>), I can create symbolic links to those resource-intensive directories in the home directory.</li>
+<li>Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the <code>.cache</code>, <code>.local</code> and/or <code>.conda</code> files must be in another directory (e.g., <code>$MYSOFTWARE</code>). But please note that <code>/software/</code> has a smaller inode quota (mentioned in the top of this note).  Managing the cache and conda files through environment variable can be found <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>. Alternatively (<strong>Better</strong>), I can create symbolic links to those resource-intensive directories in the home directory.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>.cache<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$MYSOFTWARE</span>/.cache<span class="w"> </span><span class="nv">$HOME</span>/.cache
 mkdir<span class="w"> </span>-p<span class="w"> </span>.local<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="nv">$MYSOFTWARE</span>/.local<span class="w"> </span><span class="nv">$HOME</span>/.local
@@ -153,9 +166,13 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>.local<span class="w"> </
 <li>If there are multiple projects, configure default project name in <code>$HOME/.pawsey_project</code> to appropriately set <code>$MYSCRATCH</code> and <code>$MYSOFTWARE</code> environment variables.</li>
 </ul>
 <p>&nbsp;</p>
-<h1>System macros</h1>
+<h1>Important commands</h1>
 <div class="highlight"><pre><span></span><code>pawseyAccountBalance<span class="w"> </span>-p<span class="w"> </span>pawsey1001-gpu<span class="w"> </span>-user<span class="w"> </span><span class="c1"># Check user-wise usage of GPU and CPU from a project</span>
 pawseyAccountBalance<span class="w"> </span>-p<span class="w"> </span>pawsey1001-gpu<span class="w"> </span>-year<span class="w"> </span><span class="c1"># Check yearly usage of GPU and CPU from a project</span>
+lfs<span class="w"> </span>quota<span class="w"> </span>/software<span class="w"> </span><span class="c1"># Check quota of the software directory, both user-wise and group-wise. Same can be checked for /scratch</span>
+quota<span class="w"> </span>-s<span class="w"> </span><span class="c1"># Check the quota of the home directory</span>
+du<span class="w"> </span>-sh<span class="w"> </span><span class="o">[</span>path<span class="o">]</span><span class="w"> </span><span class="c1"># Check the size of a directory, human-readable summary format</span>
+ls<span class="w"> </span>--inode<span class="w"> </span>-sh<span class="w"> </span><span class="o">[</span>path<span class="o">]</span><span class="w"> </span><span class="c1"># Check the inode usage of a directory, human-readable summary format</span>
 </code></pre></div>
 
 <p>&nbsp;</p>
