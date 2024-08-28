@@ -7,7 +7,7 @@ Did you know 'Setonix' is actually the scientific name of Australian native anim
 - `/home` directory quota is 1GB.
 - `/home` directory has inode quota of 10K.
 - `/software/` directory has inode quota of 100K per user.
-- `/scratch/` directory has a quota of 1M per user.
+- `/scratch/` directory has inode quota of 1M per user.
 - `/scratch/` files are deleted after 21 days of inactivity.
 
 # Access
