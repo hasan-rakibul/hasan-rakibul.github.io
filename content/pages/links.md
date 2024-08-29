@@ -60,6 +60,7 @@ Title: Useful links
 - [Transformer Neural Networks - EXPLAINED! (Attention is all you need)](https://www.youtube.com/watch?v=TQQlZhbC5ps)
 - [What is Transformer?](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)
 - [Pooling Strategies for Downstream Tasks - Utilizing Transformer Representations Efficiently](https://www.kaggle.com/code/rhtsingh/utilizing-transformer-representations-efficiently)
+- [Free LLM API Resources](https://jscheah.me/free-llm-api-resources/)
 
 ## Physics-informed machine learning
 - [Basic definition and background -- PNNL](https://www.pnnl.gov/explainer-articles/physics-informed-machine-learning)
