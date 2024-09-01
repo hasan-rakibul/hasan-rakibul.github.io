@@ -87,7 +87,7 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 <ul>
 <li>Guide: <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a></li>
 <li>The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix</li>
-<li>To make it simpler, dockers and containers are available. We can load it throuch <code>docker pull</code> or <code>module load</code></li>
+<li>To make it simpler, dockers and containers are available. We can load it throuch <code>docker pull</code> or <code>module load</code>. It didn't work well for me.</li>
 </ul>
 <h3>Pyenv</h3>
 <ul>
@@ -97,10 +97,35 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 <div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/rocm6.0
 </code></pre></div>
 
-<h4>Offloading pyenv files across multiple directories due to inode quota</h4>
+<h4>Offloading pyenv files in a different directory due to limited quota</h4>
 <ul>
-<li>The primary <code>.pyenv</code> is located in the home directory, which I symlinked to the <code>/software</code> directory. After symlinking, the <code>ls -al</code> shows <code>.pyenv -&gt; /software/projects/pawsey1001/rakib/.pyenv</code></li>
-<li>This did NOT work because the inode limit is <strong>per user</strong>: After creating a virtual environment, I also symlinked corresponding virtual environment files to another project. Inside <code>/home/rakib/.pyenv/versions/3.12.3/envs</code>, I symlinked the created virtual environment, which looks like: <code>env_name -&gt; /software/projects/pawsey0993/rakib/envs/env_name</code>. Note that <code>pawsey0993</code> is is another project comared to the project <code>pawsey1001</code> where the primary <code>.pyenv</code> is symlinked.</li>
+<li>The primary <code>.pyenv</code> is located in the home directory, which I symlinked to the <code>/software</code> directory. After symlinking, the <code>ls -al</code> shows <code>.pyenv -&gt; /software/projects/pawsey1001/rakib/.pyenv</code>. The command sequence of moving the files and symlinking may look like this:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>.pyenv<span class="w"> </span>/software/projects/pawsey1001/rakib/
+ln<span class="w"> </span>-s<span class="w"> </span>/software/projects/pawsey1001/rakib/.pyenv<span class="w"> </span>.pyenv
+</code></pre></div>
+
+<h5>Multiple virtual environments</h5>
+<ul>
+<li>It would be great if we could create virtual environment in a different folder. Following <a href="https://github.com/pyenv/pyenv-virtualenv/issues/408">this GitHub issue</a>, we can create virual envirornment using basic <code>python -m venv</code> command.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># list available python versions using pyenv versions and see which one is active. Change if needed.</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
+<span class="nb">source</span><span class="w"> </span>&lt;path/to/venv&gt;/bin/activate<span class="w"> </span><span class="c1"># activate the virtual environment</span>
+
+<span class="c1"># Optional: Create symlink to change using pyenv</span>
+<span class="nb">cd</span><span class="w"> </span>~/.pyenv/versions
+ln<span class="w"> </span>-s<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span>env_name
+pyenv<span class="w"> </span>activate<span class="w"> </span>env_name<span class="w"> </span><span class="c1"># activate the virtual environment</span>
+</code></pre></div>
+
+<h5>Unsuccessful experiments with pyenv</h5>
+<ul>
+<li>Even if I symlinked the environment folder, it seems the <code>lib</code> folder is common for all environments and thus getting quota error. <ul>
+<li>If I need multiple virtual environment, it becomes more tricky. I thought of offloading files of less-significant environment to the <code>scratch</code> directory (as <code>scratch</code> has file purge policy, I would need to re-install packages after some days). After creating the new virtual environment, I symlinked corresponding virtual environment files to <code>scratch</code>. Inside <code>/home/rakib/.pyenv/versions/3.12.3/envs</code>, I symlinked the created virtual environment, which looks like: <code>env_name -&gt; /scratch/pawsey1001/rakib/extr_pyenv/env_name</code>.</li>
+</ul>
+</li>
+<li>Even when I have multiple project allocations, I could not offload to another project's <code>software</code> directory (by symlinking) due to the inode quota being <strong>per user</strong>.</li>
 </ul>
 <h3>Pawsey-provided Pytorch</h3>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;<span class="w"> </span><span class="c1"># e.g., pytorch/2.2.0-rocm5.7.3</span>
