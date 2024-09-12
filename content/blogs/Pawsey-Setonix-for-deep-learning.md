@@ -17,6 +17,13 @@ Item | Value
 --- | ---
 setonix.pawsey.org.au | `/scratch/<project_id>/<user_id>/`
 
+Lately, the VSCode 1.93 version caused some issues with the above approach (details [here](https://github.com/microsoft/vscode-remote-release/issues/10230)), so I had to revert to the default HOME directory, and created a symlink to the `.vscode-server` directory in the `/scratch` directory.
+```bash
+# Open VSCode and connect to the remote server. It will create the .vscode-server directory in the HOME directory. Then, move it to the scratch directory and create a symlink.
+mv .vscode-server /scratch/pawsey1001/rakib/
+ln -s /scratch/pawsey1001/rakib/.vscode-server .vscode-server
+```
+
 Next, just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html)).
 
 ## GPU Computing
