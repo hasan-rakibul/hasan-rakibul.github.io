@@ -45,6 +45,11 @@ Title: Useful links
 - [Deep Learning](https://www.deeplearningbook.org/)
 - [Understanding Machine Learning: From Theory to Algorithms](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
 
+## PyTorch
+### Liightning
+- [A good overview](https://lightning.ai/docs/pytorch/stable/common/lightning_module.html)
+- [Debugging basic](https://lightning.ai/docs/pytorch/stable/debug/debugging_basic.html)
+
 ## Semi-supervised learning
 - [Definition and commond algorithms in plain language](https://h3abionet.github.io/H3ABioNet-ML-glossary/semi-supervised_intro.html)
 - [An overview of proxy-label approaches for semi-supervised learning](https://www.ruder.io/semi-supervised/)

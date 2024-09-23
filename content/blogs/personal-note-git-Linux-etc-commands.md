@@ -36,6 +36,17 @@ Caution: This will remove all commits after the specified commit hash.
 - Here's a [nice SO answer](https://stackoverflow.com/a/71774640) that describe the merge options.
 - I had some remote commits that I didn't pull before commiting from local. As usual, the push failed as I haven't fetched the changes. Simple `git pull` wasn't successful. Rather, `git pull --rebase` worked. It pulls and rebases local commits on top of remote commits.
 
+## Migrating Repository with Commit History
+- [This SO answer](https://stackoverflow.com/a/17373088) is a good guide to migrate a repository with commit history:
+```bash
+cd new_repo
+git checkout main
+git remote add old_remote **url-of-old-repo**
+git fetch old_remote
+git merge old_remote/main --allow-unrelated-histories
+git remote rm old_remote
+```
+
 ## Configuring local machine to access (pull, push, etc.) GitHub private and public repositories. 
 
 ### Local machine &ndash; generate SSH key
