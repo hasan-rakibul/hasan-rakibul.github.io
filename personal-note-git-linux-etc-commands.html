@@ -79,6 +79,18 @@ Caution: This will remove all commits after the specified commit hash.</li>
 <li>Here's a <a href="https://stackoverflow.com/a/71774640">nice SO answer</a> that describe the merge options.</li>
 <li>I had some remote commits that I didn't pull before commiting from local. As usual, the push failed as I haven't fetched the changes. Simple <code>git pull</code> wasn't successful. Rather, <code>git pull --rebase</code> worked. It pulls and rebases local commits on top of remote commits.</li>
 </ul>
+<h2>Migrating Repository with Commit History</h2>
+<ul>
+<li><a href="https://stackoverflow.com/a/17373088">This SO answer</a> is a good guide to migrate a repository with commit history:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>new_repo
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>old_remote<span class="w"> </span>**url-of-old-repo**
+git<span class="w"> </span>fetch<span class="w"> </span>old_remote
+git<span class="w"> </span>merge<span class="w"> </span>old_remote/main<span class="w"> </span>--allow-unrelated-histories
+git<span class="w"> </span>remote<span class="w"> </span>rm<span class="w"> </span>old_remote
+</code></pre></div>
+
 <h2>Configuring local machine to access (pull, push, etc.) GitHub private and public repositories.</h2>
 <h3>Local machine &ndash; generate SSH key</h3>
 <ul>
