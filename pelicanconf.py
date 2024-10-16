@@ -24,19 +24,19 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-        ('Google Scholar','https://scholar.google.com.au/citations?user=DuCQ8goAAAAJ&hl=en'),
-        ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
-        ('ReserchGate','https://www.researchgate.net/profile/Md-Rakibul-Hasan-10'),
-        ('Semantic Scholar', 'https://www.semanticscholar.org/author/2142425'),
-        ('dblp','https://dblp.org/pid/122/5190-1.html'),
-        ('arXiv', 'https://arxiv.org/a/hasan_m_1.html'),
-        ('Web of Science','https://www.webofscience.com/wos/author/record/AFK-8839-2022'),
-        ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
-        ('GitHub','https://github.com/hasan-rakibul'),
-        ('Curtin University','https://staffportal.curtin.edu.au/staff/profile/view/rakibul-hasan-145a1046/'),
-        ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
-        ('e-mail','mailto:Rakibul.Hasan@curtin.edu.au'),
-        )
+    ('Google Scholar','https://scholar.google.com.au/citations?user=DuCQ8goAAAAJ&hl=en'),
+    ('ORCiD','https://orcid.org/0000-0003-2565-5321'),
+    ('ReserchGate','https://www.researchgate.net/profile/Md-Rakibul-Hasan-10'),
+    ('Semantic Scholar', 'https://www.semanticscholar.org/author/2142425'),
+    ('dblp','https://dblp.org/pid/122/5190-1.html'),
+    ('arXiv', 'https://arxiv.org/a/hasan_m_1.html'),
+    ('Web of Science','https://www.webofscience.com/wos/author/record/AFK-8839-2022'),
+    ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
+    ('GitHub','https://github.com/hasan-rakibul'),
+    ('Curtin University','https://staffportal.curtin.edu.au/staff/profile/view/rakibul-hasan-145a1046/'),
+    ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
+    ('e-mail','mailto:Rakibul.Hasan@curtin.edu.au'),
+)
 
 LINKS_WIDGET_NAME = 'find me on'
 
@@ -68,14 +68,14 @@ DISPLAY_CATEGORIES_ON_MENU = False # will manually display categories using MENU
 DISPLAY_PAGES_ON_MENU = False # will manually display pages using MENUITEMS
 
 MENUITEMS = (
-    ('home', '/'),
-    ('about me', '/about_me.html'),
+    ('./', '/'), # Home
+    ('research', '/research.html'),
     ('publications', '/publications.html'),
-    # ('teaching','/teaching'),
-    ('activity', '/activity.html'),
-    ('blogs','/blogs.html'),
+    ('teaching','/teaching.html'),
+    ('services','/services.html'),
+    ('people', '/people.html'),
     ('links','/links.html'),
-    ('student corner', '/student_corner.html')
+    ('blogs','/blogs.html'),
 )
 
 ARTICLE_PATHS = ['blogs']

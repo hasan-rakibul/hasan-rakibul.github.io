@@ -44,6 +44,7 @@ Title: Useful links
 - [Understanding Deep Learning](https://udlbook.github.io/udlbook/)
 - [Deep Learning](https://www.deeplearningbook.org/)
 - [Understanding Machine Learning: From Theory to Algorithms](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
+- [Statistics and Data Science](https://jillxoreilly.github.io/StatsCourseBook_2024/intro.html)
 
 ## PyTorch
 ### Liightning
