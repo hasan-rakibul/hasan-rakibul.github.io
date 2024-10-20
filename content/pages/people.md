@@ -3,20 +3,31 @@ Title: People
 # My mentor board of directors
 I'm fortunate to have several mentors in my academic and personal development journey. The following list is not exhaustive and is in no particular order.
 
-- [Professor Sarah Pearce](https://people.csiro.au/P/S/Sarah-Pearce), Deputy Director, CSIRO Astronomy and Space Science [IMNIS mentor]
-- [Professor Tom Gedeon](https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/), Curtin University [PhD supervisor]
-- [Professor Md Mahbub Hasan](https://site.kuet.ac.bd/ppm/eee/mahbub), Khulna University of Engineering & Technology [BSc & MSc supervisor]
-- [Dr Md Zakir Hossain](https://staffportal.curtin.edu.au/staff/profile/view/md-zakir-hossain-4fd95ece/), Senior Research Fellow, Curtin University [PhD co-supervisor]
-- [Associate Professor Aneesh Krishna](https://staffportal.curtin.edu.au/staff/profile/view/aneesh-krishna-1b4c5581/), Curtin University [PhD co-supervisor]
-- [Dr Md Redowan Mahmud](https://staffportal.curtin.edu.au/staff/profile/view/md-redowan-mahmud-682e2209/), Lecturer, Curtin University
+- [Professor Sarah Pearce](https://people.csiro.au/P/S/Sarah-Pearce) (Deputy Director, CSIRO Astronomy and Space Science [IMNIS mentor])
+- [Professor Tom Gedeon](https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/) (Curtin University [PhD supervisor])
+- [Professor Md Mahbub Hasan](https://site.kuet.ac.bd/ppm/eee/mahbub) (Khulna University of Engineering & Technology [BSc & MSc supervisor])
+- [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Senior Research Fellow, Curtin University [PhD co-supervisor])
+- [Associate Professor Aneesh Krishna](https://staffportal.curtin.edu.au/staff/profile/view/aneesh-krishna-1b4c5581/) (Curtin University [PhD co-supervisor])
+- [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources [Internship supervisor])
+- [Dr Md Redowan Mahmud](https://staffportal.curtin.edu.au/staff/profile/view/md-redowan-mahmud-682e2209/) (Lecturer, Curtin University)
 
 &nbsp;
-# Students
+
+# Research collaborators
+- [Dr Shafin Rahman](https://sites.google.com/site/rshafin) (Assistant Professor, North South University, Bangladesh)
+- [Dr Yue Yao](http://yorkeyao.cc/) (Curtin University)
+- [Dr Shreya Ghosh](https://sites.google.com/view/shreyaghosh) (Curtin University)
+- [Md. Mehedi Hasan Shawon](https://www.mehedi.info/) (BRAC University)
+- [Md Jobayer](https://jobayer.github.io/) (BRAC University)
+
+&nbsp;
+
+# Research students
 In official and unofficial capacities, I have had the pleasure of supervising the following students in their honours or master's projects and other similar research avenues. The following list is not exhaustive and is in no particular order.
 
 ### BRAC University
+0. [Md Jobayer](https://jobayer.github.io/) (2022) [[Paper](./publications#jobayer2022a)]
 0. Lazib Sharar Shaiok (Jun. 2023 – Dec. 2023) [[Paper](publications#shaiok2023attention)]
-0. Md Jobayer (2022 – ) [[Paper](./publications#jobayer2022a)]
 0. Md Al Hasan Shaikat (2022 – 2023) [[Paper](./publications#jobayer2022a)]
 0. Md Naimur Rashid (2022 – 2023) [[Paper](./publications#jobayer2022a)]
 0. Subir Mazumder (May 2022 – Dec. 2022)
@@ -72,10 +83,10 @@ In official and unofficial capacities, I have had the pleasure of supervising th
 
 &nbsp;
 ### Others
-0. Ishtiaqul Hoque, Islamic University of Technology (Jun. 2023 – Dec. 2023) [[Paper](publications#shaiok2023attention)]
 0. Mst. Fahmida Sultana Naznin, Bangladesh University of Engineering and Technology (2024) [[Paper](publications#naznin2024cstrl)]
 0. Ahsanul Islam, Khulna University of Engineering & Technology (2021 – 2024) [[Paper 1](publications#islam2021eigenvalue)] [[Paper 2](publications#islam2024bdconvsgnet)]
 0. Rifat Mitul, Chittagong University of Engineering & Technology (2023 – 2024)
+0. Ishtiaqul Hoque, Islamic University of Technology (Jun. 2023 – Dec. 2023) [[Paper](publications#shaiok2023attention)]
 
 &nbsp;
 <h1>Recommended by me</h1>
