@@ -1,5 +1,7 @@
 Title: Teaching
 
+I have had the pleasure of teaching/tutoring several units/courses at multiple universities. The following list includes some of the units that I loved teaching/tutoring.
+
 # [Curtin University](https://www.curtin.edu.au/)
 ## Lab/Tutorial
 

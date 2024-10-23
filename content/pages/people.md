@@ -3,7 +3,7 @@ Title: People
 # My mentor board of directors
 I'm fortunate to have several mentors in my academic and personal development journey. The following list is not exhaustive and is in no particular order.
 
-- [Professor Sarah Pearce](https://people.csiro.au/P/S/Sarah-Pearce) (Deputy Director, CSIRO Astronomy and Space Science [IMNIS mentor])
+- [Professor Sarah Pearce](https://people.csiro.au/P/S/Sarah-Pearce) (Deputy Director, CSIRO Astronomy and Space Science [Industry Mentoring Network in STEM])
 - [Professor Tom Gedeon](https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/) (Curtin University [PhD supervisor])
 - [Professor Md Mahbub Hasan](https://site.kuet.ac.bd/ppm/eee/mahbub) (Khulna University of Engineering & Technology [BSc & MSc supervisor])
 - [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Senior Research Fellow, Curtin University [PhD co-supervisor])
