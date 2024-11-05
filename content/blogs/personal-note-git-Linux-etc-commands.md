@@ -310,6 +310,10 @@ rclone lsd <remote>:<path> # list directories in the remote path
 --dry-run # simulate the command without actually doing it
 --progress # show progress of the command
 ```
+&nbsp;
+# Good coding practices
+- Just like global variables are bad, interacting with config file (e.g., OmeConf) in the deep of the code is bad. Rather, config file should be accessed and parsed at the top of the code, like only in __main__ function. Other functions should be explicit in terms of their inputs and outputs. 
+
 
 &nbsp;
 
