@@ -359,6 +359,11 @@ rclone<span class="w"> </span>lsd<span class="w"> </span>&lt;remote&gt;:&lt;path
 </code></pre></div>
 
 <p>&nbsp;</p>
+<h1>Good coding practices</h1>
+<ul>
+<li>Just like global variables are bad, interacting with config file (e.g., OmeConf) in the deep of the code is bad. Rather, config file should be accessed and parsed at the top of the code, like only in <strong>main</strong> function. Other functions should be explicit in terms of their inputs and outputs. </li>
+</ul>
+<p>&nbsp;</p>
 <h1>Others</h1>
 <h2>Change JupyerLab startup directory</h2>
 <p>As discussed in <a href="https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-folder">this SO thread</a>:</p>
