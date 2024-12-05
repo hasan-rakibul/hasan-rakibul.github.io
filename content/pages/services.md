@@ -14,7 +14,7 @@ Title: Services
 &nbsp;
 ## Conferences
 <ol reversed>
-    <li>Volunteer, <a href="https://dicta2024.dictaconference.org/">2024 International Conference on Digital Image Computing: Techniques and Applications (DICTA 2024)</a></li>
+    <li>Volunteer, Organising Committee, <a href="https://dicta2024.dictaconference.org/">2024 International Conference on Digital Image Computing: Techniques and Applications (DICTA 2024)</a></li>
     <li>Reviewer, European Conference on Computer Vision (ECCV) 2024</li>
     <li>Reviewer, IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2024, 2025.</li>
     <li><a href="https://react-ws.github.io/2024/">Program committee</a> member, 2nd International Workshop on Multimodal, Generative and Responsible Affective Computing (MRAC 2024) at <a href="https://2024.acmmm.org/">ACM MM 2024</a>, Melbourne, Australia</li>

@@ -9,9 +9,15 @@ Personal website to track my recent involvements.
 python -m pip install -r requirements.txt
 ```
 
-**Note:** Sometimes, `pelican` and `ghp-import` are shown as not found. In that case, installing through apt works:
+If `pelican` and `ghp-import` commands are shown as not found, we need to see if the path is set correctly.
 ```
-sudo apt install pelican ghp-import
+python -m site --user-base # to see the path, e.g., /Users/has118/.local
+echo $PATH # to see if the path is set correctly
+```
+
+If not, we need to add the path through the `~/.zshrc` or `~/.bashrc` file.
+```
+export PATH="$PATH:/Users/has118/.local/bin" # here, /Users/has118/.local/bin is the path
 ```
 
 ## Post-commit hook to auto-update the website with commit
