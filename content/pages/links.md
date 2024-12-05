@@ -16,7 +16,8 @@ Title: Useful links
 - [Scholarcy - AI-powered summariser](https://article-summarizer.scholarcy.com/summarizer)
 - [Peer review in NLP: reject-if-not-SOTA](https://hackingsemantics.xyz/2020/reviewing-models/)
 - [HOW TO BE A GOOD REVIEWER? REVIEWER TUTORIAL FOR ECCV 2024](https://docs.google.com/presentation/d/1HE_Pwcdy_3eVCIdb1o1VjtwqX5KTvddukhRxZVAOnIY/)
-- [**How to Get a Paper Accepted -- Comments by Kent Beck**](https://plg.uwaterloo.ca/%7Emigod/research/beckOOPSLA.html)
+- [**How to Get a Paper Accepted –ß Comments by Kent Beck**](https://plg.uwaterloo.ca/%7Emigod/research/beckOOPSLA.html)
+- [**Hacing Academia – Professor Michael Milford**](https://michaelmilford.com/hacking-academia-tutorial-series/)
 
 &nbsp;
 
@@ -89,6 +90,7 @@ Title: Useful links
 &nbsp;
 
 # Researcher's website I like to visit time to time
+- [https://michaelmilford.com/](https://michaelmilford.com/)
 - [https://jkk.name/](https://jkk.name/)
 - [https://nchuramani.github.io/](https://nchuramani.github.io/)
 - [https://salman-h-khan.github.io/](https://salman-h-khan.github.io/)
