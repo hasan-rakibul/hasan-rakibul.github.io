@@ -24,6 +24,7 @@ Title: Useful links
 # Upcoming conferences
 - [**Computer Science conferences timeline (lucjaulmes.github.io)**](https://lucjaulmes.github.io/cfp-timeline/)
 - [**AI Conference Deadlines (aideadlin.es)**](https://aideadlin.es/?sub=ML,CV,CG,NLP,RO,SP,DM,AP,KR,HCI)
+- [**China Computer Federation (CCF)-Ranked Conference Deadlines**](https://ccfddl.com/)
 - [Upcoming Conferences – ACM SIGCHI](https://sigchi.org/conferences/upcoming-conferences/)
 - [AAAI Association for the Advancement of Artificial Intelligence](https://aaai.org/)
 - [Conferences | IEEE SWC2023 (ieee-smart-world-congress.org)](https://ieee-smart-world-congress.org/program/overview)
@@ -90,13 +91,14 @@ Title: Useful links
 &nbsp;
 
 # Researcher's website I like to visit time to time
-- [https://michaelmilford.com/](https://michaelmilford.com/)
-- [https://jkk.name/](https://jkk.name/)
-- [https://nchuramani.github.io/](https://nchuramani.github.io/)
-- [https://salman-h-khan.github.io/](https://salman-h-khan.github.io/)
-- [http://www.cs.cmu.edu/~pliang/](http://www.cs.cmu.edu/~pliang/)
-- [https://l-mathur.github.io/](https://l-mathur.github.io/)
-- [https://jonbarron.info/](https://jonbarron.info/)
+- [Prof Michael Milford](https://michaelmilford.com/)
+- [Prof Tim Baldwin](https://eltimster.github.io/www/)
+- [Prof Jonathan K. Kummerfeld](https://jkk.name/)
+- [Assoc Prof Salman Khan](https://salman-h-khan.github.io/)
+- [Assistant Prof Paul Liang](https://www.mit.edu/~ppliang/)
+- [Jon Barron](https://jonbarron.info/)
+- [Nikhil Churamani](https://nchuramani.github.io/)
+- [Leena Mathur](https://l-mathur.github.io/)
 
 &nbsp;
 
