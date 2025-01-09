@@ -7,9 +7,9 @@ I'm fortunate to have several mentors in my academic and personal development jo
 - [Professor Tom Gedeon](https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/) (Curtin University [PhD supervisor])
 - [Professor Md Mahbub Hasan](https://site.kuet.ac.bd/ppm/eee/mahbub) (Khulna University of Engineering & Technology [BSc & MSc supervisor])
 - [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Senior Research Fellow, Curtin University [PhD co-supervisor])
-- [Associate Professor Aneesh Krishna](https://staffportal.curtin.edu.au/staff/profile/view/aneesh-krishna-1b4c5581/) (Curtin University [PhD co-supervisor])
+- [Professor Aneesh Krishna](https://staffportal.curtin.edu.au/staff/profile/view/aneesh-krishna-1b4c5581/) (Curtin University [PhD co-supervisor])
 - [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources [Internship supervisor])
-- [Dr Md Redowan Mahmud](https://staffportal.curtin.edu.au/staff/profile/view/md-redowan-mahmud-682e2209/) (Lecturer, Curtin University)
+- [Dr Md Redowan Mahmud](https://staffportal.curtin.edu.au/staff/profile/view/md-redowan-mahmud-682e2209/) (Senior Lecturer, Curtin University)
 
 &nbsp;
 
@@ -92,6 +92,7 @@ In official and unofficial capacities, I have had the pleasure of supervising th
 <h1>Recommended by me</h1>
 <p>Students are advised to email me and fill out <a href="https://forms.gle/hcznDQMDLUE4bXN87">this Google form</a> to request for a letter of recommendation. Only the following students are referred/recommended by me for higher study/job/etc.</p>
 <ol reversed>
+    <li>Md. Borhan Uddin Antor, UG student, BRAC University</li>
     <li>Khadiza Sumaiya, UG project student, BRAC University</li>
     <li>Md Taiubul Islam, UG student, BRAC University</li>
     <li>Md Jobayer, UG student and research collaborator, BRAC University</li>

@@ -30,6 +30,8 @@ LINKS = (
     ('Semantic Scholar', 'https://www.semanticscholar.org/author/2142425'),
     ('dblp','https://dblp.org/pid/122/5190-1.html'),
     ('arXiv', 'https://arxiv.org/a/hasan_m_1.html'),
+    ('ACL Anthology', 'https://aclanthology.org/people/m/md-rakibul-hasan/'),
+    ('IEEE Xplore', 'https://ieeexplore.ieee.org/author/37089195113'),
     ('Web of Science','https://www.webofscience.com/wos/author/record/AFK-8839-2022'),
     ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
     ('GitHub','https://github.com/hasan-rakibul'),
