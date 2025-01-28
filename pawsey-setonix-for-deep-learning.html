@@ -44,7 +44,7 @@
 <!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
 
 </footer><!-- /.post-info -->      <p>Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
-<h1>Constraints -- Must remember</h1>
+<h1>Constraints – Must remember</h1>
 <ul>
 <li><code>/home</code> directory quota is 1GB.</li>
 <li><code>/home</code> directory has inode quota of 10K.</li>
@@ -53,7 +53,17 @@
 <li><code>/scratch/</code> files are deleted after 21 days of inactivity.</li>
 </ul>
 <h1>Access</h1>
-<p>I access through VSCode remote SSH extension. It has a side-effect of hogging the small HOME quota, as mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">here</a>. To solve this, I can configure the remote SSH extension to use a different directory (e.g., <code>/scratch</code>) for the <code>.vscode-server</code> directory. Open the VSCode settings (Ctrl + ,) and search for "Server install path". Then, add items like this:</p>
+<p>I access through VSCode remote SSH extension. It has a side-effect of hogging the small HOME quota, as mentioned <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931360/Visual+Studio+Code+for+Remote+Development">here</a>.</p>
+<h2>Solution 1</h2>
+<p>Create a symlink to the <code>.vscode-server</code> directory in the <code>/scratch</code> directory.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Open VSCode and connect to the remote server. It will create the .vscode-server directory in the HOME directory. Then, move it to the scratch directory and create a symlink.</span>
+mv<span class="w"> </span>.vscode-server<span class="w"> </span>/scratch/pawsey1001/rakib/
+ln<span class="w"> </span>-s<span class="w"> </span>/scratch/pawsey1001/rakib/.vscode-server<span class="w"> </span>.vscode-server
+</code></pre></div>
+
+<h2>Solution 2</h2>
+<p>Note: VSCode 1.93 version caused some issues with this approach (details <a href="https://github.com/microsoft/vscode-remote-release/issues/10230">here</a>)</p>
+<p>I can configure the remote SSH extension to use a different directory (e.g., <code>/scratch</code>) for the <code>.vscode-server</code> directory. Open the VSCode settings (Ctrl + ,) and search for "Server install path". Then, add items like this:</p>
 <table>
 <thead>
 <tr>
@@ -68,13 +78,8 @@
 </tr>
 </tbody>
 </table>
-<p>Lately, the VSCode 1.93 version caused some issues with the above approach (details <a href="https://github.com/microsoft/vscode-remote-release/issues/10230">here</a>), so I had to revert to the default HOME directory, and created a symlink to the <code>.vscode-server</code> directory in the <code>/scratch</code> directory.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Open VSCode and connect to the remote server. It will create the .vscode-server directory in the HOME directory. Then, move it to the scratch directory and create a symlink.</span>
-mv<span class="w"> </span>.vscode-server<span class="w"> </span>/scratch/pawsey1001/rakib/
-ln<span class="w"> </span>-s<span class="w"> </span>/scratch/pawsey1001/rakib/.vscode-server<span class="w"> </span>.vscode-server
-</code></pre></div>
-
-<p>Next, just open the remote explorer and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>).</p>
+<h2>Next</h2>
+<p>Just open the remote explorer in VSCode and add a new SSH host. Then, select the host and connect. It will ask for the password and then it will be connected. To avoid password, we can use the public key authentication (detailed <a href="https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html">here</a>).</p>
 <h2>GPU Computing</h2>
 <ul>
 <li>Based on <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes">this</a>, SLURM command to access the GPU node interactively:</li>
@@ -94,11 +99,17 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 <ul>
 <li>Guide: <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a></li>
 <li>The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix</li>
-<li>To make it simpler, dockers and containers are available. We can load it throuch <code>docker pull</code> or <code>module load</code>. It didn't work well for me.</li>
+<li>To make it simpler, containers and modules are available. We can load it throuch <code>docker pull</code> or <code>module load</code>. <strong>I tested the <code>module load</code> approach mentioned in the above guide, and it worked well (Updated on January 2025). It is important to note that I must run Python in the Singularity shell, otherwise it throws ModuleNotFoundError.</strong></li>
 </ul>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>pytorch/...<span class="w"> </span><span class="c1"># Load the correct Pytorch version</span>
+bash<span class="w"> </span><span class="c1"># starts singularity shell</span>
+<span class="nb">source</span><span class="w"> </span>...<span class="w"> </span><span class="c1"># activate the virtual environment</span>
+python<span class="w"> </span>...<span class="w"> </span><span class="c1"># run Python</span>
+</code></pre></div>
+
 <h3>Pyenv</h3>
 <ul>
-<li>I really liked <a href="https://github.com/pyenv/pyenv">pyenv</a>, because the official pytorch container has several complexities and issues (details on next point). Pyenv seemed simpler to me.</li>
+<li><a href="https://github.com/pyenv/pyenv">pyenv</a> is a great alternative with simpler interface. <strong>However, for large projects, I had to use the module approach simply because this pyenv aprroach leads to more files than loading pytorch as a module. As always, we are limited by the inode quota.</strong></li>
 <li>To install ROCm-compatible Pytorch, I can follow the official pytorch guideline from <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>, for example:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/rocm6.0
@@ -135,11 +146,12 @@ pyenv<span class="w"> </span>activate<span class="w"> </span>env_name<span class
 <li>Even when I have multiple project allocations, I could not offload to another project's <code>software</code> directory (by symlinking) due to the inode quota being <strong>per user</strong>.</li>
 </ul>
 <h3>Pawsey-provided Pytorch</h3>
+<p><strong>Note that the following issue was appeared on my attempt in 2024. Lately, in January 2025 (as also mentioned above), I managed to use the official Pytorch container successfully using their updated guide (<a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a>).</strong></p>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;<span class="w"> </span><span class="c1"># e.g., pytorch/2.2.0-rocm5.7.3</span>
 python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
 </code></pre></div>
 
-<p><strong>There is a problem here.</strong> The symlinked Python version in the virtual environment is different from the loaded Pytorch. To verify, go to the <code>bin</code> directory of the virtual environment and run <code>ls -l</code>. It will show the symbolic link. An entry of <code>python3 -&gt; /usr/bin/python3</code> means the virtual environment is linked to the system Python, which we don't want. We can find the correct Python path using <code>which python3</code> command after loading the PyTorch module (for example: <code>/software/setonix/2023.08/containers/modules-long/quay.io/pawsey/pytorch/2.2.0-rocm5.7.3/bin/python3</code>). Then, to update the symlink, we can use the following command:</p>
+<p><strong>There is (or was, haven't checked lately) a problem here.</strong> The symlinked Python version in the virtual environment is different from the loaded Pytorch. To verify, go to the <code>bin</code> directory of the virtual environment and run <code>ls -l</code>. It will show the symbolic link. An entry of <code>python3 -&gt; /usr/bin/python3</code> means the virtual environment is linked to the system Python, which we don't want. We can find the correct Python path using <code>which python3</code> command after loading the PyTorch module (for example: <code>/software/setonix/2023.08/containers/modules-long/quay.io/pawsey/pytorch/2.2.0-rocm5.7.3/bin/python3</code>). Then, to update the symlink, we can use the following command:</p>
 <div class="highlight"><pre><span></span><code>ln<span class="w"> </span>-sf<span class="w"> </span>&lt;correct/path/to/python3&gt;<span class="w"> </span>&lt;path/to/venv&gt;/bin/python3<span class="w"> </span><span class="c1"># or, just python3 if you are in the bin directory</span>
 </code></pre></div>
 
@@ -149,7 +161,7 @@ python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </
 <span class="c1"># Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.</span>
 </code></pre></div>
 
-<p>Even with this approach, I failed to work with Jupyter notebook with virtual environment.</p>
+<p>Even with this approach, I failed to work with Jupyter notebook with virtual environment (in 2024).</p>
 <h3>Mamba/Conda</h3>
 <ul>
 <li>I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of <code>/software/</code> directory, and there's <code>disk quota exceeded</code> error frequently.</li>
