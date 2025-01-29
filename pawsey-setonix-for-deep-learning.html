@@ -98,8 +98,7 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 <h2>Pytorch and Python</h2>
 <ul>
 <li>Guide: <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a></li>
-<li>The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix</li>
-<li>To make it simpler, containers and modules are available. We can load it throuch <code>docker pull</code> or <code>module load</code>. <strong>I tested the <code>module load</code> approach mentioned in the above guide, and it worked well (Updated on January 2025). It is important to note that I must run Python in the Singularity shell, otherwise it throws ModuleNotFoundError.</strong></li>
+<li>Containers and modules are made available by Pawsey. We can load it throuch <code>docker pull</code> or <code>module load</code>. The <code>module load</code> approach mentioned in the above guide initially seemed to be working well. It is important to note that I must run Python in the Singularity shell, otherwise it throws ModuleNotFoundError.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>pytorch/...<span class="w"> </span><span class="c1"># Load the correct Pytorch version</span>
 bash<span class="w"> </span><span class="c1"># starts singularity shell</span>
@@ -107,9 +106,10 @@ bash<span class="w"> </span><span class="c1"># starts singularity shell</span>
 python<span class="w"> </span>...<span class="w"> </span><span class="c1"># run Python</span>
 </code></pre></div>
 
+<p>Overall, it seemed quite complex, for example, basic SLURM job submission didn't work. Further, PyTorch was throwing Seg fault while accessing GPU. So, I again moved to Pyenv.</p>
 <h3>Pyenv</h3>
 <ul>
-<li><a href="https://github.com/pyenv/pyenv">pyenv</a> is a great alternative with simpler interface. <strong>However, for large projects, I had to use the module approach simply because this pyenv aprroach leads to more files than loading pytorch as a module. As always, we are limited by the inode quota.</strong></li>
+<li><a href="https://github.com/pyenv/pyenv">pyenv</a> is a great alternative with simpler interface. For large projects, it leads to more files (mostly due to PyTorch installation; I checked pyenv usage leads to additional ~4000 inodes only) and subsequently consumes the limited inode quota. In future, I will symlink the <code>.Pyenv</code> directory to <code>/scratch</code> and reinstall every 21 days but still I would prefer pyenv over Pawsey-provided Pytorch.</li>
 <li>To install ROCm-compatible Pytorch, I can follow the official pytorch guideline from <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>, for example:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>torch<span class="w"> </span>--index-url<span class="w"> </span>https://download.pytorch.org/whl/rocm6.0
