@@ -46,17 +46,17 @@ ssh <node_name> # node_name is the name of the node you get from the previous co
 
 ## Pytorch and Python
 - Guide: [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch)
-- The idea is that we need to build Pytorch (same for Tensoflow I think) from scratch to work with AMD GPUs on Setonix
-- To make it simpler, containers and modules are available. We can load it throuch `docker pull` or `module load`. **I tested the `module load` approach mentioned in the above guide, and it worked well (Updated on January 2025). It is important to note that I must run Python in the Singularity shell, otherwise it throws ModuleNotFoundError.**
+- Containers and modules are made available by Pawsey. We can load it throuch `docker pull` or `module load`. The `module load` approach mentioned in the above guide initially seemed to be working well. It is important to note that I must run Python in the Singularity shell, otherwise it throws ModuleNotFoundError.
 ```bash
 module load pytorch/... # Load the correct Pytorch version
 bash # starts singularity shell
 source ... # activate the virtual environment
 python ... # run Python
 ```
+Overall, it seemed quite complex, for example, basic SLURM job submission didn't work. Further, PyTorch was throwing Seg fault while accessing GPU. So, I again moved to Pyenv.
 
 ### Pyenv
-- [pyenv](https://github.com/pyenv/pyenv) is a great alternative with simpler interface. **However, for large projects, I had to use the module approach simply because this pyenv aprroach leads to more files than loading pytorch as a module. As always, we are limited by the inode quota.**
+- [pyenv](https://github.com/pyenv/pyenv) is a great alternative with simpler interface. For large projects, it leads to more files (mostly due to PyTorch installation; I checked pyenv usage leads to additional ~4000 inodes only) and subsequently consumes the limited inode quota. In future, I will symlink the `.Pyenv` directory to `/scratch` and reinstall every 21 days but still I would prefer pyenv over Pawsey-provided Pytorch.
 - To install ROCm-compatible Pytorch, I can follow the official pytorch guideline from [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/), for example:
 ```bash
 pip3 install torch --index-url https://download.pytorch.org/whl/rocm6.0
