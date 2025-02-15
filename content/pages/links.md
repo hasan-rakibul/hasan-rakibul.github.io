@@ -41,18 +41,14 @@ Title: Useful links
 - [Animated RNN, LSTM and GRU](https://towardsdatascience.com/animated-rnn-lstm-and-gru-ef124d06cf45)
 - [PyTorch implementation of several common architectures by Lorna](https://github.com/Lornatang?tab=repositories)
 - [Generative AI Glossary - AIPRM](https://www.aiprm.com/resources/guides/generative-ai-glossary/)
-
-### Book
 - [Dive into Deep Learning](https://d2l.ai/index.html)
 - [Understanding Deep Learning](https://udlbook.github.io/udlbook/)
 - [Deep Learning](https://www.deeplearningbook.org/)
 - [Understanding Machine Learning: From Theory to Algorithms](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
-- [Statistics and Data Science](https://jillxoreilly.github.io/StatsCourseBook_2024/intro.html)
 
-## PyTorch
-### Liightning
-- [A good overview](https://lightning.ai/docs/pytorch/stable/common/lightning_module.html)
-- [Debugging basic](https://lightning.ai/docs/pytorch/stable/debug/debugging_basic.html)
+## Probability and statistics
+- [Statistics and Data Science](https://jillxoreilly.github.io/StatsCourseBook_2024/intro.html)
+- [Count Bayesie – Probably a Probability Blog](https://www.countbayesie.com/)
 
 ## Semi-supervised learning
 - [Definition and commond algorithms in plain language](https://h3abionet.github.io/H3ABioNet-ML-glossary/semi-supervised_intro.html)
@@ -76,6 +72,11 @@ Title: Useful links
 - [https://github.com/thunil/Physics-Based-Deep-Learning](https://github.com/thunil/Physics-Based-Deep-Learning)
 - [https://www.physicsbaseddeeplearning.org/intro.html](https://www.physicsbaseddeeplearning.org/intro.html)
 
+## PyTorch
+### Liightning
+- [A good overview](https://lightning.ai/docs/pytorch/stable/common/lightning_module.html)
+- [Debugging basic](https://lightning.ai/docs/pytorch/stable/debug/debugging_basic.html)
+
 &nbsp;
 
 # Online Courses
@@ -96,6 +97,7 @@ Title: Useful links
 - [Prof Jonathan K. Kummerfeld](https://jkk.name/)
 - [Assoc Prof Salman Khan](https://salman-h-khan.github.io/)
 - [Assistant Prof Paul Liang](https://www.mit.edu/~ppliang/)
+- [David Stutz](https://davidstutz.de/)
 - [Jon Barron](https://jonbarron.info/)
 - [Nikhil Churamani](https://nchuramani.github.io/)
 - [Leena Mathur](https://l-mathur.github.io/)
