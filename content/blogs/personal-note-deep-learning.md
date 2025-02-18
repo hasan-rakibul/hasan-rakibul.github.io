@@ -19,3 +19,6 @@ In addition to controlling `param.requires_grad`, I need to enable `eval()` mode
 # PyTorch
 - `len(dataloader)`: number of batches
 - `len(dataloader.dataset)`: number of samples
+
+# Norm
+- Nicely explained in [this SO answer](https://stackoverflow.com/a/68490074).

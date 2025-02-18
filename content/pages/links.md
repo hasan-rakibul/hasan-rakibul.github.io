@@ -1,5 +1,8 @@
 Title: Useful links
 
+# Institutional
+- [Journal titles with free APC through CAUL Read & Publish Agreements](https://caul.libguides.com/read-and-publish/title-list)
+
 # Academia
 - [The Efforless Academic](https://ilyashabanov.substack.com/)
 - [Awesome tips](https://github.com/jbhuang0604/awesome-tips)
@@ -23,8 +26,10 @@ Title: Useful links
 
 # Upcoming conferences
 - [**Computer Science conferences timeline (lucjaulmes.github.io)**](https://lucjaulmes.github.io/cfp-timeline/)
-- [**AI Conference Deadlines (aideadlin.es)**](https://aideadlin.es/?sub=ML,CV,CG,NLP,RO,SP,DM,AP,KR,HCI)
+- [**AI Conference Deadlines - Nuno Ferreira Duarte**](https://nunoduarte.github.io/deadlines/)
+- [AI Conference Deadlines (aideadlines.org)](http://aideadlines.org/?sub=ML,CV,NLP,RO,SP,DM,AP,KR,HCI,IRSM,MISC)
 - [**China Computer Federation (CCF)-Ranked Conference Deadlines**](https://ccfddl.com/)
+- [AI Conference Deadlines (aideadlin.es)](https://aideadlin.es/?sub=ML,CV,CG,NLP,RO,SP,DM,AP,KR,HCI) - Seems to be dead as of Feb 2025
 - [Upcoming Conferences – ACM SIGCHI](https://sigchi.org/conferences/upcoming-conferences/)
 - [AAAI Association for the Advancement of Artificial Intelligence](https://aaai.org/)
 - [Conferences | IEEE SWC2023 (ieee-smart-world-congress.org)](https://ieee-smart-world-congress.org/program/overview)
