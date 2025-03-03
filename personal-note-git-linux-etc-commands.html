@@ -218,6 +218,23 @@ git config --global user.email &lt;EMAIL&gt;
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>wheel
 </code></pre></div>
 
+<h2>uv</h2>
+<p>It is faster than pip and pyenv, but the project approach (<code>uv init</code>) and installing package through uv (<code>uv add &lt;package&gt;</code> or <code>uv pip install &lt;package&gt;</code>) seems to be not smooth: it failed to install <code>kaleido</code>, was trying and failing to install <code>sentencepiece</code> while installing <code>transformers</code> (was trying to install <code>transformers[sentencepeice]</code>, not sure why), and install an outdated version of <code>flair</code> packages (details on this <a href="https://github.com/astral-sh/uv/issues/11726">GitHub Issue</a> I created). Overall it seems to me that it is not installing the latest package versions. Nevertheless, I liked the simplicity of creating a virtual environment and installing packages through pip (noted below). </p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>venv<span class="w"> </span><span class="c1"># create a virtual environment named .venv in the current directory</span>
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w"> </span><span class="c1"># activate the virtual environment</span>
+python<span class="w"> </span>-m<span class="w"> </span>ensurepip<span class="w"> </span><span class="c1"># install pip as it was not installed by default</span>
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip<span class="w"> </span><span class="c1"># upgrade pip</span>
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>...<span class="w"> </span><span class="c1"># install packages</span>
+</code></pre></div>
+
+<p>I hope to try the full potential of <code>uv</code> in the future, once it is more matured.</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>init<span class="w"> </span><span class="c1"># create a project with pyproject.toml, uv.lock, .gitignore and .python-version files</span>
+uv<span class="w"> </span>add<span class="w"> </span>&lt;package&gt;<span class="w"> </span><span class="c1"># add a package to the project</span>
+uv<span class="w"> </span>add<span class="w"> </span>-r<span class="w"> </span>&lt;*.txt<span class="w"> </span>or<span class="w"> </span>*.toml&gt;<span class="w"> </span><span class="c1"># also possible: uv pip install ..</span>
+uv<span class="w"> </span>tree<span class="w"> </span><span class="c1"># show the dependency tree</span>
+uv<span class="w"> </span>run<span class="w"> </span>&lt;script.py&gt;<span class="w"> </span><span class="c1"># run a script</span>
+</code></pre></div>
+
 <h2>Pyenv</h2>
 <h3>Installation</h3>
 <ul>

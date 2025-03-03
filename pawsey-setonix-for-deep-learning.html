@@ -36,6 +36,10 @@
         <abbr class="published" title="2024-02-13T10:00:00+08:00">
                 Published: Tue 13 February 2024
         </abbr>
+		<br />
+        <abbr class="modified" title="2025-03-01T20:15:00+08:00">
+                Updated: Sat 01 March 2025
+        </abbr>
 
         <!--         <address class="vcard author">
                 By                         <a class="url fn" href="/author/rakibul-hasan.html">Rakibul Hasan</a>
@@ -44,11 +48,11 @@
 <!-- <p>In <a href="/category/blogs.html">blogs</a>.</p> -->
 
 </footer><!-- /.post-info -->      <p>Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.</p>
-<h1>Constraints – Must remember</h1>
+<h1>Important constraints</h1>
 <ul>
 <li><code>/home</code> directory quota is 1GB.</li>
 <li><code>/home</code> directory has inode quota of 10K.</li>
-<li><code>/software/</code> directory has inode quota of 100K per user.</li>
+<li><code>/software/</code> directory has inode quota of 100K per user (i.e., even if you are in multiple project, your quota is still fixed to 100K).</li>
 <li><code>/scratch/</code> directory has inode quota of 1M per user.</li>
 <li><code>/scratch/</code> files are deleted after 21 days of inactivity.</li>
 </ul>
@@ -96,18 +100,34 @@ ssh<span class="w"> </span>&lt;node_name&gt;<span class="w"> </span><span class=
 </li>
 </ul>
 <h2>Pytorch and Python</h2>
+<h3>Pawsey-installed Pytorch</h3>
 <ul>
-<li>Guide: <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a></li>
-<li>Containers and modules are made available by Pawsey. We can load it throuch <code>docker pull</code> or <code>module load</code>. The <code>module load</code> approach mentioned in the above guide initially seemed to be working well. It is important to note that I must run Python in the Singularity shell, otherwise it throws ModuleNotFoundError.</li>
+<li>Containers and modules are made available by Pawsey. We can load the module using <code>module load</code>. Details are available <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>pytorch/...<span class="w"> </span><span class="c1"># Load the correct Pytorch version</span>
 bash<span class="w"> </span><span class="c1"># starts singularity shell</span>
-<span class="nb">source</span><span class="w"> </span>...<span class="w"> </span><span class="c1"># activate the virtual environment</span>
+
+<span class="c1"># Now, let&#39;s create a virtual environment - only first time</span>
+<span class="c1"># Important to add --system-site-packages to use the loaded Pytorch</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>--system-site-packages<span class="w"> </span>&lt;path/to/venv&gt;
+
+<span class="nb">source</span><span class="w"> </span>&lt;path/to/venv&gt;/bin/activate<span class="w"> </span><span class="c1"># activate the virtual environment</span>
 python<span class="w"> </span>...<span class="w"> </span><span class="c1"># run Python</span>
 </code></pre></div>
 
-<p>Overall, it seemed quite complex, for example, basic SLURM job submission didn't work. Further, PyTorch was throwing Seg fault while accessing GPU. So, I again moved to Pyenv.</p>
-<h3>Pyenv</h3>
+<p><strong>The above order of calling Python is important. I.e., <code>python</code> must be run within a singularity shell. The alternative is to use <code>singularity exec</code> command shown below.</strong></p>
+<p>With the above container-based approach, SLURM job submission requires some adjustments, especially to instantiate <code>singularity</code> shell. As shown below, the <code>singularity exec</code> command is used, following <code>bash -c</code> to run multiple commands, which includes activating the virtual environment, setting an environment variable and running the Python script.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Usual #SBATCH tags</span>
+
+module<span class="w"> </span>load<span class="w"> </span>pytorch/2.2.0-rocm5.7.3
+
+singularity<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">$SINGULARITY_CONTAINER</span><span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;\</span>
+<span class="s2">source </span><span class="nv">$MYSOFTWARE</span><span class="s2">/.venv/bin/activate &amp;&amp; \</span>
+<span class="s2">export TOKENIZERS_PARALLELISM=false &amp;&amp; \</span>
+<span class="s2">python src/main.py&quot;</span>
+</code></pre></div>
+
+<h3>Pyenv – Works fine but consumes additional ~30K inodes (including ~4K from pyenv itself) than the above module approach</h3>
 <ul>
 <li><a href="https://github.com/pyenv/pyenv">pyenv</a> is a great alternative with simpler interface. For large projects, it leads to more files (mostly due to PyTorch installation; I checked pyenv usage leads to additional ~4000 inodes only) and subsequently consumes the limited inode quota. In future, I will symlink the <code>.Pyenv</code> directory to <code>/scratch</code> and reinstall every 21 days but still I would prefer pyenv over Pawsey-provided Pytorch.</li>
 <li>To install ROCm-compatible Pytorch, I can follow the official pytorch guideline from <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>, for example:</li>
@@ -123,9 +143,9 @@ python<span class="w"> </span>...<span class="w"> </span><span class="c1"># run 
 ln<span class="w"> </span>-s<span class="w"> </span>/software/projects/pawsey1001/rakib/.pyenv<span class="w"> </span>.pyenv
 </code></pre></div>
 
-<h5>Multiple virtual environments</h5>
+<h5>Multiple virtual environments using pyenv</h5>
 <ul>
-<li>It would be great if we could create virtual environment in a different folder. Following <a href="https://github.com/pyenv/pyenv-virtualenv/issues/408">this GitHub issue</a>, we can create virual envirornment using basic <code>python -m venv</code> command.</li>
+<li>Following <a href="https://github.com/pyenv/pyenv-virtualenv/issues/408">this GitHub issue</a>, I tried to create virual envirornment using basic <code>python -m venv</code> command.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># list available python versions using pyenv versions and see which one is active. Change if needed.</span>
 python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
@@ -137,46 +157,24 @@ ln<span class="w"> </span>-s<span class="w"> </span>&lt;path/to/venv&gt;<span cl
 pyenv<span class="w"> </span>activate<span class="w"> </span>env_name<span class="w"> </span><span class="c1"># activate the virtual environment</span>
 </code></pre></div>
 
-<h5>Unsuccessful experiments with pyenv</h5>
 <ul>
-<li>Even if I symlinked the environment folder, it seems the <code>lib</code> folder is common for all environments and thus getting quota error. <ul>
-<li>If I need multiple virtual environment, it becomes more tricky. I thought of offloading files of less-significant environment to the <code>scratch</code> directory (as <code>scratch</code> has file purge policy, I would need to re-install packages after some days). After creating the new virtual environment, I symlinked corresponding virtual environment files to <code>scratch</code>. Inside <code>/home/rakib/.pyenv/versions/3.12.3/envs</code>, I symlinked the created virtual environment, which looks like: <code>env_name -&gt; /scratch/pawsey1001/rakib/extr_pyenv/env_name</code>.</li>
+<li>To get around the inode quota issue, even if I symlinked the environment folder, it seems the <code>lib</code> folder is common for all environments and thus getting quota error. <ul>
+<li>I thought of offloading files of less-significant environment to the <code>scratch</code> directory (as <code>scratch</code> has file purge policy, I would need to re-install packages after some days). After creating the new virtual environment, I symlinked corresponding virtual environment files to <code>scratch</code>. Inside <code>/home/rakib/.pyenv/versions/3.12.3/envs</code>, I symlinked the created virtual environment, which looks like: <code>env_name -&gt; /scratch/pawsey1001/rakib/extr_pyenv/env_name</code>.</li>
 </ul>
 </li>
-<li>Even when I have multiple project allocations, I could not offload to another project's <code>software</code> directory (by symlinking) due to the inode quota being <strong>per user</strong>.</li>
 </ul>
-<h3>Pawsey-provided Pytorch</h3>
-<p><strong>Note that the following issue was appeared on my attempt in 2024. Lately, in January 2025 (as also mentioned above), I managed to use the official Pytorch container successfully using their updated guide (<a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch">here</a>).</strong></p>
-<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>&lt;preferred_pytorch_version&gt;<span class="w"> </span><span class="c1"># e.g., pytorch/2.2.0-rocm5.7.3</span>
-python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>&lt;path/to/venv&gt;<span class="w"> </span><span class="c1"># create a new virtual environment</span>
-</code></pre></div>
-
-<p><strong>There is (or was, haven't checked lately) a problem here.</strong> The symlinked Python version in the virtual environment is different from the loaded Pytorch. To verify, go to the <code>bin</code> directory of the virtual environment and run <code>ls -l</code>. It will show the symbolic link. An entry of <code>python3 -&gt; /usr/bin/python3</code> means the virtual environment is linked to the system Python, which we don't want. We can find the correct Python path using <code>which python3</code> command after loading the PyTorch module (for example: <code>/software/setonix/2023.08/containers/modules-long/quay.io/pawsey/pytorch/2.2.0-rocm5.7.3/bin/python3</code>). Then, to update the symlink, we can use the following command:</p>
-<div class="highlight"><pre><span></span><code>ln<span class="w"> </span>-sf<span class="w"> </span>&lt;correct/path/to/python3&gt;<span class="w"> </span>&lt;path/to/venv&gt;/bin/python3<span class="w"> </span><span class="c1"># or, just python3 if you are in the bin directory</span>
-</code></pre></div>
-
-<p>Next, it should work as normal virtual environment. The next steps are:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>&lt;path/to/venv&gt;/bin/activate<span class="w"> </span><span class="c1"># activate the virtual environment</span>
-<span class="c1"># open &lt;path/to/venv&gt;/pyvenv.cfg and make &quot;include-system-site-packages = true&quot; to use the system packages, e.g., the loaded Pytorch</span>
-<span class="c1"># Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.</span>
-</code></pre></div>
-
-<p>Even with this approach, I failed to work with Jupyter notebook with virtual environment (in 2024).</p>
-<h3>Mamba/Conda</h3>
+<p>So, overall, the Pawsey-installed Pytorch approach would be better to have multiple environments as I could just creat a new environment in the <code>/scratch</code> directory and use it without any quota issue.</p>
+<h3>Mamba/Conda – Ok but high inode usage</h3>
 <ul>
 <li>I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of <code>/software/</code> directory, and there's <code>disk quota exceeded</code> error frequently.</li>
 </ul>
 <h1>File system</h1>
 <ul>
 <li>As mentioned in <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information">this Pawsey's documentation</a>,<ul>
-<li><code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;/</code> to install software packages.</li>
-<li><code>/scratch/&lt;project_id&gt;/&lt;user_id&gt;</code> for temporary storage.</li>
+<li><code>$MYSOFTWARE</code>, i.e, <code>/software/projects/&lt;project_id&gt;/&lt;user_id&gt;/</code> to install software packages.</li>
+<li><code>$MYSCRATCH</code>, i.e, <code>/scratch/&lt;project_id&gt;/&lt;user_id&gt;</code> for temporary storage.</li>
 </ul>
 </li>
-</ul>
-<h2>Limitation &ndash; /scratch files gets automatically deleted</h2>
-<ul>
-<li>As per Pawsey policy, files in <code>/scratch</code> are deleted automatically. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than the specified days. <code>ls -ltu</code> can be used to check the access time of the files, sorted by access time. It is better to use <code>acacia</code> for long-term storage.</li>
 </ul>
 <h2>Acacia</h2>
 <ul>
@@ -217,6 +215,7 @@ lfs<span class="w"> </span>quota<span class="w"> </span>/software<span class="w"
 quota<span class="w"> </span>-s<span class="w"> </span><span class="c1"># Check the quota of the home directory</span>
 du<span class="w"> </span>-sh<span class="w"> </span><span class="o">[</span>path<span class="o">]</span><span class="w"> </span><span class="c1"># Check the size of a directory, human-readable summary format</span>
 ls<span class="w"> </span>--inode<span class="w"> </span>-sh<span class="w"> </span><span class="o">[</span>path<span class="o">]</span><span class="w"> </span><span class="c1"># Check the inode usage of a directory, human-readable summary format</span>
+ls<span class="w"> </span>-ltu<span class="w"> </span><span class="c1"># List files sorted by access time. Access time is important for the 21-day purge policy of /scratch</span>
 </code></pre></div>
 
 <p>&nbsp;</p>
