@@ -6,7 +6,7 @@ I have had the pleasure of teaching/tutoring several units/courses at multiple u
 ## Lab/Tutorial
 
 0. ISEC1000: Cyber Security Concepts [Semester 2 2023 &ndash; Semester 2 2024 (Lab & **regular student consultations**)]
-0. COMP5008: Data Structures and Algorithms [Semester 2 2023 &ndash; Semester 2 2024]
+0. COMP5008: Data Structures and Algorithms [Semester 2 2023 &ndash; Semester 1 2025]
 0. [ICTE3002/5001: Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/)[Semester 1 2023 &ndash; Semester 1 2024]
 0. [COMP1000: Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) [Semester 1 2023]
 
@@ -15,8 +15,8 @@ I have had the pleasure of teaching/tutoring several units/courses at multiple u
 # [Murdoch University](https://www.murdoch.edu.au/)
 ## Lab/Tutorial
 
-0. ICT100: Transition to IT [Semester 2 2023 &ndash; Semester 2 2024]
-0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/hasan-rakibul/AI-cybersec) [2023 Semester 1 **(Designed from scratch)** &ndash; 2024 Semester 1]
+0. ICT100: Transition to IT [Semester 2 2023 &ndash; Semester 1 2025]
+0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/hasan-rakibul/AI-cybersec) [Semester 1 2023 **(Designed from scratch)** &ndash; Semester 1 2025]
 
 &nbsp;
 

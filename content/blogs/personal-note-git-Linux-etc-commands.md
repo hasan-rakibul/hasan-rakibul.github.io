@@ -168,6 +168,25 @@ python -m pip install -U Pillow
 ```bash
 python -m pip install -U wheel
 ```
+## uv
+It is faster than pip and pyenv, but the project approach (`uv init`) and installing package through uv (`uv add <package>` or `uv pip install <package>`) seems to be not smooth: it failed to install `kaleido`, was trying and failing to install `sentencepiece` while installing `transformers` (was trying to install `transformers[sentencepeice]`, not sure why), and install an outdated version of `flair` packages (details on this [GitHub Issue](https://github.com/astral-sh/uv/issues/11726) I created). Overall it seems to me that it is not installing the latest package versions. Nevertheless, I liked the simplicity of creating a virtual environment and installing packages through pip (noted below). 
+
+```bash
+uv venv # create a virtual environment named .venv in the current directory
+source .venv/bin/activate # activate the virtual environment
+python -m ensurepip # install pip as it was not installed by default
+python -m pip install -U pip # upgrade pip
+python -m pip install ... # install packages
+```
+
+I hope to try the full potential of `uv` in the future, once it is more matured.
+```bash
+uv init # create a project with pyproject.toml, uv.lock, .gitignore and .python-version files
+uv add <package> # add a package to the project
+uv add -r <*.txt or *.toml> # also possible: uv pip install ..
+uv tree # show the dependency tree
+uv run <script.py> # run a script
+```
 
 ## Pyenv
 

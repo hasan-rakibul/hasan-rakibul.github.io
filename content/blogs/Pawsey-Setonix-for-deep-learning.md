@@ -1,12 +1,13 @@
 Title: Pawsey Setonix for deep learning
 Date: 2024-02-13 10:00
+Modified: 2025-03-01 20:15
 
 Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
 
-# Constraints – Must remember
+# Important constraints
 - `/home` directory quota is 1GB.
 - `/home` directory has inode quota of 10K.
-- `/software/` directory has inode quota of 100K per user.
+- `/software/` directory has inode quota of 100K per user (i.e., even if you are in multiple project, your quota is still fixed to 100K).
 - `/scratch/` directory has inode quota of 1M per user.
 - `/scratch/` files are deleted after 21 days of inactivity.
 
@@ -45,17 +46,35 @@ ssh <node_name> # node_name is the name of the node you get from the previous co
     - "The request of resources only needs the number of nodes (–-nodes, -N) and the number of allocation-packs per node (--gres=gpu:number)." "Users should not indicate any other Slurm allocation option related to memory or CPU cores. Therefore, users should not use --ntasks, --cpus-per-task, --mem, etc."
 
 ## Pytorch and Python
-- Guide: [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch)
-- Containers and modules are made available by Pawsey. We can load it throuch `docker pull` or `module load`. The `module load` approach mentioned in the above guide initially seemed to be working well. It is important to note that I must run Python in the Singularity shell, otherwise it throws ModuleNotFoundError.
+### Pawsey-installed Pytorch 
+- Containers and modules are made available by Pawsey. We can load the module using `module load`. Details are available [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch).
 ```bash
 module load pytorch/... # Load the correct Pytorch version
 bash # starts singularity shell
-source ... # activate the virtual environment
+
+# Now, let's create a virtual environment - only first time
+# Important to add --system-site-packages to use the loaded Pytorch
+python3 -m venv --system-site-packages <path/to/venv>
+
+source <path/to/venv>/bin/activate # activate the virtual environment
 python ... # run Python
 ```
-Overall, it seemed quite complex, for example, basic SLURM job submission didn't work. Further, PyTorch was throwing Seg fault while accessing GPU. So, I again moved to Pyenv.
 
-### Pyenv
+**The above order of calling Python is important. I.e., `python` must be run within a singularity shell. The alternative is to use `singularity exec` command shown below.**
+
+With the above container-based approach, SLURM job submission requires some adjustments, especially to instantiate `singularity` shell. As shown below, the `singularity exec` command is used, following `bash -c` to run multiple commands, which includes activating the virtual environment, setting an environment variable and running the Python script.
+```bash
+# Usual #SBATCH tags
+
+module load pytorch/2.2.0-rocm5.7.3
+
+singularity exec -e $SINGULARITY_CONTAINER bash -c "\
+source $MYSOFTWARE/.venv/bin/activate && \
+export TOKENIZERS_PARALLELISM=false && \
+python src/main.py"
+```
+
+### Pyenv – Works fine but consumes additional ~30K inodes (including ~4K from pyenv itself) than the above module approach
 - [pyenv](https://github.com/pyenv/pyenv) is a great alternative with simpler interface. For large projects, it leads to more files (mostly due to PyTorch installation; I checked pyenv usage leads to additional ~4000 inodes only) and subsequently consumes the limited inode quota. In future, I will symlink the `.Pyenv` directory to `/scratch` and reinstall every 21 days but still I would prefer pyenv over Pawsey-provided Pytorch.
 - To install ROCm-compatible Pytorch, I can follow the official pytorch guideline from [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/), for example:
 ```bash
@@ -68,8 +87,8 @@ mv .pyenv /software/projects/pawsey1001/rakib/
 ln -s /software/projects/pawsey1001/rakib/.pyenv .pyenv
 ```
 
-##### Multiple virtual environments
-- It would be great if we could create virtual environment in a different folder. Following [this GitHub issue](https://github.com/pyenv/pyenv-virtualenv/issues/408), we can create virual envirornment using basic `python -m venv` command.
+##### Multiple virtual environments using pyenv
+- Following [this GitHub issue](https://github.com/pyenv/pyenv-virtualenv/issues/408), I tried to create virual envirornment using basic `python -m venv` command.
 ```bash
 # list available python versions using pyenv versions and see which one is active. Change if needed.
 python -m venv <path/to/venv> # create a new virtual environment
@@ -81,42 +100,18 @@ ln -s <path/to/venv> env_name
 pyenv activate env_name # activate the virtual environment
 ```
 
-##### Unsuccessful experiments with pyenv
-- Even if I symlinked the environment folder, it seems the `lib` folder is common for all environments and thus getting quota error. 
-    - If I need multiple virtual environment, it becomes more tricky. I thought of offloading files of less-significant environment to the `scratch` directory (as `scratch` has file purge policy, I would need to re-install packages after some days). After creating the new virtual environment, I symlinked corresponding virtual environment files to `scratch`. Inside `/home/rakib/.pyenv/versions/3.12.3/envs`, I symlinked the created virtual environment, which looks like: `env_name -> /scratch/pawsey1001/rakib/extr_pyenv/env_name`.
-- Even when I have multiple project allocations, I could not offload to another project's `software` directory (by symlinking) due to the inode quota being __per user__.
+- To get around the inode quota issue, even if I symlinked the environment folder, it seems the `lib` folder is common for all environments and thus getting quota error. 
+    - I thought of offloading files of less-significant environment to the `scratch` directory (as `scratch` has file purge policy, I would need to re-install packages after some days). After creating the new virtual environment, I symlinked corresponding virtual environment files to `scratch`. Inside `/home/rakib/.pyenv/versions/3.12.3/envs`, I symlinked the created virtual environment, which looks like: `env_name -> /scratch/pawsey1001/rakib/extr_pyenv/env_name`.
 
-### Pawsey-provided Pytorch
-**Note that the following issue was appeared on my attempt in 2024. Lately, in January 2025 (as also mentioned above), I managed to use the official Pytorch container successfully using their updated guide ([here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch)).**
+So, overall, the Pawsey-installed Pytorch approach would be better to have multiple environments as I could just creat a new environment in the `/scratch` directory and use it without any quota issue.
 
-```bash
-module load <preferred_pytorch_version> # e.g., pytorch/2.2.0-rocm5.7.3
-python3 -m venv <path/to/venv> # create a new virtual environment
-```
-
-**There is (or was, haven't checked lately) a problem here.** The symlinked Python version in the virtual environment is different from the loaded Pytorch. To verify, go to the `bin` directory of the virtual environment and run `ls -l`. It will show the symbolic link. An entry of `python3 -> /usr/bin/python3` means the virtual environment is linked to the system Python, which we don't want. We can find the correct Python path using `which python3` command after loading the PyTorch module (for example: `/software/setonix/2023.08/containers/modules-long/quay.io/pawsey/pytorch/2.2.0-rocm5.7.3/bin/python3`). Then, to update the symlink, we can use the following command:
-```bash
-ln -sf <correct/path/to/python3> <path/to/venv>/bin/python3 # or, just python3 if you are in the bin directory
-```
-
-Next, it should work as normal virtual environment. The next steps are:
-```bash
-source <path/to/venv>/bin/activate # activate the virtual environment
-# open <path/to/venv>/pyvenv.cfg and make "include-system-site-packages = true" to use the system packages, e.g., the loaded Pytorch
-# Install new packages as usual. It will skip the packages exists from the loaded Pytorch container.
-```
-Even with this approach, I failed to work with Jupyter notebook with virtual environment (in 2024).
-
-### Mamba/Conda
+### Mamba/Conda – Ok but high inode usage 
 - I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of `/software/` directory, and there's `disk quota exceeded` error frequently.
 
 # File system
 - As mentioned in [this Pawsey's documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information),
-    - `/software/projects/<project_id>/<user_id>/` to install software packages.
-    - `/scratch/<project_id>/<user_id>` for temporary storage.
-
-## Limitation &ndash; /scratch files gets automatically deleted
-- As per Pawsey policy, files in `/scratch` are deleted automatically. The system checks the last access time of the files. Therefore, even if the files are copied recently, they will be deleted if their access timestamps are older than the specified days. `ls -ltu` can be used to check the access time of the files, sorted by access time. It is better to use `acacia` for long-term storage.
+    - `$MYSOFTWARE`, i.e, `/software/projects/<project_id>/<user_id>/` to install software packages.
+    - `$MYSCRATCH`, i.e, `/scratch/<project_id>/<user_id>` for temporary storage.
 
 ## Acacia
 - [Quick start](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924476/Acacia+-+Quick+Start). **It's important to save the access keys key in the `$HOME/.config/rclone/rclone.conf` file.** To do that, corresponding client configure command is available on the window after clicking the "Create New Key" button. Feel free to customise the profile name.
@@ -150,6 +145,7 @@ lfs quota /software # Check quota of the software directory, both user-wise and 
 quota -s # Check the quota of the home directory
 du -sh [path] # Check the size of a directory, human-readable summary format
 ls --inode -sh [path] # Check the inode usage of a directory, human-readable summary format
+ls -ltu # List files sorted by access time. Access time is important for the 21-day purge policy of /scratch
 ```
 
 &nbsp;
