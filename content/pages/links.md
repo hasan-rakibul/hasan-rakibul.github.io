@@ -97,12 +97,13 @@ Title: Useful links
 &nbsp;
 
 # Researcher's website I like to visit time to time
-- [Prof Michael Milford](https://michaelmilford.com/)
-- [Prof Tim Baldwin](https://eltimster.github.io/www/)
-- [Prof Jonathan K. Kummerfeld](https://jkk.name/)
-- [Assoc Prof Salman Khan](https://salman-h-khan.github.io/)
-- [Assistant Prof Paul Liang](https://www.mit.edu/~ppliang/)
+- [Michael Milford](https://michaelmilford.com/)
+- [Tim Baldwin](https://eltimster.github.io/www/)
+- [Jonathan K. Kummerfeld](https://jkk.name/)
+- [Salman Khan](https://salman-h-khan.github.io/)
+- [Paul Liang](https://www.mit.edu/~ppliang/)
 - [David Stutz](https://davidstutz.de/)
+- [Sanghyuk Chun](https://sanghyukchun.github.io/home/)
 - [Jon Barron](https://jonbarron.info/)
 - [Nikhil Churamani](https://nchuramani.github.io/)
 - [Leena Mathur](https://l-mathur.github.io/)
