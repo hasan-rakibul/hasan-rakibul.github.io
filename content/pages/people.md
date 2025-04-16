@@ -3,11 +3,11 @@ Title: People
 # My mentor board of directors
 I'm fortunate to have several mentors in my academic and personal development journey. The following list is not exhaustive and is in no particular order.
 
-- [Professor Sarah Pearce](https://people.csiro.au/P/S/Sarah-Pearce) (Deputy Director, CSIRO Astronomy and Space Science [Industry Mentoring Network in STEM])
+- [Professor Sarah Pearce](https://careerswithstem.com.au/profiles/director-of-astronomy-and-space-science-csiro/) (Deputy Director, CSIRO Astronomy and Space Science [Industry Mentoring Network in STEM])
 - [Professor Tom Gedeon](https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/) (Curtin University [PhD supervisor])
 - [Professor Md Mahbub Hasan](https://www.kuet.ac.bd/eee/mahbub) (Khulna University of Engineering & Technology [BSc & MSc supervisor])
-- [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Senior Research Fellow, Curtin University [PhD co-supervisor])
 - [Professor Aneesh Krishna](https://staffportal.curtin.edu.au/staff/profile/view/aneesh-krishna-1b4c5581/) (Curtin University [PhD co-supervisor])
+- [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Senior Research Fellow, Curtin University [PhD co-supervisor])
 - [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources [Internship supervisor])
 - [Dr Md Redowan Mahmud](https://staffportal.curtin.edu.au/staff/profile/view/md-redowan-mahmud-682e2209/) (Senior Lecturer, Curtin University)
 
@@ -83,7 +83,7 @@ In official and unofficial capacities, I have had the pleasure of supervising th
 
 &nbsp;
 ### Others
-0. Mst. Fahmida Sultana Naznin, Bangladesh University of Engineering and Technology (2024) [[Paper](publications#naznin2024cstrl)]
+0. Mst. Fahmida Sultana Naznin, Bangladesh University of Engineering and Technology (2024 – ) [[Paper](publications#naznin2024cstrl)]
 0. Ahsanul Islam, Khulna University of Engineering & Technology (2021 – 2024) [[Paper 1](publications#islam2021eigenvalue)] [[Paper 2](publications#islam2024bdconvsgnet)]
 0. Rifat Mitul, Chittagong University of Engineering & Technology (2023 – 2024)
 0. Ishtiaqul Hoque, Islamic University of Technology (Jun. 2023 – Dec. 2023) [[Paper](publications#shaiok2023attention)]

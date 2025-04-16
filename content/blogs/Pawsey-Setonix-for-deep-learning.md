@@ -1,6 +1,6 @@
 Title: Pawsey Setonix for deep learning
 Date: 2024-02-13 10:00
-Modified: 2025-03-01 20:15
+Modified: 2025-03-29 11:28
 
 Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
 
@@ -118,10 +118,12 @@ So, overall, the Pawsey-installed Pytorch approach would be better to have multi
 - [User guide](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924986/Acacia+-+User+Guide)
     - [Install S3 client](https://pawsey.atlassian.net/wiki/spaces/US/pages/51928144/Installing+an+S3+client+application)
     - [Listing the contents](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924480/Listing+the+contents+of+your+account)
-- [Acacia - Troubleshooting](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting)
-    - "If copying to Setonix `/scratch` file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
+
+## Careful with the modification time
+- "If copying to Setonix `/scratch` file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
 This could result in data being purged from `/scratch` even though it has not been on the file system for 21 days.
-To prevent this you can use the `--local-no-set-modtime` option to rclone."
+To prevent this you can use the `--local-no-set-modtime` option to rclone." - [Acacia - Troubleshooting](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting)
+- `unzip FILE.ZIP` command preserves the original modification time of the files while unpacking. To update the modification time to the current time of unzipping, use `unzip -DD FILE.ZIP` command.
 
 # SLURM job submission
 - `account` is the project ID, e.g., pawsey1234
