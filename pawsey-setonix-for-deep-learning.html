@@ -37,8 +37,8 @@
                 Published: Tue 13 February 2024
         </abbr>
 		<br />
-        <abbr class="modified" title="2025-03-01T20:15:00+08:00">
-                Updated: Sat 01 March 2025
+        <abbr class="modified" title="2025-03-29T11:28:00+08:00">
+                Updated: Sat 29 March 2025
         </abbr>
 
         <!--         <address class="vcard author">
@@ -184,12 +184,13 @@ pyenv<span class="w"> </span>activate<span class="w"> </span>env_name<span class
 <li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924480/Listing+the+contents+of+your+account">Listing the contents</a></li>
 </ul>
 </li>
-<li><a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting">Acacia - Troubleshooting</a><ul>
+</ul>
+<h2>Careful with the modification time</h2>
+<ul>
 <li>"If copying to Setonix <code>/scratch</code> file system please be aware that rclone sets atime to the same as modtime (which it gets from the S3 storage).
 This could result in data being purged from <code>/scratch</code> even though it has not been on the file system for 21 days.
-To prevent this you can use the <code>--local-no-set-modtime</code> option to rclone."</li>
-</ul>
-</li>
+To prevent this you can use the <code>--local-no-set-modtime</code> option to rclone." - <a href="https://pawsey.atlassian.net/wiki/spaces/US/pages/51924510/Acacia+-+Troubleshooting">Acacia - Troubleshooting</a></li>
+<li><code>unzip FILE.ZIP</code> command preserves the original modification time of the files while unpacking. To update the modification time to the current time of unzipping, use <code>unzip -DD FILE.ZIP</code> command.</li>
 </ul>
 <h1>SLURM job submission</h1>
 <ul>
