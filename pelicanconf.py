@@ -32,12 +32,13 @@ LINKS = (
     ('arXiv', 'https://arxiv.org/a/hasan_m_1.html'),
     ('ACL Anthology', 'https://aclanthology.org/people/m/md-rakibul-hasan/'),
     ('IEEE Xplore', 'https://ieeexplore.ieee.org/author/37089195113'),
+    ('Scopus', 'https://www.scopus.com/authid/detail.uri?authorId=57215341043'),
     ('Web of Science','https://www.webofscience.com/wos/author/record/AFK-8839-2022'),
     ('LinkedIn','https://www.linkedin.com/in/m-rakibul'),
     ('GitHub','https://github.com/hasan-rakibul'),
     ('Curtin University','https://staffportal.curtin.edu.au/staff/profile/view/rakibul-hasan-145a1046/'),
     ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
-    ('e-mail','mailto:Rakibul.Hasan@curtin.edu.au'),
+    ('E-mail','mailto:Rakibul.Hasan@curtin.edu.au'),
 )
 
 LINKS_WIDGET_NAME = 'find me on'
