@@ -3,7 +3,7 @@ Title: Useful links
 # Institutional
 - [Journal titles with free APC through CAUL Read & Publish Agreements](https://caul.libguides.com/read-and-publish/title-list)
 
-# Academia
+# Research & Publications
 - [The Efforless Academic](https://ilyashabanov.substack.com/)
 - [Awesome tips](https://github.com/jbhuang0604/awesome-tips)
 - [Collection of advice for prospective and current PhD students by Paul Liang](https://github.com/pliang279/awesome-phd-advice)
@@ -21,6 +21,7 @@ Title: Useful links
 - [HOW TO BE A GOOD REVIEWER? REVIEWER TUTORIAL FOR ECCV 2024](https://docs.google.com/presentation/d/1HE_Pwcdy_3eVCIdb1o1VjtwqX5KTvddukhRxZVAOnIY/)
 - [**How to Get a Paper Accepted –ß Comments by Kent Beck**](https://plg.uwaterloo.ca/%7Emigod/research/beckOOPSLA.html)
 - [**Hacing Academia – Professor Michael Milford**](https://michaelmilford.com/hacking-academia-tutorial-series/)
+- [Some Common Mathematical Symbols and Abbreviations (with History) – UC Davis](https://www.math.ucdavis.edu/~anne/WQ2007/mat67-Common_Math_Symbols.pdf)
 
 &nbsp;
 
