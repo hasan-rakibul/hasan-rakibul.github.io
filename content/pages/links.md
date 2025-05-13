@@ -94,6 +94,7 @@ Title: Useful links
 
 # Career
 - [https://interviewsby.ai/](https://interviewsby.ai/)
+- [Example CV for PhD Students (with advices)](https://shomir.net/wilhom_rosins.html)
 
 &nbsp;
 
