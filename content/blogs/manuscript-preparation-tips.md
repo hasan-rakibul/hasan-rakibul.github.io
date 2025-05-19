@@ -49,5 +49,7 @@ Tools like ChatGPT generate exagerrated texts with common patterns (e.g., "delve
 - [SciSpace](https://typeset.io/)
 - [scite](https://scite.ai/)
 
-# Guidelines by others
+# Guidelines/resources
 - [**cs-paper-checklist by Yue Zhao**](https://github.com/yzhao062/cs-paper-checklist)
+- [Butterick's Practical Typography](https://practicaltypography.com/)
+- [The LaTeX Font Catalogue](https://tug.org/FontCatalogue/)
