@@ -14,11 +14,16 @@ I'm fortunate to have several mentors in my academic and personal development jo
 &nbsp;
 
 # Research collaborators
+## Current
 - [Dr Shafin Rahman](https://sites.google.com/site/rshafin) (Assistant Professor, North South University, Bangladesh)
 - [Dr Yue Yao](http://yorkeyao.cc/) (Curtin University)
+- [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources)
+- [Dr Pouria Behnoudfar](https://scholar.google.com/citations?user=Imuw5CMAAAAJ) (Assistant Professor, University of Wisconsin-Madison)
 - [Dr Shreya Ghosh](https://sites.google.com/view/shreyaghosh) (Curtin University)
 - [Md. Mehedi Hasan Shawon](https://www.mehedi.info/) (BRAC University)
 - [Md Jobayer](https://jobayer.github.io/) (BRAC University)
+## Past
+- [Dr Eklas Hossain](https://www.boisestate.edu/research-hcri/about-us/eklas-hossain/) (Associate Professor, Boise State University)
 
 &nbsp;
 

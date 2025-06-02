@@ -3,24 +3,33 @@ Title: Teaching
 I have had the pleasure of teaching/tutoring several units/courses at multiple universities. The following list includes some of the units that I loved teaching/tutoring.
 
 # [Curtin University](https://www.curtin.edu.au/)
+
+## Lecture
+1. ISEC1000 Cyber Security Concepts: Blended lecture delivery & student consultations [Semester 2 2024]
+
 ## Lab/Tutorial
 
-0. ISEC1000: Cyber Security Concepts [Semester 2 2023 &ndash; Semester 2 2024 (Lab & **regular student consultations**)]
-0. COMP5008: Data Structures and Algorithms [Semester 2 2023 &ndash; Semester 1 2025]
-0. [ICTE3002/5001: Human-Computer Interfaces](https://www.curtin.edu.au/study/offering/unit-ug-human-computer-interface--icte3002/)[Semester 1 2023 &ndash; Semester 1 2024]
-0. [COMP1000: Unix and C Programming](https://www.curtin.edu.au/study/offering/unit-ug-unix-and-c-programming--comp1000/) [Semester 1 2023]
+1. ISEC1000 Cyber Security Concepts [Semester 2 2023 &ndash; Semester 2 2024]
+1. COMP5008/1002 Data Structures and Algorithms [Semester 2 2023 &ndash; Semester 1 2025]
+1. ICTE3002/5001 Human-Computer Interfaces [Semester 1 2023 &ndash; Semester 1 2024]
+1. COMP1000 Unix and C Programming [Semester 1 2023]
 
 &nbsp;
 
 # [Murdoch University](https://www.murdoch.edu.au/)
-## Lab/Tutorial
+## Curriculum Design
+1. ICT607 Artificial Intelligence for Cybersecurity: designed from _scratch_ [Semester 1 2023]
 
-0. ICT100: Transition to IT [Semester 2 2023 &ndash; Semester 1 2025]
-0. [ICT607: Artificial Intelligence for Cybersecurity](https://github.com/hasan-rakibul/AI-cybersec) [Semester 1 2023 **(Designed from scratch)** &ndash; Semester 1 2025]
+## Lab/Tutorial
+1. ICT100 Transition to IT [Semester 2 2023 &ndash; Semester 1 2025]
+1. ICT607 Artificial Intelligence for Cybersecurity [Semester 1 2023 &ndash; Semester 1 2025]
 
 &nbsp;
 
 # [BRAC University](https://www.bracu.ac.bd/)
+
+## Curriculum Design
+1. EEE400 Final-Year Design Project: transitioned from thesis to project, following _Outcome-Based Education (OBE)_ framework.
 
 Among several courses, I loved teaching &ndash;
 

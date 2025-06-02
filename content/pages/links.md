@@ -12,6 +12,8 @@ Title: Useful links
 - [Check journal copyrights - Sherma Romeo](https://www.sherpa.ac.uk/romeo/)
 - [Collections related to paper writing, publications, etc. by Professor Cornelia Caragea](https://www.cs.uic.edu/~cornelia/links.html)
 - Poster
+    - [https://jkk.name/advice/posters/](https://jkk.name/advice/posters/)
+        - Great tips, including on printing and carrying posters
     - [Better Poster by Mike Morrison](https://osf.io/ef53g/?view_only=)
     - [https://github.com/zhoubolei/bolei_awesome_posters](https://github.com/zhoubolei/bolei_awesome_posters)
     - [https://www.makesigns.com/SciPosters_Templates.aspx](https://www.makesigns.com/SciPosters_Templates.aspx)
@@ -19,9 +21,16 @@ Title: Useful links
 - [Scholarcy - AI-powered summariser](https://article-summarizer.scholarcy.com/summarizer)
 - [Peer review in NLP: reject-if-not-SOTA](https://hackingsemantics.xyz/2020/reviewing-models/)
 - [HOW TO BE A GOOD REVIEWER? REVIEWER TUTORIAL FOR ECCV 2024](https://docs.google.com/presentation/d/1HE_Pwcdy_3eVCIdb1o1VjtwqX5KTvddukhRxZVAOnIY/)
-- [**How to Get a Paper Accepted –ß Comments by Kent Beck**](https://plg.uwaterloo.ca/%7Emigod/research/beckOOPSLA.html)
+- [**How to Get a Paper Accepted – Comments by Kent Beck**](https://plg.uwaterloo.ca/%7Emigod/research/beckOOPSLA.html)
 - [**Hacing Academia – Professor Michael Milford**](https://michaelmilford.com/hacking-academia-tutorial-series/)
 - [Some Common Mathematical Symbols and Abbreviations (with History) – UC Davis](https://www.math.ucdavis.edu/~anne/WQ2007/mat67-Common_Math_Symbols.pdf)
+- [https://jkk.name/advice/](https://jkk.name/advice/)
+- [https://github.com/shaily99/advice](https://github.com/shaily99/advice)
+- [https://shomir.net/advice_for_students.html](https://shomir.net/advice_for_students.html)
+- [https://github.com/helenahartmann/awesome-PhD](https://github.com/helenahartmann/awesome-PhD)
+- [https://austinhenley.com/blog/lessonsfrommyphd.html](https://austinhenley.com/blog/lessonsfrommyphd.html)
+- [https://shashank-srikant.github.io/notes/aspiring-academics/](https://shashank-srikant.github.io/notes/aspiring-academics/)
+- [https://maithraraghu.com/blog/2020/Reflections_on_my_Machine_Learning_PhD_Journey/](https://maithraraghu.com/blog/2020/Reflections_on_my_Machine_Learning_PhD_Journey/)
 
 &nbsp;
 
@@ -79,7 +88,7 @@ Title: Useful links
 - [https://www.physicsbaseddeeplearning.org/intro.html](https://www.physicsbaseddeeplearning.org/intro.html)
 
 ## PyTorch
-### Liightning
+### Lightning
 - [A good overview](https://lightning.ai/docs/pytorch/stable/common/lightning_module.html)
 - [Debugging basic](https://lightning.ai/docs/pytorch/stable/debug/debugging_basic.html)
 
