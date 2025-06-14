@@ -130,8 +130,8 @@ git config --global user.email &lt;EMAIL&gt;
 <h2>VSCode/Cursor on Linux Platform</h2>
 <p>VSCode extensions "LaTeX Workshop" can be used to compile LaTeX files with Ctrl+Alt+B or each save. Requirements:
 1. LaTeX base
-1. <code>latexmk</code>, to compile the file (Otherwise, may get "Recipe terminated with fatal error: spawn latexmk ENOENT." error)
-1. Packages</p>
+1. Install <code>latexmk</code> to automatically compile the file (If not installed, may get "Recipe terminated with fatal error: spawn latexmk ENOENT." error)
+1. Packages, installing <code>-full</code> makes sure that all the packages are installed.</p>
 <h3>OpenSUSE</h3>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>zypper<span class="w"> </span>install<span class="w"> </span>texlive-scheme-medium<span class="w"> </span><span class="c1"># can be -small or -full</span>
 sudo<span class="w"> </span>zypper<span class="w"> </span>install<span class="w"> </span>texlive-latexmk-bin
@@ -142,6 +142,10 @@ sudo<span class="w"> </span>zypper<span class="w"> </span>install<span class="w"
 <span class="c1"># install latexmk</span>
 </code></pre></div>
 
+<h3>Resources</h3>
+<ul>
+<li><a href="https://paulwintz.com/latex-in-vscode/">Paul Wintz's blog on LaTeX in VSCode</a></li>
+</ul>
 <h2>Natbib-style citation in IEEE template</h2>
 <p>I like the <code>\citep</code> and <code>\citet</code> commands to automatically mention author names. To use them in IEEE template, I need to add the following lines in the preamble:</p>
 <div class="highlight"><pre><span></span><code><span class="k">\usepackage</span><span class="na">[backend=biber,style=ieee,natbib=true,maxcitenames=2,mincitenames=1]</span><span class="nb">{</span>biblatex<span class="nb">}</span>
