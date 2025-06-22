@@ -11,7 +11,8 @@ Title: Services
 - Computer Methods in Biomechanics and Biomedical Engineering
 
 ### Conferences
-- ACL ARR 2025 February
+- ACL ARR 2025
+- ACM MM 2025
 - IJCNN 2025
 - CVPR 2025
 - ECCV 2024
