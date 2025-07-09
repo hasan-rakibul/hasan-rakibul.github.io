@@ -107,6 +107,7 @@ So, overall, the Pawsey-installed Pytorch approach would be better to have multi
 
 ### Mamba/Conda – Ok but high inode usage 
 - I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of `/software/` directory, and there's `disk quota exceeded` error frequently.
+- Having said that, I had to use it in July 2025 (I needed FEniCS, which was straightforward through conda system. Apart from FEniCS, the `vtk` package installed through pip was missing `libXrender.so.1`, but through conda, it was smooth like butter). I installed Miniforge3 in the `/scratch` directory (the installation process asks for the installation path, so it was easy). The caveat is that I had to re-install Miniforge3 within 24 hours (perhaps the modification time of the files were older than 21 days, so they were purged automatically).
 
 # File system
 - As mentioned in [this Pawsey's documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information),
