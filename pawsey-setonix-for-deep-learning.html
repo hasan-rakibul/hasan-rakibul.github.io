@@ -167,6 +167,7 @@ pyenv<span class="w"> </span>activate<span class="w"> </span>env_name<span class
 <h3>Mamba/Conda – Ok but high inode usage</h3>
 <ul>
 <li>I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of <code>/software/</code> directory, and there's <code>disk quota exceeded</code> error frequently.</li>
+<li>Having said that, I had to use it in July 2025 (I needed FEniCS, which was straightforward through conda system. Apart from FEniCS, the <code>vtk</code> package installed through pip was missing <code>libXrender.so.1</code>, but through conda, it was smooth like butter). I installed Miniforge3 in the <code>/scratch</code> directory (the installation process asks for the installation path, so it was easy). The caveat is that I had to re-install Miniforge3 within 24 hours (perhaps the modification time of the files were older than 21 days, so they were purged automatically).</li>
 </ul>
 <h1>File system</h1>
 <ul>
