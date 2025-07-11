@@ -5,6 +5,7 @@ I have had the pleasure of teaching/tutoring several units/courses at multiple u
 # [Curtin University](https://www.curtin.edu.au/)
 
 ## Lecture
+1. ISAD1000/ISAD5004 Introduction to Software Engineering: Co-lecturer [Semester 2 2025]
 1. ISEC1000 Cyber Security Concepts: Blended lecture delivery & student consultations [Semester 2 2024]
 
 ## Lab/Tutorial
