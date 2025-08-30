@@ -29,8 +29,40 @@ I'm fortunate to have several mentors in my academic and personal development jo
 &nbsp;
 
 # Research students
-In official and unofficial capacities, I have had the pleasure of supervising the following students in their honours or master's projects and other similar research avenues. The following list is not exhaustive and is in no particular order.
+In official and unofficial capacities, I have had the pleasure of supervising/mentoring several students in their honours, master's or similar research projects. The following list is not exhaustive and is in no particular order.
 
+&nbsp;
+### Curtin University
+0. Derek Lee (2025)
+0. Atiqah Adawiyah Atiqah Adawiyah Binte Mohamed Idris Alju (2025)
+0. Arpan Sarkar (2025)
+0. Vrushtiben Patel (2025)
+0. Prem Oli (2025)
+0. Bikash Baral (2025)
+0. Mukesh Rai (2025)
+0. Govinda Budhathoki (2025)
+0. Bibek Maharjan (2025)
+0. Ramya Chandrasekar (2023-2024)
+
+&nbsp;
+### Australian National University
+0. Yiheng Du (2023 – 2024) [[Paper](publications#du2024investigating)]
+0. Hongyuan He (2023) [[Paper](publications#hongyuan2023tca)]
+0. Daming Wang (2023) [[Paper](publications#hongyuan2023tca)]
+0. Cheng Jiang (2023) [[Paper](publications#jiang2023maskthefer)]
+0. Patrick Buckley (2023) [[Paper](publications#buckley2023convolutional)]
+0. Xuehan Liu (2022 – 2023) [[Paper 1](./publications#liu2023MADE)] [[Paper 2](./publications#liu2022machine)]
+0. Reabal Najjar (2022 – 2023) [[Paper 1](./publications#najjar2022the)] [[Paper 2](./publications#mahmud2023which)]
+0. Xiangyu Chen (2022 – 2023) [[Paper](./publications#chen2023C3-PO)]
+0. Zhongrui Chen (2022 – 2023) [[Paper](./publications#chen2023mutfusvae)]
+0. Alexander Taylor (2022) [[Paper](publications#jobayer2023machine)]
+0. Zeyu Zhang (2022 – 2023) [[Paper](./publications#liu2022machine)]
+0. Yifan Zhou (2022) [[Paper](./publications#zhou2023how)]
+0. Alex Qin (2022) [[Paper](./publications#qin2022machine)]
+0. Jin Si Lam (2022) [[Paper](./publications#lam2022machine)]
+0. Fan Wu (2021) [[Paper](./publications#wu2022an)]
+
+&nbsp;
 ### BRAC University
 0. [Md Jobayer](https://jobayer.github.io/) (2022) [[Paper](./publications#jobayer2022a)]
 0. Lazib Sharar Shaiok (Jun. 2023 – Dec. 2023) [[Paper](publications#shaiok2023attention)]
@@ -59,36 +91,6 @@ In official and unofficial capacities, I have had the pleasure of supervising th
 0. Yousuf Mohammad (Feb. 2021 – Jan. 2022)
 0. Mehedi Hasan (Feb. 2021 – Jan. 2022)
 0. Shah Rukh Islam (Feb. 2021 – Jan. 2022)
-
-&nbsp;
-### Curtin University
-0. Derek Lee (2025)
-0. Atiqah Adawiyah Atiqah Adawiyah Binte Mohamed Idris Alju (2025)
-0. Arpan Sarkar (2025)
-0. Vrushtiben Patel (2025)
-0. Prem Oli (2025)
-0. Bikash Baral (2025)
-0. Mukesh Rai (2025)
-0. Govinda Budhathoki (2025)
-0. Bibek Maharjan (2025)
-0. Ramya Chandrasekar (2023-2024)
-
-### Australian National University
-0. Yiheng Du (2023 – 2024) [[Paper](publications#du2024investigating)]
-0. Hongyuan He (2023) [[Paper](publications#hongyuan2023tca)]
-0. Daming Wang (2023) [[Paper](publications#hongyuan2023tca)]
-0. Cheng Jiang (2023) [[Paper](publications#jiang2023maskthefer)]
-0. Patrick Buckley (2023) [[Paper](publications#buckley2023convolutional)]
-0. Xuehan Liu (2022 – 2023) [[Paper 1](./publications#liu2023MADE)] [[Paper 2](./publications#liu2022machine)]
-0. Reabal Najjar (2022 – 2023) [[Paper 1](./publications#najjar2022the)] [[Paper 2](./publications#mahmud2023which)]
-0. Xiangyu Chen (2022 – 2023) [[Paper](./publications#chen2023C3-PO)]
-0. Zhongrui Chen (2022 – 2023) [[Paper](./publications#chen2023mutfusvae)]
-0. Alexander Taylor (2022) [[Paper](publications#jobayer2023machine)]
-0. Zeyu Zhang (2022 – 2023) [[Paper](./publications#liu2022machine)]
-0. Yifan Zhou (2022) [[Paper](./publications#zhou2023how)]
-0. Alex Qin (2022) [[Paper](./publications#qin2022machine)]
-0. Jin Si Lam (2022) [[Paper](./publications#lam2022machine)]
-0. Fan Wu (2021) [[Paper](./publications#wu2022an)]
 
 &nbsp;
 ### Bangladesh Army International University of Science and Technology
