@@ -19,9 +19,10 @@ I'm fortunate to have several mentors in my academic and personal development jo
 - [Dr Yue Yao](http://yorkeyao.cc/) (Curtin University)
 - [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources)
 - [Dr Pouria Behnoudfar](https://scholar.google.com/citations?user=Imuw5CMAAAAJ) (Assistant Professor, University of Wisconsin-Madison)
-- [Dr Shreya Ghosh](https://sites.google.com/view/shreyaghosh) (Curtin University)
+- [Dr Shreya Ghosh](https://sites.google.com/view/shreyaghosh) (The University of Queensland)
 - [Md. Mehedi Hasan Shawon](https://www.mehedi.info/) (BRAC University)
 - [Md Jobayer](https://jobayer.github.io/) (BRAC University)
+- Dr Fred Nugen (Seirrowon Labs and UC Berkeley)
 ## Past
 - [Dr Eklas Hossain](https://www.boisestate.edu/research-hcri/about-us/eklas-hossain/) (Associate Professor, Boise State University)
 
@@ -60,14 +61,26 @@ In official and unofficial capacities, I have had the pleasure of supervising th
 0. Shah Rukh Islam (Feb. 2021 – Jan. 2022)
 
 &nbsp;
+### Curtin University
+0. Derek Lee (2025)
+0. Atiqah Adawiyah Atiqah Adawiyah Binte Mohamed Idris Alju (2025)
+0. Arpan Sarkar (2025)
+0. Vrushtiben Patel (2025)
+0. Prem Oli (2025)
+0. Bikash Baral (2025)
+0. Mukesh Rai (2025)
+0. Govinda Budhathoki (2025)
+0. Bibek Maharjan (2025)
+0. Ramya Chandrasekar (2023-2024)
+
 ### Australian National University
 0. Yiheng Du (2023 – 2024) [[Paper](publications#du2024investigating)]
 0. Hongyuan He (2023) [[Paper](publications#hongyuan2023tca)]
 0. Daming Wang (2023) [[Paper](publications#hongyuan2023tca)]
 0. Cheng Jiang (2023) [[Paper](publications#jiang2023maskthefer)]
 0. Patrick Buckley (2023) [[Paper](publications#buckley2023convolutional)]
-0. Xuehan Liu (2022 – 2023) [[Paper 1](./publications#liu2023MADE)] [Paper 2](./publications#liu2022machine)
-0. Reabal Najjar (2022 – 2023) [[Paper 1](./publications#najjar2022the) [Paper 2](./publications#mahmud2023which)]
+0. Xuehan Liu (2022 – 2023) [[Paper 1](./publications#liu2023MADE)] [[Paper 2](./publications#liu2022machine)]
+0. Reabal Najjar (2022 – 2023) [[Paper 1](./publications#najjar2022the)] [[Paper 2](./publications#mahmud2023which)]
 0. Xiangyu Chen (2022 – 2023) [[Paper](./publications#chen2023C3-PO)]
 0. Zhongrui Chen (2022 – 2023) [[Paper](./publications#chen2023mutfusvae)]
 0. Alexander Taylor (2022) [[Paper](publications#jobayer2023machine)]

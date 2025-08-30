@@ -9,7 +9,8 @@ I have had the pleasure of teaching/tutoring several units/courses at multiple u
 1. ISEC1000 Cyber Security Concepts: Blended lecture delivery & student consultations [Semester 2 2024]
 
 ## Lab/Tutorial
-
+1. ISAD5004 Introduction to Software Engineering [Semester 2 2025]
+1. ISAD6000 Software Engineering Requirements and Specification [Semester 2 2025]
 1. ISEC1000 Cyber Security Concepts [Semester 2 2023 &ndash; Semester 2 2024]
 1. COMP5008/1002 Data Structures and Algorithms [Semester 2 2023 &ndash; Semester 1 2025]
 1. ICTE3002/5001 Human-Computer Interfaces [Semester 1 2023 &ndash; Semester 1 2024]
@@ -22,7 +23,7 @@ I have had the pleasure of teaching/tutoring several units/courses at multiple u
 1. ICT607 Artificial Intelligence for Cybersecurity: designed from _scratch_ [Semester 1 2023]
 
 ## Lab/Tutorial
-1. ICT100 Transition to IT [Semester 2 2023 &ndash; Semester 1 2025]
+1. ICT100 Transition to IT [Semester 2 2023 &ndash; Semester 2 2025]
 1. ICT607 Artificial Intelligence for Cybersecurity [Semester 1 2023 &ndash; Semester 1 2025]
 
 &nbsp;
