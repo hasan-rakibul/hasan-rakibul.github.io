@@ -65,6 +65,12 @@ Title: Useful links
 - [Statistics and Data Science](https://jillxoreilly.github.io/StatsCourseBook_2024/intro.html)
 - [Count Bayesie – Probably a Probability Blog](https://www.countbayesie.com/)
 
+### Effect size and/or p-value
+- [Make a difference: the alternative for p-values - Joachim Goedhart](https://thenode.biologists.com/quantification-of-differences-as-alternative-for-p-values/research/)
+- [Computation of Effect Sizes - Psychometrica](https://www.psychometrica.de/effect_size.html)
+- [Rules of thumb on magnitudes of effect sizes - University of Cambridge](https://imaging.mrc-cbu.cam.ac.uk/statswiki/FAQ/effectSize)
+- [Effect size By Steve Draper, Department of Psychology, University of Glasgow](https://www.psy.gla.ac.uk/~steve/best/effect.html)
+
 ## Semi-supervised learning
 - [Definition and commond algorithms in plain language](https://h3abionet.github.io/H3ABioNet-ML-glossary/semi-supervised_intro.html)
 - [An overview of proxy-label approaches for semi-supervised learning](https://www.ruder.io/semi-supervised/)
