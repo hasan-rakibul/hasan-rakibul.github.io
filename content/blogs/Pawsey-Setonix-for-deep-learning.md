@@ -1,8 +1,10 @@
 Title: Pawsey Setonix for deep learning
 Date: 2024-02-13 10:00
-Modified: 2025-03-29 11:28
+Modified: 2025-11-27 05:49
 
 Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
+
+Update (November 2025): I have had the opportunity to attend several training session organised by Pawsey. [**Pawsey Training Resources**](https://pawsey.atlassian.net/wiki/spaces/US/pages/51928294/Pawsey+Training+Resources) includes a good set of slides with demonstrations we should start with.
 
 # Important constraints
 - `/home` directory quota is 1GB.
@@ -129,6 +131,7 @@ To prevent this you can use the `--local-no-set-modtime` option to rclone." - [A
 # SLURM job submission
 - `account` is the project ID, e.g., pawsey1234
 - Sample job submission script is [here for CPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes) and [here for GPU](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929056/Example+Slurm+Batch+Scripts+for+Setonix+on+GPU+Compute+Nodes).
+- [**Module 9: Running Jobs**](https://pawsey.atlassian.net/wiki/spaces/US/pages/51928294/Pawsey+Training+Resources)
 
 # Important points
 - Home directory quota is 1GB only. Therefore, I should offload large files/folders from home to other directory. Especially, the `.cache`, `.local` and/or `.conda` files must be in another directory (e.g., `$MYSOFTWARE`). But please note that `/software/` has a smaller inode quota (mentioned in the top of this note).  Managing the cache and conda files through environment variable can be found [here](https://hasan-rakibul.github.io/personal-note-git-linux-etc-commands.html). Alternatively (**Better**), I can create symbolic links to those resource-intensive directories in the home directory.
@@ -153,6 +156,7 @@ ls -ltu # List files sorted by access time. Access time is important for the 21-
 
 &nbsp;
 # Course / Manuals / helpful resources
+- [**Pawsey Training Resources**](https://pawsey.atlassian.net/wiki/spaces/US/pages/51928294/Pawsey+Training+Resources) includes a good set of slides with demonstration (_Module 9: Running Jobs_ is a must read to understand SLURM batch scripting.)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925876/Pawsey+Filesystems+and+their+Usage)
 - [https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies](https://pawsey.atlassian.net/wiki/spaces/US/pages/51925880/Filesystem+Policies)
