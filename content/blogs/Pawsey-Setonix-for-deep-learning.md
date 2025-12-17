@@ -113,8 +113,8 @@ So, overall, the Pawsey-installed Pytorch approach would be better to have multi
 
 # File system
 - As mentioned in [this Pawsey's documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51929028/Setonix+General+Information),
-    - `$MYSOFTWARE`, i.e, `/software/projects/<project_id>/<user_id>/` to install software packages.
-    - `$MYSCRATCH`, i.e, `/scratch/<project_id>/<user_id>` for temporary storage.
+    - `$MYSOFTWARE`, i.e,, `/software/projects/<project_id>/<user_id>/` to install software packages.
+    - `$MYSCRATCH`, i.e., `/scratch/<project_id>/<user_id>` for temporary storage.
 
 ## Acacia
 - [Quick start](https://pawsey.atlassian.net/wiki/spaces/US/pages/51924476/Acacia+-+Quick+Start). **It's important to save the access keys key in the `$HOME/.config/rclone/rclone.conf` file.** To do that, corresponding client configure command is available on the window after clicking the "Create New Key" button. Feel free to customise the profile name.
@@ -140,7 +140,7 @@ mkdir -p .cache && ln -s $MYSOFTWARE/.cache $HOME/.cache
 mkdir -p .local && ln -s $MYSOFTWARE/.local $HOME/.local
 ```
 
-- If there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables.
+- If there are multiple projects, configure default project name in `$HOME/.pawsey_project` to appropriately set `$MYSCRATCH` and `$MYSOFTWARE` environment variables. As I understood, project ID appeared at the top of this file is condiered the default one.
 
 &nbsp;
 # Important commands
