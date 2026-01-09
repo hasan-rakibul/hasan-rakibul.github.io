@@ -16,7 +16,7 @@ I'm fortunate to have several mentors in my academic and personal development jo
 # Research collaborators
 ## Current
 - [Dr Shafin Rahman](https://sites.google.com/site/rshafin) (Assistant Professor, North South University, Bangladesh)
-- [Dr Yue Yao](http://yorkeyao.cc/) (Curtin University)
+- [Dr Yue Yao](http://yorkeyao.cc/) (Australian National University)
 - [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources)
 - [Dr Pouria Behnoudfar](https://scholar.google.com/citations?user=Imuw5CMAAAAJ) (Assistant Professor, University of Wisconsin-Madison)
 - [Dr Shreya Ghosh](https://sites.google.com/view/shreyaghosh) (The University of Queensland)
@@ -112,7 +112,7 @@ In official and unofficial capacities, I have had the pleasure of supervising/me
 <h1>Recommended by me</h1>
 <p>Students are advised to email me and fill out <a href="https://forms.gle/hcznDQMDLUE4bXN87">this Google form</a> to request for a letter of recommendation. Only the following students/colleagues are referred/recommended by me for higher study/job/etc.</p>
 <ol reversed>
-    <li>Md. Mehedi Hasan Shawon, BRAC University<li>
+    <li>Md. Mehedi Hasan Shawon, BRAC University</li>
     <li>Ms Silky Sharma, UG student, Curtin University</li>
     <li>Md. Borhan Uddin Antor, UG student, BRAC University</li>
     <li>Khadiza Sumaiya, UG project student, BRAC University</li>
