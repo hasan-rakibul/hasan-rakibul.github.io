@@ -11,3 +11,6 @@ __pycache__
 .make_env_ready.sh
 
 .vscode/
+# pixi environments
+.pixi/*
+!.pixi/config.toml

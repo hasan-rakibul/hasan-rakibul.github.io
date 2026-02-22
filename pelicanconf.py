@@ -38,7 +38,7 @@ LINKS = (
     ('GitHub','https://github.com/hasan-rakibul'),
     ('Papers with Code','https://paperswithcode.com/search?q=author%3AMd+Rakibul+Hasan'),
     ('Curtin University','https://staffportal.curtin.edu.au/staff/profile/view/rakib-hasan-8d2e4f83/'),
-    ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
+    # ('BRAC University','https://www.bracu.ac.bd/about/people/md-rakibul-hasan'),
     ('E-mail','mailto:Rakibul.Hasan@curtin.edu.au'),
 )
 

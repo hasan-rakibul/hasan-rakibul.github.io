@@ -1,0 +1,15 @@
+[workspace]
+authors = ["Rakib Hasan <rakibul.hasan@curtin.edu.au>"]
+channels = ["conda-forge"]
+name = "hasan-rakibul.github.io"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.14.3,<3.15"
+ghp-import = ">=2.1.0,<3"
+
+[pypi-dependencies]
+pelican = { version = ">=4.11.0.post0, <5", extras = ["markdown"] }
