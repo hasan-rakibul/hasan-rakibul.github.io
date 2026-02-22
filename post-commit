@@ -1,1 +1,1 @@
-python -m pelican content -o output -s pelicanconf.py && ghp-import output && git push origin gh-pages
+pixi run python -m pelican content -o output -s pelicanconf.py && pixi run ghp-import output && git push origin gh-pages
