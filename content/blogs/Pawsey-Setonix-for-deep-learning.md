@@ -59,7 +59,11 @@ Once pixi is set up using `pixi init`, I could add `pixi add python`, or better 
 
 To install ROCm-compatible `torch`, I also needed to add `extra-index-urls`. Details can be seen at the `pixi.toml` file at any of my resent GitHub repo, such as [https://github.com/hasan-rakibul/passively-sensed-loneliness](https://github.com/hasan-rakibul/passively-sensed-loneliness).
 
-While installing, I first tried `pixi add <package>` to use the default conda-forge channel, and when that failed, I did `pixi add --pypi <package>`, and it worked in my case. Let's see, if it is `pixi` I've been looking for a while.
+While installing, I first tried `pixi add <package>` to use the default conda-forge channel, and when that failed, I did `pixi add --pypi <package>`, and it worked in my case. Let's see, if it is `pixi` I've been looking for a while. Rule of thumb, torch is required to install with pypi, and so packages associated with torch requires to be installed with pypi.
+
+#### Notes
+- Once I run some experiments and I have an environment ready, I should pin the exact version in `pixi.toml`. The benefits are – (1) my experiments remains completely reproducible and (2) next time when I need to install the environment, pixi is really fast (maybe because it doesn't need to resolve and find a proper dependency version?).
+- Sometimes, for some unknown reason to me, pixi was failing to install new packages for cache related errors. I had to clean its cache, and it worked. In worst case, `pixi clean` removed the environment and then `pixi install` installs everything from the toml file.
 
 ### Pawsey-installed Pytorch 
 - Containers and modules are made available by Pawsey. We can load the module using `module load`. Details are available [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch).

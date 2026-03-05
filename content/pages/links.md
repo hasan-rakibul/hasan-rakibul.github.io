@@ -46,6 +46,14 @@ Title: Useful links
 
 &nbsp;
 
+# Teaching - LMS
+## Blackboard
+- [Import groups](https://elearning.uq.edu.au/staff-guides-original/groups/import-groups-function-original?p=0#0)
+- [Import members](https://elearning.uq.edu.au/staff-guides-original/groups/import-groups-function-original?p=1#1)
+- [Smart Views for tutorial, seminar and practical groups](https://elearning.uq.edu.au/staff-guides-original/grade-centre/smart-views-tutorial-seminar-and-practical-groups-original)
+
+&nbsp;
+
 # Deep learning
 
 ## General

@@ -1,11 +1,15 @@
 Title: Services
 
 # Volunteer
+- Member, [IEEE SMC Technical Committee on Cyber-Medical Systems](https://www.ieeesmc.org/technical-activities/cybernetics/cyber-medical-systems/) [2026]
 - Communication Secretary, IEEE SPS WA Chapter [2025]
 - Organising committee member, <a href="https://dicta2024.dictaconference.org/">2024 International Conference on Digital Image Computing: Techniques and Applications (DICTA 2024)</a>
 
 &nbsp;
 # University Committees
+## Curtin University
+- Member (Cultural Competency), EECMS Diversity, Inclusion and Belonging (DIB) Committee [2026]
+
 ## BRAC University
 - Chair, Extra &amp; Co-Curricular Activities Subcommittee [2021 &ndash; Dec. 2022]
 - Member Secretary, Final Year Design Project Coordination Subcommittee [2020 &ndash; Dec. 2022]
