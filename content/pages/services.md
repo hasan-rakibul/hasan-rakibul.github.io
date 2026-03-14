@@ -16,24 +16,28 @@ Title: Services
 - Member, Committee for Undergraduate Studies [Oct. 2020 &ndash; Dec. 2022]
 
 &nbsp;
-# Journals and Conferences (not updating this section anymore since Jan 2026)
+# Journals and Conferences
+_Note: This list is no longer being regularly updated since January 2026._
 ## Peer-reviewer
 ### Journals
 - IEEE Transactions on Affective Computing
 - Knowledge-Based Systems
+- Journal of Reliable Intelligent Environments
 - IET Signal Processing
 - Expert Systems, Wiley
 - Journal of Medical Internet Research
 - Computer Methods in Biomechanics and Biomedical Engineering
 
 ### Conferences
-- ACL ARR 2025
-- ACM MM 2025
-- IJCNN 2025
+- ACL ARR 2025, 2026
+- ACM MM 2025, 2026
+- IJCNN 2025, 2026
+- BMVC 2026
+- ACM ICMR 2026
 - CVPR 2025
 - ECCV 2024
 - WACV 2024, 2025
-- ICONIP 2023, ICONIP 2022
+- ICONIP 2023, 2022
 - IEEE EICT <a href="https://eict2023.kuet.ac.bd/">2023</a>
 - <a href="https://attend.ieee.org/engineering-informatics-2023/">IEEE Conference on Engineering Informatics-2023</a>
 - 13th Workshop on Computational Approaches to Subjectivity, Sentiment & Social Media Analysis (<a href="https://wassa-workshop.github.io/">WASSA</a>) at ACL 2023

@@ -1,6 +1,5 @@
 Title: Pawsey Setonix for deep learning
 Date: 2024-02-13 10:00
-Modified: 2025-11-27 05:49
 
 Did you know 'Setonix' is actually the scientific name of Australian native animal 'Quokka'? I didn't know until I started using Pawsey's Setonix for deep learning. This is a personal note to use Setnoix supercomputer for deep learning workflow. Please be informed that things might have changed since I last accessed and/or I might be mistaken on my notes.
 
@@ -48,22 +47,7 @@ ssh <node_name> # node_name is the name of the node you get from the previous co
     - "The request of resources only needs the number of nodes (–-nodes, -N) and the number of allocation-packs per node (--gres=gpu:number)." "Users should not indicate any other Slurm allocation option related to memory or CPU cores. Therefore, users should not use --ntasks, --cpus-per-task, --mem, etc."
 
 ## Pytorch and Python
-### pixi
-Pawsey-installed Pytorch caused conflict in one of my project: Pawsey-provided one was compiled with numpy 1.x while I needed 2.x for another Python package. While I could install that numpy 2.x using venv on top of the Pytorch module, Pytorch was not happy when I run codes. I also tried pulling the docker container and install on top of that, but the problem persisted. 
 
-What worked is conda/mamba environment, inside which I had to install using pip (because those packages, inclduing torch+rocm, were unavailable on conda-forge). So, this was working, but I felt it suboptimal because I didn't see the value of having conda if I have to install all through pip.
-
-Then, pixi comes into play, as I got to learn that pixi, by design, supports both conda-forge and pypi, perhaps more natively. And, instead of environment-based package installation, I am thinking of project-based installation. mostly in `/scratch`, and so I'm hoping that I would not consume the inode quota of `/software` (unless I host the project in `/software`, which I'm thinking to do for one/two major project(s) at a time). But, of course, the caveat would be I'd need to reinstall packages once they are automatically purged, which I can be okay with.
-
-Once pixi is set up using `pixi init`, I could add `pixi add python`, or better (if I know what is the latest Python version I need) `pixi add python<=x.xx`. Note here that when I don't specify version, pixi will install latest Python, which might not be supported in the packages I want to install down the line. If that happens, I just change the required version in `pixi.toml` file. To be clear, let's say pixi installed Python 3.13 and when I do `pixi add torch`, it says dependency is unsolvable. The terminal output is often helpful to understand the latest Python version it would be happy with. I then limit to that Python version in the `pixi.toml` file.
-
-To install ROCm-compatible `torch`, I also needed to add `extra-index-urls`. Details can be seen at the `pixi.toml` file at any of my resent GitHub repo, such as [https://github.com/hasan-rakibul/passively-sensed-loneliness](https://github.com/hasan-rakibul/passively-sensed-loneliness).
-
-While installing, I first tried `pixi add <package>` to use the default conda-forge channel, and when that failed, I did `pixi add --pypi <package>`, and it worked in my case. Let's see, if it is `pixi` I've been looking for a while. Rule of thumb, torch is required to install with pypi, and so packages associated with torch requires to be installed with pypi.
-
-#### Notes
-- Once I run some experiments and I have an environment ready, I should pin the exact version in `pixi.toml`. The benefits are – (1) my experiments remains completely reproducible and (2) next time when I need to install the environment, pixi is really fast (maybe because it doesn't need to resolve and find a proper dependency version?).
-- Sometimes, for some unknown reason to me, pixi was failing to install new packages for cache related errors. I had to clean its cache, and it worked. In worst case, `pixi clean` removed the environment and then `pixi install` installs everything from the toml file.
 
 ### Pawsey-installed Pytorch 
 - Containers and modules are made available by Pawsey. We can load the module using `module load`. Details are available [here](https://pawsey.atlassian.net/wiki/spaces/US/pages/51931230/PyTorch).
@@ -123,6 +107,25 @@ pyenv activate env_name # activate the virtual environment
     - I thought of offloading files of less-significant environment to the `scratch` directory (as `scratch` has file purge policy, I would need to re-install packages after some days). After creating the new virtual environment, I symlinked corresponding virtual environment files to `scratch`. Inside `/home/rakib/.pyenv/versions/3.12.3/envs`, I symlinked the created virtual environment, which looks like: `env_name -> /scratch/pawsey1001/rakib/extr_pyenv/env_name`.
 
 So, overall, the Pawsey-installed Pytorch approach would be better to have multiple environments as I could just creat a new environment in the `/scratch` directory and use it without any quota issue.
+
+### pixi
+**Update (March 2026)**: pixi had a lot of friction. In addition to the issue mentioned in the notes below, pixi python suddenly showed ModuleNotFoundError for certain built in packages. My best guess is that since I'm installing it in `/scratch` (I can't afford to install project-specific packages in `software`), some pixi environment files get deleted automatically due to the purge policy. In the end, I moved back to the venv approach with Pawsey-installed Pytorch, and aim to use pixi only on edge cases like mentioned below.
+
+Pawsey-installed Pytorch caused conflict in one of my project: Pawsey-provided one was compiled with numpy 1.x while I needed 2.x for another Python package. While I could install that numpy 2.x using venv on top of the Pytorch module, Pytorch was not happy when I run codes. I also tried pulling the docker container and install on top of that, but the problem persisted. 
+
+What worked is conda/mamba environment, inside which I had to install using pip (because those packages, inclduing torch+rocm, were unavailable on conda-forge). So, this was working, but I felt it suboptimal because I didn't see the value of having conda if I have to install all through pip.
+
+Then, pixi comes into play, as I got to learn that pixi, by design, supports both conda-forge and pypi, perhaps more natively. And, instead of environment-based package installation, I am thinking of project-based installation. mostly in `/scratch`, and so I'm hoping that I would not consume the inode quota of `/software` (unless I host the project in `/software`, which I'm thinking to do for one/two major project(s) at a time). But, of course, the caveat would be I'd need to reinstall packages once they are automatically purged, which I can be okay with.
+
+Once pixi is set up using `pixi init`, I could add `pixi add python`, or better (if I know what is the latest Python version I need) `pixi add python<=x.xx`. Note here that when I don't specify version, pixi will install latest Python, which might not be supported in the packages I want to install down the line. If that happens, I just change the required version in `pixi.toml` file. To be clear, let's say pixi installed Python 3.13 and when I do `pixi add torch`, it says dependency is unsolvable. The terminal output is often helpful to understand the latest Python version it would be happy with. I then limit to that Python version in the `pixi.toml` file.
+
+To install ROCm-compatible `torch`, I also needed to add `extra-index-urls`. Details can be seen at the `pixi.toml` file at any of my resent GitHub repo, such as [https://github.com/hasan-rakibul/passively-sensed-loneliness](https://github.com/hasan-rakibul/passively-sensed-loneliness).
+
+While installing, I first tried `pixi add <package>` to use the default conda-forge channel, and when that failed, I did `pixi add --pypi <package>`, and it worked in my case. Let's see, if it is `pixi` I've been looking for a while. Rule of thumb, torch is required to install with pypi, and so packages associated with torch requires to be installed with pypi.
+
+#### Notes
+- Once I run some experiments and I have an environment ready, I should pin the exact version in `pixi.toml`. The benefits are – (1) my experiments remains completely reproducible and (2) next time when I need to install the environment, pixi is really fast (maybe because it doesn't need to resolve and find a proper dependency version?).
+- Sometimes, for some unknown reason to me, pixi was failing to install new packages for cache related errors. I had to clean its cache, and it worked. In worst case, `pixi clean` removed the environment and then `pixi install` installs everything from the toml file.
 
 ### Mamba/Conda – Ok but high inode usage 
 - I have tried Miniforge3. It worked well initially, but there's no ROCm-compatible Pytorch available through conda/mamba. Installing through pip within conda environment could be a solution. Another problem was that the installation consumed the limited inode quota of `/software/` directory, and there's `disk quota exceeded` error frequently.

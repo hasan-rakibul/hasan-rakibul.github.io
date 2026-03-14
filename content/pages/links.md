@@ -137,6 +137,7 @@ Title: Useful links
 
 # Miscellanea
 - [https://timer.now/](https://timer.now/)
+- [https://convert.to.it/](https://convert.to.it/)
 ## Photo - remove current background and use a different one
 - Adobe Photoshop: straightforward with generative AI prompting
 As I wanted to use another picture's background, I removed subject while keeping the background and filling the gap with generative AI.

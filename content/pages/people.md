@@ -13,12 +13,12 @@ I'm fortunate to have several mentors in my academic and personal development jo
 
 # Research collaborators
 ## Current
-- [Dr Shafin Rahman](https://sites.google.com/site/rshafin) (Assistant Professor, North South University, Bangladesh)
-- [Professor Md Mahbub Hasan](https://www.kuet.ac.bd/eee/mahbub) (Khulna University of Engineering & Technology)
+- [Assoc Prof Dr Shafin Rahman](https://sites.google.com/site/rshafin) (North South University, Bangladesh)
+- [Prof Md Mahbub Hasan](https://www.kuet.ac.bd/eee/mahbub) (Khulna University of Engineering & Technology)
 - [Dr Yue Yao](http://yorkeyao.cc/) (Australian National University)
 - [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources)
-- [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Senior Research Fellow, Curtin University [PhD co-supervisor])
-- [Dr Pouria Behnoudfar](https://scholar.google.com/citations?user=Imuw5CMAAAAJ) (Assistant Professor, University of Wisconsin-Madison)
+- [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Curtin University [PhD co-supervisor])
+- [A/Prof Dr Pouria Behnoudfar](https://scholar.google.com/citations?user=Imuw5CMAAAAJ) (University of Wisconsin-Madison)
 - [Dr Shreya Ghosh](https://sites.google.com/view/shreyaghosh) (The University of Queensland)
 - [Md. Mehedi Hasan Shawon](https://www.mehedi.info/) (BRAC University)
 - [Md Jobayer](https://jobayer.github.io/) (BRAC University)
@@ -32,7 +32,8 @@ I'm fortunate to have several mentors in my academic and personal development jo
 In official and unofficial capacities, I have had the pleasure of supervising/mentoring several students in their honours, master's or similar research projects. The following list is not exhaustive and is in no particular order.
 
 &nbsp;
-### Curtin University (this list is no longer being updated in 2026, having several students)
+### Curtin University 
+_Note: This list is no longer being updated in 2026, having many students_
 0. Derek Lee (2025 - 2026)
 0. Atiqah Adawiyah Atiqah Adawiyah Binte Mohamed Idris Alju (2025 - 2026)
 0. Arpan Sarkar (2025 - 2026)
