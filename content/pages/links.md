@@ -31,6 +31,7 @@ Title: Useful links
 - [https://austinhenley.com/blog/lessonsfrommyphd.html](https://austinhenley.com/blog/lessonsfrommyphd.html)
 - [https://shashank-srikant.github.io/notes/aspiring-academics/](https://shashank-srikant.github.io/notes/aspiring-academics/)
 - [https://maithraraghu.com/blog/2020/Reflections_on_my_Machine_Learning_PhD_Journey/](https://maithraraghu.com/blog/2020/Reflections_on_my_Machine_Learning_PhD_Journey/)
+- [IEEE Editorial Style Manual for Authors](https://docs.google.com/document/d/1OalFYqVfxKKMelF79U3B93SjmIEiTnJC12wPJrKeSDM/edit?tab=t.0)
 
 &nbsp;
 
