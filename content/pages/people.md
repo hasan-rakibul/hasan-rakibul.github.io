@@ -33,7 +33,8 @@ In official and unofficial capacities, I have had the pleasure of supervising/me
 
 &nbsp;
 ### Curtin University 
-_Note: This list is no longer being updated in 2026, having many students_
+_Note: This list is no longer being updated as of 2026, having many students._
+
 0. Derek Lee (2025 - 2026)
 0. Atiqah Adawiyah Atiqah Adawiyah Binte Mohamed Idris Alju (2025 - 2026)
 0. Arpan Sarkar (2025 - 2026)
