@@ -1,8 +1,9 @@
 Title: Services
 
 # Volunteer
+- Student Activities Coordinator, IEEE WA Section, Australia [2026--]
 - Member, [IEEE SMC Technical Committee on Cyber-Medical Systems](https://www.ieeesmc.org/technical-activities/cybernetics/cyber-medical-systems/) [2026]
-- Communication Secretary, IEEE SPS WA Chapter [2025]
+- Communication Secretary, IEEE SPS WA Chapter [2025--]
 - Organising committee member, <a href="https://dicta2024.dictaconference.org/">2024 International Conference on Digital Image Computing: Techniques and Applications (DICTA 2024)</a>
 
 &nbsp;
