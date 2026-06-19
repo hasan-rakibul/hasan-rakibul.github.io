@@ -6,7 +6,7 @@ I have had the pleasure of teaching/tutoring several units/courses at multiple u
 
 ## Unit Coordinator & Lecturer
 1. ICTE3002 Human Computer Interface / ICTE5001 Advanced Human Computer Interface [Semester 1 2026]
-1. ISEC 6000 Secure DevOps [Semester 2 2026]
+1. ISEC6000 Secure DevOps [Semester 2 2026]
 
 ## Co-Lecturer
 1. ISAD1000/ISAD5004 Introduction to Software Engineering: Co-lecturer [Semester 2 2025]
