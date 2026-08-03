@@ -5,14 +5,25 @@ I have had the pleasure of teaching/tutoring several units/courses at multiple u
 # [Curtin University](https://www.curtin.edu.au/)
 
 ## Unit Coordinator & Lecturer
-1. ICTE3002 Human Computer Interface / ICTE5001 Advanced Human Computer Interface [Semester 1 2026]
 1. ISEC6000 Secure DevOps [Semester 2 2026]
+1. ICTE3002 Human Computer Interface / ICTE5001 Advanced Human Computer Interface [Semester 1 2026]
 
-## Co-Lecturer
-1. ISAD1000/ISAD5004 Introduction to Software Engineering: Co-lecturer [Semester 2 2025]
+## Co-Lecturer / Shadow Lecturer / Shadow UC
+1. ISAD1000/ISAD5004 Introduction to Software Engineering: Co-lecturer & Shadow UC [Semester 2 2025]
 1. ISEC1000 Cyber Security Concepts: Blended lecture delivery & student consultations [Semester 2 2024]
 
+## Supervision in Project Units
+1. EEET4000 Engineering Research Project 1
+1. EEET4001 Engineering Research Project 2
+1. NPSC2001 Research, Leadership and Entrepreneurship in Science 1
+1. NPSC3000 Research, Leadership and Entrepreneurship in Science 2
+1. COMP6015 Computer Science Project 1
+1. COMP6016 Computer Science Project 2
+1. CMPE3002 Computer Technology Project 1
+1. COMP3004 Computer Project 1
+
 ## Lab/Tutorial
+1. ISEC6000 Secure DevOps [Semester 2 2026]
 1. ISAD5004 Introduction to Software Engineering [Semester 2 2025]
 1. ISAD6000 Software Engineering Requirements and Specification [Semester 2 2025]
 1. ISEC1000 Cyber Security Concepts [Semester 2 2023 &ndash; Semester 2 2024]
