@@ -27,11 +27,16 @@ I'm fortunate to have several mentors in my academic and personal development jo
 - [Dr Eklas Hossain](https://www.boisestate.edu/research-hcri/about-us/eklas-hossain/) (Associate Professor, Boise State University)
 
 &nbsp;
+# Higher degree by research (PhD/MPhil) students
 
-# Research students
-In official and unofficial capacities, I have had the pleasure of supervising/mentoring several students in their honours, master's or similar research projects. The following list is not exhaustive and is in no particular order.
+## Co-supervisorship
+0. Bayou Tilahun Assaye, "Privacy-Preserving Deepfake AI De-Identification for Early Fall Detection Among Older Adults", PhD in Computing, Curtin University, PhD [2026–]
+0. Narges Mohaghegh, "A Multimodal AI Framework for Adaptive Non-Verbal Communication in Social XR", PhD in Computing, Curtin University [2026-]
 
 &nbsp;
+# Other research/project students
+In official and unofficial capacities, I have had the pleasure of supervising/mentoring several students in their honours, master's or similar research projects. The following list is not exhaustive and is in no particular order.
+
 ### Curtin University 
 _Note: This list is no longer being updated as of 2026, having many students._
 
