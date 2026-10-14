@@ -3,20 +3,20 @@ Title: People
 # My mentor board of directors
 I'm fortunate to have several mentors in my academic and personal development journey. The following list is not exhaustive and is in no particular order.
 
-- [Professor Aneesh Krishna](https://staffportal.curtin.edu.au/staff/profile/view/aneesh-krishna-1b4c5581/) (Curtin University)
 - [Professor Tom Gedeon](https://staffportal.curtin.edu.au/staff/profile/view/tom-gedeon-5e48a1fd/) (Curtin University)
-- [Dr Md Redowan Mahmud](https://staffportal.curtin.edu.au/staff/profile/view/md-redowan-mahmud-682e2209/) (Senior Lecturer, Curtin University)
-- [Professor Sarah Pearce](https://careerswithstem.com.au/profiles/director-of-astronomy-and-space-science-csiro/) (Deputy Director, CSIRO Astronomy and Space Science)
 - [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources)
+- [Professor Aneesh Krishna](https://staffportal.curtin.edu.au/staff/profile/view/aneesh-krishna-1b4c5581/) (Curtin University)
+- [Professor Sarah Pearce](https://careerswithstem.com.au/profiles/director-of-astronomy-and-space-science-csiro/) (Deputy Director, CSIRO Astronomy and Space Science)
+- [Dr Md Redowan Mahmud](https://staffportal.curtin.edu.au/staff/profile/view/md-redowan-mahmud-682e2209/) (Senior Lecturer, Curtin University)
 
 &nbsp;
 
 # Research collaborators
 ## Current
+- [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources)
 - [Assoc Prof Dr Shafin Rahman](https://sites.google.com/site/rshafin) (North South University, Bangladesh)
 - [Prof Md Mahbub Hasan](https://www.kuet.ac.bd/eee/mahbub) (Khulna University of Engineering & Technology)
 - [Dr Yue Yao](http://yorkeyao.cc/) (Australian National University)
-- [Dr Thomas Poulet](https://people.csiro.au/p/t/thomas-poulet) (CSIRO Mineral Resources)
 - [Dr Md Zakir Hossain](https://sites.google.com/view/zakirh) (Curtin University [PhD co-supervisor])
 - [A/Prof Dr Pouria Behnoudfar](https://scholar.google.com/citations?user=Imuw5CMAAAAJ) (University of Wisconsin-Madison)
 - [Dr Shreya Ghosh](https://sites.google.com/view/shreyaghosh) (The University of Queensland)
